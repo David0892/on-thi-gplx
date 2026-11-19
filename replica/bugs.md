@@ -175,13 +175,29 @@ All fixes are in `3ccd5d0`.
 
 **Status:** fixed in `3ccd5d0`.
 
+### BUG-010: the app crashes at startup on Android
+
+- **Severity:** S1 (core flow blocked: nothing works on Android)
+- **Screens:** all (before the first frame)
+- **Device:** Samsung phone, Android 15, arm64; debug build
+
+**Steps:** `flutter run` (or install the APK) on an Android device and open the app.
+
+**Expected:** the class picker.
+**Actual:** an unhandled exception in `main()`, so the app never shows its first screen.
+**Evidence:** logcat `ClassNotFoundException: Didn't find class "Landroid/content/Context;"`, thrown by `Jni.findClass` in `path_provider_android` 2.3.1 (`jni` 1.2.0), called from `getApplicationSupportDirectory` in `openUserDb`.
+**Fix:** `path_provider_android` is pinned to 2.2.19, which uses a platform channel instead of `jni` (see the comment in `pubspec.yaml`). Checked on the phone: the class picker shows, and the chosen class and a running exam survive an app restart.
+**Gap:** the widget tests never run the Android plugin, so they could not catch this. Smoke-test on a device after any plugin bump.
+
+**Status:** fixed (see git log, "fix(android)").
+
 ---
 
 ## To check (not reproduced, or not covered by automation)
 
 - **KB-1, keyboard only:** not run. Flutter widget tests can send key events, but no keyboard traversal test was written. Check by hand on iPad with a keyboard, or on desktop.
 - **SR-1, VoiceOver:** not run. The semantics labels are asserted indirectly: the tests find buttons by label, and `labeledTapTargetGuideline` passes. No real screen reader was used.
-- **Android device:** never run on Android; only on the iOS simulator.
+- **Android device:** startup, the class picker, home and persistence were checked on one Samsung phone (Android 15) after BUG-010. The exam and study flows were not walked through by hand on Android.
 - **Dark mode contrast:** the accessibility tests ran in light mode only. Dark tokens passed `contrast.py`, but not the in-app `textContrastGuideline`.
 - **Simulator, class changed to B and exams started unexpectedly:** not a bug. The database timestamps show the simulator was being used by someone else at the same time as the test. No code path changes the class except the class picker's confirm button.
 - **F02-N2:** opening `/exams/run/<unknown id>` should show the error view; no test covers this yet.
