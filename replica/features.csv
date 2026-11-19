@@ -1,0 +1,35 @@
+feature,area,priority,original,clone,notes
+Pick licence class (A1 A B1 B C1 C D1 D2 D BE C1E CE D1E D2E DE),onboarding,must,yes,yes,S01; all 15 classes
+Full official 600-question bank bundled offline,content,must,yes,no,only 32 hand-written sample questions; needs the content pipeline
+Question pools per class (e.g. 250 for A1/A),content,must,yes,partial,all classes share the sample pool; real mapping comes with the official appendix
+Critical questions flagged (60),content,must,yes,partial,3 sample critical questions; 60 come with the official bank
+Random mock exam per class rules (count / minutes / pass mark),exam,must,yes,yes,"S04; quota per topic for A1/A/B1, uniform for others; classes above 32 questions show a not-enough-questions dialog"
+Countdown timer with auto-submit,exam,must,yes,partial,"timer reads deadline and auto-submits; NOT persisted, so killing the app loses the exam until drift lands"
+Question jump grid in exam,exam,must,yes,yes,"bottom sheet in S04, S08"
+Pass/fail result with critical-question fail rule,exam,must,yes,yes,S05; unit tested
+Review exam with correct answers,exam,must,yes,yes,S06 with all/wrong filter
+Study by topic with instant feedback,study,must,yes,yes,"S07, S08"
+Answer explanations,study,must,yes,partial,written for the 32 sample questions only
+Wrong-answers list auto-collected,review,must,yes,yes,S10; answering right removes it; clear with confirm
+Bookmark / saved questions,review,must,yes,yes,S11 with empty state
+Critical questions drill,review,must,yes,yes,S09
+Numbered fixed exam sets with best score,exam,should,inferred,yes,"5 sets per class, fixed seed"
+Progress per topic and overall,study,should,inferred,yes,"S02 ring, S07 bars"
+Resume topic where left off,study,should,inferred,yes,in memory only for now
+Exam history,exam,should,inferred,yes,"S03, last 10"
+Memorization tips per topic,content,should,yes,no,own writing
+FAQ on the exam procedure,content,should,yes,no,own writing
+Change class later and keep progress per class,settings,should,inferred,yes,progress keyed by class
+Reset progress with confirm,settings,should,inferred,yes,S15
+Not-official disclaimer + privacy policy,settings,should,yes,partial,in-app text in S15; hosted privacy page still needed for the stores
+Traffic sign library by group,content,could,inferred,no,may not exist in original
+Search questions by text or number,study,could,unknown,no,
+Dark mode,settings,could,unknown,no,
+Banner and interstitial ads,monetization,could,yes,skip,decided 2026-11-19: app is completely free
+Remove-ads purchase,monetization,could,no,skip,not needed: no ads
+Readiness score (pass probability from recent exams),exam,could,no,no,differentiator idea
+Text-to-speech reading of questions,study,could,no,no,differentiator idea
+120 simulation video situations (mo phong),simulation,could,no,skip,separate slice; licensed video content
+Sa hinh practical test guide,practical,could,no,skip,separate slice
+Original app's explanations / tips / images,content,could,yes,skip,owned by the developer
+Original app's name and listing copy,brand,could,yes,skip,make your own via /replica-brand
