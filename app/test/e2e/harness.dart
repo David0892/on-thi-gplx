@@ -165,7 +165,7 @@ Future<void> takeExam(
   bool criticalWrong = false,
   bool allWrong = false,
 }) async {
-  await tapText(tester, 'Thi thử ngay');
+  await tapText(tester, 'Làm đề thi');
   for (var i = 0; i < 25; i++) {
     final q = currentQuestion(tester);
     await answerCurrent(

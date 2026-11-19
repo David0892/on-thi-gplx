@@ -217,36 +217,38 @@ class _ExamRunPageState extends ConsumerState<ExamRunPage> {
           ],
         ),
         // Keyed by question so each question opens scrolled to its top.
-        body: PageBody(
-          key: ValueKey(_index),
-          children: [
-            QuestionCard(
-              index: _index + 1,
-              total: a.questionCount,
-              text: q.text,
-              image: QuestionImage.of(q),
-              // Critical questions are not marked during the exam (as in the real test).
-              trailing: BookmarkToggle(
-                on: saved,
-                onChanged: (_) async {
-                  await ref.read(bookmarkRepoProvider).toggle(q.key);
-                  ref.read(revisionProvider.notifier).bump();
-                },
+        body: QuestionTextScale(
+          child: PageBody(
+            key: ValueKey(_index),
+            children: [
+              QuestionCard(
+                index: _index + 1,
+                total: a.questionCount,
+                text: q.text,
+                image: QuestionImage.of(q),
+                // Critical questions are not marked during the exam (as in the real test).
+                trailing: BookmarkToggle(
+                  on: saved,
+                  onChanged: (_) async {
+                    await ref.read(bookmarkRepoProvider).toggle(q.key);
+                    ref.read(revisionProvider.notifier).bump();
+                  },
+                ),
               ),
-            ),
-            const SizedBox(height: AppSpace.s12),
-            for (final (i, opt) in q.options.indexed) ...[
-              AnswerOption(
-                position: i + 1,
-                text: opt,
-                state: answer.chosen == i + 1
-                    ? AnswerState.selected
-                    : AnswerState.idle,
-                onTap: () => _choose(answer.position, i + 1),
-              ),
-              const SizedBox(height: AppSpace.s8),
+              const SizedBox(height: AppSpace.s12),
+              for (final (i, opt) in q.options.indexed) ...[
+                AnswerOption(
+                  position: i + 1,
+                  text: opt,
+                  state: answer.chosen == i + 1
+                      ? AnswerState.selected
+                      : AnswerState.idle,
+                  onTap: () => _choose(answer.position, i + 1),
+                ),
+                const SizedBox(height: AppSpace.s8),
+              ],
             ],
-          ],
+          ),
         ),
         // Toolbar text is capped at 1.3x so four controls still fit on a 320px screen.
         bottomNavigationBar: MediaQuery.withClampedTextScaling(

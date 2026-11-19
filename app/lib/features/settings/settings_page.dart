@@ -8,6 +8,7 @@ import '../../design/tokens.g.dart';
 import '../../design/widgets.dart';
 import '../../providers.dart';
 import '../common.dart';
+import '../shell/app_shell.dart';
 
 class SettingsPage extends ConsumerWidget {
   const SettingsPage({super.key});
@@ -27,12 +28,48 @@ class SettingsPage extends ConsumerWidget {
       ),
     );
 
+    final scale = ref.watch(questionScaleProvider);
     final rows = <Widget>[
       ListRow(
-        leading: Icons.directions_car_outlined,
+        leading: Icons.badge_outlined,
         title: 'Hạng đang ôn',
         subtitle: '${cls.name} · ${cls.description}',
         onTap: () => context.push('/onboarding?change=1'),
+      ),
+      ListRow(
+        leading: Icons.text_fields,
+        title: 'Cỡ chữ câu hỏi',
+        subtitle: 'Câu hỏi, đáp án và giải thích',
+        trailing: Text('${(scale * 100).round()}%'),
+        onTap: () => showModalBottomSheet<void>(
+          context: context,
+          showDragHandle: true,
+          builder: (ctx) => SafeArea(
+            child: Consumer(
+              builder: (ctx, ref, _) {
+                final current = ref.watch(questionScaleProvider);
+                return Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    for (final v in QuestionScale.steps)
+                      ListTile(
+                        title: Text('${(v * 100).round()}%'),
+                        subtitle: Text(
+                          'Biển nào cấm xe ô tô rẽ trái?',
+                          textScaler: TextScaler.linear(v),
+                        ),
+                        trailing: v == current ? const Icon(Icons.check) : null,
+                        onTap: () {
+                          ref.read(questionScaleProvider.notifier).set(v);
+                          Navigator.pop(ctx);
+                        },
+                      ),
+                  ],
+                );
+              },
+            ),
+          ),
+        ),
       ),
       ListRow(
         leading: Icons.restart_alt,
@@ -86,7 +123,7 @@ class SettingsPage extends ConsumerWidget {
     ];
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Cài đặt')),
+      appBar: const TabAppBar(title: 'Cài đặt', showClass: false),
       body: PageBody(
         children: [
           ClipRRect(

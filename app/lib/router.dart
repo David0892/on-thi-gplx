@@ -18,7 +18,8 @@ import 'features/home/home_page.dart';
 import 'features/onboarding/class_picker_page.dart';
 import 'features/settings/settings_page.dart';
 import 'features/study/study_page.dart';
-import 'features/study/topic_list_page.dart';
+import 'features/shell/app_shell.dart';
+import 'features/study/learn_page.dart';
 import 'providers.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
@@ -42,8 +43,40 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (_, s) =>
             ClassPickerPage(changing: s.uri.queryParameters['change'] == '1'),
       ),
-      GoRoute(path: '/', builder: (_, _) => const HomePage()), // S02
-      GoRoute(path: '/exams', builder: (_, _) => const ExamListPage()), // S03
+      StatefulShellRoute.indexedStack(
+        builder: (_, _, shell) => AppShell(shell: shell),
+        branches: [
+          StatefulShellBranch(
+            routes: [
+              GoRoute(path: '/', builder: (_, _) => const HomePage()), // S02
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: '/learn',
+                builder: (_, _) => const LearnPage(),
+              ), // S07
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: '/exams',
+                builder: (_, _) => const ExamListPage(),
+              ), // S03
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: '/settings',
+                builder: (_, _) => const SettingsPage(),
+              ), // S15
+            ],
+          ),
+        ],
+      ),
       GoRoute(
         path: '/exams/run/:id', // S04
         builder: (_, s) =>
@@ -61,7 +94,7 @@ final routerProvider = Provider<GoRouter>((ref) {
           onlyWrong: s.uri.queryParameters['filter'] == 'wrong',
         ),
       ),
-      GoRoute(path: '/topics', builder: (_, _) => const TopicListPage()), // S07
+      GoRoute(path: '/topics', redirect: (_, _) => '/learn'),
       GoRoute(
         path: '/study/:source', // S08, and S09 critical / S10 wrong / S11 saved
         builder: (_, s) => StudyPage(
@@ -86,10 +119,6 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (_, s) => TipDetailPage(tipId: s.pathParameters['id']!),
       ),
       GoRoute(path: '/faq', builder: (_, _) => const FaqPage()), // S14
-      GoRoute(
-        path: '/settings',
-        builder: (_, _) => const SettingsPage(),
-      ), // S15
       GoRoute(path: '/design', builder: (_, _) => const GalleryPage()),
     ],
   );

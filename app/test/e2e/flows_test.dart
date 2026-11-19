@@ -29,7 +29,7 @@ void main() {
         expect(button.onPressed, isNull);
         await pickClass(tester, 'A1');
         expect(find.text('Hạng A1'), findsWidgets);
-        expect(find.text('Thi thử ngay'), findsOneWidget);
+        expect(find.text('Mức sẵn sàng'), findsOneWidget);
       },
     );
 
@@ -37,7 +37,7 @@ void main() {
       await launchApp(tester, db);
       await pickClass(tester, 'A1');
       await launchApp(tester, db);
-      expect(find.text('Thi thử ngay'), findsOneWidget);
+      expect(find.text('Mức sẵn sàng'), findsOneWidget);
       expect(find.text('Bạn đang ôn thi bằng hạng nào?'), findsNothing);
     });
 
@@ -46,19 +46,20 @@ void main() {
     ) async {
       await launchApp(tester, db);
       await pickClass(tester, 'A1');
-      await tapText(tester, 'Ôn theo chủ đề');
+      await tapText(tester, 'Ôn tập');
       await tapText(tester, 'Quy định chung và quy tắc giao thông');
       await answerCurrent(tester, correctly: true);
       await tester.pageBack();
       await settle(tester);
-      await tester.pageBack();
-      await settle(tester);
-      expect(find.text('1/32 câu đã trả lời đúng'), findsOneWidget);
+      await scrollToTop(tester); // the tab kept its scroll position
+      expect(find.text('1 / 32 câu đã làm'), findsOneWidget);
 
       await tapLabel(tester, RegExp('Đang ôn hạng A1'));
       await pickClass(tester, 'B');
       expect(find.text('Hạng B'), findsWidgets);
-      expect(find.text('0/32 câu đã trả lời đúng'), findsOneWidget);
+      await tapText(tester, 'Ôn tập');
+      await scrollToTop(tester);
+      expect(find.text('0 / 32 câu đã làm'), findsOneWidget);
     });
   });
 
@@ -76,7 +77,7 @@ void main() {
     ) async {
       await launchApp(tester, db);
       await pickClass(tester, 'A1');
-      await tapText(tester, 'Thi thử ngay');
+      await tapText(tester, 'Làm đề thi');
       await tapText(tester, 'Nộp');
       expect(
         find.textContaining('Bạn còn 25 câu chưa trả lời'),
@@ -104,7 +105,7 @@ void main() {
       (tester) async {
         await launchApp(tester, db);
         await pickClass(tester, 'A1');
-        await tapText(tester, 'Thi thử ngay');
+        await tapText(tester, 'Làm đề thi');
         final submit = find.text('Nộp').last;
         await tester.tap(submit);
         await tester.tap(submit, warnIfMissed: false);
@@ -121,7 +122,7 @@ void main() {
     testWidgets('F02-E4: back mid-exam asks, then abandons', (tester) async {
       await launchApp(tester, db);
       await pickClass(tester, 'A1');
-      await tapText(tester, 'Thi thử ngay');
+      await tapText(tester, 'Làm đề thi');
       await tester.binding.handlePopRoute();
       await settle(tester);
       expect(find.text('Thoát bài thi?'), findsOneWidget);
@@ -136,7 +137,7 @@ void main() {
     ) async {
       await launchApp(tester, db);
       await pickClass(tester, 'A1');
-      await tapText(tester, 'Thi thử ngay');
+      await tapText(tester, 'Làm đề thi');
       final q = currentQuestion(tester);
       await answerCurrent(tester, correctly: true);
 
@@ -161,7 +162,7 @@ void main() {
       (tester) async {
         await launchApp(tester, db);
         await pickClass(tester, 'A1');
-        await tapText(tester, 'Thi thử ngay');
+        await tapText(tester, 'Làm đề thi');
         await answerCurrent(tester, correctly: true);
         await tester.runAsync(() => runningToPast(db));
 
@@ -179,7 +180,7 @@ void main() {
     ) async {
       await launchApp(tester, db);
       await pickClass(tester, 'A1');
-      await tapText(tester, 'Thi thử ngay');
+      await tapText(tester, 'Làm đề thi');
       for (var i = 0; i < 4; i++) {
         await nextQuestion(tester);
       }
@@ -195,7 +196,7 @@ void main() {
       (tester) async {
         await launchApp(tester, db);
         await pickClass(tester, 'D');
-        await tapText(tester, 'Thi thử ngay');
+        await tapText(tester, 'Làm đề thi');
         expect(find.text('Chưa đủ câu hỏi'), findsOneWidget);
         await tapText(tester, 'Đã hiểu');
         expect(await tester.runAsync(() => attempts(db)), isEmpty);
@@ -239,7 +240,7 @@ void main() {
       (tester) async {
         await launchApp(tester, db);
         await pickClass(tester, 'A1');
-        await tapText(tester, 'Ôn theo chủ đề');
+        await tapText(tester, 'Ôn tập');
         await tapText(tester, 'Văn hoá giao thông và đạo đức người lái');
         await answerCurrent(tester, correctly: false);
         expect(find.text('Giải thích'), findsOneWidget);
@@ -249,9 +250,9 @@ void main() {
         expect(states, containsAll([AnswerState.wrong, AnswerState.missed]));
         await tester.pageBack();
         await settle(tester);
-        await tester.pageBack();
-        await settle(tester);
-        expect(find.bySemanticsLabel('Câu sai, 1 câu'), findsOneWidget);
+        await tapText(tester, 'Tổng quan');
+        await tapText(tester, 'Câu đang sai');
+        expect(find.text('Câu 1/1'), findsWidgets);
       },
     );
 
@@ -260,7 +261,7 @@ void main() {
     ) async {
       await launchApp(tester, db);
       await pickClass(tester, 'A1');
-      await tapText(tester, 'Ôn theo chủ đề');
+      await tapText(tester, 'Ôn tập');
       await tapText(tester, 'Kỹ thuật lái xe');
       await tapText(tester, 'Tiếp');
       await tapText(tester, 'Tiếp');
@@ -274,7 +275,7 @@ void main() {
     testWidgets('F04-E2: the last question offers a summary', (tester) async {
       await launchApp(tester, db);
       await pickClass(tester, 'A1');
-      await tapText(tester, 'Ôn theo chủ đề');
+      await tapText(tester, 'Ôn tập');
       await tapText(tester, 'Văn hoá giao thông và đạo đức người lái');
       for (var i = 0; i < 4; i++) {
         await answerCurrent(tester, correctly: true);
@@ -299,7 +300,7 @@ void main() {
     testWidgets('F06-E1: empty at first', (tester) async {
       await launchApp(tester, db);
       await pickClass(tester, 'A1');
-      await tapText(tester, 'Câu sai');
+      await tapText(tester, 'Câu đang sai');
       expect(find.text('Chưa có câu sai nào'), findsOneWidget);
     });
 
@@ -308,19 +309,18 @@ void main() {
     ) async {
       await launchApp(tester, db);
       await pickClass(tester, 'A1');
-      await tapText(tester, 'Ôn theo chủ đề');
+      await tapText(tester, 'Ôn tập');
       await tapText(tester, 'Kỹ thuật lái xe');
       await answerCurrent(tester, correctly: false);
       await tester.pageBack();
       await settle(tester);
-      await tester.pageBack();
-      await settle(tester);
-      await tapText(tester, 'Câu sai');
+      await tapText(tester, 'Tổng quan');
+      await tapText(tester, 'Câu đang sai');
       expect(find.text('Câu 1/1'), findsWidgets);
       await answerCurrent(tester, correctly: true);
       await tester.pageBack();
       await settle(tester);
-      await tapText(tester, 'Câu sai');
+      await tapText(tester, 'Câu đang sai');
       expect(find.text('Chưa có câu sai nào'), findsOneWidget);
     });
 
@@ -329,7 +329,7 @@ void main() {
       await pickClass(tester, 'A1');
       await takeExam(tester, allWrong: true);
       await tapLabel(tester, 'Về trang chủ');
-      await tapText(tester, 'Câu sai');
+      await tapText(tester, 'Câu đang sai');
       await tapLabel(tester, 'Xoá danh sách');
       await tapText(tester, 'Xoá');
       expect(find.text('Chưa có câu sai nào'), findsOneWidget);
@@ -342,6 +342,7 @@ void main() {
     ) async {
       await launchApp(tester, db, contentRepo: bank);
       await pickClass(tester, 'B');
+      await tapText(tester, 'Ôn tập');
       await tapText(tester, 'Biển báo');
       await tapText(tester, 'Vạch kẻ đường');
       expect(find.byType(QuestionRow), findsWidgets);
@@ -362,6 +363,7 @@ void main() {
     ) async {
       await launchApp(tester, db, contentRepo: bank);
       await pickClass(tester, 'A1');
+      await tapText(tester, 'Ôn tập');
       await tapText(tester, 'Biển báo');
       final a1 = bank.pool('A1').map((q) => q.number).toSet();
       final g = articles.signGroups.first;
@@ -426,6 +428,7 @@ void main() {
   ) async {
     await launchApp(tester, db);
     await pickClass(tester, 'A1');
+    await tapText(tester, 'Ôn tập');
     await tapText(tester, 'Mẹo ghi nhớ');
     expect(find.text('Tốc độ tối đa'), findsOneWidget);
     await tapText(tester, 'Khoảng cách an toàn');
@@ -450,6 +453,7 @@ void main() {
   ) async {
     await launchApp(tester, db);
     await pickClass(tester, 'A1');
+    await tapText(tester, 'Ôn tập');
     await tapText(tester, 'Hỏi đáp');
     expect(find.text('Hỏi đáp về kỳ thi'), findsOneWidget);
     await tapText(
@@ -467,17 +471,59 @@ void main() {
     expect(find.text('BE*'), findsOneWidget); // unverified rules are flagged
   });
 
+  testWidgets('S02-H1: readiness sheet explains the score and conditions', (
+    tester,
+  ) async {
+    await launchApp(tester, db);
+    await pickClass(tester, 'A1');
+    expect(find.text('Mức sẵn sàng'), findsOneWidget);
+    await tapLabel(tester, 'Xem chi tiết mức sẵn sàng');
+    expect(find.text('Mức sẵn sàng 0%'), findsOneWidget);
+    expect(find.text('Điều kiện đi thi (0/3)'), findsOneWidget);
+    await tapText(tester, 'Đã hiểu');
+    expect(find.text('Điều kiện đi thi (0/3)'), findsNothing);
+  });
+
+  testWidgets('S02-H2: a wrong answer shows up in Cần cải thiện', (
+    tester,
+  ) async {
+    await launchApp(tester, db);
+    await pickClass(tester, 'A1');
+    await tapText(tester, 'Ôn tập');
+    await tapText(tester, 'Kỹ thuật lái xe');
+    await answerCurrent(tester, correctly: false);
+    await tester.pageBack();
+    await settle(tester);
+    await tapText(tester, 'Tổng quan');
+    expect(find.text('CHƯƠNG NHIỀU CÂU SAI'), findsOneWidget);
+  });
+
+  testWidgets('S15-H2: question text size is saved and applied', (
+    tester,
+  ) async {
+    await launchApp(tester, db);
+    await pickClass(tester, 'A1');
+    await tapText(tester, 'Cài đặt');
+    expect(find.text('100%'), findsOneWidget);
+    await tapText(tester, 'Cỡ chữ câu hỏi');
+    await tapText(tester, '130%');
+    expect(find.text('130%'), findsOneWidget);
+    await launchApp(tester, db); // restart: the choice is kept
+    await tapText(tester, 'Cài đặt');
+    expect(find.text('130%'), findsOneWidget);
+  });
+
   testWidgets('S15-H1: reset progress empties home stats', (tester) async {
     await launchApp(tester, db);
     await pickClass(tester, 'A1');
     await takeExam(tester, criticalWrong: true);
     await tapLabel(tester, 'Về trang chủ');
-    expect(find.text('24/32 câu đã trả lời đúng'), findsOneWidget);
-    await tapLabel(tester, 'Cài đặt');
+    await tapText(tester, 'Ôn tập');
+    expect(find.text('25 / 32 câu đã làm'), findsOneWidget);
+    await tapText(tester, 'Cài đặt');
     await tapText(tester, 'Xoá tiến độ Hạng A1');
     await tapText(tester, 'Xoá tiến độ');
-    await tester.pageBack();
-    await settle(tester);
-    expect(find.text('0/32 câu đã trả lời đúng'), findsOneWidget);
+    await tapText(tester, 'Ôn tập');
+    expect(find.text('0 / 32 câu đã làm'), findsOneWidget);
   });
 }

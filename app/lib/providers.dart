@@ -6,6 +6,7 @@ import 'data/memory_repositories.dart';
 import 'data/repositories.dart';
 import 'data/sql_repositories.dart';
 import 'domain/models.dart';
+import 'domain/readiness.dart';
 
 /// Overridden in main() once the seed is loaded.
 final contentRepoProvider = Provider<ContentRepo>(
@@ -166,3 +167,51 @@ final homeStatsProvider = FutureProvider<HomeStats>((ref) async {
     examsTaken: history.length,
   );
 });
+
+final readinessProvider = FutureProvider<Readiness>((ref) async {
+  final cls = ref.watch(currentClassProvider);
+  final pool = ref.watch(contentRepoProvider).pool(cls.code);
+  final progress = await ref.watch(progressProvider.future);
+  final history = await ref.watch(historyProvider.future);
+  final recent = history.take(recentExamsNeeded).toList();
+  return Readiness(
+    pool: Tally.of(pool, progress),
+    critical: Tally.of(pool.where((q) => q.isCritical), progress),
+    recentPasses: recent.where((a) => a.passed == true).length,
+    recentExams: recent.length,
+  );
+});
+
+final improvementsProvider = FutureProvider<List<Improvement>>((ref) async {
+  final cls = ref.watch(currentClassProvider);
+  final content = ref.watch(contentRepoProvider);
+  final progress = await ref.watch(progressProvider.future);
+  return improvements(
+    pool: content.pool(cls.code),
+    topics: content.topics(),
+    progress: progress,
+  );
+});
+
+/// Question text size (Cài đặt → Cỡ chữ câu hỏi). Starts at 100% and loads the
+/// saved value; screens rebuild when it arrives.
+class QuestionScale extends Notifier<double> {
+  static const steps = [0.9, 1.0, 1.15, 1.3];
+
+  @override
+  double build() {
+    ref.read(settingsRepoProvider).questionScale().then((v) {
+      if (ref.mounted) state = v;
+    });
+    return 1;
+  }
+
+  Future<void> set(double v) async {
+    state = v;
+    await ref.read(settingsRepoProvider).setQuestionScale(v);
+  }
+}
+
+final questionScaleProvider = NotifierProvider<QuestionScale, double>(
+  QuestionScale.new,
+);

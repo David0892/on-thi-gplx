@@ -120,7 +120,14 @@ class SeedContentRepo implements ContentRepo {
   @override
   List<Quota> quota(String classCode) => _quotas[classCode] ?? const [];
   @override
-  int examSetCount(String classCode) => 5;
+  /// Enough numbered sets that, together, they are about as long as the
+  /// class pool (B: 600 / 30 = 20 sets; A1: 250 / 25 = 10). Sets are drawn
+  /// independently, so they overlap; this is a size, not full coverage.
+  /// At least 5, so a small bank still has a few sets.
+  int examSetCount(String classCode) {
+    final perExam = cls(classCode).examQuestionCount;
+    return (pool(classCode).length / perExam).ceil().clamp(5, 30);
+  }
 }
 
 class MemorySettingsRepo implements SettingsRepo {
@@ -129,6 +136,12 @@ class MemorySettingsRepo implements SettingsRepo {
   Future<String?> selectedClass() async => _class;
   @override
   Future<void> setClass(String code) async => _class = code;
+
+  double _scale = 1;
+  @override
+  Future<double> questionScale() async => _scale;
+  @override
+  Future<void> setQuestionScale(double scale) async => _scale = scale;
 }
 
 class MemoryStudyRepo implements StudyRepo {
@@ -159,6 +172,16 @@ class MemoryStudyRepo implements StudyRepo {
       case StudySource.saved:
         final saved = await bookmarks.all();
         return pool.where((q) => saved.contains(q.key)).toList();
+      case StudySource.all:
+        return pool;
+      case StudySource.often:
+        final p = await progress(classCode);
+        return pool.where((q) => (p[q.key]?.timesWrong ?? 0) >= 2).toList();
+      case StudySource.criticalWrong:
+        final p = await progress(classCode);
+        return pool
+            .where((q) => q.isCritical && (p[q.key]?.inWrongList ?? false))
+            .toList();
     }
   }
 

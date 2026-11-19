@@ -47,6 +47,27 @@ class SqlSettingsRepo implements SettingsRepo {
           updatedAt: _now(),
         ),
       );
+
+  static const _scaleKey = 'question_scale';
+
+  @override
+  Future<double> questionScale() async {
+    final row = await (_db.select(
+      _db.settings,
+    )..where((t) => t.key.equals(_scaleKey))).getSingleOrNull();
+    return double.tryParse(row?.value ?? '') ?? 1;
+  }
+
+  @override
+  Future<void> setQuestionScale(double scale) => _db
+      .into(_db.settings)
+      .insertOnConflictUpdate(
+        db.SettingsCompanion.insert(
+          key: _scaleKey,
+          value: scale.toString(),
+          updatedAt: _now(),
+        ),
+      );
 }
 
 class SqlBookmarkRepo implements BookmarkRepo {
@@ -105,6 +126,16 @@ class SqlStudyRepo implements StudyRepo {
       case StudySource.saved:
         final saved = await bookmarks.all();
         return pool.where((q) => saved.contains(q.key)).toList();
+      case StudySource.all:
+        return pool;
+      case StudySource.often:
+        final p = await progress(classCode);
+        return pool.where((q) => (p[q.key]?.timesWrong ?? 0) >= 2).toList();
+      case StudySource.criticalWrong:
+        final p = await progress(classCode);
+        return pool
+            .where((q) => q.isCritical && (p[q.key]?.inWrongList ?? false))
+            .toList();
     }
   }
 

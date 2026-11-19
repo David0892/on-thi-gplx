@@ -127,3 +127,23 @@ Details are in [content/README.md](../content/README.md).
   - the images are byte-identical across rebuilds.
 - **For human review:** Câu 440, 493, 515, 523, 569 and 593 give a reason the picture does not make fully explicit. A driving instructor should look at them before release.
 - **Parity:** 88.9, with 14/14 must-haves.
+
+## 2026-11-19: layout matched to the original (from the user's screen recording)
+
+The user recorded the original app (64 s, their own phone) and asked for the clone to look closer.
+What was rebuilt, as structure and behaviour (our code, copy, icons and colours; no assets, ads or illustrations taken):
+
+| area | before | now |
+| --- | --- | --- |
+| navigation | one home hub, everything pushed | four tabs at the bottom: Tổng quan, Ôn tập, Luyện thi, Cài đặt (`StatefulShellRoute`), filled app bar with the class chip |
+| S02 Tổng quan | progress ring, big start button, 8 tiles | "Mức sẵn sàng" card (score, 4 stat tiles, sheet with 3 conditions to book the exam), "Cần cải thiện" (up to 3 suggestions), "Truy cập nhanh" 2×3 grid |
+| S07 Ôn tập | topic list | progress card (answered, right / wrong / not yet, "Ôn tất cả câu hỏi"), study material tiles, a card per chapter with a right / wrong / not-yet bar |
+| S03 Luyện thi | rules, list of 5 sets, history | summary (sets done, passed, failed), rules folded, sets as a 3-column grid; sets sized to the pool (B: 20, A1: 10) |
+| S15 Cài đặt | list | same, plus question text size (90 to 130 %, saved) |
+| study sources | topic, critical, wrong, saved | plus all questions, often wrong (wrong at least twice), critical currently wrong |
+
+Readiness is our own rule (`lib/domain/readiness.dart`): right twice = mastered (counts fully), right once = half,
+target 90 %, and three conditions: score, all critical questions mastered, last 3 mock exams passed.
+Not taken: the original's 8-hour spacing rule, its wording, its gradient tile colours, and its ads.
+Not done: "Câu hỏi khó" (needs answers from many users; we have none), share and rate (need store links).
+

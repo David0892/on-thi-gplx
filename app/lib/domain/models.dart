@@ -188,7 +188,21 @@ class QuestionProgress {
 }
 
 /// Where a study session draws its questions from (S08 serves S09–S11 too).
-enum StudySource { topic, critical, wrong, saved }
+enum StudySource {
+  topic,
+  critical,
+  wrong,
+  saved,
+
+  /// The whole class pool, in bank order.
+  all,
+
+  /// Answered wrong at least twice, whatever the last answer was.
+  often,
+
+  /// Critical questions currently in the wrong list.
+  criticalWrong,
+}
 
 class ExamSetSummary {
   const ExamSetSummary({required this.number, this.bestScore, this.passed});

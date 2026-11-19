@@ -49,45 +49,50 @@ class _ExamReviewPageState extends ConsumerState<ExamReviewPage> {
           final items = value.answers
               .where((x) => !_onlyWrong || x.isCorrect == false)
               .toList();
-          return PageBody(
-            children: [
-              SegmentedButton<bool>(
-                segments: [
-                  ButtonSegment(
-                    value: false,
-                    label: Text('Tất cả (${value.questionCount})'),
-                  ),
-                  ButtonSegment(
-                    value: true,
-                    label: Text(
-                      'Câu sai (${value.answers.where((x) => x.isCorrect == false).length})',
+          return QuestionTextScale(
+            child: PageBody(
+              children: [
+                SegmentedButton<bool>(
+                  segments: [
+                    ButtonSegment(
+                      value: false,
+                      label: Text('Tất cả (${value.questionCount})'),
                     ),
+                    ButtonSegment(
+                      value: true,
+                      label: Text(
+                        'Câu sai (${value.answers.where((x) => x.isCorrect == false).length})',
+                      ),
+                    ),
+                  ],
+                  selected: {_onlyWrong},
+                  onSelectionChanged: (s) =>
+                      setState(() => _onlyWrong = s.first),
+                ),
+                const SizedBox(height: AppSpace.s16),
+                if (items.isEmpty)
+                  const EmptyState(
+                    icon: Icons.task_alt,
+                    title: 'Không sai câu nào',
+                    body: 'Bạn đã trả lời đúng toàn bộ bài thi này.',
                   ),
+                for (final x in items) ...[
+                  _ReviewItem(
+                    answer: x,
+                    total: value.questionCount,
+                    question: content.question(x.questionKey),
+                    saved: saved.contains(x.questionKey),
+                    onToggleSave: () async {
+                      await ref
+                          .read(bookmarkRepoProvider)
+                          .toggle(x.questionKey);
+                      ref.read(revisionProvider.notifier).bump();
+                    },
+                  ),
+                  const SizedBox(height: AppSpace.s24),
                 ],
-                selected: {_onlyWrong},
-                onSelectionChanged: (s) => setState(() => _onlyWrong = s.first),
-              ),
-              const SizedBox(height: AppSpace.s16),
-              if (items.isEmpty)
-                const EmptyState(
-                  icon: Icons.task_alt,
-                  title: 'Không sai câu nào',
-                  body: 'Bạn đã trả lời đúng toàn bộ bài thi này.',
-                ),
-              for (final x in items) ...[
-                _ReviewItem(
-                  answer: x,
-                  total: value.questionCount,
-                  question: content.question(x.questionKey),
-                  saved: saved.contains(x.questionKey),
-                  onToggleSave: () async {
-                    await ref.read(bookmarkRepoProvider).toggle(x.questionKey);
-                    ref.read(revisionProvider.notifier).bump();
-                  },
-                ),
-                const SizedBox(height: AppSpace.s24),
               ],
-            ],
+            ),
           );
         }(),
         AsyncError() => const ErrorView(message: 'Không tìm thấy bài thi.'),

@@ -25,7 +25,7 @@ void main() {
   testWidgets('A11Y-1 exam, answered', (tester) async {
     await launchApp(tester, db);
     await pickClass(tester, 'A1');
-    await tapText(tester, 'Thi thử ngay');
+    await tapText(tester, 'Làm đề thi');
     await answerCurrent(tester, correctly: true);
     await checkA11y(tester);
     await tester.binding.handlePopRoute(); // leave so the timer stops
@@ -45,7 +45,7 @@ void main() {
   testWidgets('A11Y-1 study with explanation', (tester) async {
     await launchApp(tester, db);
     await pickClass(tester, 'A1');
-    await tapText(tester, 'Ôn theo chủ đề');
+    await tapText(tester, 'Ôn tập');
     await checkA11y(tester);
     await tapText(tester, 'Kỹ thuật lái xe');
     await answerCurrent(tester, correctly: false);
@@ -55,6 +55,7 @@ void main() {
   testWidgets('A11Y-1 tips and FAQ', (tester) async {
     await launchApp(tester, db);
     await pickClass(tester, 'A1');
+    await tapText(tester, 'Ôn tập');
     await tapText(tester, 'Mẹo ghi nhớ');
     await checkA11y(tester);
     await tapText(tester, 'Tốc độ tối đa');
@@ -63,6 +64,7 @@ void main() {
     await settle(tester);
     await tester.pageBack();
     await settle(tester);
+    await tapText(tester, 'Ôn tập');
     await tapText(tester, 'Hỏi đáp');
     await tapText(
       tester,
@@ -74,12 +76,14 @@ void main() {
   testWidgets('S13/S14 at 320px, text 200%: no overflow', (tester) async {
     await launchApp(tester, db, size: const Size(320, 640), textScale: 2);
     await pickClass(tester, 'A1');
+    await tapText(tester, 'Ôn tập');
     await tapText(tester, 'Mẹo ghi nhớ');
     await tapText(tester, 'Tốc độ tối đa');
     await tester.pageBack();
     await settle(tester);
     await tester.pageBack();
     await settle(tester);
+    await tapText(tester, 'Ôn tập');
     await tapText(tester, 'Hỏi đáp');
     await tapText(
       tester,
@@ -93,6 +97,8 @@ void main() {
   ) async {
     await launchApp(tester, db, contentRepo: bank);
     await pickClass(tester, 'B');
+    // From Ôn tập: on home, "Biển báo" is also a chapter name in Cần cải thiện.
+    await tapText(tester, 'Ôn tập');
     await tapText(tester, 'Biển báo');
     await checkA11y(tester);
     await tapText(tester, 'Đường sắt');
@@ -103,8 +109,8 @@ void main() {
       await tester.pageBack();
       await settle(tester);
     }
-    await scrollToTop(tester); // home kept its scroll position
-    await tapLabel(tester, 'Tìm câu hỏi');
+    await scrollToTop(tester); // the tab kept its scroll position
+    await tapText(tester, 'Tìm câu hỏi');
     await checkA11y(tester);
     await tester.enterText(find.byType(TextField), 'duong cao toc');
     await settle(tester);
@@ -120,6 +126,8 @@ void main() {
       textScale: 2,
     );
     await pickClass(tester, 'B');
+    // From Ôn tập: on home, "Biển báo" is also a chapter name in Cần cải thiện.
+    await tapText(tester, 'Ôn tập');
     await tapText(tester, 'Biển báo');
     await tapText(tester, 'Vạch kẻ đường');
     await tapText(tester, 'Câu 476');
@@ -128,8 +136,8 @@ void main() {
       await tester.pageBack();
       await settle(tester);
     }
-    await scrollToTop(tester); // home kept its scroll position
-    await tapLabel(tester, 'Tìm câu hỏi');
+    await scrollToTop(tester); // the tab kept its scroll position
+    await tapText(tester, 'Tìm câu hỏi');
     await tester.enterText(find.byType(TextField), 'biển');
     await settle(tester);
     expect(find.textContaining('hiện 50 câu đầu'), findsOneWidget);

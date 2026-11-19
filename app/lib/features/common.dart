@@ -28,6 +28,26 @@ class PageBody extends StatelessWidget {
   );
 }
 
+/// Applies the learner's question text size (Cài đặt) on top of the system
+/// text size, to a question and its answers and explanation.
+class QuestionTextScale extends ConsumerWidget {
+  const QuestionTextScale({super.key, required this.child});
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final scale = ref.watch(questionScaleProvider);
+    if (scale == 1) return child;
+    final mq = MediaQuery.of(context);
+    return MediaQuery(
+      data: mq.copyWith(
+        textScaler: TextScaler.linear(mq.textScaler.scale(1) * scale),
+      ),
+      child: child,
+    );
+  }
+}
+
 /// Shown while the bank is the hand-written sample, so nobody mistakes it for the official set.
 class SampleNotice extends ConsumerWidget {
   const SampleNotice({super.key});

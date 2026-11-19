@@ -130,46 +130,48 @@ class QuestionPage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(title: Text('Câu ${q.number}')),
-      body: PageBody(
-        children: [
-          if (!found.inClass)
-            Padding(
-              padding: const EdgeInsets.only(bottom: AppSpace.s12),
-              child: Text(
-                'Câu này không có trong bộ câu của ${cls.name}.',
-                style: AppType.sm.copyWith(color: c.textMuted),
+      body: QuestionTextScale(
+        child: PageBody(
+          children: [
+            if (!found.inClass)
+              Padding(
+                padding: const EdgeInsets.only(bottom: AppSpace.s12),
+                child: Text(
+                  'Câu này không có trong bộ câu của ${cls.name}.',
+                  style: AppType.sm.copyWith(color: c.textMuted),
+                ),
+              ),
+            QuestionCard(
+              index: q.number,
+              total: 600,
+              text: q.text,
+              critical: q.isCritical,
+              image: QuestionImage.of(q),
+              trailing: BookmarkToggle(
+                on: saved.contains(q.key),
+                onChanged: (_) async {
+                  await ref.read(bookmarkRepoProvider).toggle(q.key);
+                  ref.read(revisionProvider.notifier).bump();
+                },
               ),
             ),
-          QuestionCard(
-            index: q.number,
-            total: 600,
-            text: q.text,
-            critical: q.isCritical,
-            image: QuestionImage.of(q),
-            trailing: BookmarkToggle(
-              on: saved.contains(q.key),
-              onChanged: (_) async {
-                await ref.read(bookmarkRepoProvider).toggle(q.key);
-                ref.read(revisionProvider.notifier).bump();
-              },
-            ),
-          ),
-          const SizedBox(height: AppSpace.s12),
-          for (final (j, opt) in q.options.indexed) ...[
-            AnswerOption(
-              position: j + 1,
-              text: opt,
-              state: j + 1 == q.correctPosition
-                  ? AnswerState.correct
-                  : AnswerState.idle,
-            ),
-            const SizedBox(height: AppSpace.s8),
+            const SizedBox(height: AppSpace.s12),
+            for (final (j, opt) in q.options.indexed) ...[
+              AnswerOption(
+                position: j + 1,
+                text: opt,
+                state: j + 1 == q.correctPosition
+                    ? AnswerState.correct
+                    : AnswerState.idle,
+              ),
+              const SizedBox(height: AppSpace.s8),
+            ],
+            if (q.explanation != null) ...[
+              const SizedBox(height: AppSpace.s8),
+              ExplanationPanel(body: q.explanation!, initiallyExpanded: true),
+            ],
           ],
-          if (q.explanation != null) ...[
-            const SizedBox(height: AppSpace.s8),
-            ExplanationPanel(body: q.explanation!, initiallyExpanded: true),
-          ],
-        ],
+        ),
       ),
     );
   }

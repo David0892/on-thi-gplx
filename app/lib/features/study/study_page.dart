@@ -35,6 +35,9 @@ class _StudyPageState extends ConsumerState<StudyPage> {
     StudySource.critical => 'Câu điểm liệt',
     StudySource.wrong => 'Câu đã làm sai',
     StudySource.saved => 'Câu đã lưu',
+    StudySource.all => 'Tất cả câu hỏi',
+    StudySource.often => 'Câu hay sai',
+    StudySource.criticalWrong => 'Câu điểm liệt đang sai',
   };
 
   @override
@@ -203,6 +206,16 @@ class _StudyPageState extends ConsumerState<StudyPage> {
         onPressed: () => startExam(context, ref),
       ),
     ),
+    StudySource.often => const EmptyState(
+      icon: Icons.task_alt,
+      title: 'Chưa có câu hay sai',
+      body: 'Câu nào bạn trả lời sai từ hai lần trở lên sẽ hiện ở đây.',
+    ),
+    StudySource.criticalWrong => const EmptyState(
+      icon: Icons.task_alt,
+      title: 'Không còn câu điểm liệt nào đang sai',
+      body: 'Giữ vững nhé: chỉ cần sai một câu điểm liệt là trượt.',
+    ),
     StudySource.saved => const EmptyState(
       icon: Icons.bookmark_border,
       title: 'Chưa lưu câu nào',
@@ -220,44 +233,46 @@ class _StudyPageState extends ConsumerState<StudyPage> {
     final q = qs[i];
     final chosen = _answers[q.key];
     // Keyed by question so each question opens scrolled to its top.
-    return PageBody(
-      key: ValueKey(q.key),
-      children: [
-        QuestionCard(
-          index: i + 1,
-          total: qs.length,
-          text: q.text,
-          critical: q.isCritical,
-          image: QuestionImage.of(q),
-          trailing: BookmarkToggle(
-            on: saved.contains(q.key),
-            onChanged: (_) async {
-              await ref.read(bookmarkRepoProvider).toggle(q.key);
-              ref.read(revisionProvider.notifier).bump();
-            },
+    return QuestionTextScale(
+      child: PageBody(
+        key: ValueKey(q.key),
+        children: [
+          QuestionCard(
+            index: i + 1,
+            total: qs.length,
+            text: q.text,
+            critical: q.isCritical,
+            image: QuestionImage.of(q),
+            trailing: BookmarkToggle(
+              on: saved.contains(q.key),
+              onChanged: (_) async {
+                await ref.read(bookmarkRepoProvider).toggle(q.key);
+                ref.read(revisionProvider.notifier).bump();
+              },
+            ),
           ),
-        ),
-        const SizedBox(height: AppSpace.s12),
-        for (final (j, opt) in q.options.indexed) ...[
-          AnswerOption(
-            position: j + 1,
-            text: opt,
-            state: chosen == null
-                ? AnswerState.idle
-                : revealedState(
-                    position: j + 1,
-                    correct: q.correctPosition,
-                    chosen: chosen,
-                  ),
-            onTap: chosen == null ? () => _choose(q, j + 1) : null,
-          ),
-          const SizedBox(height: AppSpace.s8),
+          const SizedBox(height: AppSpace.s12),
+          for (final (j, opt) in q.options.indexed) ...[
+            AnswerOption(
+              position: j + 1,
+              text: opt,
+              state: chosen == null
+                  ? AnswerState.idle
+                  : revealedState(
+                      position: j + 1,
+                      correct: q.correctPosition,
+                      chosen: chosen,
+                    ),
+              onTap: chosen == null ? () => _choose(q, j + 1) : null,
+            ),
+            const SizedBox(height: AppSpace.s8),
+          ],
+          if (chosen != null && q.explanation != null) ...[
+            const SizedBox(height: AppSpace.s8),
+            ExplanationPanel(body: q.explanation!),
+          ],
         ],
-        if (chosen != null && q.explanation != null) ...[
-          const SizedBox(height: AppSpace.s8),
-          ExplanationPanel(body: q.explanation!),
-        ],
-      ],
+      ),
     );
   }
 

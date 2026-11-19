@@ -7,7 +7,9 @@ import '../../design/app_theme.dart';
 import '../../design/tokens.g.dart';
 import '../../design/widgets.dart';
 import '../../providers.dart';
+import '../../domain/models.dart';
 import '../common.dart';
+import '../shell/app_shell.dart';
 
 class ExamListPage extends ConsumerWidget {
   const ExamListPage({super.key});
@@ -27,8 +29,13 @@ class ExamListPage extends ConsumerWidget {
       ),
     );
 
+    final setList = sets.value ?? const <ExamSetSummary>[];
+    final done = setList.where((s) => s.bestScore != null).length;
+    final passed = setList.where((s) => s.passed == true).length;
+    final failed = setList.where((s) => s.passed == false).length;
+
     return Scaffold(
-      appBar: AppBar(title: Text('Thi thử ${cls.name}')),
+      appBar: const TabAppBar(title: 'Luyện thi'),
       body: PageBody(
         children: [
           Container(
@@ -36,77 +43,122 @@ class ExamListPage extends ConsumerWidget {
             decoration: BoxDecoration(
               color: c.bg,
               borderRadius: BorderRadius.circular(AppRadius.lg),
+              border: Border.all(color: c.border),
             ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                for (final (icon, text) in [
-                  (
-                    Icons.quiz_outlined,
-                    '${cls.examQuestionCount} câu hỏi, chọn một đáp án đúng',
-                  ),
-                  (
-                    Icons.timer_outlined,
-                    '${cls.examMinutes} phút, đồng hồ vẫn chạy khi bạn thoát ra ngoài app',
-                  ),
-                  (
-                    Icons.verified_outlined,
-                    'Đạt khi đúng từ ${cls.passMark}/${cls.examQuestionCount} câu',
-                  ),
-                  (
-                    Icons.priority_high,
-                    'Có ${cls.criticalPerExam} câu điểm liệt: trả lời sai là trượt',
-                  ),
-                ])
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: AppSpace.s4),
-                    child: Row(
-                      children: [
-                        Icon(icon, size: 20, color: c.accent),
-                        const SizedBox(width: AppSpace.s12),
-                        Expanded(
-                          child: Text(
-                            text,
-                            style: AppType.sm.copyWith(color: c.text),
-                          ),
+                Row(
+                  children: [
+                    Icon(Icons.flag_outlined, color: c.accent),
+                    const SizedBox(width: AppSpace.s8),
+                    Expanded(
+                      child: Text(
+                        '$done / ${setList.length} đề đã làm',
+                        style: AppType.base.copyWith(
+                          color: c.text,
+                          fontWeight: FontWeight.w600,
                         ),
+                      ),
+                    ),
+                    Icon(Icons.check_circle, size: 18, color: c.success),
+                    Text(
+                      ' $passed  ',
+                      style: AppType.sm.copyWith(color: c.text),
+                    ),
+                    Icon(Icons.cancel, size: 18, color: c.danger),
+                    Text(' $failed', style: AppType.sm.copyWith(color: c.text)),
+                  ],
+                ),
+                const SizedBox(height: AppSpace.s8),
+                ProgressBar(value: setList.isEmpty ? 0 : done / setList.length),
+                const SizedBox(height: AppSpace.s12),
+                Theme(
+                  data: Theme.of(context)
+                      .copyWith(dividerColor: Colors.transparent),
+                  // Its own Material, so the tile's ink is not hidden by the card colour.
+                  child: Material(
+                    type: MaterialType.transparency,
+                    child: ExpansionTile(
+                      tilePadding: EdgeInsets.zero,
+                      childrenPadding: EdgeInsets.zero,
+                      title: Text(
+                        '${cls.name}: ${cls.examQuestionCount} câu · ${cls.examMinutes} phút · đạt từ ${cls.passMark} câu',
+                        style: AppType.sm.copyWith(color: c.text),
+                      ),
+                      children: [
+                        for (final (icon, text) in [
+                          (
+                            Icons.timer_outlined,
+                            'Đồng hồ vẫn chạy khi bạn thoát ra ngoài app',
+                          ),
+                          (
+                            Icons.priority_high,
+                            'Có ${cls.criticalPerExam} câu điểm liệt: trả lời sai là trượt',
+                          ),
+                        ])
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                              vertical: AppSpace.s4,
+                            ),
+                            child: Row(
+                              children: [
+                                Icon(icon, size: 20, color: c.accent),
+                                const SizedBox(width: AppSpace.s12),
+                                Expanded(
+                                  child: Text(
+                                    text,
+                                    style: AppType.sm.copyWith(color: c.text),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        if (!cls.rulesVerified)
+                          Padding(
+                            padding: const EdgeInsets.only(top: AppSpace.s4),
+                            child: Text(
+                              'Quy định của hạng này đang được đối chiếu với văn bản chính thức.',
+                              style: AppType.xs.copyWith(color: c.warning),
+                            ),
+                          ),
                       ],
                     ),
                   ),
-                if (!cls.rulesVerified) ...[
-                  const SizedBox(height: AppSpace.s8),
-                  Text(
-                    'Quy định của hạng này đang được đối chiếu với văn bản chính thức.',
-                    style: AppType.xs.copyWith(color: c.warning),
-                  ),
-                ],
+                ),
+                const SizedBox(height: AppSpace.s8),
+                AppButton(
+                  label: 'Làm đề ngẫu nhiên',
+                  icon: Icons.shuffle,
+                  expand: true,
+                  onPressed: () => startExam(context, ref),
+                ),
               ],
             ),
           ),
-          const SizedBox(height: AppSpace.s16),
-          AppButton(
-            label: 'Làm đề ngẫu nhiên',
-            icon: Icons.shuffle,
-            size: AppButtonSize.lg,
-            expand: true,
-            onPressed: () => startExam(context, ref),
-          ),
           section('Bộ đề cố định'),
           switch (sets) {
-            AsyncData(:final value) => _Card(
-              children: [
-                for (final s in value)
-                  ListRow(
-                    title: 'Đề ${s.number}',
-                    subtitle: s.bestScore == null
-                        ? 'Chưa làm'
-                        : 'Điểm cao nhất ${s.bestScore}/${cls.examQuestionCount}',
-                    trailing: s.passed == null
-                        ? null
-                        : _Badge(passed: s.passed!),
-                    onTap: () => startExam(context, ref, setNumber: s.number),
-                  ),
-              ],
+            AsyncData(:final value) => LayoutBuilder(
+              builder: (context, box) {
+                final cols = box.maxWidth >= 480 ? 4 : 3;
+                final w = (box.maxWidth - AppSpace.s8 * (cols - 1)) / cols;
+                return Wrap(
+                  spacing: AppSpace.s8,
+                  runSpacing: AppSpace.s8,
+                  children: [
+                    for (final s in value)
+                      SizedBox(
+                        width: w,
+                        child: _SetCard(
+                          set: s,
+                          total: cls.examQuestionCount,
+                          onTap: () =>
+                              startExam(context, ref, setNumber: s.number),
+                        ),
+                      ),
+                  ],
+                );
+              },
             ),
             AsyncError() => const ErrorView(
               message: 'Không tải được danh sách đề.',
@@ -126,7 +178,7 @@ class ExamListPage extends ConsumerWidget {
                   ListRow(
                     title: a.examSetNumber == null
                         ? 'Đề ngẫu nhiên'
-                        : 'Đề ${a.examSetNumber}',
+                        : 'Đề số ${a.examSetNumber}',
                     subtitle:
                         '${a.score}/${a.questionCount} câu · ${_time(a.startedAt)}',
                     trailing: _Badge(passed: a.passed!),
@@ -180,6 +232,88 @@ class _Badge extends StatelessWidget {
         style: AppType.xs.copyWith(
           fontWeight: FontWeight.w600,
           color: passed ? c.success : c.danger,
+        ),
+      ),
+    );
+  }
+}
+
+class _SetCard extends StatelessWidget {
+  const _SetCard({required this.set, required this.total, required this.onTap});
+  final ExamSetSummary set;
+  final int total;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final c = context.colors;
+    final (status, color, soft) = switch (set.passed) {
+      null => ('Chưa làm', c.textMuted, c.surface),
+      true => ('Đạt', c.success, c.successSoft),
+      false => ('Chưa đạt', c.danger, c.dangerSoft),
+    };
+    return Semantics(
+      button: true,
+      label:
+          'Đề số ${set.number}, $status'
+          '${set.bestScore == null ? '' : ', ${set.bestScore}/$total câu'}',
+      excludeSemantics: true,
+      child: Material(
+        color: c.bg,
+        borderRadius: BorderRadius.circular(AppRadius.lg),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(AppRadius.lg),
+          onTap: onTap,
+          child: Container(
+            padding: const EdgeInsets.symmetric(
+              vertical: AppSpace.s12,
+              horizontal: AppSpace.s4,
+            ),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(AppRadius.lg),
+              border: Border.all(color: c.border),
+            ),
+            child: Column(
+              children: [
+                Text(
+                  'Đề số ${set.number}',
+                  style: AppType.sm.copyWith(
+                    color: c.text,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                const SizedBox(height: AppSpace.s4),
+                Icon(
+                  set.passed == null
+                      ? Icons.schedule
+                      : set.passed!
+                      ? Icons.check_circle_outline
+                      : Icons.highlight_off,
+                  color: color,
+                ),
+                const SizedBox(height: AppSpace.s4),
+                Text(
+                  '${set.bestScore?.toString() ?? '--'}/$total',
+                  style: AppType.base.copyWith(
+                    color: c.text,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                const SizedBox(height: AppSpace.s4),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: AppSpace.s8,
+                    vertical: 2,
+                  ),
+                  decoration: BoxDecoration(
+                    color: soft,
+                    borderRadius: BorderRadius.circular(AppRadius.pill),
+                  ),
+                  child: Text(status, style: AppType.xs.copyWith(color: color)),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );

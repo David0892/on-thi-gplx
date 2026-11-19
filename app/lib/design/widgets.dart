@@ -378,6 +378,56 @@ class ProgressBar extends StatelessWidget {
   }
 }
 
+/// Right / wrong / not yet answered as one bar, for a topic or the whole pool.
+class SegmentedProgress extends StatelessWidget {
+  const SegmentedProgress({
+    super.key,
+    required this.right,
+    required this.wrong,
+    required this.total,
+  });
+  final int right;
+  final int wrong;
+  final int total;
+
+  @override
+  Widget build(BuildContext context) {
+    final c = context.colors;
+    final rest = (total - right - wrong).clamp(0, total);
+    return Semantics(
+      label: '$right đúng, $wrong sai, $rest chưa làm',
+      excludeSemantics: true,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(AppRadius.pill),
+        child: SizedBox(
+          height: 6,
+          child: total == 0
+              ? ColoredBox(color: c.border)
+              : Row(
+                  children: [
+                    if (right > 0)
+                      Expanded(
+                        flex: right,
+                        child: ColoredBox(color: c.success),
+                      ),
+                    if (wrong > 0)
+                      Expanded(
+                        flex: wrong,
+                        child: ColoredBox(color: c.danger),
+                      ),
+                    if (rest > 0)
+                      Expanded(
+                        flex: rest,
+                        child: ColoredBox(color: c.border),
+                      ),
+                  ],
+                ),
+        ),
+      ),
+    );
+  }
+}
+
 // ---------------------------------------------------------------- Question
 
 class CriticalBadge extends StatelessWidget {

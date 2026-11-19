@@ -21,6 +21,10 @@ abstract interface class ContentRepo {
 abstract interface class SettingsRepo {
   Future<String?> selectedClass();
   Future<void> setClass(String code);
+
+  /// Size of question, answer and explanation text, 1.0 = 100%.
+  Future<double> questionScale();
+  Future<void> setQuestionScale(double scale);
 }
 
 abstract interface class ExamRepo {
