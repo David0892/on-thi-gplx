@@ -78,3 +78,18 @@ The question bank and the công văn are administrative documents issued by Cụ
 - **Build checks:** every key is a real question, no number is written twice, none is empty, every critical question is covered, and `--require-all` fails unless all 600 are present. `content_test.dart` asserts the same.
 - **How they were written:** each one is checked against the underlined official answer. For the 300 sign and traffic-scenario questions, the explanation was written after viewing the question's picture (in 9-image contact sheets).
 - **Reviewer pass (recommended):** a few scenario explanations give a reason the picture does not make fully explicit, so a driving instructor should look at them. They are Câu 440, 493, 515, 523, 569 and 593.
+
+## Tips and FAQ (own writing)
+
+`content/articles/tips.json` (S13) and `content/articles/faq.json` (S14) are written fresh for this app.
+`build_content.py` checks them before writing `app/assets/content/articles.json`:
+
+- every `checks` entry with `q` requires the official correct option of that question to contain `answer`
+  (and its question text to contain `text`), so a number in a tip cannot drift from the bank;
+- `pool` / `critical_total` checks pin the FAQ's pool sizes to the Công văn 2262 appendices;
+- every `refs` number must exist, ids must be unique, and points and answers must not be empty.
+
+The FAQ's exam table (`"widget": "class_table"`) is not written by hand: the app draws it from the class rules.
+General statements without a check (sign shapes and colours, how to study) are standard knowledge and should get
+the same human review as the explanations.
+

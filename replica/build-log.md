@@ -23,8 +23,8 @@
 | S10 wrong answers | done (via S08) | — | — |
 | S11 saved | done (via S08) | — | — |
 | S12 signs | stub | the whole screen and the sign images (could-have) | — |
-| S13 tips | stub | the whole screen and original tip articles | — |
-| S14 FAQ | stub | the whole screen and original FAQ text | — |
+| S13 tips | done (2026-11-19) | — | every number in a tip is pinned to a question and checked by build_content.py, so a tip cannot drift from the official answer |
+| S14 FAQ | done (2026-11-19) | — | the count / minutes / pass table renders from the class rules instead of hand-written numbers |
 | S15 settings | done | hosted privacy policy page | — |
 
 **Notes on individual screens:**

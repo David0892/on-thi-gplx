@@ -1,7 +1,9 @@
 // End-to-end flows F01–F07 from replica/test-plan.md. Case IDs in test names.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:go_router/go_router.dart';
 import 'package:gplx_prep/data/db/user_db.dart';
+import 'package:gplx_prep/features/guide/faq_page.dart';
 import 'package:gplx_prep/design/widgets.dart';
 
 import 'harness.dart';
@@ -338,6 +340,52 @@ void main() {
     await pickClass(tester, 'A1');
     await tapText(tester, 'Biển báo');
     expect(find.text('Sắp có'), findsOneWidget);
+  });
+
+  testWidgets('S13-H1: tips list opens an article with its points', (
+    tester,
+  ) async {
+    await launchApp(tester, db);
+    await pickClass(tester, 'A1');
+    await tapText(tester, 'Mẹo ghi nhớ');
+    expect(find.text('Tốc độ tối đa'), findsOneWidget);
+    await tapText(tester, 'Khoảng cách an toàn');
+    expect(find.textContaining('tối thiểu 35 m'), findsOneWidget);
+    expect(find.text('Câu liên quan: 161'), findsOneWidget);
+    await tester.pageBack();
+    await settle(tester);
+    expect(find.text('Tốc độ tối đa'), findsOneWidget);
+  });
+
+  testWidgets('S13-E1: unknown tip id shows a not-found state', (tester) async {
+    await launchApp(tester, db);
+    await pickClass(tester, 'A1');
+    final ctx = tester.element(find.byType(Scaffold).first);
+    GoRouter.of(ctx).push('/tips/khong-co');
+    await settle(tester);
+    expect(find.text('Không tìm thấy mẹo này'), findsOneWidget);
+  });
+
+  testWidgets('S14-H1: FAQ answer expands, class table matches the rules', (
+    tester,
+  ) async {
+    await launchApp(tester, db);
+    await pickClass(tester, 'A1');
+    await tapText(tester, 'Hỏi đáp');
+    expect(find.text('Hỏi đáp về kỳ thi'), findsOneWidget);
+    await tapText(
+      tester,
+      'Thi lý thuyết có bao nhiêu câu, làm trong bao lâu, đúng bao nhiêu câu thì đỗ?',
+    );
+    expect(find.byType(ClassRulesTable), findsOneWidget);
+    for (final k in content.classes()) {
+      expect(
+        find.text('${k.passMark}/${k.examQuestionCount}'),
+        findsWidgets,
+        reason: k.code,
+      );
+    }
+    expect(find.text('BE*'), findsOneWidget); // unverified rules are flagged
   });
 
   testWidgets('S15-H1: reset progress empties home stats', (tester) async {

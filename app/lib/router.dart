@@ -9,6 +9,8 @@ import 'features/exam/exam_list_page.dart';
 import 'features/exam/exam_result_page.dart';
 import 'features/exam/exam_review_page.dart';
 import 'features/exam/exam_run_page.dart';
+import 'features/guide/faq_page.dart';
+import 'features/guide/tips_page.dart';
 import 'features/home/home_page.dart';
 import 'features/onboarding/class_picker_page.dart';
 import 'features/settings/settings_page.dart';
@@ -69,16 +71,12 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/signs',
         builder: (_, _) => const StubPage(title: 'Biển báo', screenId: 'S12'),
       ),
+      GoRoute(path: '/tips', builder: (_, _) => const TipsPage()), // S13
       GoRoute(
-        path: '/tips',
-        builder: (_, _) =>
-            const StubPage(title: 'Mẹo ghi nhớ', screenId: 'S13'),
+        path: '/tips/:id',
+        builder: (_, s) => TipDetailPage(tipId: s.pathParameters['id']!),
       ),
-      GoRoute(
-        path: '/faq',
-        builder: (_, _) =>
-            const StubPage(title: 'Hỏi đáp về kỳ thi', screenId: 'S14'),
-      ),
+      GoRoute(path: '/faq', builder: (_, _) => const FaqPage()), // S14
       GoRoute(
         path: '/settings',
         builder: (_, _) => const SettingsPage(),

@@ -2,9 +2,14 @@
 // Selectors are visible text and semantics labels, like a user would see.
 import 'package:drift/drift.dart' show driftRuntimeOptions;
 import 'package:drift/native.dart';
+
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:gplx_prep/data/articles.dart';
 import 'package:gplx_prep/data/db/user_db.dart';
 import 'package:gplx_prep/data/memory_repositories.dart';
 import 'package:gplx_prep/data/sql_repositories.dart';
@@ -16,6 +21,12 @@ import 'package:gplx_prep/providers.dart';
 import '../repo_contract.dart' show loadSeed;
 
 final SeedContentRepo content = loadSeed();
+
+/// The real tips and FAQ, as shipped.
+final Articles articles = Articles.fromJson(
+  jsonDecode(File('assets/content/articles.json').readAsStringSync())
+      as Map<String, dynamic>,
+);
 
 UserDb memoryDb() {
   driftRuntimeOptions.dontWarnAboutMultipleDatabases = true;
@@ -49,6 +60,7 @@ Future<void> launchApp(
           contentRepoProvider.overrideWithValue(content),
           userDbProvider.overrideWithValue(db),
           initialClassProvider.overrideWithValue(initialClass),
+          articlesProvider.overrideWithValue(articles),
         ],
         child: const App(),
       ),

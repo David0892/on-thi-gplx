@@ -1,5 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'data/articles.dart';
 import 'data/db/user_db.dart' show UserDb;
 import 'data/memory_repositories.dart';
 import 'data/repositories.dart';
@@ -10,6 +11,9 @@ import 'domain/models.dart';
 final contentRepoProvider = Provider<ContentRepo>(
   (ref) => throw UnimplementedError(),
 );
+
+/// Tips and FAQ, loaded in main() with the bank. Empty until then.
+final articlesProvider = Provider<Articles>((ref) => Articles.empty);
 
 /// user.db, opened in main(). Null on web (dev preview), where the memory
 /// repositories stand in and nothing persists.

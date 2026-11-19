@@ -17,8 +17,8 @@ Numbered fixed exam sets with best score,exam,should,inferred,yes,"5 sets per cl
 Progress per topic and overall,study,should,inferred,yes,"S02 ring, S07 bars"
 Resume topic where left off,study,should,inferred,yes,topic_cursor in user.db
 Exam history,exam,should,inferred,yes,"S03, last 10"
-Memorization tips per topic,content,should,yes,no,own writing
-FAQ on the exam procedure,content,should,yes,no,own writing
+Memorization tips per topic,content,should,yes,yes,"10 articles, own writing; 48 numbers checked against the official answers at build time"
+FAQ on the exam procedure,content,should,yes,yes,"11 items, own writing; exam table drawn from rules.json"
 Change class later and keep progress per class,settings,should,inferred,yes,progress keyed by class
 Reset progress with confirm,settings,should,inferred,yes,S15
 Not-official disclaimer + privacy policy,settings,should,yes,partial,in-app text in S15; hosted privacy page still needed for the stores

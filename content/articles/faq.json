@@ -1,0 +1,78 @@
+{
+  "_about": "Hỏi đáp (S14). Tự biên soạn. Số câu, thời gian và điểm đạt của từng hạng không viết tay ở đây: mục có \"widget\": \"class_table\" lấy thẳng từ rules.json khi hiển thị. 'checks' kiểu pool được build_content.py đối chiếu với phụ lục Công văn 2262.",
+  "groups": [
+    {
+      "title": "Về kỳ thi lý thuyết",
+      "items": [
+        {
+          "id": "so-cau",
+          "q": "Thi lý thuyết có bao nhiêu câu, làm trong bao lâu, đúng bao nhiêu câu thì đỗ?",
+          "a": "Mỗi hạng có số câu, thời gian và số câu phải đúng riêng, xem bảng dưới đây. Ngoài ra phải trả lời đúng câu điểm liệt.",
+          "widget": "class_table"
+        },
+        {
+          "id": "cau-diem-liet",
+          "q": "Câu điểm liệt là gì?",
+          "a": "Là những câu về tình huống mất an toàn giao thông nghiêm trọng. Mỗi đề có đúng một câu điểm liệt. Trả lời sai câu này là trượt, dù tổng số câu đúng đủ điểm đạt."
+        },
+        {
+          "id": "so-cau-hoc",
+          "q": "Có phải hạng nào cũng học đủ 600 câu không?",
+          "a": "Không. Hạng A1 và A học 250 câu, trong đó có 20 câu điểm liệt. Hạng B1 học 300 câu, trong đó có 30 câu điểm liệt. Các hạng ô tô còn lại học đủ 600 câu, trong đó có 60 câu điểm liệt. Ứng dụng tự lọc đúng bộ câu theo hạng bạn chọn.",
+          "checks": [
+            {"pool": "appendix1", "count": 250},
+            {"pool": "appendix1_critical", "count": 20},
+            {"pool": "appendix2", "count": 300},
+            {"pool": "appendix2_critical", "count": 30},
+            {"critical_total": 60}
+          ]
+        },
+        {
+          "id": "de-that",
+          "q": "Đề thi thật có giống đề trong ứng dụng không?",
+          "a": "Câu hỏi và đáp án lấy nguyên từ bộ câu hỏi chính thức. Đề được ghép ngẫu nhiên theo cùng cấu trúc số câu của từng chương như đề thật, nên câu hỏi giống nhưng tổ hợp câu trong mỗi đề sẽ khác."
+        },
+        {
+          "id": "nguon",
+          "q": "Bộ câu hỏi lấy từ đâu, áp dụng từ khi nào?",
+          "a": "Bộ 600 câu hỏi dùng cho sát hạch lái xe cơ giới đường bộ do Cục Cảnh sát giao thông ban hành năm 2025, áp dụng từ ngày 01/6/2025. Cấu trúc đề theo Công văn 2262/CSGT-P5; số câu, thời gian và điểm đạt theo Thông tư 12/2025/TT-BCA."
+        },
+        {
+          "id": "thuc-hanh",
+          "q": "Đỗ lý thuyết là xong chưa?",
+          "a": "Chưa. Lý thuyết là phần đầu tiên; sau đó còn phần thi thực hành tùy theo hạng. Ứng dụng này chỉ giúp ôn phần lý thuyết."
+        }
+      ]
+    },
+    {
+      "title": "Về ứng dụng",
+      "items": [
+        {
+          "id": "giai-thich",
+          "q": "Lời giải thích dưới mỗi câu có phải của cơ quan nhà nước không?",
+          "a": "Không. Đáp án là đáp án chính thức, còn lời giải thích do nhóm làm ứng dụng tự biên soạn để giúp bạn hiểu và nhớ lâu. Nếu thấy giải thích chưa khớp, hãy luôn theo đáp án chính thức."
+        },
+        {
+          "id": "doi-hang",
+          "q": "Đổi hạng thì tiến độ học có mất không?",
+          "a": "Không mất. Tiến độ, câu sai và lịch sử thi được lưu riêng cho từng hạng. Quay lại hạng cũ là thấy lại đúng tiến độ của hạng đó."
+        },
+        {
+          "id": "du-lieu",
+          "q": "Dữ liệu của tôi được lưu ở đâu?",
+          "a": "Chỉ trên máy của bạn. Ứng dụng không cần tài khoản và không gửi dữ liệu học tập đi đâu. Gỡ ứng dụng sẽ xóa toàn bộ dữ liệu này."
+        },
+        {
+          "id": "mien-phi",
+          "q": "Ứng dụng có mất phí hay có quảng cáo không?",
+          "a": "Không. Ứng dụng miễn phí hoàn toàn, không quảng cáo và không có gói trả phí."
+        },
+        {
+          "id": "ngoai-tuyen",
+          "q": "Có cần mạng để học không?",
+          "a": "Không. Toàn bộ câu hỏi, hình ảnh và lời giải thích đã nằm sẵn trong ứng dụng."
+        }
+      ]
+    }
+  ]
+}

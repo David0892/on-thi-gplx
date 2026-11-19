@@ -5,6 +5,7 @@ import 'dart:io';
 import 'dart:math';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:gplx_prep/data/articles.dart';
 import 'package:gplx_prep/data/memory_repositories.dart';
 import 'package:gplx_prep/domain/exam_rules.dart';
 
@@ -131,5 +132,31 @@ void main() {
       expect(content.cls(key).passMark, value, reason: key);
       expect(content.cls(key).rulesVerified, isTrue, reason: key);
     }
+  });
+
+  test('tips and FAQ load; every referenced question exists', () {
+    final a = Articles.fromJson(
+      jsonDecode(File('assets/content/articles.json').readAsStringSync())
+          as Map<String, dynamic>,
+    );
+    expect(a.tips, isNotEmpty);
+    expect(a.faq.expand((g) => g.items), isNotEmpty);
+    final ids = a.tips.map((t) => t.id).toList();
+    expect(ids.toSet(), hasLength(ids.length));
+    final numbers = content.pool('B').map((q) => q.number).toSet();
+    for (final t in a.tips) {
+      expect(t.points, isNotEmpty, reason: t.id);
+      for (final p in t.points) {
+        expect(
+          numbers.containsAll(p.refs),
+          isTrue,
+          reason: '${t.id}: ${p.refs}',
+        );
+      }
+    }
+    expect(
+      a.faq.expand((g) => g.items).where((i) => i.widget == 'class_table'),
+      hasLength(1),
+    );
   });
 }

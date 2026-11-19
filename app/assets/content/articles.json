@@ -1,0 +1,428 @@
+{
+ "tips": [
+  {
+   "id": "cach-hoc",
+   "title": "Học thế nào cho nhanh đỗ",
+   "summary": "Thứ tự học gọn nhất: câu điểm liệt, rồi từng chương, rồi thi thử.",
+   "points": [
+    {
+     "text": "Học câu điểm liệt trước tiên. Mỗi đề có đúng một câu điểm liệt, và chỉ cần sai câu đó là trượt dù đủ điểm các câu còn lại."
+    },
+    {
+     "text": "Học theo chương thay vì học lan man. Ba chương Quy tắc, Biển báo và Sa hình chiếm hơn 80% số câu của mỗi đề, ở mọi hạng."
+    },
+    {
+     "text": "Sau mỗi buổi, mở mục \"Câu sai\" để làm lại đúng những câu mình đã sai. Đây là cách tiết kiệm thời gian nhất."
+    },
+    {
+     "text": "Khi đã làm đúng phần lớn các chương, chuyển sang thi thử theo đề. Đỗ liên tiếp nhiều đề với thời gian còn dư là dấu hiệu sẵn sàng đi thi."
+    },
+    {
+     "text": "Đọc hết câu hỏi và cả bốn phương án trước khi chọn. Nhiều câu khác nhau chỉ một chữ như \"được\" và \"không được\", hoặc \"trong\" và \"ngoài\" khu đông dân cư."
+    }
+   ]
+  },
+  {
+   "id": "diem-liet",
+   "title": "Câu điểm liệt",
+   "topic": 1,
+   "summary": "Phần lớn câu điểm liệt hỏi về hành vi bị nghiêm cấm và tình huống nguy hiểm. Chọn phương án an toàn, đúng luật nhất.",
+   "points": [
+    {
+     "text": "Uống rượu bia rồi lái xe: mọi nồng độ cồn trong máu hoặc hơi thở khi điều khiển phương tiện đều bị nghiêm cấm, không có ngưỡng \"uống ít\".",
+     "refs": [
+      24,
+      26
+     ]
+    },
+    {
+     "text": "Gặp câu hỏi \"có được phép không\" về đua xe, lạng lách, chở quá số người, đi ngược chiều cao tốc, bỏ trốn sau tai nạn: đáp án luôn là bị cấm."
+    },
+    {
+     "text": "Khi có tai nạn, phương án đúng là dừng lại, giữ hiện trường, cấp cứu người bị nạn và báo cơ quan có thẩm quyền, không bỏ đi."
+    },
+    {
+     "text": "Trong ứng dụng, mục \"Câu điểm liệt\" chỉ gồm những câu áp dụng cho hạng bạn chọn, nên hãy luyện đến khi đúng hết."
+    }
+   ]
+  },
+  {
+   "id": "toc-do",
+   "title": "Tốc độ tối đa",
+   "topic": 1,
+   "summary": "Trong khu đông dân cư chỉ cần nhớ 60 và 50. Ngoài khu đông dân cư nhớ dãy 90, 80, 70, 60 và trừ 10 cho đường một làn.",
+   "points": [
+    {
+     "text": "Trong khu đông dân cư, mọi ô tô và xe mô tô: 60 km/h trên đường đôi hoặc đường một chiều từ hai làn trở lên, 50 km/h trên đường hai chiều hoặc một chiều chỉ có một làn.",
+     "refs": [
+      145,
+      146,
+      147,
+      148
+     ]
+    },
+    {
+     "text": "Ngoài khu đông dân cư, đường đôi: ô tô con đến 28 chỗ và tải đến 3,5 tấn 90 km/h; ô tô trên 28 chỗ và tải trên 3,5 tấn 80 km/h; xe buýt, đầu kéo sơ mi rơ moóc, xe mô tô 70 km/h; ô tô kéo rơ moóc, kéo xe khác, xe xi téc, trộn bê tông 60 km/h.",
+     "refs": [
+      149,
+      150,
+      151,
+      152
+     ]
+    },
+    {
+     "text": "Ngoài khu đông dân cư, đường hai chiều một làn: lấy đúng bốn nhóm xe ở trên và trừ 10, tức 80, 70, 60 và 50 km/h.",
+     "refs": [
+      153,
+      154,
+      155,
+      156
+     ]
+    },
+    {
+     "text": "Xe gắn máy và xe máy chuyên dùng: tối đa 40 km/h ở mọi nơi (trừ cao tốc, nơi các xe này không được đi).",
+     "refs": [
+      144
+     ]
+    }
+   ]
+  },
+  {
+   "id": "khoang-cach",
+   "title": "Khoảng cách an toàn",
+   "topic": 1,
+   "summary": "Bốn mốc tốc độ, bốn khoảng cách: 35, 55, 70, 100 mét.",
+   "points": [
+    {
+     "text": "Chạy 60 km/h: giữ cách xe trước tối thiểu 35 m.",
+     "refs": [
+      161
+     ]
+    },
+    {
+     "text": "Trên 60 đến 80 km/h: tối thiểu 55 m.",
+     "refs": [
+      160
+     ]
+    },
+    {
+     "text": "Trên 80 đến 100 km/h: tối thiểu 70 m.",
+     "refs": [
+      158
+     ]
+    },
+    {
+     "text": "Trên 100 đến 120 km/h: tối thiểu 100 m.",
+     "refs": [
+      159
+     ]
+    },
+    {
+     "text": "Mẹo: khoảng cách tăng nhanh hơn tốc độ. Gặp mưa, sương mù hay đường trơn thì phải giữ xa hơn các mốc này."
+    }
+   ]
+  },
+  {
+   "id": "do-tuoi",
+   "title": "Độ tuổi được lái xe",
+   "topic": 1,
+   "summary": "Các mốc cần nhớ: 16, 18, 24, 27 và tuổi tối đa 57 (nam), 55 (nữ).",
+   "points": [
+    {
+     "text": "Từ đủ 16 đến dưới 18 tuổi: chỉ được lái xe gắn máy.",
+     "refs": [
+      123
+     ]
+    },
+    {
+     "text": "Đủ 18 tuổi: được cấp bằng mô tô đến 125 cm³, ô tô hạng B và C1.",
+     "refs": [
+      118,
+      119
+     ]
+    },
+    {
+     "text": "Đủ 24 tuổi: lái xe chở người trên 16 đến 29 chỗ (hạng D2).",
+     "refs": [
+      122
+     ]
+    },
+    {
+     "text": "Đủ 27 tuổi: lái xe chở người trên 29 chỗ, xe giường nằm (hạng D).",
+     "refs": [
+      120
+     ]
+    },
+    {
+     "text": "Tuổi tối đa lái xe chở người trên 29 chỗ: đủ 57 tuổi với nam, đủ 55 tuổi với nữ.",
+     "refs": [
+      121
+     ]
+    }
+   ]
+  },
+  {
+   "id": "con-so",
+   "title": "Những con số hay gặp",
+   "topic": 1,
+   "summary": "Giờ dùng còi, khoảng cách khi dừng đỗ, giờ lái xe, điểm giấy phép lái xe.",
+   "points": [
+    {
+     "text": "Trong khu đông dân cư chỉ được dùng còi từ 05 giờ đến 22 giờ. Ngoài giờ này muốn vượt thì báo bằng đèn.",
+     "refs": [
+      49,
+      80
+     ]
+    },
+    {
+     "text": "Dừng, đỗ sát lề phải: bánh xe cách lề không quá 0,25 m.",
+     "refs": [
+      60
+     ]
+    },
+    {
+     "text": "Dừng, đỗ trên phố hẹp: cách xe đỗ phía bên kia đường tối thiểu 20 m.",
+     "refs": [
+      61
+     ]
+    },
+    {
+     "text": "Xe hỏng trên cao tốc mà không vào được làn dừng khẩn cấp: đặt biển hoặc đèn cảnh báo phía sau xe tối thiểu 150 m.",
+     "refs": [
+      114
+     ]
+    },
+    {
+     "text": "Lái xe kinh doanh vận tải: liên tục không quá 4 giờ, cả ngày không quá 10 giờ.",
+     "refs": [
+      171,
+      172
+     ]
+    },
+    {
+     "text": "Giấy phép lái xe có 12 điểm. Không bị trừ thêm trong 12 tháng thì được phục hồi đủ 12 điểm; bị trừ hết thì sau ít nhất 06 tháng mới được kiểm tra để phục hồi.",
+     "refs": [
+      140,
+      141
+     ]
+    },
+    {
+     "text": "Niên hạn sử dụng: ô tô tải không quá 25 năm, ô tô chở người trên 8 chỗ không quá 20 năm.",
+     "refs": [
+      277,
+      278
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hieu-lenh",
+   "title": "Nghe theo ai khi tín hiệu khác nhau",
+   "topic": 5,
+   "summary": "Người điều khiển giao thông đứng trên hết; biển tạm thời thắng biển cố định.",
+   "points": [
+    {
+     "text": "Hiệu lệnh của người điều khiển giao thông trái với đèn hoặc biển báo: làm theo người điều khiển.",
+     "refs": [
+      38
+     ]
+    },
+    {
+     "text": "Cùng một chỗ có biển cố định và biển tạm thời khác nghĩa nhau: làm theo biển tạm thời.",
+     "refs": [
+      39
+     ]
+    },
+    {
+     "text": "Cảnh sát giơ một tay thẳng đứng: mọi hướng dừng lại, trừ xe đã ở trong nút giao.",
+     "refs": [
+      37,
+      528
+     ]
+    },
+    {
+     "text": "Cảnh sát dang ngang hai tay: phía trước và phía sau người điều khiển phải dừng, hai bên trái phải được đi.",
+     "refs": [
+      36,
+      529
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nhom-bien",
+   "title": "Nhận diện nhóm biển báo",
+   "topic": 5,
+   "summary": "Nhìn hình dạng và màu là biết biển thuộc nhóm nào, trước cả khi đọc hình vẽ bên trong.",
+   "points": [
+    {
+     "text": "Biển cấm: hình tròn, viền đỏ, nền trắng. Gặp là không được làm điều hình vẽ chỉ ra."
+    },
+    {
+     "text": "Biển nguy hiểm và cảnh báo: hình tam giác, viền đỏ, nền vàng. Báo trước nguy hiểm để giảm tốc độ."
+    },
+    {
+     "text": "Biển hiệu lệnh: hình tròn, nền xanh lam. Bắt buộc phải làm theo, ví dụ hướng đi phải theo."
+    },
+    {
+     "text": "Biển chỉ dẫn: hình vuông hoặc chữ nhật, nền xanh. Cung cấp thông tin như đường ưu tiên, nơi quay đầu."
+    },
+    {
+     "text": "Biển phụ: hình chữ nhật đặt dưới biển chính, giới hạn hoặc nói rõ thêm ý nghĩa của biển chính (loại xe, khoảng cách, thời gian)."
+    },
+    {
+     "text": "Bẫy hay gặp: biển cấm rẽ trái không cấm quay đầu, còn biển cấm quay đầu thì không cấm rẽ trái. Đọc kỹ hình mũi tên.",
+     "refs": [
+      512,
+      537
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sa-hinh",
+   "title": "Thứ tự xe đi trong sa hình",
+   "topic": 6,
+   "summary": "Xét lần lượt: xe ưu tiên, đường ưu tiên, bên phải trống, rồi hướng đi.",
+   "points": [
+    {
+     "text": "Bước 1: xe ưu tiên đang làm nhiệm vụ (chữa cháy, quân sự, công an, cứu thương...) đi trước. Giữa xe quân sự và xe công an thì xe quân sự đi trước.",
+     "refs": [
+      94,
+      540
+     ]
+    },
+    {
+     "text": "Bước 2: xe trên đường ưu tiên (biển hình thoi vàng, hoặc phía bên kia có biển tam giác ngược) đi trước xe từ đường nhánh.",
+     "refs": [
+      525,
+      584,
+      585
+     ]
+    },
+    {
+     "text": "Bước 3: nơi giao nhau không có biển, xe nào bên phải trống thì đi trước (nhường xe đến từ bên phải).",
+     "refs": [
+      520,
+      568
+     ]
+    },
+    {
+     "text": "Bước 4: khi cùng được đi, xe rẽ trái phải nhường xe đi thẳng ngược chiều.",
+     "refs": [
+      547,
+      591
+     ]
+    },
+    {
+     "text": "Các trường hợp riêng: xe xuống dốc nhường xe lên dốc; xe có chướng ngại vật phía trước nhường xe đi ngược chiều.",
+     "refs": [
+      541,
+      576
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cao-toc-duong-sat",
+   "title": "Cao tốc và đường sắt",
+   "topic": 1,
+   "summary": "Trên cao tốc không lùi, không quay đầu. Gặp đường sắt thì dừng bên phải, trước vạch dừng.",
+   "points": [
+    {
+     "text": "Đi quá lối ra: lái tiếp và ra ở lối ra kế tiếp.",
+     "refs": [
+      115
+     ]
+    },
+    {
+     "text": "Ùn tắc trên cao tốc: không được chạy vào làn dừng khẩn cấp (trừ xe ưu tiên).",
+     "refs": [
+      116
+     ]
+    },
+    {
+     "text": "Xe mô tô, xe gắn máy, xe thô sơ và người đi bộ không được vào cao tốc.",
+     "refs": [
+      111
+     ]
+    },
+    {
+     "text": "Đường ngang có đèn đỏ nhấp nháy, chuông kêu hoặc chắn đang đóng, hay đường ngang không có người gác: dừng lại bên phải đường của mình, trước vạch dừng.",
+     "refs": [
+      99,
+      100
+     ]
+    }
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "title": "Về kỳ thi lý thuyết",
+   "items": [
+    {
+     "id": "so-cau",
+     "q": "Thi lý thuyết có bao nhiêu câu, làm trong bao lâu, đúng bao nhiêu câu thì đỗ?",
+     "a": "Mỗi hạng có số câu, thời gian và số câu phải đúng riêng, xem bảng dưới đây. Ngoài ra phải trả lời đúng câu điểm liệt.",
+     "widget": "class_table"
+    },
+    {
+     "id": "cau-diem-liet",
+     "q": "Câu điểm liệt là gì?",
+     "a": "Là những câu về tình huống mất an toàn giao thông nghiêm trọng. Mỗi đề có đúng một câu điểm liệt. Trả lời sai câu này là trượt, dù tổng số câu đúng đủ điểm đạt."
+    },
+    {
+     "id": "so-cau-hoc",
+     "q": "Có phải hạng nào cũng học đủ 600 câu không?",
+     "a": "Không. Hạng A1 và A học 250 câu, trong đó có 20 câu điểm liệt. Hạng B1 học 300 câu, trong đó có 30 câu điểm liệt. Các hạng ô tô còn lại học đủ 600 câu, trong đó có 60 câu điểm liệt. Ứng dụng tự lọc đúng bộ câu theo hạng bạn chọn."
+    },
+    {
+     "id": "de-that",
+     "q": "Đề thi thật có giống đề trong ứng dụng không?",
+     "a": "Câu hỏi và đáp án lấy nguyên từ bộ câu hỏi chính thức. Đề được ghép ngẫu nhiên theo cùng cấu trúc số câu của từng chương như đề thật, nên câu hỏi giống nhưng tổ hợp câu trong mỗi đề sẽ khác."
+    },
+    {
+     "id": "nguon",
+     "q": "Bộ câu hỏi lấy từ đâu, áp dụng từ khi nào?",
+     "a": "Bộ 600 câu hỏi dùng cho sát hạch lái xe cơ giới đường bộ do Cục Cảnh sát giao thông ban hành năm 2025, áp dụng từ ngày 01/6/2025. Cấu trúc đề theo Công văn 2262/CSGT-P5; số câu, thời gian và điểm đạt theo Thông tư 12/2025/TT-BCA."
+    },
+    {
+     "id": "thuc-hanh",
+     "q": "Đỗ lý thuyết là xong chưa?",
+     "a": "Chưa. Lý thuyết là phần đầu tiên; sau đó còn phần thi thực hành tùy theo hạng. Ứng dụng này chỉ giúp ôn phần lý thuyết."
+    }
+   ]
+  },
+  {
+   "title": "Về ứng dụng",
+   "items": [
+    {
+     "id": "giai-thich",
+     "q": "Lời giải thích dưới mỗi câu có phải của cơ quan nhà nước không?",
+     "a": "Không. Đáp án là đáp án chính thức, còn lời giải thích do nhóm làm ứng dụng tự biên soạn để giúp bạn hiểu và nhớ lâu. Nếu thấy giải thích chưa khớp, hãy luôn theo đáp án chính thức."
+    },
+    {
+     "id": "doi-hang",
+     "q": "Đổi hạng thì tiến độ học có mất không?",
+     "a": "Không mất. Tiến độ, câu sai và lịch sử thi được lưu riêng cho từng hạng. Quay lại hạng cũ là thấy lại đúng tiến độ của hạng đó."
+    },
+    {
+     "id": "du-lieu",
+     "q": "Dữ liệu của tôi được lưu ở đâu?",
+     "a": "Chỉ trên máy của bạn. Ứng dụng không cần tài khoản và không gửi dữ liệu học tập đi đâu. Gỡ ứng dụng sẽ xóa toàn bộ dữ liệu này."
+    },
+    {
+     "id": "mien-phi",
+     "q": "Ứng dụng có mất phí hay có quảng cáo không?",
+     "a": "Không. Ứng dụng miễn phí hoàn toàn, không quảng cáo và không có gói trả phí."
+    },
+    {
+     "id": "ngoai-tuyen",
+     "q": "Có cần mạng để học không?",
+     "a": "Không. Toàn bộ câu hỏi, hình ảnh và lời giải thích đã nằm sẵn trong ứng dụng."
+    }
+   ]
+  }
+ ]
+}

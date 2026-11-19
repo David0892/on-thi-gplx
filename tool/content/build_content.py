@@ -9,6 +9,7 @@ Inputs (content/source/, see README.md for where they come from):
 Output:
   app/assets/content/content.json
   app/assets/content/img/qNNN.webp   one image per illustrated question, cropped as printed
+  app/assets/content/articles.json   tips (S13) and FAQ (S14) from content/articles/, checked against the bank
 
 Usage (needs pymupdf and pillow; see requirements.txt):
   python3 tool/content/build_content.py            # build + validate, exit 1 on any check failure
@@ -33,6 +34,7 @@ BANK = SRC / "bo-600-cau-hoi-2025.pdf"
 CV = SRC / "cong-van-2262-csgt-p5.pdf"
 RULES = Path(__file__).resolve().parent / "rules.json"
 EXPLANATIONS = ROOT / "content" / "explanations"  # own writing: *.json, {"explanations": {"N": "..."}}
+ARTICLES = ROOT / "content" / "articles"  # own writing: tips.json, faq.json
 
 Q_RE = re.compile(r"^Câu\s+(\d+)\s*[.:]\s*(.*)$")  # Câu 507 is printed with a colon
 OPT_RE = re.compile(r"^([1-4])\s*\.\s+(.*)$")
@@ -253,6 +255,85 @@ def validate(questions, apps, rules):
     return errors, warnings
 
 
+def validate_articles(questions, apps):
+    """Tips and FAQ are own writing, but every number they state is pinned to the bank:
+    a 'q' check needs the official correct option of that question to contain 'answer'
+    (and its text to contain 'text'); a 'pool' check needs that appendix group to have
+    'count' questions. 'refs' must be real question numbers."""
+    tips = json.loads((ARTICLES / "tips.json").read_text(encoding="utf-8"))["tips"]
+    faq = json.loads((ARTICLES / "faq.json").read_text(encoding="utf-8"))["groups"]
+    by_n = {q["number"]: q for q in questions}
+    sizes = {
+        "appendix1": sum(len(g["numbers"]) for g in apps[1][:-1]),
+        "appendix1_critical": len(apps[1][-1]["numbers"]),
+        "appendix2": sum(len(g["numbers"]) for g in apps[2][:-1]),
+        "appendix2_critical": len(apps[2][-1]["numbers"]),
+    }
+    errors, ids, n_checks = [], set(), 0
+
+    def check_all(where, checks):
+        nonlocal n_checks
+        for c in checks:
+            n_checks += 1
+            if "q" in c:
+                q = by_n.get(c["q"])
+                if q is None:
+                    errors.append(f"{where}: check on unknown question {c['q']}")
+                    continue
+                correct = clean(next(o["text"] for o in q["options"] if o["under"]))
+                if c["answer"] not in correct:
+                    errors.append(f"{where}: Câu {c['q']} answer is {correct[:80]!r}, tip says {c['answer']!r}")
+                if "text" in c and c["text"] not in clean(q["text"]):
+                    errors.append(f"{where}: Câu {c['q']} text has no {c['text']!r}")
+            elif "pool" in c:
+                if sizes.get(c["pool"]) != c["count"]:
+                    errors.append(f"{where}: pool {c['pool']} has {sizes.get(c['pool'])}, text says {c['count']}")
+            elif "critical_total" in c:
+                if len(apps[3][0]["numbers"]) != c["critical_total"]:
+                    errors.append(f"{where}: {len(apps[3][0]['numbers'])} critical questions, text says {c['critical_total']}")
+            else:
+                errors.append(f"{where}: unknown check {c}")
+
+    def unique(where, i):
+        if not i or i in ids:
+            errors.append(f"{where}: missing or duplicate id {i!r}")
+        ids.add(i)
+
+    for t in tips:
+        unique("tips", t.get("id"))
+        where = f"tip {t.get('id')}"
+        if not t.get("title") or not t.get("summary") or not t.get("points"):
+            errors.append(f"{where}: needs title, summary and points")
+        if t.get("topic") not in (None, 1, 2, 3, 4, 5, 6):
+            errors.append(f"{where}: bad topic {t.get('topic')}")
+        for p in t.get("points", []):
+            if len(p.get("text", "")) < 10:
+                errors.append(f"{where}: empty point")
+            bad = [r for r in p.get("refs", []) if r not in by_n]
+            if bad:
+                errors.append(f"{where}: unknown refs {bad}")
+        check_all(where, t.get("checks", []))
+    for g in faq:
+        if not g.get("title") or not g.get("items"):
+            errors.append("faq: group needs title and items")
+        for it in g.get("items", []):
+            unique("faq", it.get("id"))
+            where = f"faq {it.get('id')}"
+            if len(it.get("q", "")) < 10 or len(it.get("a", "")) < 10:
+                errors.append(f"{where}: empty question or answer")
+            if it.get("widget") not in (None, "class_table"):
+                errors.append(f"{where}: unknown widget {it['widget']}")
+            check_all(where, it.get("checks", []))
+    strip = lambda d: {k: v for k, v in d.items() if k != "checks"}
+    out = {
+        "tips": [strip(t) for t in tips],
+        "faq": [{"title": g["title"], "items": [strip(i) for i in g["items"]]} for g in faq],
+    }
+    n_items = sum(len(g["items"]) for g in faq)
+    print(f"articles: {len(tips)} tips, {n_items} FAQ items, {n_checks} facts checked against the bank")
+    return out, errors
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true")
@@ -283,6 +364,9 @@ def main():
     if a.require_all and len(explanations) != 600:
         missing = sorted(set(range(1, 601)) - set(explanations))
         errors.append(f"explanations: {len(missing)} missing, first {missing[:15]}")
+
+    articles, article_errors = validate_articles(questions, apps)
+    errors += article_errors
 
     with_img = sum(1 for q in questions if q["images"])
     print(f"parsed {len(questions)} questions, {with_img} with an image")
@@ -363,6 +447,7 @@ def main():
     }
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "content.json").write_text(json.dumps(content, ensure_ascii=False, indent=1), encoding="utf-8")
+    (OUT / "articles.json").write_text(json.dumps(articles, ensure_ascii=False, indent=1), encoding="utf-8")
     size = sum(p.stat().st_size for p in img_dir.glob("*.webp"))
     print(f"wrote {OUT / 'content.json'} and {with_img} images ({size / 1e6:.1f} MB)")
     return 0

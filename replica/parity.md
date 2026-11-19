@@ -1,5 +1,11 @@
 # Parity: GPLX prep app vs Ôn Thi GPLX 600 Câu Chuẩn 2026
 
+> **Update 2026-11-19, after tips (S13) and FAQ (S14):**
+> - Feature score is **95.2 / 100**, with must-haves at **14 of 14**. No open S1 or S2 bugs: **shippable**.
+> - Tips: 10 articles; every number in them (48 facts) is checked at build time against the official answer of the question it comes from.
+> - FAQ: 11 items; the count / minutes / pass table renders from the class rules, so it cannot disagree with the exams the app builds.
+> - Remaining: the hosted privacy policy (should), the sign library and search (could). Layout parity is still unmeasured.
+>
 > **Update 2026-11-19, after all 600 explanations:**
 > - Feature score is **88.9 / 100**, with must-haves at **14 of 14**.
 > - There are no open S1 or S2 bugs, so the app is **shippable** by the replica-diff rule.
