@@ -73,10 +73,8 @@ A question on the 60-list that an appendix files under another group (for exampl
 
 The question bank and the công văn are administrative documents issued by Cục Cảnh sát giao thông. Under Article 15 of the Luật Sở hữu trí tuệ, legal and administrative documents are not protected by copyright. Have a lawyer confirm this before publishing, including for the images in the book.
 
-**Explanations:** the official set has none, so all explanations are our own writing, in `content/explanations.json` (keyed by question number).
-- **Written:** 60 of 600, covering all the critical questions.
-- **The build checks:** every key is a real question number, no explanation is empty, and every critical question has one.
-- **The rule for writing them:**
-  - say why the underlined answer is right, and why the tempting wrong answers are wrong;
-  - never contradict the official answer;
-  - don't cite article numbers that haven't been checked.
+**Explanations:** the official set has none, so all explanations are our own writing, in `content/explanations/*.json` (one file per chapter range, keyed by question number).
+- **Coverage:** **600 of 600.**
+- **Build checks:** every key is a real question, no number is written twice, none is empty, every critical question is covered, and `--require-all` fails unless all 600 are present. `content_test.dart` asserts the same.
+- **How they were written:** each one is checked against the underlined official answer. For the 300 sign and traffic-scenario questions, the explanation was written after viewing the question's picture (in 9-image contact sheets).
+- **Reviewer pass (recommended):** a few scenario explanations give a reason the picture does not make fully explicit, so a driving instructor should look at them. They are Câu 440, 493, 515, 523, 569 and 593.

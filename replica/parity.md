@@ -1,10 +1,11 @@
 # Parity: GPLX prep app vs Ôn Thi GPLX 600 Câu Chuẩn 2026
 
-> **Update 2026-11-19, after adding the official bank:**
-> - Feature score is **84.1 / 100**, with must-haves at **13 of 14**.
-> - Still **not shippable**: the remaining must-have is **answer explanations**. The official set has none, so all 600 have to be written.
-> - Content went from 21.4 to 64.3; study is now 63.6, down because the sample explanations were removed with the sample bank.
-> - The sections below describe the earlier run (77.0, 10/14) and are kept for history.
+> **Update 2026-11-19, after all 600 explanations:**
+> - Feature score is **88.9 / 100**, with must-haves at **14 of 14**.
+> - There are no open S1 or S2 bugs, so the app is **shippable** by the replica-diff rule.
+> - Layout parity is still unmeasured, because there are no screenshots of the original.
+> - Remaining should-haves: tips (S13), FAQ (S14), and a hosted privacy policy. Remaining could-haves: the sign library and search.
+> - The sections below describe earlier runs and are kept for history.
 
 **Build:** `1dfdf9c`. **Date:** 2026-11-19.
 

@@ -1,0 +1,32 @@
+{
+  "_about": "Chương V (biển báo), câu 433–459. Tự biên soạn sau khi xem hình, khớp đáp án gạch chân.",
+  "explanations": {
+    "433": "Biển 1 (tròn nền xanh, mũi tên thẳng) là biển hiệu lệnh \"Hướng đi thẳng phải theo\". Biển 2 (vuông nền xanh) là biển chỉ dẫn \"Đường một chiều\". Mẹo: tròn xanh là hiệu lệnh, vuông xanh là chỉ dẫn.",
+    "434": "Biển 2 (hình vuông nền xanh, mũi tên trắng lớn) là biển chỉ dẫn \"Đường một chiều\". Biển 1 (hình tròn) là hướng đi thẳng phải theo.",
+    "435": "Biển 1 (số 50 bị các vạch đen chéo) là \"Hết tốc độ tối đa cho phép\". Biển 2 là hết mọi lệnh cấm, biển 3 (nền xanh, số 60 gạch đỏ) là hết tốc độ tối thiểu.",
+    "436": "Lệnh tốc độ tối đa hết hiệu lực khi gặp biển 1 (hết tốc độ tối đa) hoặc biển 2 (hết mọi lệnh cấm, bao gồm cả lệnh hạn chế tốc độ). Biển 3 chỉ là hết tốc độ tối thiểu.",
+    "437": "Biển 3 (tròn nền xanh, số 60 có gạch đỏ chéo) là \"Hết tốc độ tối thiểu\". Biển 1 là hết tốc độ tối đa.",
+    "438": "Biển 2 (hết mọi lệnh cấm) và biển 3 (hình hai xe bị vạch đen chéo, \"Hết cấm vượt\") đều chấm dứt lệnh cấm vượt. Biển 1 chỉ hết hạn chế tốc độ tối đa.",
+    "439": "Biển 2 (tròn trắng viền xanh, chỉ có các vạch đen chéo, không có hình) là \"Hết mọi lệnh cấm\".",
+    "440": "Theo bộ đề, biển 3 (hướng đi thẳng và rẽ trái) đặt trước ngã ba, ngã tư là biển cho phép xe quay đầu đi theo hướng ngược lại.",
+    "441": "Biển 1 bắt buộc rẽ trái nên không được rẽ phải. Biển 2 cho rẽ trái hoặc phải, biển 3 cho đi thẳng hoặc rẽ phải.",
+    "442": "Biển 1 (chỉ được rẽ trái) và biển 2 (chỉ được rẽ trái hoặc phải) không cho xe đi thẳng. Biển 3 cho đi thẳng hoặc rẽ phải.",
+    "443": "Cả hai biển chỉ dẫn (vuông nền xanh, hình mũi tên quay ngược) đều báo nơi được phép quay đầu xe.",
+    "444": "Biển 3 (nền xanh đậm, chữ AH112) chỉ dẫn tên đường trên tuyến đường đối ngoại. Biển 1 và biển 2 (ZONE) là biển khu vực cấm đỗ xe.",
+    "445": "Biển 1 (ZONE, biển cấm đỗ có ghi giờ 6:00 – 18:00, bị vạch đen chéo) là biển hết khu vực cấm đỗ xe theo giờ.",
+    "446": "Biển 3 (ZONE kèm biển tốc độ 50) là biển hạn chế tốc độ tối đa trong khu vực: cả khu vực không được chạy quá 50 km/h.",
+    "447": "Biển 2 (làn bên trái có hình xe khách, mũi tên ngược chiều) báo đường phía trước có làn đường dành cho ô tô khách.",
+    "448": "Biển 3 (mũi tên rẽ sang đường có hình xe khách ở một làn) báo rẽ ra đường có làn đường dành cho ô tô khách.",
+    "449": "Biển 1 và biển 2 (hình nhánh rẽ có vạch đỏ chắn ngang) đặt trên đường chính trước nơi giao nhau, báo nhánh rẽ sang trái hoặc phải là đường cụt. Biển 3 báo chính đường phía trước là đường cụt.",
+    "450": "Biển 1 (người đi lên cầu thang) chỉ dẫn người đi bộ dùng cầu vượt qua đường. Biển 2 (người đi xuống) là hầm chui.",
+    "451": "Biển 2 (người đi xuống cầu thang) chỉ dẫn người đi bộ dùng hầm chui qua đường. Biển 1 là cầu vượt.",
+    "452": "Biển 2 (hình xe lăn trên nền xanh) báo nơi đỗ xe dành cho người khuyết tật. Biển 1 là đường dành cho xe thô sơ, biển 3 là đường dành cho người đi bộ.",
+    "453": "Biển chữ P có hình xe nửa trên hè phố là biển đỗ xe một phần trên hè phố: phải đỗ sao cho từ 1/2 thân xe trở lên nằm trên hè.",
+    "454": "Biển CSGT – POLICE báo gần trạm Cảnh sát giao thông: phải giảm tốc độ đến mức an toàn và không được vượt khi đi qua khu vực này.",
+    "455": "Biển tròn nền xanh có ba mũi tên chạy vòng là biển hiệu lệnh \"Nơi giao nhau chạy theo vòng xuyến\": xe muốn chuyển hướng bắt buộc phải chạy vòng theo đảo an toàn theo chiều mũi tên.",
+    "456": "Biển 2 (\"ĐỊA PHẬN HÀ NAM\" kèm số km) chỉ dẫn địa giới hành chính giữa các tỉnh, thành phố, huyện. Biển 1 là chỉ hướng đi, biển 3 là tên địa danh du lịch.",
+    "457": "Biển 1 và biển 3 (bảng xanh vẽ sơ đồ nhánh rẽ qua cầu vượt đến các hướng) báo hiệu cầu vượt liên thông. Biển 2 (tròn) là biển chỉ hướng đi.",
+    "458": "Biển 1 vẽ sơ đồ các hướng đi qua cầu vượt tới Quốc lộ 1, Hà Nội, Quốc lộ 6: đây là biển báo hiệu cầu vượt liên thông.",
+    "459": "Biển 1 và biển 2 (tròn nền xanh, có mũi tên đi thẳng lên cầu vượt và mũi tên rẽ) báo hiệu tuyến đường cầu vượt cắt qua. Biển 3 là biển cảnh báo cầu vồng."
+  }
+}

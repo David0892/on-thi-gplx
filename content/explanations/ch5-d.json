@@ -1,0 +1,32 @@
+{
+  "_about": "Chương V (biển báo), câu 379–405. Tự biên soạn sau khi xem hình, khớp đáp án gạch chân.",
+  "explanations": {
+    "379": "Ba cột trắng có một, hai và ba vạch đỏ là mốc báo trước sắp đến vị trí đường sắt giao không vuông góc với đường bộ, không có người gác và không có rào chắn. Số vạch giảm dần khi càng đến gần chỗ giao.",
+    "380": "Biển 3 (hình thoi vàng viền trắng, có vạch đen chéo) là \"Hết đoạn đường ưu tiên\". Biển 1 là giao nhau với đường không ưu tiên, biển 2 là giao nhau với đường ưu tiên.",
+    "381": "Biển 1 (giao nhau với đường không ưu tiên) và biển 3 (hình thoi vàng, \"Đường ưu tiên\") đều cho biết xe trên đường này được quyền ưu tiên qua nơi giao nhau. Biển 2 (tam giác ngược) thì phải nhường đường.",
+    "382": "Biển 1 (tam giác, đường chính đậm có nhánh nhỏ) là \"Giao nhau với đường không ưu tiên\": xe đang đi trên đường ưu tiên.",
+    "383": "Biển 2 (tam giác ngược đỉnh, viền đỏ) là \"Giao nhau với đường ưu tiên\": xe phải nhường đường cho xe trên đường ưu tiên.",
+    "384": "Biển 1 (đường thu hẹp cả hai bên) và biển 2 (đường thu hẹp về một bên) đều là biển \"Đường bị thu hẹp\". Biển 3 báo chỗ ngoặt nguy hiểm.",
+    "385": "Biển 2 và biển 3 báo đường bị thu hẹp về một phía: người lái phải giảm tốc độ, chú ý xe ngược chiều, và xe đi ở phía bị hẹp phải nhường đường. Biển 1 báo chướng ngại vật, không phải đường hẹp.",
+    "386": "Biển 3 (tam giác ngược) là \"Giao nhau với đường ưu tiên\". Biển 1 là đường giao nhau cùng cấp, biển 2 là giao nhau với đường không ưu tiên.",
+    "387": "Biển 1 (tam giác có dấu cộng) báo \"Đường giao nhau\" của các tuyến đường cùng cấp. Biển 2 là giao nhau với đường không ưu tiên, biển 3 là giao nhau với đường ưu tiên.",
+    "388": "Biển 2 (tam giác, đường chính đậm có nhánh nhỏ) là \"Giao nhau với đường không ưu tiên\". Biển 1 là giao nhau cùng cấp, biển 3 là giao nhau với đường ưu tiên.",
+    "389": "Biển 1 (tam giác vàng, hai mũi tên ngược chiều theo chiều dọc) là biển cảnh báo \"Đường hai chiều\". Biển 2 bắt nhường đường cho xe ngược chiều, biển 3 cho quyền ưu tiên qua đường hẹp.",
+    "390": "Biển 2 (tròn viền đỏ, mũi tên đỏ đi lên và mũi tên đen đi xuống) là biển hiệu lệnh: phải giảm tốc độ, nhường đường cho xe cơ giới đi ngược chiều qua đường hẹp.",
+    "391": "Biển 3 (vuông nền xanh, mũi tên trắng đi lên lớn hơn mũi tên đỏ) là biển chỉ dẫn \"Được ưu tiên qua đường hẹp\": xe ngược chiều phải nhường cho mình.",
+    "392": "Biển 2 (tam giác, mũi tên tách ra hai bên một dải phân cách) là \"Đường đôi\". Biển 1 là được ưu tiên qua đường hẹp, biển 3 là kết thúc đường đôi.",
+    "393": "Biển 3 (mũi tên tách ra hai bên dải phân cách) là \"Đường đôi\". Biển 1 là đường hai chiều, biển 2 là giao nhau với đường hai chiều.",
+    "394": "Biển 3 (hai mũi tên nhập lại sau khi hết dải phân cách) là \"Kết thúc đường đôi\". Biển 2 là bắt đầu đường đôi.",
+    "395": "Biển 1 (hai mũi tên nằm ngang ngược chiều) là \"Giao nhau với đường hai chiều\": phía trước có đường hai chiều cắt ngang. Mũi tên dọc là \"Đường hai chiều\".",
+    "396": "Biển 2 (hai mũi tên dọc ngược chiều) là \"Đường hai chiều\": phía trước đường chuyển thành hai chiều, xe ngược chiều sẽ đi tới.",
+    "397": "Biển 2 (hai mũi tên ngang ngược chiều) là \"Giao nhau với đường hai chiều\". Biển 1 (mũi tên dọc) là đường hai chiều, biển 3 là đường giao nhau cùng cấp.",
+    "398": "Biển 2 (chướng ngại vật, mũi tên tránh hai bên) và biển 3 (chướng ngại vật, mũi tên tránh một bên) đều là \"Chú ý chướng ngại vật\". Biển 1 là kết thúc đường đôi.",
+    "399": "Biển 2 (nền xanh, có hình làn rẽ ra và khoảng cách 2 km) chỉ dẫn vị trí và khoảng cách đến làn đường cứu nạn, làn thoát xe khẩn cấp. Biển 1 chỉ dẫn đường vòng tránh.",
+    "400": "Biển 2 (hình cửa hầm có vòm và đường kẻ bên trong) là biển \"Đường hầm\". Biển 1 là cửa chui, biển 3 là cầu vồng.",
+    "401": "Biển 2 (hai cạnh đường thắt lại như thành cầu) là biển \"Cầu hẹp\". Biển 3 là cầu quay, cầu cất.",
+    "402": "Biển 3 (nhịp cầu nâng lên trên mặt nước) là biển \"Cầu quay – cầu cất\": phía trước có cầu có thể quay hoặc nâng lên cho tàu thuyền qua.",
+    "403": "Biển 1 (xe chúi mũi xuống vực ngay phía trước) là \"Kè, vực sâu phía trước\". Biển 2 và biển 3 báo kè, vực sâu ở bên đường.",
+    "404": "Biển 3 là \"Kè, vực sâu bên đường phía bên trái\": hình xe lệch xuống vực ở phía bên trái. Biển 2 là vực sâu phía bên phải.",
+    "405": "Biển 2 là \"Kè, vực sâu bên đường phía bên phải\": hình xe lệch xuống vực ở phía bên phải. Biển 3 là vực sâu phía bên trái."
+  }
+}

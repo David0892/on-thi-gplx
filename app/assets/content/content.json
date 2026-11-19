@@ -1415,7 +1415,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Phần đường xe chạy là phần của đường bộ dành cho phương tiện đi lại. Lề đường không dành cho xe chạy, và không có khái niệm riêng \"phần đường xe cơ giới\"."
   },
   {
    "n": 2,
@@ -1429,7 +1429,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Làn đường là một phần của phần đường xe chạy, chia theo chiều dọc và phải đủ rộng để xe chạy an toàn. Điểm mấu chốt để phân biệt với ý 1 là cụm \"đủ chiều rộng cho xe chạy an toàn\"."
   },
   {
    "n": 3,
@@ -1443,7 +1443,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Khổ giới hạn tính cả chiều rộng lẫn chiều cao của đường bộ, kể cả hàng hóa xếp trên xe, và được xác định theo quy chuẩn kỹ thuật. Ý 2 và ý 3 chỉ nói một chiều nên chưa đủ."
   },
   {
    "n": 4,
@@ -1457,7 +1457,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Dải phân cách dùng để chia phần đường xe chạy thành hai chiều riêng biệt, hoặc tách phần đường của xe cơ giới với xe thô sơ hay của các loại xe khác nhau trên cùng một chiều."
   },
   {
    "n": 5,
@@ -1472,7 +1472,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Vạch kẻ đường là vạch chỉ sự phân chia làn đường, vị trí hoặc hướng đi, vị trí dừng lại. Các ý còn lại mô tả chức năng của biển báo chứ không phải vạch kẻ."
   },
   {
    "n": 6,
@@ -1486,7 +1486,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Người điều khiển phương tiện là người lái xe cơ giới, xe thô sơ hoặc xe máy chuyên dùng. Người hướng dẫn giao thông là \"người điều khiển giao thông\", một khái niệm khác."
   },
   {
    "n": 7,
@@ -1500,7 +1500,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "\"Người lái xe\" chỉ dùng cho người điều khiển xe cơ giới. Người đi xe thô sơ hay xe máy chuyên dùng gọi là người điều khiển phương tiện."
   },
   {
    "n": 8,
@@ -1513,7 +1513,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Xe cơ giới gồm xe ô tô, rơ moóc và sơ mi rơ moóc được kéo, xe chở người hoặc chở hàng bốn bánh có gắn động cơ, xe mô tô, xe gắn máy và các loại tương tự. Ý 1 sai vì lẫn xe đạp, xe đạp điện (xe thô sơ) và xe máy chuyên dùng."
   },
   {
    "n": 9,
@@ -1527,7 +1527,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Xe thô sơ gồm xe đạp (kể cả xe đạp máy, xe đạp điện), xe xích lô, xe lăn cho người khuyết tật, xe vật nuôi kéo và các loại tương tự. Xe gắn máy và ô tô là xe cơ giới nên ý 2, ý 3 sai."
   },
   {
    "n": 10,
@@ -1541,7 +1541,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Phương tiện giao thông đường bộ gồm cả phương tiện cơ giới lẫn phương tiện thô sơ, xe máy chuyên dùng, nên chọn \"Cả hai ý trên\"."
   },
   {
    "n": 11,
@@ -1555,7 +1555,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Người tham gia giao thông gồm người điều khiển và người được chở trên phương tiện, người dẫn dắt vật nuôi và người đi bộ trên đường bộ, nên chọn \"Cả hai ý trên\"."
   },
   {
    "n": 12,
@@ -1569,7 +1569,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Người điều khiển phương tiện gồm người điều khiển xe cơ giới, xe thô sơ và xe máy chuyên dùng, nên chọn \"Cả hai ý trên\"."
   },
   {
    "n": 13,
@@ -1583,7 +1583,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Người điều khiển giao thông là Cảnh sát giao thông và người được giao nhiệm vụ hướng dẫn giao thông, không phải người lái xe hay người tham gia giao thông nói chung."
   },
   {
    "n": 14,
@@ -1597,7 +1597,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Dừng xe là đứng yên tạm thời, chỉ trong thời gian cần thiết để người lên xuống, xếp dỡ hàng hay kiểm tra xe. Khi dừng không được tắt máy và rời vị trí lái, trừ vài việc như mở cửa, xếp dỡ hàng thì phải dùng phanh đỗ. Đứng yên \"không giới hạn thời gian\" là đỗ xe."
   },
   {
    "n": 15,
@@ -1610,7 +1610,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Đỗ xe là đứng yên không giới hạn thời gian. Người lái chỉ được rời xe khi đã kéo phanh đỗ hoặc có biện pháp an toàn khác; đỗ trên dốc phải đánh lái về phía lề và chèn bánh."
   },
   {
    "n": 16,
@@ -1623,7 +1623,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Đường cao tốc chỉ dành cho một số loại xe cơ giới, có dải phân cách hai chiều riêng biệt, không giao cắt cùng mức với đường khác, chỉ ra vào ở điểm nhất định, có hàng rào bảo vệ. Ý 2 mô tả quốc lộ, không phải cao tốc."
   },
   {
    "n": 17,
@@ -1636,7 +1636,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Thiết bị an toàn cho trẻ em giữ trẻ ở tư thế ngồi hoặc nằm, hạn chế cơ thể trẻ bị xô đi khi va chạm hay phanh gấp. Trẻ không được ở tư thế đứng nên ý 2 sai."
   },
   {
    "n": 18,
@@ -1650,7 +1650,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Theo chức năng phục vụ, đường bộ gồm đường chính, đường nhánh, đường gom, đường bên, đường cho giao thông công cộng, đường nội bộ, đường dành riêng cho người đi bộ, người đi xe đạp và các đường khác. Ý 1 là danh sách đầy đủ."
   },
   {
    "n": 19,
@@ -1803,7 +1803,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Cải tạo xe trái phép, can thiệp làm sai lệch đồng hồ quãng đường (tua công-tơ-mét), đục sửa hay đóng lại số khung, số máy trái phép đều bị cấm. Cải tạo xe phục vụ quốc phòng, an ninh theo quy định thì không bị cấm."
   },
   {
    "n": 30,
@@ -1831,7 +1831,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Sản xuất, sử dụng, mua bán trái phép biển số xe bị nghiêm cấm trong mọi trường hợp, vì biển số là căn cứ để quản lý và xác định phương tiện."
   },
   {
    "n": 32,
@@ -1859,7 +1859,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Biển báo hiệu đường bộ có năm nhóm: biển báo cấm, biển báo nguy hiểm và cảnh báo, biển hiệu lệnh, biển chỉ dẫn và biển phụ."
   },
   {
    "n": 34,
@@ -1903,7 +1903,7 @@
    ],
    "correct": 4,
    "image": "img/q036.webp",
-   "explanation": null
+   "explanation": "Cảnh sát giao thông dang ngang hai tay: người ở phía trước và phía sau người điều khiển phải dừng lại, người ở bên phải và bên trái được đi tất cả các hướng."
   },
   {
    "n": 37,
@@ -1918,7 +1918,7 @@
    ],
    "correct": 3,
    "image": "img/q037.webp",
-   "explanation": null
+   "explanation": "Cảnh sát giao thông giơ một tay thẳng đứng: người tham gia giao thông ở mọi hướng phải dừng lại. Riêng xe đã ở trong khu vực giao nhau thì được đi tiếp để giải phóng nút giao."
   },
   {
    "n": 38,
@@ -1932,7 +1932,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Hiệu lệnh của người điều khiển giao thông có hiệu lực cao nhất, trên cả đèn tín hiệu và biển báo, vì họ đang xử lý tình huống thực tế tại chỗ."
   },
   {
    "n": 39,
@@ -1946,7 +1946,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Khi biển tạm thời và biển cố định có ý nghĩa khác nhau thì theo biển tạm thời, vì biển tạm thời phản ánh tình trạng thực tế hiện tại như thi công hay sự cố."
   },
   {
    "n": 40,
@@ -1960,7 +1960,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Đèn vàng: phải dừng trước vạch dừng; nếu đã ở trên hoặc đã qua vạch thì được đi tiếp. Đèn vàng nhấp nháy thì được đi nhưng phải quan sát, giảm tốc độ và nhường người đi bộ, xe lăn, phương tiện khác. Tăng tốc vượt đèn vàng là sai."
   },
   {
    "n": 41,
@@ -1974,7 +1974,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Người lái xe không được vượt quá tốc độ tối đa cho phép trong mọi điều kiện, kể cả khi đường vắng hay ban đêm."
   },
   {
    "n": 42,
@@ -1987,7 +1987,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Trẻ em dưới 10 tuổi và cao dưới 1,35 m không được ngồi cùng hàng ghế với người lái (trừ xe chỉ có một hàng ghế). Người lái phải dùng và hướng dẫn dùng thiết bị an toàn phù hợp cho trẻ."
   },
   {
    "n": 43,
@@ -2001,7 +2001,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Xe chạy chậm hơn phải đi về bên phải theo chiều đi của mình, để xe nhanh hơn có chỗ vượt bên trái."
   },
   {
    "n": 44,
@@ -2015,7 +2015,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Trên một chiều đường có vạch phân làn, xe thô sơ đi làn bên phải trong cùng, còn xe cơ giới và xe máy chuyên dùng đi trên làn đường bên trái. Đây là cách tách xe nhanh với xe thô sơ chậm."
   },
   {
    "n": 45,
@@ -2030,7 +2030,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Khi xe phía sau xin vượt và đủ điều kiện an toàn, xe phía trước phải giảm tốc độ, có tín hiệu rẽ phải và đi sát về bên phải để xe sau vượt."
   },
   {
    "n": 46,
@@ -2043,7 +2043,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Vượt xe là khi mỗi chiều chỉ có một làn cho xe cơ giới, xe phía sau phải sang bên trái để lên trước xe phía trước. Trên đường từ hai làn cùng chiều trở lên, đi lên trước theo làn là \"vượt\" theo quy tắc sử dụng làn đường, khác với khái niệm này."
   },
   {
    "n": 47,
@@ -2085,7 +2085,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Trong khu đông dân cư và khu vực cơ sở khám chữa bệnh (không có biển cấm còi), chỉ được dùng còi từ 05 giờ đến 22 giờ. Từ 22 giờ đến 05 giờ sáng hôm sau không được dùng còi, trừ xe ưu tiên."
   },
   {
    "n": 50,
@@ -2099,7 +2099,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Còi chỉ dùng để báo hiệu khi có tình huống có thể mất an toàn hoặc khi chuẩn bị vượt xe. Dùng còi từ 22 giờ đến 05 giờ trong khu đông dân cư, khu khám chữa bệnh là bị cấm (trừ xe ưu tiên)."
   },
   {
    "n": 51,
@@ -2113,7 +2113,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Trong khu đông dân cư có đèn đường đang sáng, chỉ được bật đèn chiếu gần (đèn cốt). Đèn chiếu xa gây chói mắt người đi ngược chiều và không cần thiết khi đường đã có đèn."
   },
   {
    "n": 52,
@@ -2154,7 +2154,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Cấm quay đầu xe ở cả hai nhóm nơi: phần đường người đi bộ qua đường, trên cầu, đầu cầu, gầm cầu vượt, ngầm; và nơi giao cắt cùng mức với đường sắt, đường hẹp, đường dốc, đoạn cong tầm nhìn bị che khuất."
   },
   {
    "n": 55,
@@ -2183,7 +2183,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Trước khi chuyển hướng phải làm đủ ba việc: quan sát và giữ khoảng cách an toàn với xe sau, giảm tốc độ và có tín hiệu báo hướng rẽ, chuyển dần sang làn gần nhất với hướng rẽ khi an toàn."
   },
   {
    "n": 57,
@@ -2197,7 +2197,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Phải bật tín hiệu báo rẽ trước khi chuyển làn, để xe xung quanh biết ý định và kịp nhường. Bật khi đã bắt đầu hoặc đã chuyển xong thì không còn tác dụng cảnh báo."
   },
   {
    "n": 58,
@@ -2226,7 +2226,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Không được dừng, đỗ xe trên miệng cống, miệng hầm điện thoại, điện cao thế, chỗ dành riêng cho xe chữa cháy lấy nước, và trong phạm vi an toàn của đường sắt. Cả hai ý đều là nơi cấm."
   },
   {
    "n": 60,
@@ -2241,7 +2241,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Trên đường phố, khi dừng hoặc đỗ sát lề hay vỉa hè bên phải, bánh xe gần nhất không được cách lề hay vỉa hè quá 0,25 mét."
   },
   {
    "n": 61,
@@ -2256,7 +2256,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Trên đường phố hẹp, xe ô tô dừng hoặc đỗ phải cách xe đang đỗ ở phía ngược chiều tối thiểu 20 mét, để hai xe đỗ đối diện nhau không bóp nghẹt lối đi của xe khác."
   },
   {
    "n": 62,
@@ -2270,7 +2270,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Không được dừng, đỗ song song với xe khác đang dừng đỗ, trên đường cong hay gần đầu dốc khuất tầm nhìn, hoặc bên trái đường một chiều. Lề rộng hay khu đất bên ngoài phần đường xe chạy là nơi nên dừng đỗ chứ không bị cấm."
   },
   {
    "n": 63,
@@ -2371,7 +2371,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Xe mô tô hai bánh, xe gắn máy chỉ được chở tối đa hai người khi chở người bệnh đi cấp cứu, áp giải người vi phạm pháp luật, trẻ em dưới 12 tuổi, người già yếu hoặc người khuyết tật. Say rượu hay dùng ma túy không phải là lý do được chở thêm người."
   },
   {
    "n": 70,
@@ -2458,7 +2458,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Nếu người ngồi sau không đội mũ bảo hiểm hoặc không cài quai đúng quy cách (ngoài các trường hợp được miễn), cả người điều khiển và người được chở đều bị xử phạt."
   },
   {
    "n": 76,
@@ -2472,7 +2472,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Người lái mô tô phải luôn đội mũ bảo hiểm đạt quy chuẩn, cài quai đúng cách, và không dùng ô, điện thoại, thiết bị âm thanh (trừ thiết bị trợ thính). Không có ngoại lệ theo thời tiết hay quãng đường."
   },
   {
    "n": 77,
@@ -2486,7 +2486,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Khi xuống phà, xe cơ giới và xe máy chuyên dùng xuống trước, xe thô sơ và người đi bộ xuống sau, để xe lớn không phải len giữa người đi bộ trên cầu phà."
   },
   {
    "n": 78,
@@ -2500,7 +2500,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Trên đường nhiều làn cùng chiều, xe phải đi trong một làn và chỉ chuyển làn ở nơi cho phép. Mỗi lần chỉ sang một làn liền kề, có tín hiệu báo trước và quan sát giữ khoảng cách an toàn với xe xung quanh. Đi giữa hai làn là sai."
   },
   {
    "n": 79,
@@ -2514,7 +2514,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Trên đường một chiều có vạch phân làn, xe thô sơ đi làn bên phải trong cùng, xe cơ giới và xe máy chuyên dùng đi trên làn bên trái."
   },
   {
    "n": 80,
@@ -2528,7 +2528,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Trong đô thị và khu đông dân cư từ 22 giờ đến 05 giờ, không được dùng còi, nên muốn vượt chỉ được báo hiệu bằng đèn."
   },
   {
    "n": 81,
@@ -2542,7 +2542,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Nếu đủ điều kiện an toàn cho xe sau vượt, xe trước phải giảm tốc độ, bật tín hiệu rẽ phải và đi sát bên phải cho đến khi xe sau vượt qua. Tăng tốc hay dạt sang trái là cản trở xe xin vượt."
   },
   {
    "n": 82,
@@ -2556,7 +2556,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Nếu chưa đủ điều kiện an toàn để xe sau vượt, xe trước bật tín hiệu rẽ trái để báo cho xe sau biết là chưa được vượt. Tăng tốc để \"báo hiệu\" là sai và nguy hiểm."
   },
   {
    "n": 83,
@@ -2570,7 +2570,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Khi chuyển hướng phải nhường đường cho người đi bộ, xe thô sơ, xe đi ngược chiều, và chỉ chuyển hướng khi không gây trở ngại hay nguy hiểm cho người khác. Bật tín hiệu không cho mình quyền bắt người khác dừng lại."
   },
   {
    "n": 84,
@@ -2584,7 +2584,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Trước khi chuyển hướng phải quan sát, giữ khoảng cách với xe sau, giảm tốc độ, có tín hiệu báo rẽ (hoặc tín hiệu tay với xe thô sơ), chuyển dần sang làn gần hướng rẽ, giữ tín hiệu suốt quá trình rẽ và chỉ rẽ khi an toàn. Tăng tốc rồi rẽ là sai."
   },
   {
    "n": 85,
@@ -2725,7 +2725,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Phải nhanh chóng giảm tốc độ, đi sát lề phải hoặc dừng lại để nhường đường cho đúng các xe ưu tiên: xe chữa cháy, xe quân sự, công an, kiểm sát đi làm nhiệm vụ khẩn cấp, đoàn xe có Cảnh sát giao thông dẫn đường, xe cứu thương, xe hộ đê, xe cứu nạn cứu hộ, khắc phục thiên tai, dịch bệnh, và đoàn xe tang. Đoàn xe diễu hành không phải xe ưu tiên."
   },
   {
    "n": 95,
@@ -2740,7 +2740,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Xe ưu tiên (trừ đoàn xe tang) khi làm nhiệm vụ không bị hạn chế tốc độ, được đi không phụ thuộc đèn tín hiệu, được vào đường ngược chiều, và trên đường cao tốc được đi ngược chiều trên làn dừng khẩn cấp. Cả ba quyền đều đúng."
   },
   {
    "n": 96,
@@ -2754,7 +2754,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Khi có tín hiệu của xe ưu tiên, phải giảm tốc độ, đi sát lề đường bên phải hoặc dừng lại để nhường đường. Tăng tốc hay dạt sang bên trái đều sai."
   },
   {
    "n": 97,
@@ -2797,7 +2797,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Ở đường ngang không có người gác, chắn, chuông hay đèn, phải dừng lại về bên phải đường của mình trước vạch dừng, quan sát hai phía, và chỉ đi qua khi không có tàu tới."
   },
   {
    "n": 100,
@@ -2811,7 +2811,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Khi có hiệu lệnh gác chắn, đèn đỏ nhấp nháy, chuông kêu hoặc chắn đang đóng, phải dừng lại về bên phải đường của mình, trước vạch dừng xe."
   },
   {
    "n": 101,
@@ -2825,7 +2825,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Nếu xe hỏng hoặc gặp tai nạn trên đường ngang mà không đưa ngay ra khỏi phạm vi an toàn đường sắt được, người lái và người có mặt phải lập tức báo hiệu để dừng tàu và làm mọi cách bảo đảm an toàn."
   },
   {
    "n": 102,
@@ -2854,7 +2854,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Trong hầm đường bộ: xe cơ giới và xe máy chuyên dùng bật đèn chiếu gần, xe thô sơ bật đèn hoặc có vật phát sáng, không dừng đỗ trong hầm. Nếu buộc phải dừng thì đưa vào vị trí dừng khẩn cấp; không di chuyển được thì bật đèn khẩn cấp và đặt biển hoặc đèn cảnh báo phía sau xe."
   },
   {
    "n": 104,
@@ -2868,7 +2868,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Nếu hệ thống phanh của xe được kéo không còn hiệu lực, hai xe phải nối với nhau bằng thanh nối cứng, để xe được kéo không đâm vào xe kéo khi giảm tốc. Dây cáp không giữ được khoảng cách khi phanh."
   },
   {
    "n": 105,
@@ -2882,7 +2882,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Xe kéo rơ moóc và ô tô đầu kéo chỉ được kéo rơ moóc, sơ mi rơ moóc phù hợp với thiết kế của xe, và việc kết nối phải chắc chắn, an toàn."
   },
   {
    "n": 106,
@@ -2896,7 +2896,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Xe được kéo phải có người điều khiển và hệ thống lái còn hiệu lực, nối với xe kéo chắc chắn; nếu phanh của xe được kéo đã hỏng thì nối bằng thanh cứng. Phía trước xe kéo và phía sau xe được kéo phải có biển báo hiệu và đèn vàng nhấp nháy. Một xe kéo nhiều xe như ý 1 là không được."
   },
   {
    "n": 107,
@@ -2911,7 +2911,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Phải quan sát, giảm tốc độ hoặc dừng lại ở cả ba trường hợp: có báo hiệu nguy hiểm, chướng ngại vật, khi chuyển hướng; nơi cầu cống hẹp, đường ngầm, hầm, có vật nuôi trên đường; và chỗ dừng đỗ có khách đang lên xuống."
   },
   {
    "n": 108,
@@ -2925,7 +2925,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Trên đường mỗi chiều một làn xe cơ giới, không được vượt khi phía trước có chướng ngại vật hoặc xe phía trước đang có tín hiệu vượt xe khác. Khi xe trước đã báo rẽ phải và tránh sang phải thì lại là lúc được vượt."
   },
   {
    "n": 109,
@@ -2939,7 +2939,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Chỉ được vượt bên phải khi xe phía trước có tín hiệu rẽ trái hoặc đang rẽ trái, hoặc khi xe chuyên dùng đang làm việc trên đường mà không thể vượt bên trái."
   },
   {
    "n": 110,
@@ -2953,7 +2953,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Khi đủ điều kiện cho xe sau vượt, người lái mô tô giảm tốc độ, bật tín hiệu rẽ phải và đi sát bên phải cho đến khi xe sau vượt qua, không được cản trở."
   },
   {
    "n": 111,
@@ -2967,7 +2967,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Không được đi trên đường cao tốc: xe máy chuyên dùng có tốc độ thiết kế thấp hơn tốc độ tối thiểu của cao tốc, xe chở người và chở hàng bốn bánh có gắn động cơ, xe mô tô, xe gắn máy và các loại tương tự, xe thô sơ và người đi bộ."
   },
   {
    "n": 112,
@@ -2981,7 +2981,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Trên đường cao tốc, xe ưu tiên làm nhiệm vụ khẩn cấp chỉ được đi ngược chiều trên làn dừng xe khẩn cấp, không được đi ngược chiều trên các làn xe chạy."
   },
   {
    "n": 113,
@@ -2995,7 +2995,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Trên đường cao tốc không được dừng, đỗ trên phần đường xe chạy (trừ khi xe không thể vào làn dừng khẩn cấp), và không được lùi xe hay quay đầu xe. Cả hai ý đều đúng."
   },
   {
    "n": 114,
@@ -3009,7 +3009,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Xe gặp sự cố trên cao tốc phải vào làn dừng khẩn cấp cùng chiều và bật đèn khẩn cấp. Nếu không vào được, bật đèn khẩn cấp, đặt biển hoặc đèn cảnh báo phía sau xe tối thiểu 150 mét, và báo ngay cho Cảnh sát giao thông hoặc cơ quan quản lý đường cao tốc."
   },
   {
    "n": 115,
@@ -3023,7 +3023,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Đã đi quá lối ra thì phải tiếp tục lái và ra ở lối ra kế tiếp. Lùi xe hay quay đầu trên cao tốc đều bị cấm và rất nguy hiểm."
   },
   {
    "n": 116,
@@ -3036,7 +3036,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Không được chạy trên làn dừng khẩn cấp để thoát ùn tắc. Làn này dành cho xe gặp sự cố và xe ưu tiên làm nhiệm vụ."
   },
   {
    "n": 117,
@@ -3065,7 +3065,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Người đủ 18 tuổi trở lên được cấp giấy phép lái xe hạng C1 (ô tô tải trên 3.500 kg đến 7.500 kg, kéo rơ moóc đến 750 kg)."
   },
   {
    "n": 119,
@@ -3079,7 +3079,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Người đủ 18 tuổi trở lên được cấp giấy phép lái xe mô tô đến 125 cm³ và ô tô hạng B (chở người đến 8 chỗ, tải đến 3.500 kg)."
   },
   {
    "n": 120,
@@ -3094,7 +3094,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Người lái xe chở người trên 29 chỗ, xe giường nằm (hạng D) phải đủ 27 tuổi trở lên, vì đây là hạng chở nhiều người nhất, đòi hỏi kinh nghiệm cao."
   },
   {
    "n": 121,
@@ -3108,7 +3108,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Người lái xe chở người trên 29 chỗ và xe giường nằm chỉ được lái đến đủ 57 tuổi với nam và đủ 55 tuổi với nữ."
   },
   {
    "n": 122,
@@ -3122,7 +3122,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Người lái xe chở người trên 16 chỗ đến 29 chỗ (hạng D2) phải đủ 24 tuổi trở lên. Mẹo nhớ: D1 21 tuổi, D2 24 tuổi, D 27 tuổi, mỗi hạng cách nhau 3 tuổi."
   },
   {
    "n": 123,
@@ -3137,7 +3137,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Người từ đủ 16 tuổi đến dưới 18 tuổi chỉ được điều khiển xe gắn máy. Mô tô đến 125 cm³ và ô tô hạng B đòi hỏi đủ 18 tuổi."
   },
   {
    "n": 124,
@@ -3151,7 +3151,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Giấy phép hạng A1 không cho phép lái xe mô tô ba bánh; mô tô ba bánh cần giấy phép hạng B1. A1 chỉ dùng cho mô tô hai bánh đến 125 cm³ hoặc động cơ điện đến 11 kW."
   },
   {
    "n": 125,
@@ -3165,7 +3165,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Giấy phép hạng A1 cấp sau ngày 01/01/2025 chỉ cho phép lái mô tô hai bánh đến 125 cm³ hoặc có công suất động cơ điện đến 11 kW, không gồm mô tô ba bánh."
   },
   {
    "n": 126,
@@ -3179,7 +3179,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Giấy phép hạng A cho phép lái mọi mô tô hai bánh, cả loại đến 125 cm³ (11 kW) lẫn loại trên 125 cm³ (trên 11 kW), nên chọn \"Cả hai ý trên\"."
   },
   {
    "n": 127,
@@ -3193,7 +3193,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Giấy phép hạng B cho phép lái ô tô chở người đến 8 chỗ (không kể người lái) và ô tô tải, ô tô chuyên dùng đến 3.500 kg, nên chọn \"Cả hai ý trên\"."
   },
   {
    "n": 128,
@@ -3207,7 +3207,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Giấy phép hạng C1 dành cho ô tô tải, ô tô chuyên dùng trên 3.500 kg đến 7.500 kg (được kéo rơ moóc đến 750 kg). Xe tải trên 7.500 kg cần hạng C."
   },
   {
    "n": 129,
@@ -3221,7 +3221,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Giấy phép hạng C cho phép lái cả xe tải trên 7.500 kg lẫn các xe của hạng C1 (trên 3.500 kg đến 7.500 kg), vì hạng cao hơn bao gồm hạng thấp hơn trong cùng nhóm. Cả hai ý đều đúng."
   },
   {
    "n": 130,
@@ -3235,7 +3235,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Giấy phép hạng D1 dành cho ô tô chở người trên 8 chỗ đến 16 chỗ (không kể người lái), được kéo rơ moóc đến 750 kg. Xe trên 16 chỗ cần hạng D2."
   },
   {
    "n": 131,
@@ -3249,7 +3249,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Giấy phép hạng D2 cho phép lái xe chở người trên 16 đến 29 chỗ và cả xe của hạng D1 (trên 8 đến 16 chỗ), nên chọn \"Cả hai ý trên\"."
   },
   {
    "n": 132,
@@ -3264,7 +3264,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Giấy phép hạng D cho phép lái xe chở người trên 29 chỗ, xe giường nằm, và xe trên 16 đến 29 chỗ của hạng D2, nên chọn \"Ý 1 và ý 2\". Xe hạng C kéo rơ moóc lớn cần hạng CE."
   },
   {
    "n": 133,
@@ -3278,7 +3278,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Giấy phép hạng BE cho phép lái các xe của hạng B kéo rơ moóc có khối lượng toàn bộ theo thiết kế trên 750 kg. Chữ E nghĩa là được kéo rơ moóc nặng."
   },
   {
    "n": 134,
@@ -3292,7 +3292,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Giấy phép hạng CE dành cho xe hạng C kéo rơ moóc trên 750 kg và xe đầu kéo kéo sơ mi rơ moóc. Xe chở người kéo rơ moóc thuộc các hạng D1E, D2E, DE."
   },
   {
    "n": 135,
@@ -3306,7 +3306,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Giấy phép hạng DE dành cho xe hạng D kéo rơ moóc trên 750 kg và xe chở khách nối toa."
   },
   {
    "n": 136,
@@ -3320,7 +3320,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Người tập lái ô tô phải thực hành trên xe tập lái, trên tuyến đường tập lái, và có giáo viên dạy lái ngồi bên bảo trợ tay lái."
   },
   {
    "n": 137,
@@ -3334,7 +3334,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Người lái xe phải đủ tuổi, đủ sức khỏe và có giấy phép lái xe phù hợp, còn điểm, còn hiệu lực (trừ người lái xe gắn máy). Không bắt buộc phải là người đứng tên trên đăng ký xe."
   },
   {
    "n": 138,
@@ -3349,7 +3349,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Người lái phải mang chứng nhận đăng ký xe (hoặc bản sao có chứng thực kèm giấy tờ tổ chức tín dụng giữ bản gốc), giấy phép lái xe, chứng nhận kiểm định, bảo hiểm bắt buộc. Nếu các giấy tờ đã tích hợp vào tài khoản định danh điện tử thì xuất trình qua tài khoản đó cũng có giá trị như mang bản giấy. Cả ba ý đều đúng."
   },
   {
    "n": 139,
@@ -3364,7 +3364,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Giấy phép lái xe bị thu hồi khi người được cấp không còn đủ sức khỏe theo kết luận y tế, khi giấy phép được cấp sai quy định, hoặc khi quá thời hạn tạm giữ, hết thời hiệu thi hành quyết định xử phạt mà người vi phạm không đến nhận. Cả ba ý đều đúng."
   },
   {
    "n": 140,
@@ -3377,7 +3377,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Giấy phép chưa bị trừ hết 12 điểm sẽ được phục hồi đủ 12 điểm nếu người lái không bị trừ điểm trong 12 tháng tính từ lần bị trừ điểm gần nhất."
   },
   {
    "n": 141,
@@ -3391,7 +3391,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Giấy phép đã bị trừ hết điểm thì sau ít nhất 06 tháng, người lái phải dự kiểm tra kiến thức pháp luật về trật tự, an toàn giao thông; đạt yêu cầu mới được phục hồi đủ 12 điểm. Chỉ chờ không vi phạm là chưa đủ."
   },
   {
    "n": 142,
@@ -3404,7 +3404,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Khi chưa làm thủ tục thu hồi chứng nhận đăng ký và biển số xe, tổ chức hoặc cá nhân đứng tên đăng ký vẫn tiếp tục chịu trách nhiệm của chủ xe, kể cả khi đã bán, cho hoặc tặng xe."
   },
   {
    "n": 143,
@@ -3418,7 +3418,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Phải lắp thiết bị giám sát hành trình trên xe ô tô kinh doanh vận tải, và trên xe chở người từ 8 chỗ trở lên (không kể người lái) kinh doanh vận tải cùng các loại xe theo quy định. Cả hai ý đều đúng."
   },
   {
    "n": 144,
@@ -3432,7 +3432,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Xe máy chuyên dùng, xe gắn máy và các loại xe tương tự có tốc độ tối đa 40 km/h trên đường bộ (trừ đường cao tốc)."
   },
   {
    "n": 145,
@@ -3446,7 +3446,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Trong khu đông dân cư, trên đường đôi hoặc đường một chiều có từ hai làn xe cơ giới trở lên, xe cơ giới (trừ xe gắn máy, xe máy chuyên dùng) được chạy tối đa 60 km/h."
   },
   {
    "n": 146,
@@ -3460,7 +3460,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Trong khu đông dân cư, trên đường hai chiều hoặc đường một chiều chỉ có một làn xe cơ giới, xe cơ giới (trừ xe gắn máy, xe máy chuyên dùng) được chạy tối đa 50 km/h."
   },
   {
    "n": 147,
@@ -3474,7 +3474,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Trong khu đông dân cư, đường hai chiều hoặc một chiều một làn, ô tô tải và ô tô chở người trên 28 chỗ được chạy tối đa 50 km/h. Xe gắn máy, xe máy chuyên dùng chỉ được tối đa 40 km/h."
   },
   {
    "n": 148,
@@ -3488,7 +3488,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Trong khu đông dân cư, đường đôi hoặc một chiều từ hai làn trở lên, ô tô tải và ô tô chở người trên 28 chỗ được chạy tối đa 60 km/h. Xe gắn máy, xe máy chuyên dùng vẫn chỉ tối đa 40 km/h."
   },
   {
    "n": 149,
@@ -3502,7 +3502,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Ngoài khu đông dân cư, trên đường đôi hoặc một chiều từ hai làn trở lên, mức 90 km/h dành cho xe chở người đến 28 chỗ (trừ xe buýt) và ô tô tải đến 3,5 tấn. Mẹo: xe càng nhẹ, nhỏ thì tốc độ tối đa càng cao."
   },
   {
    "n": 150,
@@ -3517,7 +3517,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Ngoài khu đông dân cư, đường đôi từ hai làn trở lên: xe chở người trên 28 chỗ (trừ xe buýt) và ô tô tải trên 3,5 tấn (trừ xi téc) được tối đa 80 km/h, thấp hơn một bậc so với xe nhỏ (90 km/h)."
   },
   {
    "n": 151,
@@ -3532,7 +3532,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Ngoài khu đông dân cư, đường đôi từ hai làn trở lên: xe buýt, ô tô đầu kéo kéo sơ mi rơ moóc (trừ xi téc), xe mô tô và ô tô chuyên dùng (trừ xe trộn vữa, bê tông lưu động) được tối đa 70 km/h."
   },
   {
    "n": 152,
@@ -3547,7 +3547,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Ngoài khu đông dân cư, đường đôi từ hai làn trở lên: nhóm xe kéo rơ moóc, kéo xe khác, xe trộn vữa, trộn bê tông lưu động, xe xi téc có tốc độ tối đa thấp nhất, 60 km/h."
   },
   {
    "n": 153,
@@ -3561,7 +3561,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Ngoài khu đông dân cư, trên đường hai chiều hoặc một chiều một làn: xe chở người đến 28 chỗ (trừ xe buýt) và ô tô tải đến 3,5 tấn được tối đa 80 km/h. Mỗi nhóm xe trên loại đường này thấp hơn đường đôi 10 km/h."
   },
   {
    "n": 154,
@@ -3576,7 +3576,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Ngoài khu đông dân cư, đường hai chiều hoặc một chiều một làn: xe chở người trên 28 chỗ (trừ xe buýt) và ô tô tải trên 3,5 tấn (trừ xi téc) được tối đa 70 km/h."
   },
   {
    "n": 155,
@@ -3591,7 +3591,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Ngoài khu đông dân cư, đường hai chiều hoặc một chiều một làn: xe buýt, đầu kéo kéo sơ mi rơ moóc (trừ xi téc), xe mô tô và ô tô chuyên dùng (trừ xe trộn vữa, bê tông) được tối đa 60 km/h."
   },
   {
    "n": 156,
@@ -3606,7 +3606,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Ngoài khu đông dân cư, đường hai chiều hoặc một chiều một làn: xe kéo rơ moóc, kéo xe khác, xe trộn vữa, trộn bê tông lưu động, xe xi téc được tối đa 50 km/h."
   },
   {
    "n": 157,
@@ -3620,7 +3620,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Xe chở hàng bốn bánh có gắn động cơ, khi hoạt động trong phạm vi và thời gian được phép, có tốc độ tối đa 50 km/h. Xe gắn máy và xe máy chuyên dùng chỉ được tối đa 40 km/h."
   },
   {
    "n": 158,
@@ -3634,7 +3634,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Khi chạy trên 80 đến 100 km/h trong điều kiện tốt, phải giữ khoảng cách tối thiểu 70 m với xe liền trước. Mốc cần nhớ: 60 km/h 35 m; trên 60 đến 80 là 55 m; trên 80 đến 100 là 70 m; trên 100 đến 120 là 100 m."
   },
   {
    "n": 159,
@@ -3648,7 +3648,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Khi chạy trên 100 đến 120 km/h trong điều kiện tốt, phải giữ khoảng cách tối thiểu 100 m với xe liền trước."
   },
   {
    "n": 160,
@@ -3662,7 +3662,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Khi chạy trên 60 đến 80 km/h trong điều kiện tốt, phải giữ khoảng cách tối thiểu 55 m với xe liền trước."
   },
   {
    "n": 161,
@@ -3676,7 +3676,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Khi chạy với tốc độ 60 km/h trong điều kiện tốt, phải giữ khoảng cách tối thiểu 35 m với xe liền trước."
   },
   {
    "n": 162,
@@ -3690,7 +3690,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Dưới 60 km/h không có con số cố định: người lái phải chủ động giữ khoảng cách phù hợp với xe trước, tùy mật độ xe và tình hình giao thông thực tế. Cả hai ý đều đúng."
   },
   {
    "n": 163,
@@ -3719,7 +3719,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Xe đưa đón trẻ mầm non, học sinh được ưu tiên phân luồng, điều tiết giao thông và bố trí nơi dừng đỗ ở khu vực trường học và các điểm đón trả trên lộ trình. Không có quy định bố trí xe dẫn đường."
   },
   {
    "n": 165,
@@ -3748,7 +3748,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Không có biển hạn chế tốc độ hay biển khoảng cách thì người lái vẫn phải chấp hành tốc độ tối đa và khoảng cách an toàn theo quy định chung. Không có biển không có nghĩa là không giới hạn."
   },
   {
    "n": 167,
@@ -3774,7 +3774,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Xe chở khách phải đón trả khách đúng nơi quy định, hướng dẫn sử dụng thiết bị an toàn, giữ vệ sinh, chạy đúng lịch trình và lộ trình đã đăng ký, và không cho khách ngồi trên nóc, trong khoang hành lý hay đu bám bên ngoài. Đón trả theo yêu cầu của khách là sai."
   },
   {
    "n": 169,
@@ -3789,7 +3789,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Trong vận tải đường bộ, bị nghiêm cấm vận chuyển hàng cấm lưu hành, vận chuyển trái phép hoặc không theo đúng quy định với hàng nguy hiểm, và vận chuyển động vật hoang dã. Cả ba ý đều đúng."
   },
   {
    "n": 170,
@@ -3804,7 +3804,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Bị nghiêm cấm đe dọa, xúc phạm, tranh giành, lôi kéo, ép khách dùng dịch vụ ngoài ý muốn, và chuyển tải hay xuống khách để trốn kiểm tra chở quá tải, quá số người. Cạnh tranh hay giảm giá đúng pháp luật thì không bị cấm."
   },
   {
    "n": 171,
@@ -3819,7 +3819,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Người lái ô tô kinh doanh vận tải không được lái liên tục quá 4 giờ, để tránh mệt mỏi, buồn ngủ khi lái."
   },
   {
    "n": 172,
@@ -3834,7 +3834,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Thời gian làm việc của người lái ô tô kinh doanh vận tải không quá 10 giờ trong một ngày, không phụ thuộc vào cảm nhận sức khỏe của người lái."
   },
   {
    "n": 173,
@@ -3849,7 +3849,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Trước khi xe khởi hành, người lái và nhân viên phục vụ phải kiểm tra điều kiện an toàn của xe và hướng dẫn hành khách về an toàn, thoát hiểm. Kiểm tra nhân thân, hành lý của khách không phải trách nhiệm của họ, nên chọn \"Ý 1 và ý 2\"."
   },
   {
    "n": 174,
@@ -3864,7 +3864,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Xe kinh doanh vận tải chở trẻ mầm non, học sinh phải có thiết bị ghi hình và cảnh báo chống bỏ quên trẻ, dây an toàn hoặc ghế phù hợp lứa tuổi, và được đăng ký, gắn biển số, kiểm định đầy đủ. Cả ba ý đều đúng."
   },
   {
    "n": 175,
@@ -3879,7 +3879,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Vận chuyển động vật sống phải mang đủ giấy tờ theo quy định, dùng phương tiện có kết cấu phù hợp với loại động vật, và chấp hành quy tắc giao thông, vệ sinh môi trường trong quá trình vận chuyển. Cả ba ý đều đúng."
   },
   {
    "n": 176,
@@ -3892,7 +3892,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Vận chuyển hàng nguy hiểm phải có giấy phép vận chuyển, và khi cần thiết đơn vị vận chuyển phải bố trí người áp tải. Ý 2 sai vì nói không phải bố trí người áp tải."
   },
   {
    "n": 177,
@@ -3907,7 +3907,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Xe nước ngoài vào Việt Nam du lịch phải chấp hành luật giao thông Việt Nam, đi đúng phạm vi, tuyến đường và thời gian được cấp phép. Xe tay lái bên phải còn phải đi theo đoàn và có xe dẫn đường. Cả ba ý đều đúng."
   },
   {
    "n": 178,
@@ -3921,7 +3921,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Dùng mô tô, xe gắn máy, xe thô sơ chở khách hay chở hàng phải kiểm tra an toàn của xe, mang đủ giấy tờ, sắp xếp hàng chắc chắn, không chở quá số người và quá kích thước, khối lượng cho phép. Cả hai ý đều đúng."
   },
   {
    "n": 179,
@@ -3934,7 +3934,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Xe chở hàng siêu trường, siêu trọng phải chạy đúng tốc độ ghi trong giấy phép, có báo hiệu kích thước hàng, và khi cần thì phải có người, phương tiện hỗ trợ và cảnh báo cho người khác."
   },
   {
    "n": 180,
@@ -3948,7 +3948,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Xe cứu hộ giao thông phải có dấu hiệu nhận diện, niêm yết thông tin và gắn đèn theo quy định, đồng thời tuân thủ quy định về khối lượng chuyên chở và kích thước khi kéo, chở xe bị nạn. Cả hai ý đều đúng."
   },
   {
    "n": 181,
@@ -3962,7 +3962,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Rèn luyện đạo đức nghề nghiệp giúp người lái được khách hàng, xã hội tôn trọng, đồng nghiệp quý mến, doanh nghiệp tin dùng, và góp phần xây dựng thương hiệu. Không có quy định cộng điểm vào giấy phép lái xe."
   },
   {
    "n": 182,
@@ -3977,7 +3977,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Người có văn hóa giao thông luôn tuân thủ pháp luật, nhường nhịn và giúp đỡ người khác. Vượt đèn đỏ khi không có công an, bấm còi nháy đèn liên tục hay không nhường đường đều là thiếu văn hóa."
   },
   {
    "n": 183,
@@ -3991,7 +3991,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Để rèn luyện đạo đức nghề nghiệp, người lái xe kinh doanh vận tải phải quản lý, bảo dưỡng xe tốt, tiết kiệm, và nắm vững, tự giác chấp hành pháp luật về giao thông. Cả hai ý đều đúng."
   },
   {
    "n": 184,
@@ -4005,7 +4005,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Người lái xe khách phải lịch sự, tôn trọng, giúp đỡ hành khách có hoàn cảnh khó khăn, đồng thời luôn tu dưỡng bản thân, sống lành mạnh, làm việc có tác phong. Cả hai ý đều đúng."
   },
   {
    "n": 185,
@@ -4019,7 +4019,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Văn hóa giao thông gồm hai mặt: hiểu và chấp hành nghiêm pháp luật, có trách nhiệm với cộng đồng; và tôn trọng, nhường nhịn, giúp đỡ, ứng xử có văn hóa với người cùng tham gia giao thông. Cả hai ý đều đúng."
   },
   {
    "n": 186,
@@ -4033,7 +4033,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Qua vũng nước khi làn bên cạnh có nhiều xe mô tô, phải giảm tốc độ để không làm nước bắn vào người khác. Chạy nhanh gây bắn nước, còn lấn sang làn mô tô là sai làn và nguy hiểm."
   },
   {
    "n": 187,
@@ -4046,7 +4046,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Đi sai làn, phóng nhanh vượt ẩu, vượt đèn đỏ, đi vào đường cấm vừa là thiếu văn hóa giao thông vừa là vi phạm pháp luật về trật tự, an toàn giao thông."
   },
   {
    "n": 188,
@@ -4059,7 +4059,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Máu phun thành tia theo nhịp mạch đập là chảy máu động mạch, phải cầm máu không trực tiếp: ấn chặn động mạch ở phía trên vết thương (phía gần tim). Băng ép trực tiếp không đủ cho loại chảy máu này."
   },
   {
    "n": 189,
@@ -4072,7 +4072,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Người lái có văn hóa giao thông phải hiểu và chấp hành nghiêm pháp luật, có trách nhiệm với cộng đồng, và ứng xử tôn trọng, nhường nhịn, giúp đỡ người khác. Chạy quá tốc độ, sai làn là trái ngược."
   },
   {
    "n": 190,
@@ -4085,7 +4085,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Người lái có văn hóa giao thông chấp hành hiệu lệnh, tốc độ, đèn tín hiệu, biển báo, vạch kẻ đường, và nhường đường cho người đi bộ, người già, trẻ em, người khuyết tật. Chọn làn vắng xe để đi là sai."
   },
   {
    "n": 191,
@@ -4099,7 +4099,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Người lái mô tô có văn hóa giao thông đi bên phải theo chiều đi, đúng phần đường và làn đường, luôn đội mũ bảo hiểm đạt chuẩn và cài quai đúng cách, không chỉ đội ở nơi có biển bắt buộc."
   },
   {
    "n": 192,
@@ -4113,7 +4113,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Người lái có văn hóa giao thông đi bên phải, đúng phần đường và làn đường, dừng đỗ đúng nơi quy định, và đã uống rượu bia thì không lái xe. Dừng đỗ tùy tiện cho tiện chở khách, giao hàng là sai."
   },
   {
    "n": 193,
@@ -4128,7 +4128,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Chỉ bấm còi khi thật sự cần, không bấm liên tục hay kéo dài, và dùng còi đúng âm lượng quy định. Không dùng còi trong mọi trường hợp cũng sai, vì còi là tín hiệu cảnh báo cần thiết."
   },
   {
    "n": 194,
@@ -4143,7 +4143,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Người gây tai nạn và người liên quan phải dừng ngay xe, cảnh báo nguy hiểm, giữ nguyên hiện trường, giúp người bị nạn và báo cơ quan chức năng; ở lại hiện trường đến khi công an đến; và cung cấp thông tin danh tính, thông tin về vụ tai nạn. Cả ba ý đều đúng."
   },
   {
    "n": 195,
@@ -4156,7 +4156,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Người có mặt tại nơi xảy ra tai nạn phải giúp đỡ, cứu chữa người bị nạn, báo ngay cho công an, cơ sở y tế hoặc chính quyền gần nhất, tham gia bảo vệ hiện trường và tài sản của người bị nạn, cung cấp thông tin khi được yêu cầu. Chụp ảnh rồi bỏ đi là sai."
   },
   {
    "n": 196,
@@ -4169,7 +4169,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Nạn nhân không còn thở thì phải đặt nằm ngửa, khai thông đường thở trước, rồi mới hô hấp nhân tạo. Thổi ngạt khi đường thở còn bị tắc sẽ không có tác dụng."
   },
   {
    "n": 197,
@@ -4213,7 +4213,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Gặp tai nạn giao thông thì dừng xe, hỗ trợ nạn nhân và báo cho cơ quan chức năng. Bỏ đi, chỉ đứng xem hay chỉ giúp khi có người quen đều không đúng."
   },
   {
    "n": 200,
@@ -4227,7 +4227,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Khi ùn tắc, người có văn hóa giao thông kiên nhẫn theo hướng dẫn của người điều khiển giao thông hoặc đèn tín hiệu, đi đúng phần đường bên phải và nhường xe ngược chiều. Lấn làn ngược chiều hay leo vỉa hè làm ùn tắc thêm và vi phạm luật."
   },
   {
    "n": 201,
@@ -4240,7 +4240,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Bấm còi liên tục để giục, đi lên vỉa hè, chen vào mọi khoảng trống, lấn trái để vượt khi đang ùn tắc đều là thiếu văn hóa giao thông."
   },
   {
    "n": 202,
@@ -4255,7 +4255,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Phòng cháy cho xe gồm: không lắp thêm thiết bị điện, phụ kiện sai thiết kế; khi để xe trong nhà hay bãi giữ xe thì tắt khóa điện, để xa nguồn lửa, nguồn nhiệt; và không để chất dễ cháy trong xe, dưới yên, trong cốp. Cả ba ý đều đúng."
   },
   {
    "n": 203,
@@ -4269,7 +4269,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Khi xe bị cháy và có thể dập được: tắt khóa điện, hô hoán và gọi lực lượng chữa cháy; nếu nhiên liệu chưa trào ra thì dùng nước hay phương tiện có sẵn, nếu đã trào ra thì dùng bình chữa cháy, cát, chăn, vải nhúng nước. Cả hai ý đều đúng."
   },
   {
    "n": 204,
@@ -4284,7 +4284,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Việc đầu tiên khi phát hiện lửa, khói hoặc nhiệt độ bất thường là bình tĩnh đưa xe vào sát lề, tránh xa chỗ đông người và chất dễ cháy, tắt khóa điện rồi mới chữa cháy. Hô hoán, gọi cứu hỏa là bước sau; tiếp tục dùng nước khi nhiên liệu đã trào ra là sai."
   },
   {
    "n": 205,
@@ -4299,7 +4299,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Với nạn nhân bị bỏng: gọi 115 và quan sát hiện trường để giúp mà không tự gây thương tích cho mình; loại bỏ ngay nguyên nhân gây bỏng và làm mát vùng bỏng bằng nước sạch (không dùng nước quá lạnh); cho uống bù nước nếu còn tỉnh, giữ ấm rồi đưa đến cơ sở y tế. Cả ba ý đều đúng."
   },
   {
    "n": 206,
@@ -4326,7 +4326,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Khởi hành xe số tự động: đạp phanh chân hết hành trình, vào số, nhả phanh đỗ, kiểm tra lại xem có vào nhầm số không rồi mới cho xe lăn bánh. Đạp ga khi vào số rất dễ làm xe lao đi bất ngờ."
   },
   {
    "n": 208,
@@ -4340,7 +4340,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Nhả phanh tay: bóp khóa hãm và đẩy cần phanh về phía trước hết hành trình. Nếu khóa hãm bị kẹt, kéo nhẹ cần phanh về phía sau đồng thời bóp khóa hãm để giải phóng chốt rồi mới đẩy về."
   },
   {
    "n": 209,
@@ -4353,7 +4353,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Khởi hành xe số sàn trên đường bằng: kiểm tra an toàn xung quanh, đạp côn hết hành trình, vào số 1, nhả phanh tay, báo hiệu bằng còi hay đèn, tăng ga đủ, nhả côn từ từ đến nửa hành trình giữ khoảng 3 giây, rồi vừa tăng ga vừa nhả hết côn."
   },
   {
    "n": 210,
@@ -4366,7 +4366,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Khi quay đầu xe: quan sát biển báo để biết nơi được phép, quan sát địa hình, chọn quỹ đạo phù hợp, quay ở tốc độ thấp, liên tục báo tín hiệu. Nếu quay ở nơi nguy hiểm thì đưa đầu xe về phía nguy hiểm, đuôi xe về phía an toàn, để luôn nhìn thấy phía nguy hiểm."
   },
   {
    "n": 211,
@@ -4380,7 +4380,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Tư thế lái đúng: chỉnh ghế để đạp phanh và ga dễ dàng, ngồi thẳng lưng, tay trái nắm vô lăng ở vị trí 9–10 giờ, tay phải ở 2–4 giờ. Ngồi sát vô lăng hay ngả người ra sau đều làm giảm khả năng điều khiển."
   },
   {
    "n": 212,
@@ -4393,7 +4393,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Lên dốc cao: về số thấp từ chân dốc để xe đủ lực, điều chỉnh ga cho xe lên từ từ; gần đỉnh dốc phải đi chậm, sát bên phải, và báo hiệu bằng còi hoặc đèn cho xe ngược chiều phía bên kia dốc biết."
   },
   {
    "n": 213,
@@ -4407,7 +4407,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Xuống dốc dài: về số thấp để dùng phanh động cơ, nhả ga phù hợp, kết hợp phanh chân để khống chế tốc độ. Về số cao hay số 0 làm mất phanh động cơ, phanh chân phải làm việc liên tục nên dễ mất tác dụng."
   },
   {
    "n": 214,
@@ -4421,7 +4421,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Dừng xe khi đang xuống dốc: bật tín hiệu rẽ phải, đưa xe sát lề phải, phanh sớm và mạnh hơn khi dừng trên đường bằng, về số 1, đạp nửa côn cho xe tới chỗ dừng; khi xe dừng hẳn thì về số 0 (N), đạp phanh chân và kéo phanh đỗ."
   },
   {
    "n": 215,
@@ -4448,7 +4448,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Rẽ phải: cách chỗ rẽ một khoảng an toàn thì bật tín hiệu rẽ phải, giảm tốc độ, quan sát phía trước, phía sau và bên phải, rồi từ từ rẽ. Không chuyển sang làn trái trước khi rẽ phải."
   },
   {
    "n": 217,
@@ -4461,7 +4461,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Rẽ trái: cách chỗ rẽ một khoảng an toàn thì bật tín hiệu rẽ trái, giảm tốc độ, quan sát xung quanh (nhất là bên trái), chuyển sang làn bên trái rồi từ từ rẽ. Tăng tốc khi rẽ là sai."
   },
   {
    "n": 218,
@@ -4475,7 +4475,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Qua rãnh lớn cắt ngang đường bằng xe số sàn: vào số 1, cho bánh trước từ từ xuống rãnh, tăng ga để bánh trước lên khỏi rãnh, sau đó để bánh sau từ từ xuống rãnh rồi tăng dần ga cho xe lên. Qua từng cặp bánh một cách chậm rãi để tránh va đập hỏng xe."
   },
   {
    "n": 219,
@@ -4489,7 +4489,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Qua đường sắt: có chuông báo hoặc thanh chắn đã hạ thì dừng đúng khoảng cách an toàn và chờ; không có chuông, chắn thì quan sát, thấy tàu tới thì dừng chờ tàu qua, không có tàu mới đi qua. Cả hai ý đều đúng."
   },
   {
    "n": 220,
@@ -4504,7 +4504,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Lái xe tự đổ: đi chậm trên đường xấu để thùng xe không bị lắc mạnh; khi đổ hàng chọn nền cứng và phẳng, dừng hẳn, kéo phanh đỗ rồi mới nâng thùng. Ý 2 sai vì luôn phải hạ hết thùng xe khi chạy, nên chọn \"Ý 1 và ý 3\"."
   },
   {
    "n": 221,
@@ -4517,7 +4517,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Khi tăng số: không nhìn xuống buồng lái, tăng lần lượt từ số thấp lên số cao, phối hợp các thao tác nhịp nhàng, chính xác. Nhìn xuống cần số làm mất quan sát đường."
   },
   {
    "n": 222,
@@ -4530,7 +4530,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Khi giảm số: không nhìn xuống buồng lái, giảm lần lượt từ số cao xuống thấp, phối hợp nhịp nhàng, chính xác, và vù ga cho phù hợp với tốc độ để không bị giật."
   },
   {
    "n": 223,
@@ -4544,7 +4544,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Giảm tốc khi xuống dốc dài: về số thấp phù hợp, nhả ga, kết hợp phanh chân vừa phải. Đạp côn hết rồi phanh mạnh, hay tăng số cao, đều làm mất phanh động cơ và dễ cháy phanh."
   },
   {
    "n": 224,
@@ -4558,7 +4558,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Qua đường ngập nước: quan sát, ước lượng mức nước xe có thể vượt qua an toàn, về số thấp, giữ đều ga và giữ vững tay lái. Tăng giảm ga liên tục dễ làm nước tràn vào ống xả, chết máy."
   },
   {
    "n": 225,
@@ -4572,7 +4572,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Gặp xe ngược chiều ban đêm: chuyển từ đèn chiếu xa sang chiếu gần để không làm chói mắt người kia, và không nhìn thẳng vào đèn xe đối diện mà nhìn chếch sang bên phải theo chiều đi của mình."
   },
   {
    "n": 226,
@@ -4599,7 +4599,7 @@
    ],
    "correct": 1,
    "image": "img/q227.webp",
-   "explanation": null
+   "explanation": "Ký hiệu chữ BRAKE kèm dấu chấm than trong vòng tròn báo phanh đỗ (phanh tay) đang được sử dụng. Phải nhả phanh đỗ trước khi cho xe chạy; nếu đã nhả mà đèn vẫn sáng thì cần kiểm tra hệ thống phanh."
   },
   {
    "n": 228,
@@ -4614,7 +4614,7 @@
    ],
    "correct": 4,
    "image": "img/q228.webp",
-   "explanation": null
+   "explanation": "Ký hiệu hình bình dầu có giọt dầu nhỏ ra báo áp suất dầu bôi trơn ở mức thấp. Phải dừng xe kiểm tra ngay, vì chạy tiếp có thể làm hỏng động cơ."
   },
   {
    "n": 229,
@@ -4629,7 +4629,7 @@
    ],
    "correct": 1,
    "image": "img/q229.webp",
-   "explanation": null
+   "explanation": "Ký hiệu hình chiếc xe có cánh cửa mở báo có cửa xe đóng chưa chặt hoặc chưa đóng. Phải đóng chặt cửa trước khi cho xe chạy."
   },
   {
    "n": 230,
@@ -4644,7 +4644,7 @@
    ],
    "correct": 3,
    "image": "img/q230.webp",
-   "explanation": null
+   "explanation": "Ký hiệu hình người ngồi với dây đai chéo qua người báo người lái và người ngồi ghế trước chưa cài dây an toàn."
   },
   {
    "n": 231,
@@ -4659,7 +4659,7 @@
    ],
    "correct": 4,
    "image": "img/q231.webp",
-   "explanation": null
+   "explanation": "Ký hiệu hình cây bơm xăng báo nhiên liệu sắp hết. Cần đổ thêm nhiên liệu sớm để xe không chết máy giữa đường."
   },
   {
    "n": 232,
@@ -4673,7 +4673,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Xăng sinh học và khí sinh học giảm thiểu ô nhiễm môi trường hơn xăng và dầu diesel truyền thống."
   },
   {
    "n": 233,
@@ -4687,7 +4687,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Tiết kiệm nhiên liệu bằng cách bảo dưỡng xe định kỳ, lên kế hoạch lộ trình trước, kiểm tra áp suất lốp đúng quy định và chạy tốc độ phù hợp với mặt đường. Cả hai ý đều đúng."
   },
   {
    "n": 234,
@@ -4715,7 +4715,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Qua đường sắt không có rào chắn và người điều khiển: giảm tốc độ, dừng trước vạch dừng, quan sát hai phía; không có tàu thì tăng ga nhẹ qua, có tàu thì dừng chờ tàu đi qua mới đi. Cả hai ý đều đúng."
   },
   {
    "n": 236,
@@ -4729,7 +4729,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Trình tự nêu trong câu hỏi (giảm tốc độ, dừng trước vạch, quan sát hai phía, không có tàu mới tăng ga nhẹ qua, có tàu thì chờ) là đúng. Ước lượng tàu còn xa để tăng tốc vượt qua là rất nguy hiểm."
   },
   {
    "n": 237,
@@ -4743,7 +4743,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Xe số tự động vào đường trơn trượt, lầy lội: về số thấp để có phanh động cơ, kết hợp phanh chân để giảm tốc độ. Dùng phanh đỗ khi xe đang chạy hoặc về số N đều dễ làm xe mất kiểm soát."
   },
   {
    "n": 238,
@@ -4757,7 +4757,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Khi động cơ đang nổ mà cần chỉnh ghế lái, phải để cần số ở N, P hoặc số 0, để xe không tự chạy nếu lỡ chạm chân ga."
   },
   {
    "n": 239,
@@ -4771,7 +4771,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Xe số tự động: không dùng chân trái, chỉ dùng chân phải cho cả phanh và ga, để tránh đạp cùng lúc hoặc nhầm hai bàn đạp."
   },
   {
    "n": 240,
@@ -4785,7 +4785,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Sương mù hoặc mưa to: giảm tốc độ, giữ khoảng cách xa hơn với xe trước, bật đèn sương mù và đèn chiếu gần. Chạy gần xe trước hay bật đèn pha (làm lóa trong sương) đều nguy hiểm."
   },
   {
    "n": 241,
@@ -4799,7 +4799,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Bị đèn pha xe ngược chiều làm chói: giảm tốc độ, giữ vững tay lái, nhìn chếch sang lề đường bên phải. Bật pha đáp trả làm cả hai cùng bị chói."
   },
   {
    "n": 242,
@@ -4813,7 +4813,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Phanh mô tô hiệu quả nhất: nhả hết ga và dùng đồng thời cả phanh trước lẫn phanh sau. Chỉ dùng một phanh thì quãng đường phanh dài hơn và dễ trượt bánh."
   },
   {
    "n": 243,
@@ -4827,7 +4827,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Đường nhiều ổ gà: giảm tốc độ, về số thấp và giữ đều ga. Tăng tốc hay đánh lái liên tục để tránh ổ gà dễ làm mất lái, gãy hỏng hệ thống treo."
   },
   {
    "n": 244,
@@ -4841,7 +4841,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Mưa to hoặc sương mù: bật đèn chiếu gần và đèn vàng (nếu có), bật gạt nước, đi chậm đủ để quan sát; khi cần thì tìm chỗ an toàn dừng xe và bật đèn khẩn cấp. Bật đèn chiếu xa và tăng tốc là sai."
   },
   {
    "n": 245,
@@ -4883,7 +4883,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Lái ô tô trong khu đông dân cư phải giảm tốc độ đến mức an toàn, quan sát, nhường người đi bộ, giữ khoảng cách, đi đúng làn và chỉ chuyển làn ở nơi cho phép. Cả hai ý đều đúng."
   },
   {
    "n": 248,
@@ -4897,7 +4897,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Nhập vào cao tốc: quan sát, phát tín hiệu, nhường xe đang chạy trên cao tốc; nếu có làn tăng tốc thì chạy trên làn đó cho đủ tốc độ, khi đủ điều kiện an toàn mới nhập vào làn cao tốc."
   },
   {
    "n": 249,
@@ -4910,7 +4910,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Ra khỏi cao tốc: tìm biển chỉ dẫn lối ra, kiểm tra phía sau và bên phải, phát tín hiệu và chuyển dần sang làn bên phải; nếu có làn giảm tốc thì chạy trên làn đó trước khi ra. Lỡ qua lối ra thì đi tiếp đến lối ra sau."
   },
   {
    "n": 250,
@@ -4924,7 +4924,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Chỉ được dừng đỗ trên làn dừng khẩn cấp khi xe gặp sự cố, tai nạn hoặc trường hợp khẩn cấp không đi tiếp được. Dừng để nghỉ, đi vệ sinh, chụp ảnh là vi phạm."
   },
   {
    "n": 251,
@@ -4939,7 +4939,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Vượt xe kéo rơ moóc trên đường đôi: giữ khoảng cách, tránh điểm mù của xe, bật xi nhan trái; chỉ vượt khi xe kéo rơ moóc báo cho vượt và đủ điều kiện; vượt xong quan sát gương phải, có khoảng trống an toàn mới quay về làn. Cả ba ý đều đúng."
   },
   {
    "n": 252,
@@ -5007,7 +5007,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Người ngồi trên ô tô mở cửa xuống xe: quan sát phía trước, phía sau và bên mở cửa, khi an toàn thì mở hé cửa, rồi mới mở ở mức cần thiết để xuống. Mở cửa không quan sát phía sau dễ va vào xe máy, xe đạp đang tới."
   },
   {
    "n": 257,
@@ -5022,7 +5022,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Quay đầu mô tô: bật tín hiệu từ trước và giảm tốc độ đến mức có thể dừng; chỉ quay đầu ở nơi được phép; quan sát xe tới từ mọi phía và nhường đường cho họ. Cả ba ý đều đúng."
   },
   {
    "n": 258,
@@ -5037,7 +5037,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Tay ga dùng để cho xe chạy về phía trước và điều tiết công suất động cơ, qua đó điều khiển tốc độ. Mô tô hai bánh không chạy lùi bằng tay ga, nên chọn \"Ý 1 và ý 2\"."
   },
   {
    "n": 259,
@@ -5052,7 +5052,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Gương chiếu hậu dùng để quan sát phía sau, cả bên trái lẫn bên phải, trước khi chuyển hướng. Gương không dùng để nhìn phía trước."
   },
   {
    "n": 260,
@@ -5082,7 +5082,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Đường xấu, nhỏ hẹp: đi tốc độ thấp, quan sát liên tục 5–10 m phía trước; hạn chế dùng phanh trước để không khóa bánh dẫn hướng; không lắc người nhiều, giữ trọng tâm cơ thể trùng với trọng tâm xe. Cả ba ý đều đúng."
   },
   {
    "n": 262,
@@ -5097,7 +5097,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Ô tô điện xuống dốc dài, đổ đèo: kiểm tra hệ thống an toàn và pin trước khi đi; nhả chân ga để phanh tái sinh hoạt động (vừa giảm tốc vừa sạc pin); rà phanh chân để sẵn sàng xử lý tình huống. Cả ba ý đều đúng."
   },
   {
    "n": 263,
@@ -5112,7 +5112,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Ô tô điện qua chỗ ngập: tìm hiểu khả năng lội nước của xe để chọn đường; giữ vững tay lái, đi đều, không dừng giữa dòng; đi chậm, không tạo sóng, giữ khoảng cách với xe khác. Cả ba ý đều đúng."
   },
   {
    "n": 264,
@@ -5126,7 +5126,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Kiểm tra dầu đúng cách: rút que thăm, lau sạch, cắm lại vào các-te rồi rút ra xem. Mức dầu phải nằm giữa vạch tối thiểu và tối đa. Nếu không lau que trước thì vệt dầu cũ bám trên que làm đọc sai."
   },
   {
    "n": 265,
@@ -5140,7 +5140,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Ô tô phải có kính chắn gió và kính cửa là kính an toàn, bảo đảm tầm nhìn, cùng đủ đèn chiếu sáng gần và xa, đèn soi biển số, đèn phanh, đèn tín hiệu và các bộ phận an toàn theo quy định. Cả hai ý đều đúng."
   },
   {
    "n": 266,
@@ -5154,7 +5154,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Mô tô và ô tô bắt buộc phải có đủ bộ phận giảm thanh (ống bô giảm âm) để không gây tiếng ồn vượt mức cho phép."
   },
   {
    "n": 267,
@@ -5169,7 +5169,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Ô tô phải có đủ đèn chiếu sáng gần và xa, đèn soi biển số, đèn phanh và đèn tín hiệu. Dàn đèn pha trên nóc xe không phải đèn bắt buộc mà thường là lắp thêm trái phép, nên chọn \"Ý 1 và ý 2\"."
   },
   {
    "n": 268,
@@ -5182,7 +5182,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Kính chắn gió phải là kính an toàn nhiều lớp, đúng quy cách, không rạn nứt, cho hình ảnh rõ ràng, không méo. Kính nhiều lớp không vỡ văng ra thành mảnh sắc khi va chạm."
   },
   {
    "n": 269,
@@ -5196,7 +5196,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Bánh xe phải có kết cấu chắc chắn, lắp đúng quy cách; lốp phải đủ số lượng, đủ áp suất, không phồng rộp, đúng cỡ lốp. Cả hai ý đều đúng."
   },
   {
    "n": 270,
@@ -5210,7 +5210,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Hệ thống lái phải giúp xe chuyển hướng chính xác, nhẹ nhàng, an toàn ở mọi vận tốc và tải trọng, và khi hoạt động các bộ phận của hệ thống lái không được va chạm với các bộ phận khác. Cả hai ý đều đúng."
   },
   {
    "n": 271,
@@ -5224,7 +5224,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Bảo dưỡng thường xuyên giữ xe luôn có tính năng kỹ thuật tốt, giảm hao mòn, đồng thời phát hiện và khắc phục sớm hư hỏng, giữ xe sạch đẹp. Cả hai ý đều đúng."
   },
   {
    "n": 272,
@@ -5238,7 +5238,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Động cơ diesel không nổ thường do hết nhiên liệu, tắc lọc nhiên liệu, tắc lọc khí, hoặc nhiên liệu lẫn không khí, tạp chất. Động cơ diesel không có bugi đánh lửa, nên các ý nhắc đến bugi là sai."
   },
   {
    "n": 273,
@@ -5252,7 +5252,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Ống xả không được đặt ở vị trí có thể gây cháy xe hay ảnh hưởng đến người trên xe, và miệng xả không được hướng về phía trước hay sang bên phải theo chiều xe chạy (phía có người đi bộ, xe thô sơ). Cả hai ý đều đúng."
   },
   {
    "n": 274,
@@ -5266,7 +5266,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Dây đai an toàn phải đủ số lượng, lắp chắc chắn, không rách đứt; khóa cài đóng mở nhẹ, không tự mở, không kẹt; kéo ra thu vào dễ; và cơ cấu hãm phải giữ chặt dây khi bị giật đột ngột. Điểm cuối cùng này là chỗ khác biệt của ý 1."
   },
   {
    "n": 275,
@@ -5279,7 +5279,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Động cơ 4 kỳ: để hoàn thành một chu trình công tác, pít tông thực hiện 4 hành trình (nạp, nén, nổ, xả), trong đó chỉ có một lần sinh công."
   },
   {
    "n": 276,
@@ -5293,7 +5293,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Hệ thống bôi trơn đưa dầu sạch, đủ lượng, có áp suất đến các chi tiết để giảm ma sát, giảm mài mòn, làm kín, làm sạch, làm mát và chống gỉ. Cung cấp nhiên liệu là việc của hệ thống nhiên liệu."
   },
   {
    "n": 277,
@@ -5307,7 +5307,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Niên hạn sử dụng của ô tô tải là không quá 25 năm, tính từ năm sản xuất."
   },
   {
    "n": 278,
@@ -5321,7 +5321,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Niên hạn sử dụng của ô tô chở người trên 8 chỗ (không kể người lái) là không quá 20 năm, tính từ năm sản xuất. Xe tải là 25 năm, xe chở người ngắn hơn vì liên quan đến an toàn của nhiều người."
   },
   {
    "n": 279,
@@ -5335,7 +5335,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Động cơ biến nhiệt năng (từ đốt nhiên liệu) thành cơ năng làm trục khuỷu quay, truyền lực tới bánh xe chủ động để xe chuyển động. Ý 2 nói ngược chiều biến đổi năng lượng."
   },
   {
    "n": 280,
@@ -5349,7 +5349,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Hệ thống truyền lực truyền mô men quay từ động cơ tới các bánh xe chủ động. Đổi hướng chuyển động là việc của hệ thống lái, còn giảm tốc và dừng xe là việc của hệ thống phanh."
   },
   {
    "n": 281,
@@ -5363,7 +5363,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Ly hợp (côn) dùng để nối hoặc ngắt truyền động từ động cơ đến hộp số, giúp khởi hành êm và chuyển số được."
   },
   {
    "n": 282,
@@ -5377,7 +5377,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Hộp số truyền và thay đổi mô men từ động cơ đến bánh xe chủ động, cắt truyền động khi cần (số 0) và giúp xe chạy lùi."
   },
   {
    "n": 283,
@@ -5391,7 +5391,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Hệ thống lái dùng để thay đổi hướng chuyển động hoặc giữ cho xe chạy ổn định theo một hướng nhất định."
   },
   {
    "n": 284,
@@ -5405,7 +5405,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Hệ thống phanh dùng để giảm tốc độ, dừng xe, và giữ xe đứng yên trên dốc."
   },
   {
    "n": 285,
@@ -5419,7 +5419,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Đèn phanh trên mô tô vừa báo cho xe phía sau biết xe đang giảm tốc để họ chủ động tránh, vừa giúp định vị xe vào ban đêm. Cả hai ý đều đúng."
   },
   {
    "n": 286,
@@ -5434,7 +5434,7 @@
    ],
    "correct": 1,
    "image": "img/q286.webp",
-   "explanation": null
+   "explanation": "Ký hiệu hình nhiệt kế ngâm trong nước báo nhiệt độ nước làm mát động cơ vượt ngưỡng cho phép. Phải dừng xe ở nơi an toàn, chờ máy nguội để kiểm tra, tránh làm hỏng động cơ."
   },
   {
    "n": 287,
@@ -5449,7 +5449,7 @@
    ],
    "correct": 4,
    "image": "img/q287.webp",
-   "explanation": null
+   "explanation": "Ký hiệu hình khối động cơ (thường màu vàng cam) là đèn \"Check Engine\", báo cần kiểm tra động cơ."
   },
   {
    "n": 288,
@@ -5464,7 +5464,7 @@
    ],
    "correct": 2,
    "image": "img/q288.webp",
-   "explanation": null
+   "explanation": "Ký hiệu hình mặt cắt lốp xe có dấu chấm than báo áp suất lốp không đủ. Phải kiểm tra và bơm lốp đúng áp suất để tránh nổ lốp, mất lái."
   },
   {
    "n": 289,
@@ -5479,7 +5479,7 @@
    ],
    "correct": 1,
    "image": "img/q289.webp",
-   "explanation": null
+   "explanation": "Ký hiệu chữ ABS trong vòng tròn báo hệ thống chống bó cứng phanh bị lỗi. Phanh thường vẫn hoạt động, nhưng bánh xe có thể bị bó cứng khi phanh gấp, nên cần đưa xe đi kiểm tra."
   },
   {
    "n": 290,
@@ -5493,7 +5493,7 @@
    ],
    "correct": 1,
    "image": "img/q290.webp",
-   "explanation": null
+   "explanation": "Với xe số tự động dùng chìa khóa thông minh, phải đạp hết hành trình bàn đạp phanh rồi mới bấm nút khởi động. Đây vừa là điều kiện để xe cho khởi động, vừa giữ xe không lăn khi máy nổ."
   },
   {
    "n": 291,
@@ -5508,7 +5508,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Ắc quy tích trữ điện năng và cung cấp điện cho các phụ tải (khởi động, đèn, thiết bị điện) khi máy phát chưa làm việc. Các ý còn lại là chức năng của hệ thống hỗ trợ phanh, cân bằng, khởi hành ngang dốc."
   },
   {
    "n": 292,
@@ -5523,7 +5523,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Máy phát điện phát điện cung cấp cho các phụ tải khi xe chạy và nạp lại điện cho ắc quy. Tích trữ điện là việc của ắc quy, không phải máy phát."
   },
   {
    "n": 293,
@@ -5536,7 +5536,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Dây đai an toàn giữ chặt người lái và hành khách trên ghế khi xe dừng đột ngột hay va chạm, để họ không bị văng về phía trước."
   },
   {
    "n": 294,
@@ -5551,7 +5551,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Túi khí giảm va đập của các bộ phận quan trọng như đầu, ngực vào vật thể trong xe, và hấp thụ một phần lực va đập. Giữ chặt người trên ghế là việc của dây đai, nên chọn \"Ý 2 và ý 3\"."
   },
   {
    "n": 295,
@@ -5566,7 +5566,7 @@
    ],
    "correct": 4,
    "image": "img/q295.webp",
-   "explanation": null
+   "explanation": "Ký hiệu hình vô lăng có dấu chấm than, sáng lâu không tắt, báo hệ thống lái (trợ lực lái) gặp sự cố. Phải đưa xe đi kiểm tra."
   },
   {
    "n": 296,
@@ -5581,7 +5581,7 @@
    ],
    "correct": 1,
    "image": "img/q296.webp",
-   "explanation": null
+   "explanation": "Thiết bị trong hình là con đội (kích), dùng để nâng xe ô tô lên khi cần thay lốp hoặc sửa chữa."
   },
   {
    "n": 297,
@@ -5596,7 +5596,7 @@
    ],
    "correct": 3,
    "image": "img/q297.webp",
-   "explanation": null
+   "explanation": "Thiết bị trong hình là búa phá kính thoát hiểm, dùng để đập vỡ kính cửa sổ thoát ra ngoài trong trường hợp khẩn cấp."
   },
   {
    "n": 298,
@@ -5610,7 +5610,7 @@
    ],
    "correct": 2,
    "image": "img/q298.webp",
-   "explanation": null
+   "explanation": "Thiết bị trong hình là bình chữa cháy, dùng để dập lửa khi xe gặp hỏa hoạn."
   },
   {
    "n": 299,
@@ -5625,7 +5625,7 @@
    ],
    "correct": 3,
    "image": "img/q299.webp",
-   "explanation": null
+   "explanation": "Nút hình tam giác đỏ là nút đèn cảnh báo nguy hiểm (hazard). Bấm nút này thì tất cả đèn xi nhan cùng nháy, báo cho người khác biết xe đang gặp tình huống nguy hiểm hoặc dừng khẩn cấp."
   },
   {
    "n": 300,
@@ -5640,7 +5640,7 @@
    ],
    "correct": 3,
    "image": "img/q300.webp",
-   "explanation": null
+   "explanation": "Biểu tượng ECO (thường màu xanh lá) báo chế độ lái tiết kiệm nhiên liệu đang bật."
   },
   {
    "n": 301,
@@ -5655,7 +5655,7 @@
    ],
    "correct": 1,
    "image": "img/q301.webp",
-   "explanation": null
+   "explanation": "Biển 1 là biển \"Cấm xe ô tô\": cấm mọi xe cơ giới (kể cả mô tô ba bánh), trừ mô tô hai bánh, xe gắn máy và xe ưu tiên. Biển 2 cấm ô tô tải và ô tô khách, biển 3 cấm ô tô kéo rơ moóc, nên chỉ biển 1 đúng nghĩa câu hỏi."
   },
   {
    "n": 302,
@@ -5670,7 +5670,7 @@
    ],
    "correct": 4,
    "image": "img/q302.webp",
-   "explanation": null
+   "explanation": "Biển 1 \"Cấm xe ô tô\" cấm mọi ô tô, trong đó có ô tô tải; biển 2 có hình xe tải nên cũng cấm ô tô tải. Biển 3 chỉ cấm xe kéo rơ moóc, không cấm ô tô tải nói chung."
   },
   {
    "n": 303,
@@ -5685,7 +5685,7 @@
    ],
    "correct": 2,
    "image": "img/q303.webp",
-   "explanation": null
+   "explanation": "Biển 2 \"Cấm xe tải\" áp dụng cả với máy kéo và xe máy chuyên dùng; biển 3 có hình máy kéo nên cấm máy kéo. Biển 1 là biển cấm mô tô."
   },
   {
    "n": 304,
@@ -5699,7 +5699,7 @@
    ],
    "correct": 1,
    "image": "img/q304.webp",
-   "explanation": null
+   "explanation": "Biển 1 \"Cấm mô tô\" cấm mọi loại mô tô, kể cả mô tô ba bánh; biển 2 \"Cấm xe ô tô\" cũng cấm mô tô ba bánh (chỉ trừ mô tô hai bánh và xe gắn máy). Biển 3 chỉ cấm xe tải."
   },
   {
    "n": 305,
@@ -5713,7 +5713,7 @@
    ],
    "correct": 3,
    "image": "img/q305.webp",
-   "explanation": null
+   "explanation": "Biển 1 cấm mô tô và biển 2 cấm ô tô đều không cấm xe gắn máy, nên xe gắn máy được đi vào ở cả hai biển."
   },
   {
    "n": 306,
@@ -5727,7 +5727,7 @@
    ],
    "correct": 1,
    "image": "img/q306.webp",
-   "explanation": null
+   "explanation": "Biển 1 có hình xe mô tô bị gạch chéo là biển cấm xe mô tô. Biển 2 cấm ô tô, biển 3 cấm xe tải."
   },
   {
    "n": 307,
@@ -5742,7 +5742,7 @@
    ],
    "correct": 3,
    "image": "img/q307.webp",
-   "explanation": null
+   "explanation": "Biển 2 (cấm ô tô) trừ mô tô hai bánh ra, và biển 3 chỉ cấm xe tải, nên mô tô hai bánh được đi vào. Biển 1 cấm mô tô."
   },
   {
    "n": 308,
@@ -5757,7 +5757,7 @@
    ],
    "correct": 3,
    "image": "img/q308.webp",
-   "explanation": null
+   "explanation": "Biển 1 (nền trắng viền xanh, có vạch chéo) là biển hết cấm vượt; biển 3 chỉ cấm ô tô tải vượt. Cả hai đều cho xe con vượt. Biển 2 cấm mọi xe cơ giới vượt nhau."
   },
   {
    "n": 309,
@@ -5771,7 +5771,7 @@
    ],
    "correct": 2,
    "image": "img/q309.webp",
-   "explanation": null
+   "explanation": "Biển 2 (hai xe con, một xe màu đỏ) là biển cấm vượt, áp dụng cho mọi xe cơ giới nên ô tô con không được vượt. Biển 1 là hết cấm vượt, biển 3 chỉ cấm xe tải vượt."
   },
   {
    "n": 310,
@@ -5786,7 +5786,7 @@
    ],
    "correct": 4,
    "image": "img/q310.webp",
-   "explanation": null
+   "explanation": "Biển 2 cấm mọi xe cơ giới vượt, trong đó có ô tô tải; biển 3 (xe tải màu đỏ) cấm riêng ô tô tải vượt. Biển 1 là biển hết cấm vượt."
   },
   {
    "n": 311,
@@ -5800,7 +5800,7 @@
    ],
    "correct": 3,
    "image": "img/q311.webp",
-   "explanation": null
+   "explanation": "Cả hai biển đều cấm xe tải vượt: biển 1 cấm mọi xe vượt nhau, biển 2 cấm riêng ô tô tải vượt."
   },
   {
    "n": 312,
@@ -5813,7 +5813,7 @@
    ],
    "correct": 2,
    "image": "img/q312.webp",
-   "explanation": null
+   "explanation": "Biển 2 chỉ cấm ô tô tải vượt nên ô tô con vẫn được vượt. Biển 1 là biển cấm vượt chung cho mọi xe."
   },
   {
    "n": 313,
@@ -5828,7 +5828,7 @@
    ],
    "correct": 2,
    "image": "img/q313.webp",
-   "explanation": null
+   "explanation": "Biển 2 có mũi tên quay ngược bị gạch là biển cấm quay đầu xe. Biển 1 là cấm rẽ trái, không cấm quay đầu."
   },
   {
    "n": 314,
@@ -5842,7 +5842,7 @@
    ],
    "correct": 1,
    "image": "img/q314.webp",
-   "explanation": null
+   "explanation": "Biển 1 có mũi tên rẽ trái bị gạch là biển cấm rẽ trái. Biển 2 là biển cấm quay đầu."
   },
   {
    "n": 315,
@@ -5856,7 +5856,7 @@
    ],
    "correct": 2,
    "image": "img/q315.webp",
-   "explanation": null
+   "explanation": "Biển 2 chỉ cấm quay đầu xe, không cấm rẽ trái, nên gặp biển 2 xe vẫn được rẽ trái. Biển 1 cấm rẽ trái."
   },
   {
    "n": 316,
@@ -5870,7 +5870,7 @@
    ],
    "correct": 3,
    "image": "img/q316.webp",
-   "explanation": null
+   "explanation": "Biển 1 cấm mọi xe rẽ trái, trong đó có ô tô. Biển 2 có hình ô tô kèm mũi tên rẽ trái và quay đầu bị gạch, cấm ô tô rẽ trái và quay đầu. Cả hai biển đều cấm ô tô rẽ trái."
   },
   {
    "n": 317,
@@ -5885,7 +5885,7 @@
    ],
    "correct": 1,
    "image": "img/q317.webp",
-   "explanation": null
+   "explanation": "Biển 1 cấm rẽ phải, biển 2 cấm rẽ phải và quay đầu, đều áp dụng cho mọi phương tiện. Biển 3 có hình ô tô nên chỉ cấm ô tô, không phải mọi phương tiện."
   },
   {
    "n": 318,
@@ -5900,7 +5900,7 @@
    ],
    "correct": 1,
    "image": "img/q318.webp",
-   "explanation": null
+   "explanation": "Biển 1 cấm rẽ trái, biển 2 cấm rẽ trái và quay đầu, đều áp dụng cho mọi phương tiện. Biển 3 có hình ô tô nên chỉ cấm ô tô."
   },
   {
    "n": 319,
@@ -5915,7 +5915,7 @@
    ],
    "correct": 1,
    "image": "img/q319.webp",
-   "explanation": null
+   "explanation": "Biển 1 có hình ô tô cạnh mũi tên quay đầu bị gạch, chỉ cấm ô tô quay đầu. Biển 2 cấm ô tô rẽ trái và quay đầu, biển 3 cấm ô tô rẽ phải và quay đầu, nên cấm nhiều hơn chỉ quay đầu."
   },
   {
    "n": 320,
@@ -5930,7 +5930,7 @@
    ],
    "correct": 2,
    "image": "img/q320.webp",
-   "explanation": null
+   "explanation": "Biển 2 có hình ô tô kèm mũi tên rẽ trái và quay đầu bị gạch, cấm ô tô rẽ trái và quay đầu. Biển 1 chỉ cấm ô tô quay đầu, biển 3 cấm ô tô rẽ phải và quay đầu."
   },
   {
    "n": 321,
@@ -5944,7 +5944,7 @@
    ],
    "correct": 2,
    "image": "img/q321.webp",
-   "explanation": null
+   "explanation": "Biển 2 có chữ TAXI trên hình xe là biển cấm xe taxi, chỉ cấm taxi. Biển 1 cấm mọi ô tô."
   },
   {
    "n": 322,
@@ -5958,7 +5958,7 @@
    ],
    "correct": 2,
    "image": "img/q322.webp",
-   "explanation": null
+   "explanation": "Biển 2 (nền xanh, hai mũi tên vòng) là biển chỉ dẫn chỗ quay xe, không cấm rẽ trái. Biển 1 cấm rẽ trái."
   },
   {
    "n": 323,
@@ -5972,7 +5972,7 @@
    ],
    "correct": 3,
    "image": "img/q323.webp",
-   "explanation": null
+   "explanation": "Biển 1 chỉ cấm rẽ trái, không cấm quay đầu; biển 2 là biển chỉ dẫn chỗ được quay xe. Vì vậy ở cả hai biển, quay đầu đều không bị cấm."
   },
   {
    "n": 324,
@@ -5986,7 +5986,7 @@
    ],
    "correct": 1,
    "image": "img/q324.webp",
-   "explanation": null
+   "explanation": "Biển 1 cấm rẽ trái nhưng không cấm quay đầu, nên xe được quay đầu mà không được rẽ trái. Biển 2 (tròn xanh, mũi tên rẽ trái) là biển hiệu lệnh bắt buộc rẽ trái."
   },
   {
    "n": 325,
@@ -6000,7 +6000,7 @@
    ],
    "correct": 2,
    "image": "img/q325.webp",
-   "explanation": null
+   "explanation": "Biển 2 (nền đỏ, vạch ngang trắng) là biển \"Cấm đi ngược chiều\". Biển 1 (tròn trắng viền đỏ) là \"Đường cấm\", biển 3 (nền xanh, gạch chéo đỏ) là \"Cấm đỗ xe\"."
   },
   {
    "n": 326,
@@ -6014,7 +6014,7 @@
    ],
    "correct": 3,
    "image": "img/q326.webp",
-   "explanation": null
+   "explanation": "Biển 1 \"Đường cấm\" cấm mọi phương tiện đi vào; biển 2 \"Cấm đi ngược chiều\" cũng không cho xe đi vào theo chiều đặt biển. Biển 3 chỉ cấm đỗ xe, xe vẫn được đi vào."
   },
   {
    "n": 327,
@@ -6029,7 +6029,7 @@
    ],
    "correct": 2,
    "image": "img/q327.webp",
-   "explanation": null
+   "explanation": "Biển 1 cấm đỗ xe mọi ngày; biển 3 (hai vạch trắng) cấm đỗ vào ngày chẵn. Biển 2 (một vạch) cấm đỗ vào ngày lẻ. Mẹo: một vạch là ngày lẻ, hai vạch là ngày chẵn."
   },
   {
    "n": 328,
@@ -6044,7 +6044,7 @@
    ],
    "correct": 1,
    "image": "img/q328.webp",
-   "explanation": null
+   "explanation": "Biển 1 cấm đỗ xe mọi ngày; biển 2 (một vạch trắng) cấm đỗ vào ngày lẻ. Biển 3 (hai vạch) chỉ cấm đỗ ngày chẵn."
   },
   {
    "n": 329,
@@ -6058,7 +6058,7 @@
    ],
    "correct": 2,
    "image": "img/q329.webp",
-   "explanation": null
+   "explanation": "Biển 2 \"Dừng lại\" (STOP) bắt mọi xe phải dừng hẳn, kể cả xe ưu tiên, rồi mới được đi tiếp. Biển đường cấm và cấm đi ngược chiều không áp dụng với xe ưu tiên làm nhiệm vụ."
   },
   {
    "n": 330,
@@ -6072,7 +6072,7 @@
    ],
    "correct": 1,
    "image": "img/q330.webp",
-   "explanation": null
+   "explanation": "Biển 1 \"Đường cấm\" cấm mọi xe cơ giới và thô sơ đi lại, trừ xe ưu tiên theo luật định. Biển 2 STOP chỉ yêu cầu dừng lại rồi đi tiếp."
   },
   {
    "n": 331,
@@ -6086,7 +6086,7 @@
    ],
    "correct": 3,
    "image": "img/q331.webp",
-   "explanation": null
+   "explanation": "Biển 3 (biển chữ nhật màu cam trên xe) là biển \"Cấm xe chở hàng nguy hiểm\". Biển 1 cấm xe tải, biển 2 cấm xe tải có khối lượng chuyên chở vượt mức ghi trên biển (2,5 tấn)."
   },
   {
    "n": 332,
@@ -6101,7 +6101,7 @@
    ],
    "correct": 4,
    "image": "img/q332.webp",
-   "explanation": null
+   "explanation": "Biển 1 và biển 2 cấm xe ba bánh có động cơ (xe lam, xích lô máy), không cấm xích lô đạp, nên xích lô được đi vào. Biển 3 có hình xích lô là biển cấm xe ba bánh không có động cơ."
   },
   {
    "n": 333,
@@ -6115,7 +6115,7 @@
    ],
    "correct": 3,
    "image": "img/q333.webp",
-   "explanation": null
+   "explanation": "Biển 3 chỉ cấm xe ba bánh không có động cơ (xích lô đạp), nên xe lam và xích lô máy được đi vào. Biển 1 và biển 2 cấm chính xe ba bánh có động cơ."
   },
   {
    "n": 334,
@@ -6129,7 +6129,7 @@
    ],
    "correct": 3,
    "image": "img/q334.webp",
-   "explanation": null
+   "explanation": "Biển có hình xe ngựa kéo bị gạch là biển cấm súc vật vận tải: cấm súc vật chở hàng hóa hoặc hành khách, dù kéo xe hay chở trên lưng."
   },
   {
    "n": 335,
@@ -6142,7 +6142,7 @@
    ],
    "correct": 1,
    "image": "img/q335.webp",
-   "explanation": null
+   "explanation": "Biển có chữ ĐÊM và số 70, kèm biển phụ 22:00 – 5:00, là biển tốc độ tối đa cho phép về ban đêm: trong khung giờ đó, tốc độ tối đa là 70 km/h."
   },
   {
    "n": 336,
@@ -6155,7 +6155,7 @@
    ],
    "correct": 2,
    "image": "img/q336.webp",
-   "explanation": null
+   "explanation": "Biển hạn chế chiều cao (3,5 m), tải trọng trục (7 t) và tải trọng toàn bộ (10 t) liên quan đến khả năng chịu tải và khổ giới hạn thực tế của cầu, đường. Xe ưu tiên vượt quá các chỉ số này cũng không được đi qua."
   },
   {
    "n": 337,
@@ -6169,7 +6169,7 @@
    ],
    "correct": 1,
    "image": "img/q337.webp",
-   "explanation": null
+   "explanation": "Biển 1 (số 3,5 m kẹp giữa hai tam giác đen trên dưới) là biển hạn chế chiều cao của xe và hàng. Biển 2 hạn chế tải trọng trên trục xe, biển 3 hạn chế tải trọng toàn bộ."
   },
   {
    "n": 338,
@@ -6182,7 +6182,7 @@
    ],
    "correct": 2,
    "image": "img/q338.webp",
-   "explanation": null
+   "explanation": "Biển 2 (7 t kèm hình trục xe) là biển hạn chế tải trọng trên trục xe: chỉ cho xe có tải trọng trên mỗi trục từ 7 tấn trở xuống đi qua."
   },
   {
    "n": 339,
@@ -6196,7 +6196,7 @@
    ],
    "correct": 1,
    "image": "img/q339.webp",
-   "explanation": null
+   "explanation": "Biển 3 (10 t, không có hình trục) là biển hạn chế tải trọng toàn bộ: cấm xe có tải trọng toàn bộ (xe cộng hàng) trên 10 tấn đi qua."
   },
   {
    "n": 340,
@@ -6210,7 +6210,7 @@
    ],
    "correct": 3,
    "image": "img/q340.webp",
-   "explanation": null
+   "explanation": "Biển 1 cấm mọi xe kéo rơ moóc, trong đó có máy kéo kéo rơ moóc; biển 2 cấm máy kéo. Cả hai biển đều cấm máy kéo kéo theo rơ moóc."
   },
   {
    "n": 341,
@@ -6223,7 +6223,7 @@
    ],
    "correct": 1,
    "image": "img/q341.webp",
-   "explanation": null
+   "explanation": "Biển 1 chỉ cấm xe kéo rơ moóc. Ô tô tải không kéo rơ moóc vẫn được đi vào."
   },
   {
    "n": 342,
@@ -6238,7 +6238,7 @@
    ],
    "correct": 1,
    "image": "img/q342.webp",
-   "explanation": null
+   "explanation": "Biển 1 chỉ cấm xe kéo rơ moóc và biển 2 chỉ cấm máy kéo, nên không áp dụng với ô tô tải không kéo moóc. Biển 3 cấm ô tô nên ô tô tải cũng bị cấm."
   },
   {
    "n": 343,
@@ -6253,7 +6253,7 @@
    ],
    "correct": 3,
    "image": "img/q343.webp",
-   "explanation": null
+   "explanation": "Biển 2 có hình máy kéo nên cấm máy kéo; biển 3 \"Cấm xe tải\" cũng áp dụng với máy kéo và xe máy chuyên dùng. Biển 1 chỉ cấm xe kéo rơ moóc."
   },
   {
    "n": 344,
@@ -6266,7 +6266,7 @@
    ],
    "correct": 2,
    "image": "img/q344.webp",
-   "explanation": null
+   "explanation": "Biển cấm ô tô và mô tô, kèm biển phụ mũi tên hai chiều trái phải, nghĩa là cấm các xe này rẽ trái và rẽ phải. Mô tô ba bánh chở hàng là mô tô nên cũng không được rẽ."
   },
   {
    "n": 345,
@@ -6279,7 +6279,7 @@
    ],
    "correct": 1,
    "image": "img/q345.webp",
-   "explanation": null
+   "explanation": "Biển cấm có hình ô tô và mô tô áp dụng cho xe cơ giới và mọi loại mô tô, kể cả mô tô hai bánh và ba bánh chở hàng."
   },
   {
    "n": 346,
@@ -6293,7 +6293,7 @@
    ],
    "correct": 2,
    "image": "img/q346.webp",
-   "explanation": null
+   "explanation": "Biển cấm ô tô và mô tô kèm biển phụ mũi tên hai đầu trái phải: cấm xe cơ giới và mô tô (trừ xe ưu tiên) đi về bên trái và bên phải. Xe vẫn được đi thẳng."
   },
   {
    "n": 347,
@@ -6307,7 +6307,7 @@
    ],
    "correct": 2,
    "image": "img/q347.webp",
-   "explanation": null
+   "explanation": "Biển phụ \"500m\" có mũi tên hướng lên đặt dưới biển cấm bóp còi chỉ chiều dài đoạn đường cấm bóp còi, tính từ nơi đặt biển. Nếu là khoảng cách đến nơi cấm, biển phụ không có mũi tên như vậy."
   },
   {
    "n": 348,
@@ -6320,7 +6320,7 @@
    ],
    "correct": 2,
    "image": "img/q348.webp",
-   "explanation": null
+   "explanation": "Trong suốt 500 m tính từ nơi đặt biển cấm bóp còi, người lái không được bấm còi."
   },
   {
    "n": 349,
@@ -6334,7 +6334,7 @@
    ],
    "correct": 2,
    "image": "img/q349.webp",
-   "explanation": null
+   "explanation": "Biển phụ dưới biển \"Đường cấm\" chỉ loại xe bị cấm: biển 1 cấm ô tô, biển 3 cấm xe tải, nên mô tô hai bánh được đi vào. Biển 2 có biển phụ hình mô tô thì cấm mô tô."
   },
   {
    "n": 350,
@@ -6348,7 +6348,7 @@
    ],
    "correct": 2,
    "image": "img/q350.webp",
-   "explanation": null
+   "explanation": "Biển 2 có biển phụ hình mô tô dưới biển \"Đường cấm\" nên mô tô hai bánh không được đi vào. Biển 1 và biển 3 cấm ô tô và xe tải."
   },
   {
    "n": 351,
@@ -6361,7 +6361,7 @@
    ],
    "correct": 1,
    "image": "img/q351.webp",
-   "explanation": null
+   "explanation": "Biển phụ đặt dưới biển \"Đường cấm\" nêu loại xe bị cấm, nên ba biển này cấm đúng loại xe ở biển phụ (ô tô, mô tô, xe tải) đi vào, không phải cấm mọi xe trừ loại đó."
   },
   {
    "n": 352,
@@ -6375,7 +6375,7 @@
    ],
    "correct": 1,
    "image": "img/q352.webp",
-   "explanation": null
+   "explanation": "Cả hai biển đều là \"Cự ly tối thiểu giữa hai xe\" (8 m). Biển phụ của biển 1 có mũi tên hướng lên kèm \"800m\", chỉ chiều dài đoạn đường phải giữ cự ly. Biển phụ của biển 2 không có mũi tên, chỉ khoảng cách từ biển đến nơi bắt đầu áp dụng."
   },
   {
    "n": 353,
@@ -6389,7 +6389,7 @@
    ],
    "correct": 2,
    "image": "img/q353.webp",
-   "explanation": null
+   "explanation": "Biển phụ \"200m\" không có mũi tên (biển 2) cho biết khoảng cách từ nơi đặt biển đến đoạn đường phải giữ cự ly tối thiểu. Biển phụ có mũi tên (biển 1) là chiều dài đoạn áp dụng."
   },
   {
    "n": 354,
@@ -6403,7 +6403,7 @@
    ],
    "correct": 2,
    "image": "img/q354.webp",
-   "explanation": null
+   "explanation": "Biển nền xanh có hai gạch chéo đỏ là \"Cấm dừng xe và đỗ xe\"; biển phụ mũi tên chỉ sang phải cho biết lệnh cấm áp dụng về phía bên phải nơi đặt biển."
   },
   {
    "n": 355,
@@ -6416,7 +6416,7 @@
    ],
    "correct": 1,
    "image": "img/q355.webp",
-   "explanation": null
+   "explanation": "Biển cấm dừng và đỗ xe kèm mũi tên chỉ sang phải cấm cả dừng lẫn đỗ xe về phía bên phải, nên theo hướng đó không được dừng hay đỗ."
   },
   {
    "n": 356,
@@ -6429,7 +6429,7 @@
    ],
    "correct": 1,
    "image": "img/q356.webp",
-   "explanation": null
+   "explanation": "Biển hạn chế chiều dài ô tô kéo moóc (14 m) cấm xe kéo moóc, sơ mi rơ moóc có tổng chiều dài kể cả xe, moóc và hàng vượt trị số trên biển. Dài hơn 14 m thì không được đi vào."
   },
   {
    "n": 357,
@@ -6442,7 +6442,7 @@
    ],
    "correct": 1,
    "image": "img/q357.webp",
-   "explanation": null
+   "explanation": "Hàng nhô ra phía trước và phía sau thùng xe, mỗi phía quá 10% chiều dài thân xe, là vượt giới hạn xếp hàng cho phép, nên xe không được lưu thông vào đây dù tổng chiều dài nhỏ hơn số trên biển."
   },
   {
    "n": 358,
@@ -6456,7 +6456,7 @@
    ],
    "correct": 2,
    "image": "img/q358.webp",
-   "explanation": null
+   "explanation": "Biển có hình xe khách bị gạch là biển \"Cấm ô tô khách\": cấm xe chở khách, không phải chỉ cấm xe buýt hay xe con."
   },
   {
    "n": 359,
@@ -6470,7 +6470,7 @@
    ],
    "correct": 2,
    "image": "img/q359.webp",
-   "explanation": null
+   "explanation": "Biển có số 3,2 m kẹp giữa hai tam giác đen ở hai bên trái phải là biển hạn chế chiều ngang của xe và hàng. Nếu hai tam giác ở trên và dưới thì là hạn chế chiều cao."
   },
   {
    "n": 360,
@@ -6484,7 +6484,7 @@
    ],
    "correct": 1,
    "image": "img/q360.webp",
-   "explanation": null
+   "explanation": "Biển 1 có chữ ĐÊM và biển phụ ghi giờ 22:00 – 5:00 là biển tốc độ tối đa cho phép về ban đêm. Biển 2 là biển tốc độ tối đa thông thường (50 km/h)."
   },
   {
    "n": 361,
@@ -6497,7 +6497,7 @@
    ],
    "correct": 1,
    "image": "img/q361.webp",
-   "explanation": null
+   "explanation": "Biển 1 (nền xanh, hình nhà cửa) báo bắt đầu khu đông dân cư, từ đây phải tuân theo quy định đi đường trong khu đông dân cư. Biển 2 có gạch đỏ chéo là hết khu đông dân cư."
   },
   {
    "n": 362,
@@ -6510,7 +6510,7 @@
    ],
    "correct": 2,
    "image": "img/q362.webp",
-   "explanation": null
+   "explanation": "Biển 2 (tròn, viền đỏ, số 50) là tốc độ tối đa cho phép, không được chạy quá số ghi trên biển. Biển 1 (tròn nền xanh, số 60) là tốc độ tối thiểu."
   },
   {
    "n": 363,
@@ -6524,7 +6524,7 @@
    ],
    "correct": 2,
    "image": "img/q363.webp",
-   "explanation": null
+   "explanation": "Biển 2 (nền xanh lá, hình đường cao tốc bị gạch đỏ) báo kết thúc đường cao tốc. Biển 1 là đường ưu tiên, biển 3 là hết đường dành cho ô tô."
   },
   {
    "n": 364,
@@ -6537,7 +6537,7 @@
    ],
    "correct": 1,
    "image": "img/q364.webp",
-   "explanation": null
+   "explanation": "Biển tròn viền đỏ có số 50 là tốc độ tối đa cho phép: xe cơ giới không được chạy quá 50 km/h."
   },
   {
    "n": 365,
@@ -6551,7 +6551,7 @@
    ],
    "correct": 2,
    "image": "img/q365.webp",
-   "explanation": null
+   "explanation": "Biển 2 (bảng xanh lá, có biển tốc độ riêng cho từng làn kèm mũi tên chỉ làn) chỉ dẫn đường cao tốc phân làn với tốc độ khác nhau. Biển 1 là biển cảnh báo hình tam giác, không phải biển chỉ dẫn này."
   },
   {
    "n": 366,
@@ -6564,7 +6564,7 @@
    ],
    "correct": 2,
    "image": "img/q366.webp",
-   "explanation": null
+   "explanation": "Biển tròn nền xanh có số 60 là biển hiệu lệnh tốc độ tối thiểu: xe cơ giới không được chạy chậm hơn 60 km/h."
   },
   {
    "n": 367,
@@ -6578,7 +6578,7 @@
    ],
    "correct": 1,
    "image": "img/q367.webp",
-   "explanation": null
+   "explanation": "Biển 1 (tam giác vàng, hình người đi trên vạch) là biển \"Đường người đi bộ cắt ngang\": người lái phải giảm tốc độ và nhường đường cho người đi bộ. Biển 2 cấm người đi bộ, biển 3 là đường dành cho người đi bộ."
   },
   {
    "n": 368,
@@ -6593,7 +6593,7 @@
    ],
    "correct": 3,
    "image": "img/q368.webp",
-   "explanation": null
+   "explanation": "Biển 3 (tròn nền xanh, hình người đi bộ) là biển \"Đường dành cho người đi bộ\": các loại xe không được đi vào. Biển 1 cảnh báo chỗ người đi bộ cắt ngang, biển 2 cấm người đi bộ."
   },
   {
    "n": 369,
@@ -6607,7 +6607,7 @@
    ],
    "correct": 1,
    "image": "img/q369.webp",
-   "explanation": null
+   "explanation": "Biển 1 (tròn nền xanh, hình xe đạp và xe ngựa) là biển \"Đường dành cho xe thô sơ\". Biển 2 cấm xe đạp, biển 3 cảnh báo chỗ có người đi xe đạp cắt ngang."
   },
   {
    "n": 370,
@@ -6622,7 +6622,7 @@
    ],
    "correct": 4,
    "image": "img/q370.webp",
-   "explanation": null
+   "explanation": "Cả ba biển đều báo sắp đến chỗ giao nhau nguy hiểm: biển 1 là giao nhau với đường sắt có rào chắn, biển 2 (tam giác ngược) là giao nhau với đường ưu tiên, biển 3 là giao nhau có tín hiệu đèn."
   },
   {
    "n": 371,
@@ -6636,7 +6636,7 @@
    ],
    "correct": 1,
    "image": "img/q371.webp",
-   "explanation": null
+   "explanation": "Biển 1 (tam giác vàng, hình hàng rào) là \"Giao nhau với đường sắt có rào chắn\". Biển 2 là giao nhau với đường ưu tiên, biển 3 là giao nhau có tín hiệu đèn."
   },
   {
    "n": 372,
@@ -6651,7 +6651,7 @@
    ],
    "correct": 3,
    "image": "img/q372.webp",
-   "explanation": null
+   "explanation": "Biển 3 (tam giác vàng, hình cột đèn ba màu) là \"Giao nhau có tín hiệu đèn\"."
   },
   {
    "n": 373,
@@ -6666,7 +6666,7 @@
    ],
    "correct": 2,
    "image": "img/q373.webp",
-   "explanation": null
+   "explanation": "Biển 1 báo giao nhau với đường sắt có rào chắn; biển 3 (hình chữ X trắng viền đỏ) báo nơi đường sắt giao vuông góc với đường bộ. Cả hai đều báo nguy hiểm giao nhau với đường sắt. Biển 2 không liên quan đến đường sắt."
   },
   {
    "n": 374,
@@ -6681,7 +6681,7 @@
    ],
    "correct": 3,
    "image": "img/q374.webp",
-   "explanation": null
+   "explanation": "Biển 2 (tam giác vàng, hình đầu tàu hỏa) báo giao nhau với đường sắt không có rào chắn; biển 3 (chữ X) đặt nơi đường sắt giao vuông góc với đường bộ không có rào chắn. Biển 1 là giao nhau có rào chắn."
   },
   {
    "n": 375,
@@ -6696,7 +6696,7 @@
    ],
    "correct": 1,
    "image": "img/q375.webp",
-   "explanation": null
+   "explanation": "Biển 1 (hình đầu tàu hỏa) báo sắp đến chỗ giao nhau giữa đường bộ và đường sắt. Biển 3 (hình tàu điện có cần lấy điện) là giao nhau với đường tàu điện, biển 2 là giao nhau với đường ưu tiên."
   },
   {
    "n": 376,
@@ -6710,7 +6710,7 @@
    ],
    "correct": 2,
    "image": "img/q376.webp",
-   "explanation": null
+   "explanation": "Biển 2 (tam giác vàng, hình vòm cửa chui) là biển \"Cửa chui\". Biển 1 là cầu vồng, biển 3 là đường hầm."
   },
   {
    "n": 377,
@@ -6724,7 +6724,7 @@
    ],
    "correct": 1,
    "image": "img/q377.webp",
-   "explanation": null
+   "explanation": "Biển chữ X đơn (biển 1) và chữ X kép (biển 2, đường sắt có từ hai đường ray trở lên) đều đặt nơi đường sắt giao vuông góc với đường bộ mà không có rào chắn."
   },
   {
    "n": 378,
@@ -6739,7 +6739,7 @@
    ],
    "correct": 4,
    "image": "img/q378.webp",
-   "explanation": null
+   "explanation": "Biển 1 (X đơn) và biển 2 (X kép) đều báo nơi đường sắt giao vuông góc với đường bộ. Biển 3 (cột trắng có vạch đỏ) là mốc báo trước khoảng cách đến chỗ giao cắt."
   },
   {
    "n": 379,
@@ -6753,7 +6753,7 @@
    ],
    "correct": 3,
    "image": "img/q379.webp",
-   "explanation": null
+   "explanation": "Ba cột trắng có một, hai và ba vạch đỏ là mốc báo trước sắp đến vị trí đường sắt giao không vuông góc với đường bộ, không có người gác và không có rào chắn. Số vạch giảm dần khi càng đến gần chỗ giao."
   },
   {
    "n": 380,
@@ -6767,7 +6767,7 @@
    ],
    "correct": 3,
    "image": "img/q380.webp",
-   "explanation": null
+   "explanation": "Biển 3 (hình thoi vàng viền trắng, có vạch đen chéo) là \"Hết đoạn đường ưu tiên\". Biển 1 là giao nhau với đường không ưu tiên, biển 2 là giao nhau với đường ưu tiên."
   },
   {
    "n": 381,
@@ -6782,7 +6782,7 @@
    ],
    "correct": 2,
    "image": "img/q381.webp",
-   "explanation": null
+   "explanation": "Biển 1 (giao nhau với đường không ưu tiên) và biển 3 (hình thoi vàng, \"Đường ưu tiên\") đều cho biết xe trên đường này được quyền ưu tiên qua nơi giao nhau. Biển 2 (tam giác ngược) thì phải nhường đường."
   },
   {
    "n": 382,
@@ -6797,7 +6797,7 @@
    ],
    "correct": 1,
    "image": "img/q382.webp",
-   "explanation": null
+   "explanation": "Biển 1 (tam giác, đường chính đậm có nhánh nhỏ) là \"Giao nhau với đường không ưu tiên\": xe đang đi trên đường ưu tiên."
   },
   {
    "n": 383,
@@ -6811,7 +6811,7 @@
    ],
    "correct": 2,
    "image": "img/q383.webp",
-   "explanation": null
+   "explanation": "Biển 2 (tam giác ngược đỉnh, viền đỏ) là \"Giao nhau với đường ưu tiên\": xe phải nhường đường cho xe trên đường ưu tiên."
   },
   {
    "n": 384,
@@ -6826,7 +6826,7 @@
    ],
    "correct": 1,
    "image": "img/q384.webp",
-   "explanation": null
+   "explanation": "Biển 1 (đường thu hẹp cả hai bên) và biển 2 (đường thu hẹp về một bên) đều là biển \"Đường bị thu hẹp\". Biển 3 báo chỗ ngoặt nguy hiểm."
   },
   {
    "n": 385,
@@ -6841,7 +6841,7 @@
    ],
    "correct": 3,
    "image": "img/q385.webp",
-   "explanation": null
+   "explanation": "Biển 2 và biển 3 báo đường bị thu hẹp về một phía: người lái phải giảm tốc độ, chú ý xe ngược chiều, và xe đi ở phía bị hẹp phải nhường đường. Biển 1 báo chướng ngại vật, không phải đường hẹp."
   },
   {
    "n": 386,
@@ -6856,7 +6856,7 @@
    ],
    "correct": 3,
    "image": "img/q386.webp",
-   "explanation": null
+   "explanation": "Biển 3 (tam giác ngược) là \"Giao nhau với đường ưu tiên\". Biển 1 là đường giao nhau cùng cấp, biển 2 là giao nhau với đường không ưu tiên."
   },
   {
    "n": 387,
@@ -6870,7 +6870,7 @@
    ],
    "correct": 1,
    "image": "img/q387.webp",
-   "explanation": null
+   "explanation": "Biển 1 (tam giác có dấu cộng) báo \"Đường giao nhau\" của các tuyến đường cùng cấp. Biển 2 là giao nhau với đường không ưu tiên, biển 3 là giao nhau với đường ưu tiên."
   },
   {
    "n": 388,
@@ -6884,7 +6884,7 @@
    ],
    "correct": 2,
    "image": "img/q388.webp",
-   "explanation": null
+   "explanation": "Biển 2 (tam giác, đường chính đậm có nhánh nhỏ) là \"Giao nhau với đường không ưu tiên\". Biển 1 là giao nhau cùng cấp, biển 3 là giao nhau với đường ưu tiên."
   },
   {
    "n": 389,
@@ -6898,7 +6898,7 @@
    ],
    "correct": 1,
    "image": "img/q389.webp",
-   "explanation": null
+   "explanation": "Biển 1 (tam giác vàng, hai mũi tên ngược chiều theo chiều dọc) là biển cảnh báo \"Đường hai chiều\". Biển 2 bắt nhường đường cho xe ngược chiều, biển 3 cho quyền ưu tiên qua đường hẹp."
   },
   {
    "n": 390,
@@ -6912,7 +6912,7 @@
    ],
    "correct": 2,
    "image": "img/q390.webp",
-   "explanation": null
+   "explanation": "Biển 2 (tròn viền đỏ, mũi tên đỏ đi lên và mũi tên đen đi xuống) là biển hiệu lệnh: phải giảm tốc độ, nhường đường cho xe cơ giới đi ngược chiều qua đường hẹp."
   },
   {
    "n": 391,
@@ -6927,7 +6927,7 @@
    ],
    "correct": 3,
    "image": "img/q391.webp",
-   "explanation": null
+   "explanation": "Biển 3 (vuông nền xanh, mũi tên trắng đi lên lớn hơn mũi tên đỏ) là biển chỉ dẫn \"Được ưu tiên qua đường hẹp\": xe ngược chiều phải nhường cho mình."
   },
   {
    "n": 392,
@@ -6941,7 +6941,7 @@
    ],
    "correct": 2,
    "image": "img/q392.webp",
-   "explanation": null
+   "explanation": "Biển 2 (tam giác, mũi tên tách ra hai bên một dải phân cách) là \"Đường đôi\". Biển 1 là được ưu tiên qua đường hẹp, biển 3 là kết thúc đường đôi."
   },
   {
    "n": 393,
@@ -6955,7 +6955,7 @@
    ],
    "correct": 3,
    "image": "img/q393.webp",
-   "explanation": null
+   "explanation": "Biển 3 (mũi tên tách ra hai bên dải phân cách) là \"Đường đôi\". Biển 1 là đường hai chiều, biển 2 là giao nhau với đường hai chiều."
   },
   {
    "n": 394,
@@ -6969,7 +6969,7 @@
    ],
    "correct": 3,
    "image": "img/q394.webp",
-   "explanation": null
+   "explanation": "Biển 3 (hai mũi tên nhập lại sau khi hết dải phân cách) là \"Kết thúc đường đôi\". Biển 2 là bắt đầu đường đôi."
   },
   {
    "n": 395,
@@ -6983,7 +6983,7 @@
    ],
    "correct": 1,
    "image": "img/q395.webp",
-   "explanation": null
+   "explanation": "Biển 1 (hai mũi tên nằm ngang ngược chiều) là \"Giao nhau với đường hai chiều\": phía trước có đường hai chiều cắt ngang. Mũi tên dọc là \"Đường hai chiều\"."
   },
   {
    "n": 396,
@@ -6997,7 +6997,7 @@
    ],
    "correct": 2,
    "image": "img/q396.webp",
-   "explanation": null
+   "explanation": "Biển 2 (hai mũi tên dọc ngược chiều) là \"Đường hai chiều\": phía trước đường chuyển thành hai chiều, xe ngược chiều sẽ đi tới."
   },
   {
    "n": 397,
@@ -7011,7 +7011,7 @@
    ],
    "correct": 2,
    "image": "img/q397.webp",
-   "explanation": null
+   "explanation": "Biển 2 (hai mũi tên ngang ngược chiều) là \"Giao nhau với đường hai chiều\". Biển 1 (mũi tên dọc) là đường hai chiều, biển 3 là đường giao nhau cùng cấp."
   },
   {
    "n": 398,
@@ -7025,7 +7025,7 @@
    ],
    "correct": 2,
    "image": "img/q398.webp",
-   "explanation": null
+   "explanation": "Biển 2 (chướng ngại vật, mũi tên tránh hai bên) và biển 3 (chướng ngại vật, mũi tên tránh một bên) đều là \"Chú ý chướng ngại vật\". Biển 1 là kết thúc đường đôi."
   },
   {
    "n": 399,
@@ -7039,7 +7039,7 @@
    ],
    "correct": 2,
    "image": "img/q399.webp",
-   "explanation": null
+   "explanation": "Biển 2 (nền xanh, có hình làn rẽ ra và khoảng cách 2 km) chỉ dẫn vị trí và khoảng cách đến làn đường cứu nạn, làn thoát xe khẩn cấp. Biển 1 chỉ dẫn đường vòng tránh."
   },
   {
    "n": 400,
@@ -7053,7 +7053,7 @@
    ],
    "correct": 2,
    "image": "img/q400.webp",
-   "explanation": null
+   "explanation": "Biển 2 (hình cửa hầm có vòm và đường kẻ bên trong) là biển \"Đường hầm\". Biển 1 là cửa chui, biển 3 là cầu vồng."
   },
   {
    "n": 401,
@@ -7067,7 +7067,7 @@
    ],
    "correct": 2,
    "image": "img/q401.webp",
-   "explanation": null
+   "explanation": "Biển 2 (hai cạnh đường thắt lại như thành cầu) là biển \"Cầu hẹp\". Biển 3 là cầu quay, cầu cất."
   },
   {
    "n": 402,
@@ -7081,7 +7081,7 @@
    ],
    "correct": 3,
    "image": "img/q402.webp",
-   "explanation": null
+   "explanation": "Biển 3 (nhịp cầu nâng lên trên mặt nước) là biển \"Cầu quay – cầu cất\": phía trước có cầu có thể quay hoặc nâng lên cho tàu thuyền qua."
   },
   {
    "n": 403,
@@ -7095,7 +7095,7 @@
    ],
    "correct": 1,
    "image": "img/q403.webp",
-   "explanation": null
+   "explanation": "Biển 1 (xe chúi mũi xuống vực ngay phía trước) là \"Kè, vực sâu phía trước\". Biển 2 và biển 3 báo kè, vực sâu ở bên đường."
   },
   {
    "n": 404,
@@ -7110,7 +7110,7 @@
    ],
    "correct": 3,
    "image": "img/q404.webp",
-   "explanation": null
+   "explanation": "Biển 3 là \"Kè, vực sâu bên đường phía bên trái\": hình xe lệch xuống vực ở phía bên trái. Biển 2 là vực sâu phía bên phải."
   },
   {
    "n": 405,
@@ -7124,7 +7124,7 @@
    ],
    "correct": 2,
    "image": "img/q405.webp",
-   "explanation": null
+   "explanation": "Biển 2 là \"Kè, vực sâu bên đường phía bên phải\": hình xe lệch xuống vực ở phía bên phải. Biển 3 là vực sâu phía bên trái."
   },
   {
    "n": 406,
@@ -7138,7 +7138,7 @@
    ],
    "correct": 2,
    "image": "img/q406.webp",
-   "explanation": null
+   "explanation": "Biển 2 (hình xe trượt để lại vệt bánh ngoằn ngoèo) là biển \"Đường trơn\". Biển 1 cảnh báo nguy cơ lật xe, biển 3 báo bến phà."
   },
   {
    "n": 407,
@@ -7152,7 +7152,7 @@
    ],
    "correct": 2,
    "image": "img/q407.webp",
-   "explanation": null
+   "explanation": "Biển 2 (hình bánh xe trượt khỏi mép đường) là biển \"Lề đường nguy hiểm\". Biển 1 là kè, vực sâu, biển 3 là nguy cơ lật xe."
   },
   {
    "n": 408,
@@ -7167,7 +7167,7 @@
    ],
    "correct": 1,
    "image": "img/q408.webp",
-   "explanation": null
+   "explanation": "Biển 1 (hình người đang làm việc bên đống vật liệu) là biển \"Công trường\", báo sắp tới đoạn đường đang thi công, sửa chữa. Biển 2 là đá lở, biển 3 là sỏi đá bắn lên."
   },
   {
    "n": 409,
@@ -7181,7 +7181,7 @@
    ],
    "correct": 2,
    "image": "img/q409.webp",
-   "explanation": null
+   "explanation": "Biển 2 (hai xe va chạm kèm dấu chấm than) cảnh báo đoạn đường thường xảy ra tai nạn. Biển 1 báo đoạn đường hay ùn tắc."
   },
   {
    "n": 410,
@@ -7196,7 +7196,7 @@
    ],
    "correct": 2,
    "image": "img/q410.webp",
-   "explanation": null
+   "explanation": "Biển 2 (nhiều xe nối đuôi nhau) báo đoạn đường hay xảy ra ùn tắc giao thông. Biển 1 là đường hầm, biển 3 là đoạn đường hay xảy ra tai nạn."
   },
   {
    "n": 411,
@@ -7209,7 +7209,7 @@
    ],
    "correct": 2,
    "image": "img/q411.webp",
-   "explanation": null
+   "explanation": "Biển 2 (hình hai trẻ em chạy) là biển \"Trẻ em\": phải đi chậm, thận trọng vì trẻ có thể xuất hiện bất ngờ. Biển 1 là chỗ người đi bộ cắt ngang."
   },
   {
    "n": 412,
@@ -7223,7 +7223,7 @@
    ],
    "correct": 2,
    "image": "img/q412.webp",
-   "explanation": null
+   "explanation": "Biển 2 (biển chữ nhật nền xanh, hình người đi bộ) chỉ dẫn nơi bắt đầu đoạn đường dành cho người đi bộ. Biển 1 và biển 3 là biển cảnh báo hình tam giác."
   },
   {
    "n": 413,
@@ -7238,7 +7238,7 @@
    ],
    "correct": 2,
    "image": "img/q413.webp",
-   "explanation": null
+   "explanation": "Biển 2 (tam giác vàng, hình trẻ em chạy) báo gần đến đoạn đường thường có trẻ em đi qua. Biển 1 là người đi bộ cắt ngang, biển 3 là người đi xe đạp cắt ngang."
   },
   {
    "n": 414,
@@ -7252,7 +7252,7 @@
    ],
    "correct": 1,
    "image": "img/q414.webp",
-   "explanation": null
+   "explanation": "Biển 1 (hình ống gió bị thổi bay ngang) báo đoạn đường có gió ngang mạnh: phải điều chỉnh tốc độ để tránh bị lật xe. Biển 2 là nguy cơ lật xe ở chỗ ngoặt."
   },
   {
    "n": 415,
@@ -7265,7 +7265,7 @@
    ],
    "correct": 1,
    "image": "img/q415.webp",
-   "explanation": null
+   "explanation": "Biển 1 (dốc 10%, mặt dốc thấp dần theo chiều xe đi) là \"Dốc xuống nguy hiểm\". Biển 2 có chiều dốc ngược lại là dốc lên."
   },
   {
    "n": 416,
@@ -7278,7 +7278,7 @@
    ],
    "correct": 2,
    "image": "img/q416.webp",
-   "explanation": null
+   "explanation": "Biển 2 (dốc 9%, mặt dốc cao dần theo chiều xe đi) là \"Dốc lên nguy hiểm\". Biển 1 là dốc xuống."
   },
   {
    "n": 417,
@@ -7291,7 +7291,7 @@
    ],
    "correct": 1,
    "image": "img/q417.webp",
-   "explanation": null
+   "explanation": "Biển có hình xe tải nghiêng cùng mũi tên cong là chỗ ngoặt nguy hiểm có nguy cơ lật xe. Mũi tên cong sang trái, nên xe có nguy cơ lật về bên phải: đường cong vòng sang trái."
   },
   {
    "n": 418,
@@ -7305,7 +7305,7 @@
    ],
    "correct": 3,
    "image": "img/q418.webp",
-   "explanation": null
+   "explanation": "Biển hình ô tô trên mặt nước báo trước sắp đến bến phà."
   },
   {
    "n": 419,
@@ -7318,7 +7318,7 @@
    ],
    "correct": 1,
    "image": "img/q419.webp",
-   "explanation": null
+   "explanation": "Biển có hai khối gồ ghề liên tiếp báo đường có ổ gà, lồi lõm, không bằng phẳng. Một khối gồ đơn mới là gồ giảm tốc."
   },
   {
    "n": 420,
@@ -7331,7 +7331,7 @@
    ],
    "correct": 2,
    "image": "img/q420.webp",
-   "explanation": null
+   "explanation": "Biển có một khối gồ đơn trên mặt đường báo phía trước có gồ giảm tốc. Phải giảm tốc độ trước khi qua."
   },
   {
    "n": 421,
@@ -7345,7 +7345,7 @@
    ],
    "correct": 3,
    "image": "img/q421.webp",
-   "explanation": null
+   "explanation": "Biển có dấu chấm than trên các vạch gợn sóng cảnh báo đoạn nền đường yếu, đang theo dõi lún: chạy tốc độ cao ở đây có thể gây nguy hiểm."
   },
   {
    "n": 422,
@@ -7359,7 +7359,7 @@
    ],
    "correct": 1,
    "image": "img/q422.webp",
-   "explanation": null
+   "explanation": "Hai biển có hình đất đá rơi từ sườn dốc là biển \"Đá lở\", báo trước đoạn đường đất đá trên ta luy dương có thể sụt lở bất ngờ. Hai biển đặt tùy theo vách núi ở bên trái hay bên phải."
   },
   {
    "n": 423,
@@ -7373,7 +7373,7 @@
    ],
    "correct": 2,
    "image": "img/q423.webp",
-   "explanation": null
+   "explanation": "Biển có hình sỏi đá văng ra từ bánh xe báo nơi mặt đường có kết cấu rời rạc: xe chạy qua làm đá, sỏi văng lên gây nguy hiểm."
   },
   {
    "n": 424,
@@ -7386,7 +7386,7 @@
    ],
    "correct": 1,
    "image": "img/q424.webp",
-   "explanation": null
+   "explanation": "Biển hình con bò báo đoạn đường có gia súc qua lại: phải đi chậm, quan sát và dừng lại nếu gặp gia súc. Bấm còi to có thể làm gia súc hoảng sợ, chạy bất ngờ ra đường."
   },
   {
    "n": 425,
@@ -7399,7 +7399,7 @@
    ],
    "correct": 2,
    "image": "img/q425.webp",
-   "explanation": null
+   "explanation": "Biển có hình tia sét từ đường dây báo khu vực có đường dây điện cắt ngang phía trên tuyến đường, phải chú ý chiều cao của xe và hàng."
   },
   {
    "n": 426,
@@ -7413,7 +7413,7 @@
    ],
    "correct": 2,
    "image": "img/q426.webp",
-   "explanation": null
+   "explanation": "Biển 2 chia làn theo loại xe (ô tô, mô tô, xe thô sơ) kèm tốc độ tối đa từng làn: xe phải đi đúng làn dành cho loại xe của mình và không vượt tốc độ ghi trên làn đó. Biển 1 chỉ quy định tốc độ theo làn."
   },
   {
    "n": 427,
@@ -7427,7 +7427,7 @@
    ],
    "correct": 3,
    "image": "img/q427.webp",
-   "explanation": null
+   "explanation": "Cả hai biển đều ghi tốc độ tối đa cho từng làn đường (biển 1: 80, 60, 50; biển 2: 60, 50, 50), nên xe phải tuân thủ tốc độ tối đa của làn mình đang đi."
   },
   {
    "n": 428,
@@ -7440,7 +7440,7 @@
    ],
    "correct": 1,
    "image": "img/q428.webp",
-   "explanation": null
+   "explanation": "Biển 1 (nền xanh, hình ô tô) là \"Đường dành cho xe ô tô\". Biển 2 có gạch đỏ chéo là hết đoạn đường dành cho ô tô."
   },
   {
    "n": 429,
@@ -7453,7 +7453,7 @@
    ],
    "correct": 2,
    "image": "img/q429.webp",
-   "explanation": null
+   "explanation": "Biển 2 (hình ô tô có gạch đỏ chéo) là \"Hết đoạn đường dành cho xe ô tô\"."
   },
   {
    "n": 430,
@@ -7466,7 +7466,7 @@
    ],
    "correct": 1,
    "image": "img/q430.webp",
-   "explanation": null
+   "explanation": "Biển 1 (hình ô tô và mô tô trên nền xanh) là đường dành cho ô tô và mô tô: các phương tiện khác không được đi vào. Biển 2 có gạch đỏ chéo là hết đoạn đường đó."
   },
   {
    "n": 431,
@@ -7480,7 +7480,7 @@
    ],
    "correct": 2,
    "image": "img/q431.webp",
-   "explanation": null
+   "explanation": "Biển chia thành các ô theo từng làn, mỗi ô có mũi tên, cho biết số làn đường và hướng đi bắt buộc trên mỗi làn: làn trái đi thẳng hoặc rẽ trái, làn giữa đi thẳng, làn phải rẽ phải."
   },
   {
    "n": 432,
@@ -7494,7 +7494,7 @@
    ],
    "correct": 3,
    "image": "img/q432.webp",
-   "explanation": null
+   "explanation": "Biển 1 bắt buộc chỉ được đi thẳng; biển 2 bắt buộc chỉ được rẽ trái hoặc rẽ phải, không được đi thẳng. Cả hai đều là biển hướng đi phải theo, không cho xe đi hướng khác với hướng đã chỉ."
   },
   {
    "n": 433,
@@ -7507,7 +7507,7 @@
    ],
    "correct": 1,
    "image": "img/q433.webp",
-   "explanation": null
+   "explanation": "Biển 1 (tròn nền xanh, mũi tên thẳng) là biển hiệu lệnh \"Hướng đi thẳng phải theo\". Biển 2 (vuông nền xanh) là biển chỉ dẫn \"Đường một chiều\". Mẹo: tròn xanh là hiệu lệnh, vuông xanh là chỉ dẫn."
   },
   {
    "n": 434,
@@ -7521,7 +7521,7 @@
    ],
    "correct": 2,
    "image": "img/q434.webp",
-   "explanation": null
+   "explanation": "Biển 2 (hình vuông nền xanh, mũi tên trắng lớn) là biển chỉ dẫn \"Đường một chiều\". Biển 1 (hình tròn) là hướng đi thẳng phải theo."
   },
   {
    "n": 435,
@@ -7536,7 +7536,7 @@
    ],
    "correct": 1,
    "image": "img/q435.webp",
-   "explanation": null
+   "explanation": "Biển 1 (số 50 bị các vạch đen chéo) là \"Hết tốc độ tối đa cho phép\". Biển 2 là hết mọi lệnh cấm, biển 3 (nền xanh, số 60 gạch đỏ) là hết tốc độ tối thiểu."
   },
   {
    "n": 436,
@@ -7551,7 +7551,7 @@
    ],
    "correct": 4,
    "image": "img/q436.webp",
-   "explanation": null
+   "explanation": "Lệnh tốc độ tối đa hết hiệu lực khi gặp biển 1 (hết tốc độ tối đa) hoặc biển 2 (hết mọi lệnh cấm, bao gồm cả lệnh hạn chế tốc độ). Biển 3 chỉ là hết tốc độ tối thiểu."
   },
   {
    "n": 437,
@@ -7566,7 +7566,7 @@
    ],
    "correct": 3,
    "image": "img/q437.webp",
-   "explanation": null
+   "explanation": "Biển 3 (tròn nền xanh, số 60 có gạch đỏ chéo) là \"Hết tốc độ tối thiểu\". Biển 1 là hết tốc độ tối đa."
   },
   {
    "n": 438,
@@ -7581,7 +7581,7 @@
    ],
    "correct": 4,
    "image": "img/q438.webp",
-   "explanation": null
+   "explanation": "Biển 2 (hết mọi lệnh cấm) và biển 3 (hình hai xe bị vạch đen chéo, \"Hết cấm vượt\") đều chấm dứt lệnh cấm vượt. Biển 1 chỉ hết hạn chế tốc độ tối đa."
   },
   {
    "n": 439,
@@ -7596,7 +7596,7 @@
    ],
    "correct": 2,
    "image": "img/q439.webp",
-   "explanation": null
+   "explanation": "Biển 2 (tròn trắng viền xanh, chỉ có các vạch đen chéo, không có hình) là \"Hết mọi lệnh cấm\"."
   },
   {
    "n": 440,
@@ -7611,7 +7611,7 @@
    ],
    "correct": 3,
    "image": "img/q440.webp",
-   "explanation": null
+   "explanation": "Theo bộ đề, biển 3 (hướng đi thẳng và rẽ trái) đặt trước ngã ba, ngã tư là biển cho phép xe quay đầu đi theo hướng ngược lại."
   },
   {
    "n": 441,
@@ -7626,7 +7626,7 @@
    ],
    "correct": 1,
    "image": "img/q441.webp",
-   "explanation": null
+   "explanation": "Biển 1 bắt buộc rẽ trái nên không được rẽ phải. Biển 2 cho rẽ trái hoặc phải, biển 3 cho đi thẳng hoặc rẽ phải."
   },
   {
    "n": 442,
@@ -7641,7 +7641,7 @@
    ],
    "correct": 1,
    "image": "img/q442.webp",
-   "explanation": null
+   "explanation": "Biển 1 (chỉ được rẽ trái) và biển 2 (chỉ được rẽ trái hoặc phải) không cho xe đi thẳng. Biển 3 cho đi thẳng hoặc rẽ phải."
   },
   {
    "n": 443,
@@ -7655,7 +7655,7 @@
    ],
    "correct": 3,
    "image": "img/q443.webp",
-   "explanation": null
+   "explanation": "Cả hai biển chỉ dẫn (vuông nền xanh, hình mũi tên quay ngược) đều báo nơi được phép quay đầu xe."
   },
   {
    "n": 444,
@@ -7670,7 +7670,7 @@
    ],
    "correct": 3,
    "image": "img/q444.webp",
-   "explanation": null
+   "explanation": "Biển 3 (nền xanh đậm, chữ AH112) chỉ dẫn tên đường trên tuyến đường đối ngoại. Biển 1 và biển 2 (ZONE) là biển khu vực cấm đỗ xe."
   },
   {
    "n": 445,
@@ -7684,7 +7684,7 @@
    ],
    "correct": 1,
    "image": "img/q445.webp",
-   "explanation": null
+   "explanation": "Biển 1 (ZONE, biển cấm đỗ có ghi giờ 6:00 – 18:00, bị vạch đen chéo) là biển hết khu vực cấm đỗ xe theo giờ."
   },
   {
    "n": 446,
@@ -7699,7 +7699,7 @@
    ],
    "correct": 3,
    "image": "img/q446.webp",
-   "explanation": null
+   "explanation": "Biển 3 (ZONE kèm biển tốc độ 50) là biển hạn chế tốc độ tối đa trong khu vực: cả khu vực không được chạy quá 50 km/h."
   },
   {
    "n": 447,
@@ -7713,7 +7713,7 @@
    ],
    "correct": 2,
    "image": "img/q447.webp",
-   "explanation": null
+   "explanation": "Biển 2 (làn bên trái có hình xe khách, mũi tên ngược chiều) báo đường phía trước có làn đường dành cho ô tô khách."
   },
   {
    "n": 448,
@@ -7727,7 +7727,7 @@
    ],
    "correct": 3,
    "image": "img/q448.webp",
-   "explanation": null
+   "explanation": "Biển 3 (mũi tên rẽ sang đường có hình xe khách ở một làn) báo rẽ ra đường có làn đường dành cho ô tô khách."
   },
   {
    "n": 449,
@@ -7741,7 +7741,7 @@
    ],
    "correct": 1,
    "image": "img/q449.webp",
-   "explanation": null
+   "explanation": "Biển 1 và biển 2 (hình nhánh rẽ có vạch đỏ chắn ngang) đặt trên đường chính trước nơi giao nhau, báo nhánh rẽ sang trái hoặc phải là đường cụt. Biển 3 báo chính đường phía trước là đường cụt."
   },
   {
    "n": 450,
@@ -7756,7 +7756,7 @@
    ],
    "correct": 1,
    "image": "img/q450.webp",
-   "explanation": null
+   "explanation": "Biển 1 (người đi lên cầu thang) chỉ dẫn người đi bộ dùng cầu vượt qua đường. Biển 2 (người đi xuống) là hầm chui."
   },
   {
    "n": 451,
@@ -7771,7 +7771,7 @@
    ],
    "correct": 2,
    "image": "img/q451.webp",
-   "explanation": null
+   "explanation": "Biển 2 (người đi xuống cầu thang) chỉ dẫn người đi bộ dùng hầm chui qua đường. Biển 1 là cầu vượt."
   },
   {
    "n": 452,
@@ -7785,7 +7785,7 @@
    ],
    "correct": 2,
    "image": "img/q452.webp",
-   "explanation": null
+   "explanation": "Biển 2 (hình xe lăn trên nền xanh) báo nơi đỗ xe dành cho người khuyết tật. Biển 1 là đường dành cho xe thô sơ, biển 3 là đường dành cho người đi bộ."
   },
   {
    "n": 453,
@@ -7799,7 +7799,7 @@
    ],
    "correct": 3,
    "image": "img/q453.webp",
-   "explanation": null
+   "explanation": "Biển chữ P có hình xe nửa trên hè phố là biển đỗ xe một phần trên hè phố: phải đỗ sao cho từ 1/2 thân xe trở lên nằm trên hè."
   },
   {
    "n": 454,
@@ -7813,7 +7813,7 @@
    ],
    "correct": 3,
    "image": "img/q454.webp",
-   "explanation": null
+   "explanation": "Biển CSGT – POLICE báo gần trạm Cảnh sát giao thông: phải giảm tốc độ đến mức an toàn và không được vượt khi đi qua khu vực này."
   },
   {
    "n": 455,
@@ -7826,7 +7826,7 @@
    ],
    "correct": 1,
    "image": "img/q455.webp",
-   "explanation": null
+   "explanation": "Biển tròn nền xanh có ba mũi tên chạy vòng là biển hiệu lệnh \"Nơi giao nhau chạy theo vòng xuyến\": xe muốn chuyển hướng bắt buộc phải chạy vòng theo đảo an toàn theo chiều mũi tên."
   },
   {
    "n": 456,
@@ -7840,7 +7840,7 @@
    ],
    "correct": 2,
    "image": "img/q456.webp",
-   "explanation": null
+   "explanation": "Biển 2 (\"ĐỊA PHẬN HÀ NAM\" kèm số km) chỉ dẫn địa giới hành chính giữa các tỉnh, thành phố, huyện. Biển 1 là chỉ hướng đi, biển 3 là tên địa danh du lịch."
   },
   {
    "n": 457,
@@ -7855,7 +7855,7 @@
    ],
    "correct": 3,
    "image": "img/q457.webp",
-   "explanation": null
+   "explanation": "Biển 1 và biển 3 (bảng xanh vẽ sơ đồ nhánh rẽ qua cầu vượt đến các hướng) báo hiệu cầu vượt liên thông. Biển 2 (tròn) là biển chỉ hướng đi."
   },
   {
    "n": 458,
@@ -7869,7 +7869,7 @@
    ],
    "correct": 3,
    "image": "img/q458.webp",
-   "explanation": null
+   "explanation": "Biển 1 vẽ sơ đồ các hướng đi qua cầu vượt tới Quốc lộ 1, Hà Nội, Quốc lộ 6: đây là biển báo hiệu cầu vượt liên thông."
   },
   {
    "n": 459,
@@ -7883,7 +7883,7 @@
    ],
    "correct": 1,
    "image": "img/q459.webp",
-   "explanation": null
+   "explanation": "Biển 1 và biển 2 (tròn nền xanh, có mũi tên đi thẳng lên cầu vượt và mũi tên rẽ) báo hiệu tuyến đường cầu vượt cắt qua. Biển 3 là biển cảnh báo cầu vồng."
   },
   {
    "n": 460,
@@ -7898,7 +7898,7 @@
    ],
    "correct": 1,
    "image": "img/q460.webp",
-   "explanation": null
+   "explanation": "Biển nền xanh có hình làn rẽ ra kèm cột vạch đỏ trắng và chữ \"300 m\" chỉ dẫn khoảng cách đến làn đường cứu nạn (làn thoát xe khẩn cấp), dùng khi xe mất phanh trên dốc dài."
   },
   {
    "n": 461,
@@ -7911,7 +7911,7 @@
    ],
    "correct": 1,
    "image": "img/q461.webp",
-   "explanation": null
+   "explanation": "Biển làn đường dành riêng cho từng loại xe quy định xe nào đi làn nào trên đoạn đường. Khi đến gần nơi giao nhau, xe được chuyển sang làn khác để đi theo hành trình mong muốn."
   },
   {
    "n": 462,
@@ -7924,7 +7924,7 @@
    ],
    "correct": 1,
    "image": "img/q462.webp",
-   "explanation": null
+   "explanation": "Biển nền xanh có hình ô tô nhìn từ phía trước là \"Đường dành cho xe ô tô\": mọi loại ô tô, kể cả xe tải và xe khách, đều được đi vào."
   },
   {
    "n": 463,
@@ -7937,7 +7937,7 @@
    ],
    "correct": 2,
    "image": "img/q463.webp",
-   "explanation": null
+   "explanation": "Biển nền xanh có hình xe con nhìn ngang là đường dành riêng cho ô tô con, nên xe tải và xe khách không được đi vào."
   },
   {
    "n": 464,
@@ -7951,7 +7951,7 @@
    ],
    "correct": 2,
    "image": "img/q464.webp",
-   "explanation": null
+   "explanation": "Biển 2 (bảng xanh lá có tên đường cao tốc và chữ \"KẾT THÚC – END\") báo kết thúc đường cao tốc. Biển 1 là hết đường ưu tiên, biển 3 là hết đường dành cho ô tô."
   },
   {
    "n": 465,
@@ -7965,7 +7965,7 @@
    ],
    "correct": 2,
    "image": "img/q465.webp",
-   "explanation": null
+   "explanation": "Biển xanh lá \"NHẬP LÀN – MERGE LANE\" kèm \"250 m\" chỉ dẫn vị trí nhập làn xe ở phía trước, cách 250 m."
   },
   {
    "n": 466,
@@ -7979,7 +7979,7 @@
    ],
    "correct": 3,
    "image": "img/q466.webp",
-   "explanation": null
+   "explanation": "Cả hai biển đều chỉ dẫn nhập làn xe: biển 1 đặt tại vị trí nhập làn, biển 2 báo trước vị trí nhập làn cách 250 m."
   },
   {
    "n": 467,
@@ -7994,7 +7994,7 @@
    ],
    "correct": 4,
    "image": "img/q467.webp",
-   "explanation": null
+   "explanation": "Biển xanh lá có tên và ký hiệu đường cao tốc (CT.01 TP.HCM – Trung Lương), biểu tượng đường cao tốc, cùng tốc độ tối đa 100 và tối thiểu 60, báo bắt đầu đường cao tốc và các giá trị tốc độ áp dụng."
   },
   {
    "n": 468,
@@ -8008,7 +8008,7 @@
    ],
    "correct": 1,
    "image": "img/q468.webp",
-   "explanation": null
+   "explanation": "Các biểu tượng trên biển trạm dừng nghỉ lần lượt là cây xăng (xăng dầu), dao nĩa (ăn uống), chữ i (thông tin) và cờ lê (sửa chữa xe)."
   },
   {
    "n": 469,
@@ -8022,7 +8022,7 @@
    ],
    "correct": 3,
    "image": "img/q469.webp",
-   "explanation": null
+   "explanation": "Biển \"TRẠM KTTT – WEIGH STATION\" kèm \"750 m\" chỉ dẫn khoảng cách đến trạm kiểm tra tải trọng xe: còn 750 m."
   },
   {
    "n": 470,
@@ -8036,7 +8036,7 @@
    ],
    "correct": 1,
    "image": "img/q470.webp",
-   "explanation": null
+   "explanation": "Ba biển vạch vàng đen chỉ hướng tránh chướng ngại vật trên cao tốc. Ở biển 1, các vạch chéo hướng xe đi về phía bên trái."
   },
   {
    "n": 471,
@@ -8050,7 +8050,7 @@
    ],
    "correct": 3,
    "image": "img/q471.webp",
-   "explanation": null
+   "explanation": "Ở biển 3, các vạch chéo vàng đen hướng xe đi về phía bên phải chướng ngại vật."
   },
   {
    "n": 472,
@@ -8064,7 +8064,7 @@
    ],
    "correct": 2,
    "image": "img/q472.webp",
-   "explanation": null
+   "explanation": "Biển 2 có các vạch hình mũi tên chữ V hướng lên, chỉ xe được đi cả hai bên trái hoặc phải để tránh chướng ngại vật."
   },
   {
    "n": 473,
@@ -8079,7 +8079,7 @@
    ],
    "correct": 2,
    "image": "img/q473.webp",
-   "explanation": null
+   "explanation": "Biển 1 và biển 3 (nền vàng, mũi tên chữ V màu đen chỉ sang phải hoặc trái) là biển chỉ hướng rẽ, báo sắp vào đường cong nguy hiểm để người lái chuẩn bị đổi hướng. Biển 2 là biển tránh chướng ngại vật."
   },
   {
    "n": 474,
@@ -8092,7 +8092,7 @@
    ],
    "correct": 2,
    "image": "img/q474.webp",
-   "explanation": null
+   "explanation": "Biển 2 có các vạch chữ V hướng lên, chỉ dẫn xe đi được cả hai hướng. Biển 1 (mũi tên chữ V chỉ sang phải) chỉ hướng rẽ ở đường cong."
   },
   {
    "n": 475,
@@ -8105,7 +8105,7 @@
    ],
    "correct": 2,
    "image": "img/q475.webp",
-   "explanation": null
+   "explanation": "Biển nền vàng có mũi tên chữ V màu đen là biển chỉ hướng rẽ, nhắc người lái chuẩn bị đổi hướng khi sắp vào đường cong nguy hiểm, bán kính nhỏ."
   },
   {
    "n": 476,
@@ -8120,7 +8120,7 @@
    ],
    "correct": 3,
    "image": "img/q476.webp",
-   "explanation": null
+   "explanation": "Vạch 3 có mũi tên đi thẳng kèm nhánh rẽ phải: chỉ được đi thẳng và rẽ phải. Vạch 2 là đi thẳng và rẽ trái, vạch 1 chỉ cho rẽ phải."
   },
   {
    "n": 477,
@@ -8135,7 +8135,7 @@
    ],
    "correct": 4,
    "image": "img/q477.webp",
-   "explanation": null
+   "explanation": "Vạch 1 (trắng nét đứt) và vạch 2 (trắng nét liền) đều phân chia các làn xe cùng chiều. Vạch 3 (vàng liền kép) là vạch tim đường phân chia hai chiều. Mẹo: vạch trắng chia làn cùng chiều, vạch vàng chia hai chiều."
   },
   {
    "n": 478,
@@ -8150,7 +8150,7 @@
    ],
    "correct": 2,
    "image": "img/q478.webp",
-   "explanation": null
+   "explanation": "Vạch 2 (vàng, nét liền) là vạch tim đường phân chia hai chiều xe chạy: xe không được lấn làn, không được đè lên vạch. Vạch 1 và vạch 3 màu trắng chia làn cùng chiều."
   },
   {
    "n": 479,
@@ -8165,7 +8165,7 @@
    ],
    "correct": 4,
    "image": "img/q479.webp",
-   "explanation": null
+   "explanation": "Vạch 1 (vàng nét đứt) và vạch 3 (vàng nét liền) đều là vạch tim đường phân chia hai chiều xe chạy. Vạch 2 màu trắng chia làn cùng chiều."
   },
   {
    "n": 480,
@@ -8178,7 +8178,7 @@
    ],
    "correct": 1,
    "image": "img/q480.webp",
-   "explanation": null
+   "explanation": "Các vạch màu vàng (đơn, đứt hoặc liền) dùng để phân chia hai chiều xe chạy ngược chiều nhau."
   },
   {
    "n": 481,
@@ -8191,7 +8191,7 @@
    ],
    "correct": 2,
    "image": "img/q481.webp",
-   "explanation": null
+   "explanation": "Các vạch màu trắng (nét đứt hoặc liền) dùng để phân chia các làn xe chạy cùng chiều nhau."
   },
   {
    "n": 482,
@@ -8206,7 +8206,7 @@
    ],
    "correct": 4,
    "image": "img/q482.webp",
-   "explanation": null
+   "explanation": "Vạch 1 (vàng nét đứt) và vạch 3 (trắng nét đứt) là vạch nét đứt nên xe được phép đè vạch khi chuyển làn hoặc vượt. Vạch 2 (trắng nét liền) không được đè."
   },
   {
    "n": 483,
@@ -8220,7 +8220,7 @@
    ],
    "correct": 3,
    "image": "img/q483.webp",
-   "explanation": null
+   "explanation": "Các vạch chữ V liên tiếp (>>) đặt cách đều nhau trên mặt đường dùng để người lái xác định khoảng cách an toàn với xe phía trước."
   },
   {
    "n": 484,
@@ -8234,7 +8234,7 @@
    ],
    "correct": 2,
    "image": "img/q484.webp",
-   "explanation": null
+   "explanation": "Hình thoi kẻ trên mặt đường trước vạch đi bộ báo hiệu sắp đến chỗ có vạch dành cho người đi bộ qua đường, để người lái giảm tốc độ."
   },
   {
    "n": 485,
@@ -8248,7 +8248,7 @@
    ],
    "correct": 1,
    "image": "img/q485.webp",
-   "explanation": null
+   "explanation": "Vạch hình răng cưa (zigzag) màu vàng sát lề đường đánh dấu vị trí dừng xe của phương tiện vận tải hành khách công cộng (xe buýt). Xe khác không được dừng đỗ ở đây."
   },
   {
    "n": 486,
@@ -8262,7 +8262,7 @@
    ],
    "correct": 3,
    "image": "img/q486.webp",
-   "explanation": null
+   "explanation": "Ở đây có đèn tín hiệu riêng cho từng làn. Theo hướng mũi tên, chỉ xe con đi theo hướng đang được đèn xanh của làn mình. Xe khách, xe tải và xe mô tô đi theo hướng đang bị đèn đỏ nên vi phạm."
   },
   {
    "n": 487,
@@ -8277,7 +8277,7 @@
    ],
    "correct": 2,
    "image": "img/q487.webp",
-   "explanation": null
+   "explanation": "Xe tải và xe mô tô ở trên đường ưu tiên nên đi trước: xe tải đi thẳng, đi trước xe mô tô đang rẽ trái. Xe khách và xe con ở đường không ưu tiên (có biển tam giác ngược) đi sau: xe khách đi thẳng trước, xe con quay đầu đi sau cùng."
   },
   {
    "n": 488,
@@ -8292,7 +8292,7 @@
    ],
    "correct": 1,
    "image": "img/q488.webp",
-   "explanation": null
+   "explanation": "Xe công an làm nhiệm vụ khẩn cấp là xe ưu tiên nên đi trước tiên. Tiếp theo là các xe trên đường ưu tiên (xe con rồi xe tải theo hướng đi), xe khách ở đường không ưu tiên (biển tam giác ngược) đi sau cùng."
   },
   {
    "n": 489,
@@ -8307,7 +8307,7 @@
    ],
    "correct": 4,
    "image": "img/q489.webp",
-   "explanation": null
+   "explanation": "Xe công an làm nhiệm vụ khẩn cấp đi trước. Các xe còn lại đi theo quy tắc đường ưu tiên và hướng đi: xe tải, rồi xe khách, cuối cùng xe con."
   },
   {
    "n": 490,
@@ -8322,7 +8322,7 @@
    ],
    "correct": 3,
    "image": "img/q490.webp",
-   "explanation": null
+   "explanation": "Nơi giao nhau cùng cấp, không có biển báo: xe phải nhường đường cho xe đến từ bên phải. Xe mô tô không có xe nào bên phải nên đi trước, rồi đến xe con, xe tải đi sau cùng."
   },
   {
    "n": 491,
@@ -8335,7 +8335,7 @@
    ],
    "correct": 1,
    "image": "img/q491.webp",
-   "explanation": null
+   "explanation": "Khi vào vòng xuyến phải nhường đường cho xe đi đến từ bên trái (xe đang chạy trong vòng xuyến). Xe tải đang ở trong vòng xuyến bên trái xe con, nên xe con phải nhường."
   },
   {
    "n": 492,
@@ -8348,7 +8348,7 @@
    ],
    "correct": 2,
    "image": "img/q492.webp",
-   "explanation": null
+   "explanation": "Xe mô tô gặp biển STOP (\"Dừng lại\") nên phải dừng hẳn và nhường đường. Xe con được quyền đi trước."
   },
   {
    "n": 493,
@@ -8362,7 +8362,7 @@
    ],
    "correct": 1,
    "image": "img/q493.webp",
-   "explanation": null
+   "explanation": "Xe con A đã đi vào trong nơi giao nhau nên được đi tiếp trước. Sau đó xe cứu thương đi làm nhiệm vụ là xe ưu tiên nên đi trước xe con B. Xe con B đi sau cùng."
   },
   {
    "n": 494,
@@ -8376,7 +8376,7 @@
    ],
    "correct": 2,
    "image": "img/q494.webp",
-   "explanation": null
+   "explanation": "Cả xe chữa cháy và xe cứu thương đều là xe ưu tiên, nhưng xe chữa cháy đi làm nhiệm vụ được ưu tiên trước xe cứu thương. Xe con đi sau cùng."
   },
   {
    "n": 495,
@@ -8389,7 +8389,7 @@
    ],
    "correct": 2,
    "image": "img/q495.webp",
-   "explanation": null
+   "explanation": "Xe cứu thương đi làm nhiệm vụ cấp cứu là xe ưu tiên nên được đi trước xe mô tô."
   },
   {
    "n": 496,
@@ -8403,7 +8403,7 @@
    ],
    "correct": 1,
    "image": "img/q496.webp",
-   "explanation": null
+   "explanation": "Xe khách đi trên đường không ưu tiên (có biển tam giác ngược) nên phải nhường đường cho các xe trên đường ưu tiên và đi qua nơi giao nhau sau cùng."
   },
   {
    "n": 497,
@@ -8416,7 +8416,7 @@
    ],
    "correct": 1,
    "image": "img/q497.webp",
-   "explanation": null
+   "explanation": "Xe con đi từ đường không ưu tiên (có biển tam giác ngược) nên phải nhường đường cho xe tải đi trên đường ưu tiên."
   },
   {
    "n": 498,
@@ -8429,7 +8429,7 @@
    ],
    "correct": 2,
    "image": "img/q498.webp",
-   "explanation": null
+   "explanation": "Xe chữa cháy đi làm nhiệm vụ đứng đầu thứ tự xe ưu tiên, nên được đi trước cả xe công an làm nhiệm vụ khẩn cấp."
   },
   {
    "n": 499,
@@ -8442,7 +8442,7 @@
    ],
    "correct": 1,
    "image": "img/q499.webp",
-   "explanation": null
+   "explanation": "Đèn phía xe con và xe khách đang xanh nên hai xe được đi. Đèn phía xe mô tô đang đỏ nên mô tô phải dừng lại."
   },
   {
    "n": 500,
@@ -8456,7 +8456,7 @@
    ],
    "correct": 2,
    "image": "img/q500.webp",
-   "explanation": null
+   "explanation": "Theo đèn tín hiệu cho từng làn, xe con và xe tải đi theo hướng đang được đèn xanh nên đúng quy tắc. Xe khách và xe mô tô đi theo hướng đang đèn đỏ."
   },
   {
    "n": 501,
@@ -8469,7 +8469,7 @@
    ],
    "correct": 2,
    "image": "img/q501.webp",
-   "explanation": null
+   "explanation": "Thứ tự xe ưu tiên là xe chữa cháy, rồi xe quân sự, rồi xe công an đi làm nhiệm vụ khẩn cấp. Vì vậy xe quân sự được đi trước xe công an."
   },
   {
    "n": 502,
@@ -8484,7 +8484,7 @@
    ],
    "correct": 2,
    "image": "img/q502.webp",
-   "explanation": null
+   "explanation": "Đèn đỏ đang sáng nhưng có đèn mũi tên xanh chỉ sang phải, nên xe tải chỉ được rẽ phải theo hướng 1. Các hướng khác phải dừng chờ."
   },
   {
    "n": 503,
@@ -8498,7 +8498,7 @@
    ],
    "correct": 1,
    "image": "img/q503.webp",
-   "explanation": null
+   "explanation": "Theo đèn tín hiệu theo làn, xe khách, xe tải và xe mô tô đi theo những hướng đang bị đèn đỏ nên vi phạm. Xe con đi đúng hướng đèn xanh."
   },
   {
    "n": 504,
@@ -8513,7 +8513,7 @@
    ],
    "correct": 3,
    "image": "img/q504.webp",
-   "explanation": null
+   "explanation": "Trong vòng xuyến, xe phải nhường đường cho xe đến từ bên trái, nên thứ tự đi qua là xe mô tô, xe tải, xe khách, cuối cùng xe con."
   },
   {
    "n": 505,
@@ -8528,7 +8528,7 @@
    ],
    "correct": 1,
    "image": "img/q505.webp",
-   "explanation": null
+   "explanation": "Biển cấm đỗ xe có biển phụ hình xe tải nên chỉ cấm xe tải đỗ. Xe con và xe mô tô đỗ không vi phạm."
   },
   {
    "n": 506,
@@ -8542,7 +8542,7 @@
    ],
    "correct": 2,
    "image": "img/q506.webp",
-   "explanation": null
+   "explanation": "Xe con B đi trên đường ưu tiên nên được đi trước. Xe con A và xe tải ở đường không ưu tiên (có biển tam giác ngược) phải nhường."
   },
   {
    "n": 507,
@@ -8556,7 +8556,7 @@
    ],
    "correct": 1,
    "image": "img/q507.webp",
-   "explanation": null
+   "explanation": "Hướng 2 có biển cấm mô tô và hướng 3 có biển cấm ô tô; cả hai biển đều không cấm xe gắn máy. Vì vậy xe gắn máy được đi cả ba hướng."
   },
   {
    "n": 508,
@@ -8571,7 +8571,7 @@
    ],
    "correct": 1,
    "image": "img/q508.webp",
-   "explanation": null
+   "explanation": "Cả xe tải và xe mô tô đều đỗ trong phạm vi có hiệu lực của biển cấm dừng và đỗ xe, nên cả hai xe đều vi phạm."
   },
   {
    "n": 509,
@@ -8586,7 +8586,7 @@
    ],
    "correct": 3,
    "image": "img/q509.webp",
-   "explanation": null
+   "explanation": "Không được đỗ xe trên phần đường dành cho người đi bộ qua đường và trong phạm vi 5 m hai bên vạch đi bộ. Cả ba xe đều đỗ ở khu vực này nên đều vi phạm."
   },
   {
    "n": 510,
@@ -8599,7 +8599,7 @@
    ],
    "correct": 2,
    "image": "img/q510.webp",
-   "explanation": null
+   "explanation": "Ô tô không được kéo xe mô tô ba bánh theo cách này, và tại đây còn có biển cấm xe kéo moóc. Xe tải kéo xe mô tô ba bánh như hình là không đúng quy tắc."
   },
   {
    "n": 511,
@@ -8612,7 +8612,7 @@
    ],
    "correct": 2,
    "image": "img/q511.webp",
-   "explanation": null
+   "explanation": "Lối ra hướng 1 có biển cấm đối với loại xe này, nên xe không được đi theo hướng 1. Các hướng còn lại được phép đi theo chiều vòng xuyến."
   },
   {
    "n": 512,
@@ -8627,7 +8627,7 @@
    ],
    "correct": 2,
    "image": "img/q512.webp",
-   "explanation": null
+   "explanation": "Biển đặt tại ngã tư là biển cấm rẽ trái, nên ô tô không được đi hướng 3 (rẽ trái). Biển cấm rẽ trái không cấm quay đầu, nên hướng 2 (quay đầu) cùng hướng 1 và 4 vẫn được đi."
   },
   {
    "n": 513,
@@ -8641,7 +8641,7 @@
    ],
    "correct": 1,
    "image": "img/q513.webp",
-   "explanation": null
+   "explanation": "Biển ở đây là biển cấm ô tô tải vượt. Xe con và xe khách không phải xe tải nên đều được vượt khi đủ điều kiện an toàn."
   },
   {
    "n": 514,
@@ -8655,7 +8655,7 @@
    ],
    "correct": 1,
    "image": "img/q514.webp",
-   "explanation": null
+   "explanation": "Biển hướng đi phải theo (tròn xanh) đặt trước ngã tư chỉ cho đi thẳng và rẽ trái, nên xe chỉ được đi hướng 2 và 3, không được rẽ phải theo hướng 1."
   },
   {
    "n": 515,
@@ -8668,7 +8668,7 @@
    ],
    "correct": 2,
    "image": "img/q515.webp",
-   "explanation": null
+   "explanation": "Xe tải nhỏ kéo cả một tổ hợp xe đầu kéo kèm sơ mi rơ moóc lớn hơn nhiều, nối bằng dây, là không bảo đảm an toàn và sai quy định về kéo xe, nên vi phạm."
   },
   {
    "n": 516,
@@ -8681,7 +8681,7 @@
    ],
    "correct": 1,
    "image": "img/q516.webp",
-   "explanation": null
+   "explanation": "Phía xe khách có biển phải nhường đường cho xe đi ngược chiều qua đường hẹp; phía xe tải có biển được ưu tiên qua đường hẹp. Vì vậy xe khách phải nhường đường cho xe tải đi qua cầu trước."
   },
   {
    "n": 517,
@@ -8694,7 +8694,7 @@
    ],
    "correct": 2,
    "image": "img/q517.webp",
-   "explanation": null
+   "explanation": "Cả hai xe đều được đèn xanh. Xe mô tô rẽ phải, không cắt ngang hướng đi của xe khác, nên được đi trước xe con."
   },
   {
    "n": 518,
@@ -8707,7 +8707,7 @@
    ],
    "correct": 1,
    "image": "img/q518.webp",
-   "explanation": null
+   "explanation": "Xe đầu kéo đang kéo sơ mi rơ moóc thì không được kéo thêm xe khác. Kéo nhau như hình là không đúng quy định."
   },
   {
    "n": 519,
@@ -8722,7 +8722,7 @@
    ],
    "correct": 2,
    "image": "img/q519.webp",
-   "explanation": null
+   "explanation": "Hướng 2 có biển cấm ô tô nên ô tô con không được đi. Ô tô con được đi các hướng 1, 3 và 4."
   },
   {
    "n": 520,
@@ -8737,7 +8737,7 @@
    ],
    "correct": 4,
    "image": "img/q520.webp",
-   "explanation": null
+   "explanation": "Nơi giao nhau không có biển báo thì nhường đường cho xe đến từ bên phải. Xe mô tô và xe đạp không có xe bên phải nên đi trước, sau đó đến xe con A, cuối cùng xe con B."
   },
   {
    "n": 521,
@@ -8752,7 +8752,7 @@
    ],
    "correct": 1,
    "image": "img/q521.webp",
-   "explanation": null
+   "explanation": "Biển hướng đi phải theo có biển phụ hình xe tải bắt xe tải chỉ được rẽ theo hướng 1. Các hướng khác xe tải không được đi."
   },
   {
    "n": 522,
@@ -8765,7 +8765,7 @@
    ],
    "correct": 2,
    "image": "img/q522.webp",
-   "explanation": null
+   "explanation": "Hướng 1 có biển cấm xe tải nên xe tải không được rẽ vào. Xe tải được đi hướng 2 và 3."
   },
   {
    "n": 523,
@@ -8780,7 +8780,7 @@
    ],
    "correct": 3,
    "image": "img/q523.webp",
-   "explanation": null
+   "explanation": "Biển cấm ô tô đặt ở đầu đoạn đường phía trước áp dụng cho các hướng 2, 3 và 4. Vì vậy xe tải chỉ được rẽ phải theo hướng 1 hoặc quay đầu theo hướng 5."
   },
   {
    "n": 524,
@@ -8795,7 +8795,7 @@
    ],
    "correct": 2,
    "image": "img/q524.webp",
-   "explanation": null
+   "explanation": "Hướng 2 có biển cấm xe tải nên xe tải không được đi hướng 2. Các hướng còn lại không bị cấm."
   },
   {
    "n": 525,
@@ -8808,7 +8808,7 @@
    ],
    "correct": 1,
    "image": "img/q525.webp",
-   "explanation": null
+   "explanation": "Xe mô tô đi trên đường có biển \"Đường ưu tiên\" (hình thoi vàng) nên được đi trước. Xe con đi từ đường không ưu tiên phải nhường."
   },
   {
    "n": 526,
@@ -8821,7 +8821,7 @@
    ],
    "correct": 2,
    "image": "img/q526.webp",
-   "explanation": null
+   "explanation": "Phía trước có biển hiệu lệnh \"Hướng đi thẳng phải theo\", nên xe con chỉ được đi thẳng. Quay đầu theo chiều mũi tên là vi phạm."
   },
   {
    "n": 527,
@@ -8836,7 +8836,7 @@
    ],
    "correct": 3,
    "image": "img/q527.webp",
-   "explanation": null
+   "explanation": "Xe con lấn qua vạch liền tim đường để đi vòng sang chiều ngược lại là vi phạm. Xe khách và xe mô tô đi đúng làn của mình."
   },
   {
    "n": 528,
@@ -8850,7 +8850,7 @@
    ],
    "correct": 3,
    "image": "img/q528.webp",
-   "explanation": null
+   "explanation": "Cảnh sát giao thông giơ một tay thẳng đứng: mọi xe ở các hướng phải dừng lại trước ngã tư. Riêng xe đã ở trong ngã tư được đi tiếp."
   },
   {
    "n": 529,
@@ -8865,7 +8865,7 @@
    ],
    "correct": 3,
    "image": "img/q529.webp",
-   "explanation": null
+   "explanation": "Cảnh sát giao thông dang ngang hai tay: xe ở bên phải và bên trái người điều khiển được đi, xe ở phía trước và phía sau phải dừng. Xe mô tô và xe tải ở hai bên nên được đi, xe con phải dừng."
   },
   {
    "n": 530,
@@ -8878,7 +8878,7 @@
    ],
    "correct": 1,
    "image": "img/q530.webp",
-   "explanation": null
+   "explanation": "Xe tải đang rẽ phải, xe con đi thẳng bên trái xe tải theo hướng mũi tên. Trường hợp này đúng quy tắc."
   },
   {
    "n": 531,
@@ -8892,7 +8892,7 @@
    ],
    "correct": 3,
    "image": "img/q531.webp",
-   "explanation": null
+   "explanation": "Xe con vượt bên trái xe phía trước khi đủ điều kiện an toàn là đúng. Xe tải vượt khi không đủ điều kiện an toàn (lấn sang làn ngược chiều nơi có xe đi tới) nên vi phạm."
   },
   {
    "n": 532,
@@ -8906,7 +8906,7 @@
    ],
    "correct": 2,
    "image": "img/q532.webp",
-   "explanation": null
+   "explanation": "Xe tải quay đầu tại nơi có biển cấm quay đầu nên vi phạm. Xe chữa cháy đang làm nhiệm vụ là xe ưu tiên nên được đi vào đường có biển cấm đi ngược chiều."
   },
   {
    "n": 533,
@@ -8920,7 +8920,7 @@
    ],
    "correct": 3,
    "image": "img/q533.webp",
-   "explanation": null
+   "explanation": "Xe tải và xe khách đi trên đường chính được đi trước xe con đi từ đường nhánh. Giữa hai xe trên đường chính, xe tải đi trước theo quy tắc hướng đi, rồi đến xe khách, cuối cùng là xe con."
   },
   {
    "n": 534,
@@ -8934,7 +8934,7 @@
    ],
    "correct": 1,
    "image": "img/q534.webp",
-   "explanation": null
+   "explanation": "Xe khách và xe tải đi trên đường chính, hướng đi không cắt nhau nên được đi cùng lúc. Xe con đi từ đường nhánh phải nhường, đi sau cùng."
   },
   {
    "n": 535,
@@ -8948,7 +8948,7 @@
    ],
    "correct": 3,
    "image": "img/q535.webp",
-   "explanation": null
+   "explanation": "Hướng 4 có biển cấm đi ngược chiều nên xe tải không được đi vào. Các hướng còn lại được phép."
   },
   {
    "n": 536,
@@ -8963,7 +8963,7 @@
    ],
    "correct": 1,
    "image": "img/q536.webp",
-   "explanation": null
+   "explanation": "Xe công an làm nhiệm vụ khẩn cấp là xe ưu tiên nên đi trước. Tiếp theo là xe con, rồi xe tải đi trên đường ưu tiên; xe khách ở đường không ưu tiên (biển tam giác ngược) đi sau cùng."
   },
   {
    "n": 537,
@@ -8978,7 +8978,7 @@
    ],
    "correct": 4,
    "image": "img/q537.webp",
-   "explanation": null
+   "explanation": "Biển ở hướng 1 là biển cấm rẽ trái, nên xe tải không được rẽ trái theo hướng 2. Biển cấm rẽ trái không cấm quay đầu; biển ở hướng 4 cấm mô tô, không áp dụng với xe tải. Vì vậy xe tải được đi các hướng 1, 3 và 4."
   },
   {
    "n": 538,
@@ -8992,7 +8992,7 @@
    ],
    "correct": 2,
    "image": "img/q538.webp",
-   "explanation": null
+   "explanation": "Theo đèn tín hiệu cho từng làn, mỗi xe đều đi theo hướng đang được đèn xanh cho phép, nên tất cả các xe đều chấp hành đúng."
   },
   {
    "n": 539,
@@ -9007,7 +9007,7 @@
    ],
    "correct": 3,
    "image": "img/q539.webp",
-   "explanation": null
+   "explanation": "Hướng 2 có biển cấm mô tô nên xe mô tô không được đi. Hướng 3 có biển cấm ô tô, không áp dụng với mô tô. Vì vậy mô tô được đi hướng 1 và 3."
   },
   {
    "n": 540,
@@ -9021,7 +9021,7 @@
    ],
    "correct": 2,
    "image": "img/q540.webp",
-   "explanation": null
+   "explanation": "Xe quân sự đi làm nhiệm vụ khẩn cấp được ưu tiên trước xe công an. Sau hai xe ưu tiên, xe con và xe mô tô mới được đi."
   },
   {
    "n": 541,
@@ -9034,7 +9034,7 @@
    ],
    "correct": 1,
    "image": "img/q541.webp",
-   "explanation": null
+   "explanation": "Trên đường dốc, xe xuống dốc phải nhường đường cho xe đang lên dốc. Xe A đang xuống dốc nên phải nhường xe B."
   },
   {
    "n": 542,
@@ -9047,7 +9047,7 @@
    ],
    "correct": 2,
    "image": "img/q542.webp",
-   "explanation": null
+   "explanation": "Xe con quay đầu ngay tại phần đường dành cho người đi bộ qua đường ở ngã tư, là nơi cấm quay đầu, nên vi phạm."
   },
   {
    "n": 543,
@@ -9062,7 +9062,7 @@
    ],
    "correct": 1,
    "image": "img/q543.webp",
-   "explanation": null
+   "explanation": "Biển trên giá long môn quy định làn đường cho từng loại xe. Xe con E và xe mô tô C đi không đúng làn dành cho loại xe của mình nên vi phạm."
   },
   {
    "n": 544,
@@ -9075,7 +9075,7 @@
    ],
    "correct": 1,
    "image": "img/q544.webp",
-   "explanation": null
+   "explanation": "Biển báo cho biết xe mình đang đi trên đường không ưu tiên, còn xe con đi trên đường ưu tiên. Muốn đi thẳng thì phải nhường cho xe con rẽ trái đi trước."
   },
   {
    "n": 545,
@@ -9090,7 +9090,7 @@
    ],
    "correct": 2,
    "image": "img/q545.webp",
-   "explanation": null
+   "explanation": "Hướng 3 có biển cấm đi ngược chiều và hướng 4 có biển cấm rẽ phải, nên xe chỉ được đi hướng 1 và 2."
   },
   {
    "n": 546,
@@ -9103,7 +9103,7 @@
    ],
    "correct": 2,
    "image": "img/q546.webp",
-   "explanation": null
+   "explanation": "Xe con B đang chuyển sang làn của xe con A nên phải nhường đường cho xe A đang đi trên làn đó."
   },
   {
    "n": 547,
@@ -9117,7 +9117,7 @@
    ],
    "correct": 3,
    "image": "img/q547.webp",
-   "explanation": null
+   "explanation": "Khi rẽ trái, phải nhường đường cho xe đi thẳng từ hướng ngược lại. Phải nhường xe buýt và xe tải đi qua rồi mới rẽ trái."
   },
   {
    "n": 548,
@@ -9132,7 +9132,7 @@
    ],
    "correct": 3,
    "image": "img/q548.webp",
-   "explanation": null
+   "explanation": "Theo biển chỉ làn trên giá long môn, xe con E và xe mô tô D đi không đúng làn quy định cho loại xe của mình nên vi phạm."
   },
   {
    "n": 549,
@@ -9145,7 +9145,7 @@
    ],
    "correct": 2,
    "image": "img/q549.webp",
-   "explanation": null
+   "explanation": "Phía xe của bạn có biển tam giác ngược (giao nhau với đường ưu tiên), nên phải nhường đường cho xe tải đi trên đường ưu tiên đi trước."
   },
   {
    "n": 550,
@@ -9159,7 +9159,7 @@
    ],
    "correct": 1,
    "image": "img/q550.webp",
-   "explanation": null
+   "explanation": "Biển cấm rẽ trái không cấm quay đầu, nên xe được quay đầu theo hướng A trong nút giao. Không quay đầu theo hướng B, vì đó là phần đường dành cho người đi bộ qua đường."
   },
   {
    "n": 551,
@@ -9174,7 +9174,7 @@
    ],
    "correct": 3,
    "image": "img/q551.webp",
-   "explanation": null
+   "explanation": "Biển cho biết xe của bạn đang đi trên đường ưu tiên. Xe của bạn và xe con cùng ở trên đường ưu tiên nên đi trước; xe tải từ đường không ưu tiên đi sau."
   },
   {
    "n": 552,
@@ -9188,7 +9188,7 @@
    ],
    "correct": 2,
    "image": "img/q552.webp",
-   "explanation": null
+   "explanation": "Muốn vượt phải báo hiệu bằng đèn hoặc còi để xe phía trước biết, và chỉ tăng tốc vượt khi đủ điều kiện an toàn. Đánh lái sang trái rồi tăng tốc mà không báo hiệu là sai."
   },
   {
    "n": 553,
@@ -9202,7 +9202,7 @@
    ],
    "correct": 3,
    "image": "img/q553.webp",
-   "explanation": null
+   "explanation": "Theo đèn tín hiệu cho từng làn, làn của xe con và xe tải đang đèn đỏ nên hai xe phải dừng lại. Xe khách đi theo hướng đang được đèn xanh."
   },
   {
    "n": 554,
@@ -9216,7 +9216,7 @@
    ],
    "correct": 2,
    "image": "img/q554.webp",
-   "explanation": null
+   "explanation": "Xe con A, C, E và xe buýt G đi đúng làn quy định. Xe con B lấn qua vạch tim đường, còn xe tải D đi vào làn dành riêng cho xe buýt nên vi phạm."
   },
   {
    "n": 555,
@@ -9229,7 +9229,7 @@
    ],
    "correct": 2,
    "image": "img/q555.webp",
-   "explanation": null
+   "explanation": "Không được vượt tại nơi đường giao nhau và phần đường người đi bộ qua đường. Xe tải đang ở ngay nút giao phía trước nên cấm vượt."
   },
   {
    "n": 556,
@@ -9242,7 +9242,7 @@
    ],
    "correct": 2,
    "image": "img/q556.webp",
-   "explanation": null
+   "explanation": "Phía trước là nơi giao nhau (có biển nhường đường), nơi không được vượt xe. Vì vậy không được vượt xe mô tô."
   },
   {
    "n": 557,
@@ -9257,7 +9257,7 @@
    ],
    "correct": 3,
    "image": "img/q557.webp",
-   "explanation": null
+   "explanation": "Biển ở đây là biển cấm đỗ xe, nên vẫn được dừng. Xe được dừng ở vị trí B và C bên phải đường; vị trí A nằm bên trái chiều đi nên không được dừng."
   },
   {
    "n": 558,
@@ -9272,7 +9272,7 @@
    ],
    "correct": 4,
    "image": "img/q558.webp",
-   "explanation": null
+   "explanation": "Biển nền xanh có hai gạch chéo đỏ là biển cấm dừng và đỗ xe, nên không được dừng ở cả vị trí A lẫn B."
   },
   {
    "n": 559,
@@ -9287,7 +9287,7 @@
    ],
    "correct": 4,
    "image": "img/q559.webp",
-   "explanation": null
+   "explanation": "Phía trước có biển hướng đi thẳng phải theo, nhưng cả xe mô tô và ô tô con đều bật xi nhan báo rẽ, tức là định đi hướng khác. Vì vậy cả hai xe đều vi phạm."
   },
   {
    "n": 560,
@@ -9301,7 +9301,7 @@
    ],
    "correct": 2,
    "image": "img/q560.webp",
-   "explanation": null
+   "explanation": "Theo đèn tín hiệu cho từng làn, xe tải đi theo hướng đang bị đèn đỏ nên vi phạm. Xe con đi đúng hướng đèn xanh."
   },
   {
    "n": 561,
@@ -9315,7 +9315,7 @@
    ],
    "correct": 3,
    "image": "img/q561.webp",
-   "explanation": null
+   "explanation": "Theo đèn tín hiệu cho từng làn, xe khách và xe tải đi theo hướng đang bị đèn đỏ nên vi phạm. Xe con đi đúng."
   },
   {
    "n": 562,
@@ -9330,7 +9330,7 @@
    ],
    "correct": 2,
    "image": "img/q562.webp",
-   "explanation": null
+   "explanation": "Theo đèn tín hiệu cho từng làn, xe tải, xe khách và xe mô tô đi theo hướng đang bị đèn đỏ nên vi phạm. Chỉ xe con đi đúng hướng được đèn xanh."
   },
   {
    "n": 563,
@@ -9345,7 +9345,7 @@
    ],
    "correct": 1,
    "image": "img/q563.webp",
-   "explanation": null
+   "explanation": "Theo đèn tín hiệu cho từng làn, xe khách và xe tải đi theo hướng đang bị đèn đỏ nên vi phạm. Xe con đi đúng."
   },
   {
    "n": 564,
@@ -9359,7 +9359,7 @@
    ],
    "correct": 2,
    "image": "img/q564.webp",
-   "explanation": null
+   "explanation": "Khi xe phía trước hỏng đột xuất, phải quan sát phía trước và phía sau, khi đủ điều kiện an toàn thì báo hiệu bằng đèn hoặc còi rồi mới vượt qua. Đánh lái sang trái ngay mà không quan sát là nguy hiểm."
   },
   {
    "n": 565,
@@ -9374,7 +9374,7 @@
    ],
    "correct": 2,
    "image": "img/q565.webp",
-   "explanation": null
+   "explanation": "Theo đèn tín hiệu cho từng làn, xe khách và xe mô tô đi theo hướng đang được đèn xanh nên đúng. Xe tải và xe con đi theo hướng đang bị đèn đỏ."
   },
   {
    "n": 566,
@@ -9389,7 +9389,7 @@
    ],
    "correct": 3,
    "image": "img/q566.webp",
-   "explanation": null
+   "explanation": "Xe tải D đi vào làn có chữ \"XE BUÝT\" dành riêng cho xe buýt, còn xe con B lấn qua vạch tim đường, nên hai xe này vi phạm. Các xe còn lại đi đúng làn."
   },
   {
    "n": 567,
@@ -9403,7 +9403,7 @@
    ],
    "correct": 3,
    "image": "img/q567.webp",
-   "explanation": null
+   "explanation": "Phía xe của bạn có biển nhường đường (tam giác ngược), nên phải nhường các xe trên đường ưu tiên. Xe mô tô đi trước, rồi xe con, xe của bạn đi sau cùng."
   },
   {
    "n": 568,
@@ -9417,7 +9417,7 @@
    ],
    "correct": 2,
    "image": "img/q568.webp",
-   "explanation": null
+   "explanation": "Nơi giao nhau không có biển báo thì nhường xe đến từ bên phải. Xe con đến từ bên phải xe của bạn nên đi trước, sau đó đến xe của bạn, rồi đến xe mô tô."
   },
   {
    "n": 569,
@@ -9431,7 +9431,7 @@
    ],
    "correct": 1,
    "image": "img/q569.webp",
-   "explanation": null
+   "explanation": "Đèn đỏ đang áp dụng cho hướng đi của xe con, nên xe con phải dừng lại. Xe của bạn rẽ phải không bị đèn đỏ đó chi phối."
   },
   {
    "n": 570,
@@ -9446,7 +9446,7 @@
    ],
    "correct": 1,
    "image": "img/q570.webp",
-   "explanation": null
+   "explanation": "Vạch mũi tên trên làn của xe bạn chỉ cho đi thẳng và rẽ trái, và đèn đang xanh, nên xe được đi thẳng hoặc rẽ trái. Muốn rẽ phải phải đi từ làn có mũi tên rẽ phải."
   },
   {
    "n": 571,
@@ -9460,7 +9460,7 @@
    ],
    "correct": 3,
    "image": "img/q571.webp",
-   "explanation": null
+   "explanation": "Đèn đỏ đang sáng (chỉ có mũi tên xanh cho làn rẽ phải), còn làn của xe bạn là làn đi thẳng và rẽ trái. Phải dừng trước vạch dừng, khi đèn xanh mới được đi thẳng hoặc rẽ trái."
   },
   {
    "n": 572,
@@ -9474,7 +9474,7 @@
    ],
    "correct": 2,
    "image": "img/q572.webp",
-   "explanation": null
+   "explanation": "Khi rẽ phải phải nhường xe tải và người đi xe đạp đang đi thẳng trên làn bên phải. Giảm tốc độ, để họ qua rồi mới rẽ phải."
   },
   {
    "n": 573,
@@ -9488,7 +9488,7 @@
    ],
    "correct": 3,
    "image": "img/q573.webp",
-   "explanation": null
+   "explanation": "Phải giảm tốc độ, nhường người đi bộ đang qua đường, và rẽ phải sau xe con màu xanh đang ở phía trước."
   },
   {
    "n": 574,
@@ -9502,7 +9502,7 @@
    ],
    "correct": 3,
    "image": "img/q574.webp",
-   "explanation": null
+   "explanation": "Phía xe bạn có biển STOP nên phải dừng lại và nhường đường cho cả xe đạp và xe khách rồi mới được đi."
   },
   {
    "n": 575,
@@ -9516,7 +9516,7 @@
    ],
    "correct": 2,
    "image": "img/q575.webp",
-   "explanation": null
+   "explanation": "Xe của bạn đi trên đường ưu tiên (biển giao nhau với đường không ưu tiên). Xe tải đi ra từ đường nhánh có biển nhường đường nên xe tải phải nhường."
   },
   {
    "n": 576,
@@ -9529,7 +9529,7 @@
    ],
    "correct": 2,
    "image": "img/q576.webp",
-   "explanation": null
+   "explanation": "Phía làn của bạn có xe đỗ chắn đường. Xe có chướng ngại vật phía trước phải nhường đường cho xe đi ngược chiều, nên xe của bạn phải nhường."
   },
   {
    "n": 577,
@@ -9542,7 +9542,7 @@
    ],
    "correct": 2,
    "image": "img/q577.webp",
-   "explanation": null
+   "explanation": "Không được vượt đoàn người đi xe đạp có tổ chức. Phải giảm tốc độ, đi sau và chờ đoàn đi qua."
   },
   {
    "n": 578,
@@ -9557,7 +9557,7 @@
    ],
    "correct": 4,
    "image": "img/q578.webp",
-   "explanation": null
+   "explanation": "Nếu phía sau không có xe xin vượt thì có thể chuyển sang làn trái để tránh xe đang lùi vào chỗ đỗ. Nếu phía sau có xe xin vượt thì giảm tốc độ, ở lại làn của mình và dừng khi cần. Cả hai cách đều đúng."
   },
   {
    "n": 579,
@@ -9571,7 +9571,7 @@
    ],
    "correct": 3,
    "image": "img/q579.webp",
-   "explanation": null
+   "explanation": "Xe phía trước đang lùi ra khỏi chỗ đỗ: phải giảm tốc độ, dừng lại nhường đường. Lấn sang nửa đường bên trái hay bấm còi đi tiếp đều nguy hiểm."
   },
   {
    "n": 580,
@@ -9585,7 +9585,7 @@
    ],
    "correct": 1,
    "image": "img/q580.webp",
-   "explanation": null
+   "explanation": "Xe ngược chiều đang vượt lấn sang làn của bạn: phải phanh giảm tốc độ và đi sát lề phải để tránh va chạm. Giữ nguyên tốc độ hay dạt sang trái đều nguy hiểm."
   },
   {
    "n": 581,
@@ -9599,7 +9599,7 @@
    ],
    "correct": 2,
    "image": "img/q581.webp",
-   "explanation": null
+   "explanation": "Xe tải phía trước đã báo xin chuyển làn: phải giảm tốc độ, chờ xe tải chuyển làn xong. Không được tranh vượt hay bấm còi đòi đi trước."
   },
   {
    "n": 582,
@@ -9613,7 +9613,7 @@
    ],
    "correct": 3,
    "image": "img/q582.webp",
-   "explanation": null
+   "explanation": "Biển nhường đường không bắt buộc dừng hẳn như biển STOP. Khi không có xe trên đường ưu tiên, chỉ cần giảm tốc độ, quan sát rồi đi thẳng qua ngã tư."
   },
   {
    "n": 583,
@@ -9627,7 +9627,7 @@
    ],
    "correct": 3,
    "image": "img/q583.webp",
-   "explanation": null
+   "explanation": "Xe của bạn rẽ trái nên phải nhường xe đạp đi thẳng ngược chiều và xe mô tô đến từ bên phải. Thứ tự là xe đạp, xe mô tô, rồi xe của bạn."
   },
   {
    "n": 584,
@@ -9642,7 +9642,7 @@
    ],
    "correct": 4,
    "image": "img/q584.webp",
-   "explanation": null
+   "explanation": "Xe của bạn đi trên đường ưu tiên (biển hình thoi vàng) nên đi trước, sau đó xe con, xe tải ở đường nhánh đi sau cùng."
   },
   {
    "n": 585,
@@ -9655,7 +9655,7 @@
    ],
    "correct": 1,
    "image": "img/q585.webp",
-   "explanation": null
+   "explanation": "Phía xe của bạn có biển nhường đường (tam giác ngược) nên xe của bạn phải nhường xe con đi trên đường ưu tiên."
   },
   {
    "n": 586,
@@ -9668,7 +9668,7 @@
    ],
    "correct": 2,
    "image": "img/q586.webp",
-   "explanation": null
+   "explanation": "Phía xe của bạn có biển phải nhường đường cho xe đi ngược chiều qua đoạn đường hẹp (gầm cầu), nên xe của bạn phải nhường."
   },
   {
    "n": 587,
@@ -9682,7 +9682,7 @@
    ],
    "correct": 3,
    "image": "img/q587.webp",
-   "explanation": null
+   "explanation": "Có người đi bộ đang qua đường trên vạch kẻ: phải giảm tốc độ, để người đi bộ qua trước rồi mới cho xe đi qua vạch."
   },
   {
    "n": 588,
@@ -9695,7 +9695,7 @@
    ],
    "correct": 2,
    "image": "img/q588.webp",
-   "explanation": null
+   "explanation": "Biển cho biết xe của bạn đang đi trên đường ưu tiên (giao nhau với đường không ưu tiên), nên xe của bạn được đi trước xe con."
   },
   {
    "n": 589,
@@ -9709,7 +9709,7 @@
    ],
    "correct": 2,
    "image": "img/q589.webp",
-   "explanation": null
+   "explanation": "Xe của bạn rẽ trái nên phải nhường các xe khác. Thứ tự là xe tải, rồi xe con, xe của bạn đi sau cùng."
   },
   {
    "n": 590,
@@ -9723,7 +9723,7 @@
    ],
    "correct": 3,
    "image": "img/q590.webp",
-   "explanation": null
+   "explanation": "Đường cong khuất tầm nhìn: phải giảm tốc độ và đi sát phần đường bên phải. Lấn sang trái ở chỗ này rất dễ đâm vào xe ngược chiều."
   },
   {
    "n": 591,
@@ -9736,7 +9736,7 @@
    ],
    "correct": 1,
    "image": "img/q591.webp",
-   "explanation": null
+   "explanation": "Cả hai hướng đều đèn xanh; xe của bạn rẽ trái nên phải nhường xe tải đi thẳng từ hướng ngược lại. Xe tải được đi trước."
   },
   {
    "n": 592,
@@ -9750,7 +9750,7 @@
    ],
    "correct": 1,
    "image": "img/q592.webp",
-   "explanation": null
+   "explanation": "Xe con dừng cách đường sắt đúng khoảng cách an toàn quy định. Xe mô tô dừng quá sát đường ray nên sai."
   },
   {
    "n": 593,
@@ -9764,7 +9764,7 @@
    ],
    "correct": 3,
    "image": "img/q593.webp",
-   "explanation": null
+   "explanation": "Theo quy tắc nhường đường bên phải và thứ tự hướng đi, xe của bạn đi trước, sau đó xe tải, cuối cùng xe đạp."
   },
   {
    "n": 594,
@@ -9778,7 +9778,7 @@
    ],
    "correct": 1,
    "image": "img/q594.webp",
-   "explanation": null
+   "explanation": "Khi rẽ trái phải đi vào đúng phần đường bên phải của đường mình rẽ vào (hướng 1). Hướng 2 cắt góc, lấn sang phần đường của xe ngược chiều."
   },
   {
    "n": 595,
@@ -9792,7 +9792,7 @@
    ],
    "correct": 2,
    "image": "img/q595.webp",
-   "explanation": null
+   "explanation": "Bị xe ngược chiều bật đèn pha: giữ nguyên đèn chiếu gần để không làm chói người kia, giảm tốc độ và đi sau xe phía trước. Không bật pha đáp trả hay tăng tốc vượt khi đang bị chói mắt."
   },
   {
    "n": 596,
@@ -9806,7 +9806,7 @@
    ],
    "correct": 2,
    "image": "img/q596.webp",
-   "explanation": null
+   "explanation": "Rào chắn đang dịch chuyển nghĩa là tàu sắp đến: phải dừng lại trước rào chắn một khoảng an toàn. Không được tăng tốc vượt qua hay đề nghị người gác chắn kéo chậm barie."
   },
   {
    "n": 597,
@@ -9819,7 +9819,7 @@
    ],
    "correct": 2,
    "image": "img/q597.webp",
-   "explanation": null
+   "explanation": "Xe con màu đỏ cắt thẳng từ đường nhánh vào làn cao tốc, ngay trước xe đang chạy trên làn, mà không nhường đường. Nhập làn như vậy là sai."
   },
   {
    "n": 598,
@@ -9832,7 +9832,7 @@
    ],
    "correct": 2,
    "image": "img/q598.webp",
-   "explanation": null
+   "explanation": "Không được vượt khi xe phía trước đang vượt xe khác. Xe màu đỏ phải chờ xe màu xanh vượt xong."
   },
   {
    "n": 599,
@@ -9845,7 +9845,7 @@
    ],
    "correct": 1,
    "image": "img/q599.webp",
-   "explanation": null
+   "explanation": "Xe màu vàng vượt bên trái xe màu đỏ ở đoạn có vạch tim đường nét đứt, phía trước không có xe ngược chiều, nên vượt đúng quy tắc."
   },
   {
    "n": 600,
@@ -9859,7 +9859,7 @@
    ],
    "correct": 2,
    "image": "img/q600.webp",
-   "explanation": null
+   "explanation": "Xe container rẽ phải cần một khoảng rộng và có điểm mù lớn. Xe con và xe máy phía sau phải giảm tốc độ, chờ xe container rẽ xong rồi mới đi tiếp, không được vượt bên phải hay bên trái."
   }
  ]
 }

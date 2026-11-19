@@ -9,7 +9,7 @@ Question jump grid in exam,exam,must,yes,yes,"bottom sheet in S04, S08"
 Pass/fail result with critical-question fail rule,exam,must,yes,yes,S05; unit tested
 Review exam with correct answers,exam,must,yes,yes,S06 with all/wrong filter
 Study by topic with instant feedback,study,must,yes,yes,"S07, S08"
-Answer explanations,study,must,yes,partial,60/600 written: all critical questions (content/explanations.json); 540 to go
+Answer explanations,study,must,yes,yes,600/600 own explanations in content/explanations/*.json; sign and scenario ones written after viewing each picture
 Wrong-answers list auto-collected,review,must,yes,yes,S10; answering right removes it; clear with confirm
 Bookmark / saved questions,review,must,yes,yes,S11 with empty state
 Critical questions drill,review,must,yes,yes,S09

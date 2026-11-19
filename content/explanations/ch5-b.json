@@ -1,0 +1,32 @@
+{
+  "_about": "Chương V (biển báo), câu 325–351. Tự biên soạn sau khi xem hình, khớp đáp án gạch chân.",
+  "explanations": {
+    "325": "Biển 2 (nền đỏ, vạch ngang trắng) là biển \"Cấm đi ngược chiều\". Biển 1 (tròn trắng viền đỏ) là \"Đường cấm\", biển 3 (nền xanh, gạch chéo đỏ) là \"Cấm đỗ xe\".",
+    "326": "Biển 1 \"Đường cấm\" cấm mọi phương tiện đi vào; biển 2 \"Cấm đi ngược chiều\" cũng không cho xe đi vào theo chiều đặt biển. Biển 3 chỉ cấm đỗ xe, xe vẫn được đi vào.",
+    "327": "Biển 1 cấm đỗ xe mọi ngày; biển 3 (hai vạch trắng) cấm đỗ vào ngày chẵn. Biển 2 (một vạch) cấm đỗ vào ngày lẻ. Mẹo: một vạch là ngày lẻ, hai vạch là ngày chẵn.",
+    "328": "Biển 1 cấm đỗ xe mọi ngày; biển 2 (một vạch trắng) cấm đỗ vào ngày lẻ. Biển 3 (hai vạch) chỉ cấm đỗ ngày chẵn.",
+    "329": "Biển 2 \"Dừng lại\" (STOP) bắt mọi xe phải dừng hẳn, kể cả xe ưu tiên, rồi mới được đi tiếp. Biển đường cấm và cấm đi ngược chiều không áp dụng với xe ưu tiên làm nhiệm vụ.",
+    "330": "Biển 1 \"Đường cấm\" cấm mọi xe cơ giới và thô sơ đi lại, trừ xe ưu tiên theo luật định. Biển 2 STOP chỉ yêu cầu dừng lại rồi đi tiếp.",
+    "331": "Biển 3 (biển chữ nhật màu cam trên xe) là biển \"Cấm xe chở hàng nguy hiểm\". Biển 1 cấm xe tải, biển 2 cấm xe tải có khối lượng chuyên chở vượt mức ghi trên biển (2,5 tấn).",
+    "332": "Biển 1 và biển 2 cấm xe ba bánh có động cơ (xe lam, xích lô máy), không cấm xích lô đạp, nên xích lô được đi vào. Biển 3 có hình xích lô là biển cấm xe ba bánh không có động cơ.",
+    "333": "Biển 3 chỉ cấm xe ba bánh không có động cơ (xích lô đạp), nên xe lam và xích lô máy được đi vào. Biển 1 và biển 2 cấm chính xe ba bánh có động cơ.",
+    "334": "Biển có hình xe ngựa kéo bị gạch là biển cấm súc vật vận tải: cấm súc vật chở hàng hóa hoặc hành khách, dù kéo xe hay chở trên lưng.",
+    "335": "Biển có chữ ĐÊM và số 70, kèm biển phụ 22:00 – 5:00, là biển tốc độ tối đa cho phép về ban đêm: trong khung giờ đó, tốc độ tối đa là 70 km/h.",
+    "336": "Biển hạn chế chiều cao (3,5 m), tải trọng trục (7 t) và tải trọng toàn bộ (10 t) liên quan đến khả năng chịu tải và khổ giới hạn thực tế của cầu, đường. Xe ưu tiên vượt quá các chỉ số này cũng không được đi qua.",
+    "337": "Biển 1 (số 3,5 m kẹp giữa hai tam giác đen trên dưới) là biển hạn chế chiều cao của xe và hàng. Biển 2 hạn chế tải trọng trên trục xe, biển 3 hạn chế tải trọng toàn bộ.",
+    "338": "Biển 2 (7 t kèm hình trục xe) là biển hạn chế tải trọng trên trục xe: chỉ cho xe có tải trọng trên mỗi trục từ 7 tấn trở xuống đi qua.",
+    "339": "Biển 3 (10 t, không có hình trục) là biển hạn chế tải trọng toàn bộ: cấm xe có tải trọng toàn bộ (xe cộng hàng) trên 10 tấn đi qua.",
+    "340": "Biển 1 cấm mọi xe kéo rơ moóc, trong đó có máy kéo kéo rơ moóc; biển 2 cấm máy kéo. Cả hai biển đều cấm máy kéo kéo theo rơ moóc.",
+    "341": "Biển 1 chỉ cấm xe kéo rơ moóc. Ô tô tải không kéo rơ moóc vẫn được đi vào.",
+    "342": "Biển 1 chỉ cấm xe kéo rơ moóc và biển 2 chỉ cấm máy kéo, nên không áp dụng với ô tô tải không kéo moóc. Biển 3 cấm ô tô nên ô tô tải cũng bị cấm.",
+    "343": "Biển 2 có hình máy kéo nên cấm máy kéo; biển 3 \"Cấm xe tải\" cũng áp dụng với máy kéo và xe máy chuyên dùng. Biển 1 chỉ cấm xe kéo rơ moóc.",
+    "344": "Biển cấm ô tô và mô tô, kèm biển phụ mũi tên hai chiều trái phải, nghĩa là cấm các xe này rẽ trái và rẽ phải. Mô tô ba bánh chở hàng là mô tô nên cũng không được rẽ.",
+    "345": "Biển cấm có hình ô tô và mô tô áp dụng cho xe cơ giới và mọi loại mô tô, kể cả mô tô hai bánh và ba bánh chở hàng.",
+    "346": "Biển cấm ô tô và mô tô kèm biển phụ mũi tên hai đầu trái phải: cấm xe cơ giới và mô tô (trừ xe ưu tiên) đi về bên trái và bên phải. Xe vẫn được đi thẳng.",
+    "347": "Biển phụ \"500m\" có mũi tên hướng lên đặt dưới biển cấm bóp còi chỉ chiều dài đoạn đường cấm bóp còi, tính từ nơi đặt biển. Nếu là khoảng cách đến nơi cấm, biển phụ không có mũi tên như vậy.",
+    "348": "Trong suốt 500 m tính từ nơi đặt biển cấm bóp còi, người lái không được bấm còi.",
+    "349": "Biển phụ dưới biển \"Đường cấm\" chỉ loại xe bị cấm: biển 1 cấm ô tô, biển 3 cấm xe tải, nên mô tô hai bánh được đi vào. Biển 2 có biển phụ hình mô tô thì cấm mô tô.",
+    "350": "Biển 2 có biển phụ hình mô tô dưới biển \"Đường cấm\" nên mô tô hai bánh không được đi vào. Biển 1 và biển 3 cấm ô tô và xe tải.",
+    "351": "Biển phụ đặt dưới biển \"Đường cấm\" nêu loại xe bị cấm, nên ba biển này cấm đúng loại xe ở biển phụ (ô tô, mô tô, xe tải) đi vào, không phải cấm mọi xe trừ loại đó."
+  }
+}

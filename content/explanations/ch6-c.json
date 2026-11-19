@@ -1,0 +1,32 @@
+{
+  "_about": "Chương VI (sa hình), câu 539–565. Tự biên soạn sau khi xem hình, khớp đáp án gạch chân.",
+  "explanations": {
+    "539": "Hướng 2 có biển cấm mô tô nên xe mô tô không được đi. Hướng 3 có biển cấm ô tô, không áp dụng với mô tô. Vì vậy mô tô được đi hướng 1 và 3.",
+    "540": "Xe quân sự đi làm nhiệm vụ khẩn cấp được ưu tiên trước xe công an. Sau hai xe ưu tiên, xe con và xe mô tô mới được đi.",
+    "541": "Trên đường dốc, xe xuống dốc phải nhường đường cho xe đang lên dốc. Xe A đang xuống dốc nên phải nhường xe B.",
+    "542": "Xe con quay đầu ngay tại phần đường dành cho người đi bộ qua đường ở ngã tư, là nơi cấm quay đầu, nên vi phạm.",
+    "543": "Biển trên giá long môn quy định làn đường cho từng loại xe. Xe con E và xe mô tô C đi không đúng làn dành cho loại xe của mình nên vi phạm.",
+    "544": "Biển báo cho biết xe mình đang đi trên đường không ưu tiên, còn xe con đi trên đường ưu tiên. Muốn đi thẳng thì phải nhường cho xe con rẽ trái đi trước.",
+    "545": "Hướng 3 có biển cấm đi ngược chiều và hướng 4 có biển cấm rẽ phải, nên xe chỉ được đi hướng 1 và 2.",
+    "546": "Xe con B đang chuyển sang làn của xe con A nên phải nhường đường cho xe A đang đi trên làn đó.",
+    "547": "Khi rẽ trái, phải nhường đường cho xe đi thẳng từ hướng ngược lại. Phải nhường xe buýt và xe tải đi qua rồi mới rẽ trái.",
+    "548": "Theo biển chỉ làn trên giá long môn, xe con E và xe mô tô D đi không đúng làn quy định cho loại xe của mình nên vi phạm.",
+    "549": "Phía xe của bạn có biển tam giác ngược (giao nhau với đường ưu tiên), nên phải nhường đường cho xe tải đi trên đường ưu tiên đi trước.",
+    "550": "Biển cấm rẽ trái không cấm quay đầu, nên xe được quay đầu theo hướng A trong nút giao. Không quay đầu theo hướng B, vì đó là phần đường dành cho người đi bộ qua đường.",
+    "551": "Biển cho biết xe của bạn đang đi trên đường ưu tiên. Xe của bạn và xe con cùng ở trên đường ưu tiên nên đi trước; xe tải từ đường không ưu tiên đi sau.",
+    "552": "Muốn vượt phải báo hiệu bằng đèn hoặc còi để xe phía trước biết, và chỉ tăng tốc vượt khi đủ điều kiện an toàn. Đánh lái sang trái rồi tăng tốc mà không báo hiệu là sai.",
+    "553": "Theo đèn tín hiệu cho từng làn, làn của xe con và xe tải đang đèn đỏ nên hai xe phải dừng lại. Xe khách đi theo hướng đang được đèn xanh.",
+    "554": "Xe con A, C, E và xe buýt G đi đúng làn quy định. Xe con B lấn qua vạch tim đường, còn xe tải D đi vào làn dành riêng cho xe buýt nên vi phạm.",
+    "555": "Không được vượt tại nơi đường giao nhau và phần đường người đi bộ qua đường. Xe tải đang ở ngay nút giao phía trước nên cấm vượt.",
+    "556": "Phía trước là nơi giao nhau (có biển nhường đường), nơi không được vượt xe. Vì vậy không được vượt xe mô tô.",
+    "557": "Biển ở đây là biển cấm đỗ xe, nên vẫn được dừng. Xe được dừng ở vị trí B và C bên phải đường; vị trí A nằm bên trái chiều đi nên không được dừng.",
+    "558": "Biển nền xanh có hai gạch chéo đỏ là biển cấm dừng và đỗ xe, nên không được dừng ở cả vị trí A lẫn B.",
+    "559": "Phía trước có biển hướng đi thẳng phải theo, nhưng cả xe mô tô và ô tô con đều bật xi nhan báo rẽ, tức là định đi hướng khác. Vì vậy cả hai xe đều vi phạm.",
+    "560": "Theo đèn tín hiệu cho từng làn, xe tải đi theo hướng đang bị đèn đỏ nên vi phạm. Xe con đi đúng hướng đèn xanh.",
+    "561": "Theo đèn tín hiệu cho từng làn, xe khách và xe tải đi theo hướng đang bị đèn đỏ nên vi phạm. Xe con đi đúng.",
+    "562": "Theo đèn tín hiệu cho từng làn, xe tải, xe khách và xe mô tô đi theo hướng đang bị đèn đỏ nên vi phạm. Chỉ xe con đi đúng hướng được đèn xanh.",
+    "563": "Theo đèn tín hiệu cho từng làn, xe khách và xe tải đi theo hướng đang bị đèn đỏ nên vi phạm. Xe con đi đúng.",
+    "564": "Khi xe phía trước hỏng đột xuất, phải quan sát phía trước và phía sau, khi đủ điều kiện an toàn thì báo hiệu bằng đèn hoặc còi rồi mới vượt qua. Đánh lái sang trái ngay mà không quan sát là nguy hiểm.",
+    "565": "Theo đèn tín hiệu cho từng làn, xe khách và xe mô tô đi theo hướng đang được đèn xanh nên đúng. Xe tải và xe con đi theo hướng đang bị đèn đỏ."
+  }
+}

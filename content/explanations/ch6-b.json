@@ -1,0 +1,32 @@
+{
+  "_about": "Chương VI (sa hình), câu 512–538. Tự biên soạn sau khi xem hình, khớp đáp án gạch chân.",
+  "explanations": {
+    "512": "Biển đặt tại ngã tư là biển cấm rẽ trái, nên ô tô không được đi hướng 3 (rẽ trái). Biển cấm rẽ trái không cấm quay đầu, nên hướng 2 (quay đầu) cùng hướng 1 và 4 vẫn được đi.",
+    "513": "Biển ở đây là biển cấm ô tô tải vượt. Xe con và xe khách không phải xe tải nên đều được vượt khi đủ điều kiện an toàn.",
+    "514": "Biển hướng đi phải theo (tròn xanh) đặt trước ngã tư chỉ cho đi thẳng và rẽ trái, nên xe chỉ được đi hướng 2 và 3, không được rẽ phải theo hướng 1.",
+    "515": "Xe tải nhỏ kéo cả một tổ hợp xe đầu kéo kèm sơ mi rơ moóc lớn hơn nhiều, nối bằng dây, là không bảo đảm an toàn và sai quy định về kéo xe, nên vi phạm.",
+    "516": "Phía xe khách có biển phải nhường đường cho xe đi ngược chiều qua đường hẹp; phía xe tải có biển được ưu tiên qua đường hẹp. Vì vậy xe khách phải nhường đường cho xe tải đi qua cầu trước.",
+    "517": "Cả hai xe đều được đèn xanh. Xe mô tô rẽ phải, không cắt ngang hướng đi của xe khác, nên được đi trước xe con.",
+    "518": "Xe đầu kéo đang kéo sơ mi rơ moóc thì không được kéo thêm xe khác. Kéo nhau như hình là không đúng quy định.",
+    "519": "Hướng 2 có biển cấm ô tô nên ô tô con không được đi. Ô tô con được đi các hướng 1, 3 và 4.",
+    "520": "Nơi giao nhau không có biển báo thì nhường đường cho xe đến từ bên phải. Xe mô tô và xe đạp không có xe bên phải nên đi trước, sau đó đến xe con A, cuối cùng xe con B.",
+    "521": "Biển hướng đi phải theo có biển phụ hình xe tải bắt xe tải chỉ được rẽ theo hướng 1. Các hướng khác xe tải không được đi.",
+    "522": "Hướng 1 có biển cấm xe tải nên xe tải không được rẽ vào. Xe tải được đi hướng 2 và 3.",
+    "523": "Biển cấm ô tô đặt ở đầu đoạn đường phía trước áp dụng cho các hướng 2, 3 và 4. Vì vậy xe tải chỉ được rẽ phải theo hướng 1 hoặc quay đầu theo hướng 5.",
+    "524": "Hướng 2 có biển cấm xe tải nên xe tải không được đi hướng 2. Các hướng còn lại không bị cấm.",
+    "525": "Xe mô tô đi trên đường có biển \"Đường ưu tiên\" (hình thoi vàng) nên được đi trước. Xe con đi từ đường không ưu tiên phải nhường.",
+    "526": "Phía trước có biển hiệu lệnh \"Hướng đi thẳng phải theo\", nên xe con chỉ được đi thẳng. Quay đầu theo chiều mũi tên là vi phạm.",
+    "527": "Xe con lấn qua vạch liền tim đường để đi vòng sang chiều ngược lại là vi phạm. Xe khách và xe mô tô đi đúng làn của mình.",
+    "528": "Cảnh sát giao thông giơ một tay thẳng đứng: mọi xe ở các hướng phải dừng lại trước ngã tư. Riêng xe đã ở trong ngã tư được đi tiếp.",
+    "529": "Cảnh sát giao thông dang ngang hai tay: xe ở bên phải và bên trái người điều khiển được đi, xe ở phía trước và phía sau phải dừng. Xe mô tô và xe tải ở hai bên nên được đi, xe con phải dừng.",
+    "530": "Xe tải đang rẽ phải, xe con đi thẳng bên trái xe tải theo hướng mũi tên. Trường hợp này đúng quy tắc.",
+    "531": "Xe con vượt bên trái xe phía trước khi đủ điều kiện an toàn là đúng. Xe tải vượt khi không đủ điều kiện an toàn (lấn sang làn ngược chiều nơi có xe đi tới) nên vi phạm.",
+    "532": "Xe tải quay đầu tại nơi có biển cấm quay đầu nên vi phạm. Xe chữa cháy đang làm nhiệm vụ là xe ưu tiên nên được đi vào đường có biển cấm đi ngược chiều.",
+    "533": "Xe tải và xe khách đi trên đường chính được đi trước xe con đi từ đường nhánh. Giữa hai xe trên đường chính, xe tải đi trước theo quy tắc hướng đi, rồi đến xe khách, cuối cùng là xe con.",
+    "534": "Xe khách và xe tải đi trên đường chính, hướng đi không cắt nhau nên được đi cùng lúc. Xe con đi từ đường nhánh phải nhường, đi sau cùng.",
+    "535": "Hướng 4 có biển cấm đi ngược chiều nên xe tải không được đi vào. Các hướng còn lại được phép.",
+    "536": "Xe công an làm nhiệm vụ khẩn cấp là xe ưu tiên nên đi trước. Tiếp theo là xe con, rồi xe tải đi trên đường ưu tiên; xe khách ở đường không ưu tiên (biển tam giác ngược) đi sau cùng.",
+    "537": "Biển ở hướng 1 là biển cấm rẽ trái, nên xe tải không được rẽ trái theo hướng 2. Biển cấm rẽ trái không cấm quay đầu; biển ở hướng 4 cấm mô tô, không áp dụng với xe tải. Vì vậy xe tải được đi các hướng 1, 3 và 4.",
+    "538": "Theo đèn tín hiệu cho từng làn, mỗi xe đều đi theo hướng đang được đèn xanh cho phép, nên tất cả các xe đều chấp hành đúng."
+  }
+}

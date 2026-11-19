@@ -1,0 +1,32 @@
+{
+  "_about": "Chương V (biển báo), câu 352–378. Tự biên soạn sau khi xem hình, khớp đáp án gạch chân.",
+  "explanations": {
+    "352": "Cả hai biển đều là \"Cự ly tối thiểu giữa hai xe\" (8 m). Biển phụ của biển 1 có mũi tên hướng lên kèm \"800m\", chỉ chiều dài đoạn đường phải giữ cự ly. Biển phụ của biển 2 không có mũi tên, chỉ khoảng cách từ biển đến nơi bắt đầu áp dụng.",
+    "353": "Biển phụ \"200m\" không có mũi tên (biển 2) cho biết khoảng cách từ nơi đặt biển đến đoạn đường phải giữ cự ly tối thiểu. Biển phụ có mũi tên (biển 1) là chiều dài đoạn áp dụng.",
+    "354": "Biển nền xanh có hai gạch chéo đỏ là \"Cấm dừng xe và đỗ xe\"; biển phụ mũi tên chỉ sang phải cho biết lệnh cấm áp dụng về phía bên phải nơi đặt biển.",
+    "355": "Biển cấm dừng và đỗ xe kèm mũi tên chỉ sang phải cấm cả dừng lẫn đỗ xe về phía bên phải, nên theo hướng đó không được dừng hay đỗ.",
+    "356": "Biển hạn chế chiều dài ô tô kéo moóc (14 m) cấm xe kéo moóc, sơ mi rơ moóc có tổng chiều dài kể cả xe, moóc và hàng vượt trị số trên biển. Dài hơn 14 m thì không được đi vào.",
+    "357": "Hàng nhô ra phía trước và phía sau thùng xe, mỗi phía quá 10% chiều dài thân xe, là vượt giới hạn xếp hàng cho phép, nên xe không được lưu thông vào đây dù tổng chiều dài nhỏ hơn số trên biển.",
+    "358": "Biển có hình xe khách bị gạch là biển \"Cấm ô tô khách\": cấm xe chở khách, không phải chỉ cấm xe buýt hay xe con.",
+    "359": "Biển có số 3,2 m kẹp giữa hai tam giác đen ở hai bên trái phải là biển hạn chế chiều ngang của xe và hàng. Nếu hai tam giác ở trên và dưới thì là hạn chế chiều cao.",
+    "360": "Biển 1 có chữ ĐÊM và biển phụ ghi giờ 22:00 – 5:00 là biển tốc độ tối đa cho phép về ban đêm. Biển 2 là biển tốc độ tối đa thông thường (50 km/h).",
+    "361": "Biển 1 (nền xanh, hình nhà cửa) báo bắt đầu khu đông dân cư, từ đây phải tuân theo quy định đi đường trong khu đông dân cư. Biển 2 có gạch đỏ chéo là hết khu đông dân cư.",
+    "362": "Biển 2 (tròn, viền đỏ, số 50) là tốc độ tối đa cho phép, không được chạy quá số ghi trên biển. Biển 1 (tròn nền xanh, số 60) là tốc độ tối thiểu.",
+    "363": "Biển 2 (nền xanh lá, hình đường cao tốc bị gạch đỏ) báo kết thúc đường cao tốc. Biển 1 là đường ưu tiên, biển 3 là hết đường dành cho ô tô.",
+    "364": "Biển tròn viền đỏ có số 50 là tốc độ tối đa cho phép: xe cơ giới không được chạy quá 50 km/h.",
+    "365": "Biển 2 (bảng xanh lá, có biển tốc độ riêng cho từng làn kèm mũi tên chỉ làn) chỉ dẫn đường cao tốc phân làn với tốc độ khác nhau. Biển 1 là biển cảnh báo hình tam giác, không phải biển chỉ dẫn này.",
+    "366": "Biển tròn nền xanh có số 60 là biển hiệu lệnh tốc độ tối thiểu: xe cơ giới không được chạy chậm hơn 60 km/h.",
+    "367": "Biển 1 (tam giác vàng, hình người đi trên vạch) là biển \"Đường người đi bộ cắt ngang\": người lái phải giảm tốc độ và nhường đường cho người đi bộ. Biển 2 cấm người đi bộ, biển 3 là đường dành cho người đi bộ.",
+    "368": "Biển 3 (tròn nền xanh, hình người đi bộ) là biển \"Đường dành cho người đi bộ\": các loại xe không được đi vào. Biển 1 cảnh báo chỗ người đi bộ cắt ngang, biển 2 cấm người đi bộ.",
+    "369": "Biển 1 (tròn nền xanh, hình xe đạp và xe ngựa) là biển \"Đường dành cho xe thô sơ\". Biển 2 cấm xe đạp, biển 3 cảnh báo chỗ có người đi xe đạp cắt ngang.",
+    "370": "Cả ba biển đều báo sắp đến chỗ giao nhau nguy hiểm: biển 1 là giao nhau với đường sắt có rào chắn, biển 2 (tam giác ngược) là giao nhau với đường ưu tiên, biển 3 là giao nhau có tín hiệu đèn.",
+    "371": "Biển 1 (tam giác vàng, hình hàng rào) là \"Giao nhau với đường sắt có rào chắn\". Biển 2 là giao nhau với đường ưu tiên, biển 3 là giao nhau có tín hiệu đèn.",
+    "372": "Biển 3 (tam giác vàng, hình cột đèn ba màu) là \"Giao nhau có tín hiệu đèn\".",
+    "373": "Biển 1 báo giao nhau với đường sắt có rào chắn; biển 3 (hình chữ X trắng viền đỏ) báo nơi đường sắt giao vuông góc với đường bộ. Cả hai đều báo nguy hiểm giao nhau với đường sắt. Biển 2 không liên quan đến đường sắt.",
+    "374": "Biển 2 (tam giác vàng, hình đầu tàu hỏa) báo giao nhau với đường sắt không có rào chắn; biển 3 (chữ X) đặt nơi đường sắt giao vuông góc với đường bộ không có rào chắn. Biển 1 là giao nhau có rào chắn.",
+    "375": "Biển 1 (hình đầu tàu hỏa) báo sắp đến chỗ giao nhau giữa đường bộ và đường sắt. Biển 3 (hình tàu điện có cần lấy điện) là giao nhau với đường tàu điện, biển 2 là giao nhau với đường ưu tiên.",
+    "376": "Biển 2 (tam giác vàng, hình vòm cửa chui) là biển \"Cửa chui\". Biển 1 là cầu vồng, biển 3 là đường hầm.",
+    "377": "Biển chữ X đơn (biển 1) và chữ X kép (biển 2, đường sắt có từ hai đường ray trở lên) đều đặt nơi đường sắt giao vuông góc với đường bộ mà không có rào chắn.",
+    "378": "Biển 1 (X đơn) và biển 2 (X kép) đều báo nơi đường sắt giao vuông góc với đường bộ. Biển 3 (cột trắng có vạch đỏ) là mốc báo trước khoảng cách đến chỗ giao cắt."
+  }
+}

@@ -32,7 +32,7 @@ OUT = ROOT / "app" / "assets" / "content"
 BANK = SRC / "bo-600-cau-hoi-2025.pdf"
 CV = SRC / "cong-van-2262-csgt-p5.pdf"
 RULES = Path(__file__).resolve().parent / "rules.json"
-EXPLANATIONS = ROOT / "content" / "explanations.json"  # own writing, by question number
+EXPLANATIONS = ROOT / "content" / "explanations"  # own writing: *.json, {"explanations": {"N": "..."}}
 
 Q_RE = re.compile(r"^Câu\s+(\d+)\s*[.:]\s*(.*)$")  # Câu 507 is printed with a colon
 OPT_RE = re.compile(r"^([1-4])\s*\.\s+(.*)$")
@@ -256,27 +256,33 @@ def validate(questions, apps, rules):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true")
+    ap.add_argument("--require-all", action="store_true", help="fail unless all 600 have an explanation")
     a = ap.parse_args()
 
     rules = json.loads(RULES.read_text(encoding="utf-8"))
     apps = parse_appendices(CV)
     doc, questions, _ = parse_bank(BANK)
     errors, warnings = validate(questions, apps, rules)
-    explanations = {
-        int(k): v.strip()
-        for k, v in json.loads(EXPLANATIONS.read_text(encoding="utf-8"))["explanations"].items()
-    }
+    explanations = {}
+    for f in sorted(EXPLANATIONS.glob("*.json")):
+        for k, v in json.loads(f.read_text(encoding="utf-8"))["explanations"].items():
+            if int(k) in explanations:
+                errors.append(f"explanations: question {k} written twice (again in {f.name})")
+            explanations[int(k)] = v.strip()
     unknown = sorted(set(explanations) - {q["number"] for q in questions})
     if unknown:
-        errors.append(f"explanations.json: unknown question numbers {unknown}")
+        errors.append(f"explanations: unknown question numbers {unknown}")
     empty = sorted(n for n, v in explanations.items() if len(v) < 20)
     if empty:
-        errors.append(f"explanations.json: empty or too short for {empty}")
+        errors.append(f"explanations: empty or too short for {empty}")
     critical_all = set(apps[3][0]["numbers"])
     missing_critical = sorted(critical_all - set(explanations))
     if missing_critical:
-        errors.append(f"explanations.json: critical questions without explanation {missing_critical}")
-    print(f"explanations: {len(explanations)} (critical covered: {len(critical_all & set(explanations))}/60)")
+        errors.append(f"explanations: critical questions without explanation {missing_critical}")
+    print(f"explanations: {len(explanations)}/600 (critical covered: {len(critical_all & set(explanations))}/60)")
+    if a.require_all and len(explanations) != 600:
+        missing = sorted(set(range(1, 601)) - set(explanations))
+        errors.append(f"explanations: {len(missing)} missing, first {missing[:15]}")
 
     with_img = sum(1 for q in questions if q["images"])
     print(f"parsed {len(questions)} questions, {with_img} with an image")

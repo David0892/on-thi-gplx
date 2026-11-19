@@ -1,0 +1,32 @@
+{
+  "_about": "Chương V (biển báo), câu 406–432. Tự biên soạn sau khi xem hình, khớp đáp án gạch chân.",
+  "explanations": {
+    "406": "Biển 2 (hình xe trượt để lại vệt bánh ngoằn ngoèo) là biển \"Đường trơn\". Biển 1 cảnh báo nguy cơ lật xe, biển 3 báo bến phà.",
+    "407": "Biển 2 (hình bánh xe trượt khỏi mép đường) là biển \"Lề đường nguy hiểm\". Biển 1 là kè, vực sâu, biển 3 là nguy cơ lật xe.",
+    "408": "Biển 1 (hình người đang làm việc bên đống vật liệu) là biển \"Công trường\", báo sắp tới đoạn đường đang thi công, sửa chữa. Biển 2 là đá lở, biển 3 là sỏi đá bắn lên.",
+    "409": "Biển 2 (hai xe va chạm kèm dấu chấm than) cảnh báo đoạn đường thường xảy ra tai nạn. Biển 1 báo đoạn đường hay ùn tắc.",
+    "410": "Biển 2 (nhiều xe nối đuôi nhau) báo đoạn đường hay xảy ra ùn tắc giao thông. Biển 1 là đường hầm, biển 3 là đoạn đường hay xảy ra tai nạn.",
+    "411": "Biển 2 (hình hai trẻ em chạy) là biển \"Trẻ em\": phải đi chậm, thận trọng vì trẻ có thể xuất hiện bất ngờ. Biển 1 là chỗ người đi bộ cắt ngang.",
+    "412": "Biển 2 (biển chữ nhật nền xanh, hình người đi bộ) chỉ dẫn nơi bắt đầu đoạn đường dành cho người đi bộ. Biển 1 và biển 3 là biển cảnh báo hình tam giác.",
+    "413": "Biển 2 (tam giác vàng, hình trẻ em chạy) báo gần đến đoạn đường thường có trẻ em đi qua. Biển 1 là người đi bộ cắt ngang, biển 3 là người đi xe đạp cắt ngang.",
+    "414": "Biển 1 (hình ống gió bị thổi bay ngang) báo đoạn đường có gió ngang mạnh: phải điều chỉnh tốc độ để tránh bị lật xe. Biển 2 là nguy cơ lật xe ở chỗ ngoặt.",
+    "415": "Biển 1 (dốc 10%, mặt dốc thấp dần theo chiều xe đi) là \"Dốc xuống nguy hiểm\". Biển 2 có chiều dốc ngược lại là dốc lên.",
+    "416": "Biển 2 (dốc 9%, mặt dốc cao dần theo chiều xe đi) là \"Dốc lên nguy hiểm\". Biển 1 là dốc xuống.",
+    "417": "Biển có hình xe tải nghiêng cùng mũi tên cong là chỗ ngoặt nguy hiểm có nguy cơ lật xe. Mũi tên cong sang trái, nên xe có nguy cơ lật về bên phải: đường cong vòng sang trái.",
+    "418": "Biển hình ô tô trên mặt nước báo trước sắp đến bến phà.",
+    "419": "Biển có hai khối gồ ghề liên tiếp báo đường có ổ gà, lồi lõm, không bằng phẳng. Một khối gồ đơn mới là gồ giảm tốc.",
+    "420": "Biển có một khối gồ đơn trên mặt đường báo phía trước có gồ giảm tốc. Phải giảm tốc độ trước khi qua.",
+    "421": "Biển có dấu chấm than trên các vạch gợn sóng cảnh báo đoạn nền đường yếu, đang theo dõi lún: chạy tốc độ cao ở đây có thể gây nguy hiểm.",
+    "422": "Hai biển có hình đất đá rơi từ sườn dốc là biển \"Đá lở\", báo trước đoạn đường đất đá trên ta luy dương có thể sụt lở bất ngờ. Hai biển đặt tùy theo vách núi ở bên trái hay bên phải.",
+    "423": "Biển có hình sỏi đá văng ra từ bánh xe báo nơi mặt đường có kết cấu rời rạc: xe chạy qua làm đá, sỏi văng lên gây nguy hiểm.",
+    "424": "Biển hình con bò báo đoạn đường có gia súc qua lại: phải đi chậm, quan sát và dừng lại nếu gặp gia súc. Bấm còi to có thể làm gia súc hoảng sợ, chạy bất ngờ ra đường.",
+    "425": "Biển có hình tia sét từ đường dây báo khu vực có đường dây điện cắt ngang phía trên tuyến đường, phải chú ý chiều cao của xe và hàng.",
+    "426": "Biển 2 chia làn theo loại xe (ô tô, mô tô, xe thô sơ) kèm tốc độ tối đa từng làn: xe phải đi đúng làn dành cho loại xe của mình và không vượt tốc độ ghi trên làn đó. Biển 1 chỉ quy định tốc độ theo làn.",
+    "427": "Cả hai biển đều ghi tốc độ tối đa cho từng làn đường (biển 1: 80, 60, 50; biển 2: 60, 50, 50), nên xe phải tuân thủ tốc độ tối đa của làn mình đang đi.",
+    "428": "Biển 1 (nền xanh, hình ô tô) là \"Đường dành cho xe ô tô\". Biển 2 có gạch đỏ chéo là hết đoạn đường dành cho ô tô.",
+    "429": "Biển 2 (hình ô tô có gạch đỏ chéo) là \"Hết đoạn đường dành cho xe ô tô\".",
+    "430": "Biển 1 (hình ô tô và mô tô trên nền xanh) là đường dành cho ô tô và mô tô: các phương tiện khác không được đi vào. Biển 2 có gạch đỏ chéo là hết đoạn đường đó.",
+    "431": "Biển chia thành các ô theo từng làn, mỗi ô có mũi tên, cho biết số làn đường và hướng đi bắt buộc trên mỗi làn: làn trái đi thẳng hoặc rẽ trái, làn giữa đi thẳng, làn phải rẽ phải.",
+    "432": "Biển 1 bắt buộc chỉ được đi thẳng; biển 2 bắt buộc chỉ được rẽ trái hoặc rẽ phải, không được đi thẳng. Cả hai đều là biển hướng đi phải theo, không cho xe đi hướng khác với hướng đã chỉ."
+  }
+}

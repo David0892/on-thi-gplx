@@ -1,0 +1,31 @@
+{
+  "_about": "Chương VI (sa hình), câu 486–511. Tự biên soạn sau khi xem hình, khớp đáp án gạch chân. Thứ tự chung khi qua nơi giao nhau: xe ưu tiên → xe trên đường ưu tiên → nhường xe bên phải (vòng xuyến: bên trái) → theo hướng đi rẽ phải, đi thẳng, rẽ trái.",
+  "explanations": {
+    "486": "Ở đây có đèn tín hiệu riêng cho từng làn. Theo hướng mũi tên, chỉ xe con đi theo hướng đang được đèn xanh của làn mình. Xe khách, xe tải và xe mô tô đi theo hướng đang bị đèn đỏ nên vi phạm.",
+    "487": "Xe tải và xe mô tô ở trên đường ưu tiên nên đi trước: xe tải đi thẳng, đi trước xe mô tô đang rẽ trái. Xe khách và xe con ở đường không ưu tiên (có biển tam giác ngược) đi sau: xe khách đi thẳng trước, xe con quay đầu đi sau cùng.",
+    "488": "Xe công an làm nhiệm vụ khẩn cấp là xe ưu tiên nên đi trước tiên. Tiếp theo là các xe trên đường ưu tiên (xe con rồi xe tải theo hướng đi), xe khách ở đường không ưu tiên (biển tam giác ngược) đi sau cùng.",
+    "489": "Xe công an làm nhiệm vụ khẩn cấp đi trước. Các xe còn lại đi theo quy tắc đường ưu tiên và hướng đi: xe tải, rồi xe khách, cuối cùng xe con.",
+    "490": "Nơi giao nhau cùng cấp, không có biển báo: xe phải nhường đường cho xe đến từ bên phải. Xe mô tô không có xe nào bên phải nên đi trước, rồi đến xe con, xe tải đi sau cùng.",
+    "491": "Khi vào vòng xuyến phải nhường đường cho xe đi đến từ bên trái (xe đang chạy trong vòng xuyến). Xe tải đang ở trong vòng xuyến bên trái xe con, nên xe con phải nhường.",
+    "492": "Xe mô tô gặp biển STOP (\"Dừng lại\") nên phải dừng hẳn và nhường đường. Xe con được quyền đi trước.",
+    "493": "Xe con A đã đi vào trong nơi giao nhau nên được đi tiếp trước. Sau đó xe cứu thương đi làm nhiệm vụ là xe ưu tiên nên đi trước xe con B. Xe con B đi sau cùng.",
+    "494": "Cả xe chữa cháy và xe cứu thương đều là xe ưu tiên, nhưng xe chữa cháy đi làm nhiệm vụ được ưu tiên trước xe cứu thương. Xe con đi sau cùng.",
+    "495": "Xe cứu thương đi làm nhiệm vụ cấp cứu là xe ưu tiên nên được đi trước xe mô tô.",
+    "496": "Xe khách đi trên đường không ưu tiên (có biển tam giác ngược) nên phải nhường đường cho các xe trên đường ưu tiên và đi qua nơi giao nhau sau cùng.",
+    "497": "Xe con đi từ đường không ưu tiên (có biển tam giác ngược) nên phải nhường đường cho xe tải đi trên đường ưu tiên.",
+    "498": "Xe chữa cháy đi làm nhiệm vụ đứng đầu thứ tự xe ưu tiên, nên được đi trước cả xe công an làm nhiệm vụ khẩn cấp.",
+    "499": "Đèn phía xe con và xe khách đang xanh nên hai xe được đi. Đèn phía xe mô tô đang đỏ nên mô tô phải dừng lại.",
+    "500": "Theo đèn tín hiệu cho từng làn, xe con và xe tải đi theo hướng đang được đèn xanh nên đúng quy tắc. Xe khách và xe mô tô đi theo hướng đang đèn đỏ.",
+    "501": "Thứ tự xe ưu tiên là xe chữa cháy, rồi xe quân sự, rồi xe công an đi làm nhiệm vụ khẩn cấp. Vì vậy xe quân sự được đi trước xe công an.",
+    "502": "Đèn đỏ đang sáng nhưng có đèn mũi tên xanh chỉ sang phải, nên xe tải chỉ được rẽ phải theo hướng 1. Các hướng khác phải dừng chờ.",
+    "503": "Theo đèn tín hiệu theo làn, xe khách, xe tải và xe mô tô đi theo những hướng đang bị đèn đỏ nên vi phạm. Xe con đi đúng hướng đèn xanh.",
+    "504": "Trong vòng xuyến, xe phải nhường đường cho xe đến từ bên trái, nên thứ tự đi qua là xe mô tô, xe tải, xe khách, cuối cùng xe con.",
+    "505": "Biển cấm đỗ xe có biển phụ hình xe tải nên chỉ cấm xe tải đỗ. Xe con và xe mô tô đỗ không vi phạm.",
+    "506": "Xe con B đi trên đường ưu tiên nên được đi trước. Xe con A và xe tải ở đường không ưu tiên (có biển tam giác ngược) phải nhường.",
+    "507": "Hướng 2 có biển cấm mô tô và hướng 3 có biển cấm ô tô; cả hai biển đều không cấm xe gắn máy. Vì vậy xe gắn máy được đi cả ba hướng.",
+    "508": "Cả xe tải và xe mô tô đều đỗ trong phạm vi có hiệu lực của biển cấm dừng và đỗ xe, nên cả hai xe đều vi phạm.",
+    "509": "Không được đỗ xe trên phần đường dành cho người đi bộ qua đường và trong phạm vi 5 m hai bên vạch đi bộ. Cả ba xe đều đỗ ở khu vực này nên đều vi phạm.",
+    "510": "Ô tô không được kéo xe mô tô ba bánh theo cách này, và tại đây còn có biển cấm xe kéo moóc. Xe tải kéo xe mô tô ba bánh như hình là không đúng quy tắc.",
+    "511": "Lối ra hướng 1 có biển cấm đối với loại xe này, nên xe không được đi theo hướng 1. Các hướng còn lại được phép đi theo chiều vòng xuyến."
+  }
+}

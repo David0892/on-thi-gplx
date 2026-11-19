@@ -98,6 +98,14 @@ void main() {
     );
   });
 
+  test('all 600 questions have an explanation (own writing)', () {
+    final missing = [
+      for (final q in content.pool('B'))
+        if ((q.explanation ?? '').length < 40) q.number,
+    ];
+    expect(missing, isEmpty);
+  });
+
   test('every referenced image file exists; all sign and scenario questions have one', () {
     for (final q in content.pool('B')) {
       if (q.image != null) {

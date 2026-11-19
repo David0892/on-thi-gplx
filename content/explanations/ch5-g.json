@@ -1,0 +1,31 @@
+{
+  "_about": "Chương V (biển báo, vạch kẻ đường), câu 460–485. Tự biên soạn sau khi xem hình, khớp đáp án gạch chân.",
+  "explanations": {
+    "460": "Biển nền xanh có hình làn rẽ ra kèm cột vạch đỏ trắng và chữ \"300 m\" chỉ dẫn khoảng cách đến làn đường cứu nạn (làn thoát xe khẩn cấp), dùng khi xe mất phanh trên dốc dài.",
+    "461": "Biển làn đường dành riêng cho từng loại xe quy định xe nào đi làn nào trên đoạn đường. Khi đến gần nơi giao nhau, xe được chuyển sang làn khác để đi theo hành trình mong muốn.",
+    "462": "Biển nền xanh có hình ô tô nhìn từ phía trước là \"Đường dành cho xe ô tô\": mọi loại ô tô, kể cả xe tải và xe khách, đều được đi vào.",
+    "463": "Biển nền xanh có hình xe con nhìn ngang là đường dành riêng cho ô tô con, nên xe tải và xe khách không được đi vào.",
+    "464": "Biển 2 (bảng xanh lá có tên đường cao tốc và chữ \"KẾT THÚC – END\") báo kết thúc đường cao tốc. Biển 1 là hết đường ưu tiên, biển 3 là hết đường dành cho ô tô.",
+    "465": "Biển xanh lá \"NHẬP LÀN – MERGE LANE\" kèm \"250 m\" chỉ dẫn vị trí nhập làn xe ở phía trước, cách 250 m.",
+    "466": "Cả hai biển đều chỉ dẫn nhập làn xe: biển 1 đặt tại vị trí nhập làn, biển 2 báo trước vị trí nhập làn cách 250 m.",
+    "467": "Biển xanh lá có tên và ký hiệu đường cao tốc (CT.01 TP.HCM – Trung Lương), biểu tượng đường cao tốc, cùng tốc độ tối đa 100 và tối thiểu 60, báo bắt đầu đường cao tốc và các giá trị tốc độ áp dụng.",
+    "468": "Các biểu tượng trên biển trạm dừng nghỉ lần lượt là cây xăng (xăng dầu), dao nĩa (ăn uống), chữ i (thông tin) và cờ lê (sửa chữa xe).",
+    "469": "Biển \"TRẠM KTTT – WEIGH STATION\" kèm \"750 m\" chỉ dẫn khoảng cách đến trạm kiểm tra tải trọng xe: còn 750 m.",
+    "470": "Ba biển vạch vàng đen chỉ hướng tránh chướng ngại vật trên cao tốc. Ở biển 1, các vạch chéo hướng xe đi về phía bên trái.",
+    "471": "Ở biển 3, các vạch chéo vàng đen hướng xe đi về phía bên phải chướng ngại vật.",
+    "472": "Biển 2 có các vạch hình mũi tên chữ V hướng lên, chỉ xe được đi cả hai bên trái hoặc phải để tránh chướng ngại vật.",
+    "473": "Biển 1 và biển 3 (nền vàng, mũi tên chữ V màu đen chỉ sang phải hoặc trái) là biển chỉ hướng rẽ, báo sắp vào đường cong nguy hiểm để người lái chuẩn bị đổi hướng. Biển 2 là biển tránh chướng ngại vật.",
+    "474": "Biển 2 có các vạch chữ V hướng lên, chỉ dẫn xe đi được cả hai hướng. Biển 1 (mũi tên chữ V chỉ sang phải) chỉ hướng rẽ ở đường cong.",
+    "475": "Biển nền vàng có mũi tên chữ V màu đen là biển chỉ hướng rẽ, nhắc người lái chuẩn bị đổi hướng khi sắp vào đường cong nguy hiểm, bán kính nhỏ.",
+    "476": "Vạch 3 có mũi tên đi thẳng kèm nhánh rẽ phải: chỉ được đi thẳng và rẽ phải. Vạch 2 là đi thẳng và rẽ trái, vạch 1 chỉ cho rẽ phải.",
+    "477": "Vạch 1 (trắng nét đứt) và vạch 2 (trắng nét liền) đều phân chia các làn xe cùng chiều. Vạch 3 (vàng liền kép) là vạch tim đường phân chia hai chiều. Mẹo: vạch trắng chia làn cùng chiều, vạch vàng chia hai chiều.",
+    "478": "Vạch 2 (vàng, nét liền) là vạch tim đường phân chia hai chiều xe chạy: xe không được lấn làn, không được đè lên vạch. Vạch 1 và vạch 3 màu trắng chia làn cùng chiều.",
+    "479": "Vạch 1 (vàng nét đứt) và vạch 3 (vàng nét liền) đều là vạch tim đường phân chia hai chiều xe chạy. Vạch 2 màu trắng chia làn cùng chiều.",
+    "480": "Các vạch màu vàng (đơn, đứt hoặc liền) dùng để phân chia hai chiều xe chạy ngược chiều nhau.",
+    "481": "Các vạch màu trắng (nét đứt hoặc liền) dùng để phân chia các làn xe chạy cùng chiều nhau.",
+    "482": "Vạch 1 (vàng nét đứt) và vạch 3 (trắng nét đứt) là vạch nét đứt nên xe được phép đè vạch khi chuyển làn hoặc vượt. Vạch 2 (trắng nét liền) không được đè.",
+    "483": "Các vạch chữ V liên tiếp (>>) đặt cách đều nhau trên mặt đường dùng để người lái xác định khoảng cách an toàn với xe phía trước.",
+    "484": "Hình thoi kẻ trên mặt đường trước vạch đi bộ báo hiệu sắp đến chỗ có vạch dành cho người đi bộ qua đường, để người lái giảm tốc độ.",
+    "485": "Vạch hình răng cưa (zigzag) màu vàng sát lề đường đánh dấu vị trí dừng xe của phương tiện vận tải hành khách công cộng (xe buýt). Xe khác không được dừng đỗ ở đây."
+  }
+}

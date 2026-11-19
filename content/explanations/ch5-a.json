@@ -1,0 +1,29 @@
+{
+  "_about": "Chương V (biển báo), câu 301–324. Tự biên soạn sau khi xem hình, khớp đáp án gạch chân.",
+  "explanations": {
+    "301": "Biển 1 là biển \"Cấm xe ô tô\": cấm mọi xe cơ giới (kể cả mô tô ba bánh), trừ mô tô hai bánh, xe gắn máy và xe ưu tiên. Biển 2 cấm ô tô tải và ô tô khách, biển 3 cấm ô tô kéo rơ moóc, nên chỉ biển 1 đúng nghĩa câu hỏi.",
+    "302": "Biển 1 \"Cấm xe ô tô\" cấm mọi ô tô, trong đó có ô tô tải; biển 2 có hình xe tải nên cũng cấm ô tô tải. Biển 3 chỉ cấm xe kéo rơ moóc, không cấm ô tô tải nói chung.",
+    "303": "Biển 2 \"Cấm xe tải\" áp dụng cả với máy kéo và xe máy chuyên dùng; biển 3 có hình máy kéo nên cấm máy kéo. Biển 1 là biển cấm mô tô.",
+    "304": "Biển 1 \"Cấm mô tô\" cấm mọi loại mô tô, kể cả mô tô ba bánh; biển 2 \"Cấm xe ô tô\" cũng cấm mô tô ba bánh (chỉ trừ mô tô hai bánh và xe gắn máy). Biển 3 chỉ cấm xe tải.",
+    "305": "Biển 1 cấm mô tô và biển 2 cấm ô tô đều không cấm xe gắn máy, nên xe gắn máy được đi vào ở cả hai biển.",
+    "306": "Biển 1 có hình xe mô tô bị gạch chéo là biển cấm xe mô tô. Biển 2 cấm ô tô, biển 3 cấm xe tải.",
+    "307": "Biển 2 (cấm ô tô) trừ mô tô hai bánh ra, và biển 3 chỉ cấm xe tải, nên mô tô hai bánh được đi vào. Biển 1 cấm mô tô.",
+    "308": "Biển 1 (nền trắng viền xanh, có vạch chéo) là biển hết cấm vượt; biển 3 chỉ cấm ô tô tải vượt. Cả hai đều cho xe con vượt. Biển 2 cấm mọi xe cơ giới vượt nhau.",
+    "309": "Biển 2 (hai xe con, một xe màu đỏ) là biển cấm vượt, áp dụng cho mọi xe cơ giới nên ô tô con không được vượt. Biển 1 là hết cấm vượt, biển 3 chỉ cấm xe tải vượt.",
+    "310": "Biển 2 cấm mọi xe cơ giới vượt, trong đó có ô tô tải; biển 3 (xe tải màu đỏ) cấm riêng ô tô tải vượt. Biển 1 là biển hết cấm vượt.",
+    "311": "Cả hai biển đều cấm xe tải vượt: biển 1 cấm mọi xe vượt nhau, biển 2 cấm riêng ô tô tải vượt.",
+    "312": "Biển 2 chỉ cấm ô tô tải vượt nên ô tô con vẫn được vượt. Biển 1 là biển cấm vượt chung cho mọi xe.",
+    "313": "Biển 2 có mũi tên quay ngược bị gạch là biển cấm quay đầu xe. Biển 1 là cấm rẽ trái, không cấm quay đầu.",
+    "314": "Biển 1 có mũi tên rẽ trái bị gạch là biển cấm rẽ trái. Biển 2 là biển cấm quay đầu.",
+    "315": "Biển 2 chỉ cấm quay đầu xe, không cấm rẽ trái, nên gặp biển 2 xe vẫn được rẽ trái. Biển 1 cấm rẽ trái.",
+    "316": "Biển 1 cấm mọi xe rẽ trái, trong đó có ô tô. Biển 2 có hình ô tô kèm mũi tên rẽ trái và quay đầu bị gạch, cấm ô tô rẽ trái và quay đầu. Cả hai biển đều cấm ô tô rẽ trái.",
+    "317": "Biển 1 cấm rẽ phải, biển 2 cấm rẽ phải và quay đầu, đều áp dụng cho mọi phương tiện. Biển 3 có hình ô tô nên chỉ cấm ô tô, không phải mọi phương tiện.",
+    "318": "Biển 1 cấm rẽ trái, biển 2 cấm rẽ trái và quay đầu, đều áp dụng cho mọi phương tiện. Biển 3 có hình ô tô nên chỉ cấm ô tô.",
+    "319": "Biển 1 có hình ô tô cạnh mũi tên quay đầu bị gạch, chỉ cấm ô tô quay đầu. Biển 2 cấm ô tô rẽ trái và quay đầu, biển 3 cấm ô tô rẽ phải và quay đầu, nên cấm nhiều hơn chỉ quay đầu.",
+    "320": "Biển 2 có hình ô tô kèm mũi tên rẽ trái và quay đầu bị gạch, cấm ô tô rẽ trái và quay đầu. Biển 1 chỉ cấm ô tô quay đầu, biển 3 cấm ô tô rẽ phải và quay đầu.",
+    "321": "Biển 2 có chữ TAXI trên hình xe là biển cấm xe taxi, chỉ cấm taxi. Biển 1 cấm mọi ô tô.",
+    "322": "Biển 2 (nền xanh, hai mũi tên vòng) là biển chỉ dẫn chỗ quay xe, không cấm rẽ trái. Biển 1 cấm rẽ trái.",
+    "323": "Biển 1 chỉ cấm rẽ trái, không cấm quay đầu; biển 2 là biển chỉ dẫn chỗ được quay xe. Vì vậy ở cả hai biển, quay đầu đều không bị cấm.",
+    "324": "Biển 1 cấm rẽ trái nhưng không cấm quay đầu, nên xe được quay đầu mà không được rẽ trái. Biển 2 (tròn xanh, mũi tên rẽ trái) là biển hiệu lệnh bắt buộc rẽ trái."
+  }
+}

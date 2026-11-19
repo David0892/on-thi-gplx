@@ -109,3 +109,20 @@ Details are in [content/README.md](../content/README.md).
 - **Reproducibility:** the build was re-run in a fresh venv from `requirements.txt`. The output was byte-identical apart from the 60 explanation lines (all 318 images unchanged).
 - **Checks:** 74 tests pass, including a new one that every critical question has an explanation. In the web build, A1's critical drill shows 20 questions, and answering one wrong shows the explanation.
 - **Remaining:** 540 explanations, for the non-critical questions.
+
+## 2026-11-19: explanations for all 600 questions
+
+- **What was written:** 540 more explanations in our own words, in `content/explanations/` (one file per chapter range), for **600/600** in total.
+  - Chapters I–IV: written from the question text and the official answer.
+  - Chapters V–VI (signs and traffic scenarios): written after viewing every picture in 9-image contact sheets.
+- **Mistakes caught by checking the pictures:**
+  - Câu 227 is the "BRAKE (!)" icon, not a "P".
+  - Câu 36 and 37 now describe the officer's arm signals.
+  - Câu 493 and 487 were checked at full size before writing.
+- **Checks:**
+  - an automated cross-check that each explanation names the correct option (Biển N, Vạch N, Hướng N, numbers and units). It found 4 false positives, which were made explicit.
+  - the build now has `--require-all`, and `content_test.dart` asserts all 600 have an explanation;
+  - 75 tests pass;
+  - the images are byte-identical across rebuilds.
+- **For human review:** Câu 440, 493, 515, 523, 569 and 593 give a reason the picture does not make fully explicit. A driving instructor should look at them before release.
+- **Parity:** 88.9, with 14/14 must-haves.
