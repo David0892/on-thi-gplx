@@ -24,7 +24,7 @@ Reset progress with confirm,settings,should,inferred,yes,S15
 Not-official disclaimer + privacy policy,settings,should,yes,partial,in-app text in S15; hosted privacy page still needed for the stores
 Traffic sign library by group,content,could,inferred,no,may not exist in original
 Search questions by text or number,study,could,unknown,no,
-Dark mode,settings,could,unknown,no,
+Dark mode,settings,could,unknown,yes,follows the system theme; dark tokens pass contrast.py
 Banner and interstitial ads,monetization,could,yes,skip,decided 2026-11-19: app is completely free
 Remove-ads purchase,monetization,could,no,skip,not needed: no ads
 Readiness score (pass probability from recent exams),exam,could,no,no,differentiator idea
