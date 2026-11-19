@@ -224,6 +224,7 @@ class _ExamRunPageState extends ConsumerState<ExamRunPage> {
               index: _index + 1,
               total: a.questionCount,
               text: q.text,
+              image: QuestionImage.of(q),
               // Critical questions are not marked during the exam (as in the real test).
               trailing: BookmarkToggle(
                 on: saved,

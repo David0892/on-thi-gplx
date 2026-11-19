@@ -42,7 +42,7 @@ class Question {
     required this.options,
     required this.correctPosition,
     required this.isCritical,
-    required this.explanation,
+    this.explanation,
     this.image,
   });
 
@@ -53,8 +53,27 @@ class Question {
   final List<String> options; // position = index + 1
   final int correctPosition; // 1-based
   final bool isCritical;
-  final String explanation;
+
+  /// Own writing; null until written (the official set has no explanations).
+  final String? explanation;
+
+  /// Asset path of the question's picture, as printed in the official set.
   final String? image;
+
+  /// The same question with the critical flag a given class uses.
+  Question withCritical(bool critical) => critical == isCritical
+      ? this
+      : Question(
+          key: key,
+          number: number,
+          topicId: topicId,
+          text: text,
+          options: options,
+          correctPosition: correctPosition,
+          isCritical: critical,
+          explanation: explanation,
+          image: image,
+        );
 }
 
 enum AttemptStatus { inProgress, submitted, timedOut, abandoned }
@@ -144,6 +163,14 @@ class ExamAttempt {
     failedOnCritical: failedOnCritical ?? this.failedOnCritical,
     currentPosition: currentPosition ?? this.currentPosition,
   );
+}
+
+/// "Draw [count] questions from these chapters" (Công văn 2262, section II).
+/// Motorbike classes draw one from chapter 3 *or* 4, hence a set of topics.
+class Quota {
+  const Quota(this.topics, this.count);
+  final Set<int> topics;
+  final int count;
 }
 
 class QuestionProgress {

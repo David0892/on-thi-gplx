@@ -12,9 +12,12 @@ import 'repositories.dart';
 class SeedContentRepo implements ContentRepo {
   SeedContentRepo._(this._json);
 
+  /// The question bank built by tool/content/build_content.py.
+  static const assetDir = 'assets/content';
+
   static Future<SeedContentRepo> load([AssetBundle? bundle]) async {
     final raw = await (bundle ?? rootBundle).loadString(
-      'assets/seed/content.json',
+      '$assetDir/content.json',
     );
     return SeedContentRepo.fromJson(jsonDecode(raw) as Map<String, dynamic>);
   }
@@ -27,7 +30,8 @@ class SeedContentRepo implements ContentRepo {
   late final List<Topic> _topics;
   late final List<Question> _questions;
   late final Map<String, Question> _byKey;
-  late final Map<String, Map<int, int>> _quotas;
+  late final Map<String, List<Quota>> _quotas;
+  late final Map<String, List<Question>> _pools;
 
   void _parse() {
     _classes = [
@@ -60,16 +64,37 @@ class SeedContentRepo implements ContentRepo {
           correctPosition: q['correct'],
           isCritical: q['critical'],
           explanation: q['explanation'],
-          image: q['image'],
+          image: q['image'] == null ? null : '$assetDir/${q['image']}',
         ),
     ];
     _byKey = {for (final q in _questions) q.key: q};
     _quotas = {
-      for (final MapEntry(:key, :value)
-          in (_json['quotas'] as Map<String, dynamic>).entries)
-        key: {
-          for (final e in (value as Map<String, dynamic>).entries)
-            int.parse(e.key): e.value as int,
+      for (final c in _json['classes'] as List)
+        c['code'] as String: [
+          for (final g in (c['quota'] as List? ?? const []))
+            Quota({
+              for (final t in g['topics'] as List) t as int,
+            }, g['count'] as int),
+        ],
+    };
+    // "all" = the full bank; otherwise a named list from Công văn 2262 (Phụ lục 1, 2).
+    final named = (_json['pools'] as Map<String, dynamic>? ?? const {});
+    _pools = {
+      for (final c in _json['classes'] as List)
+        c['code'] as String: switch (c['pool'] as String? ?? 'all') {
+          'all' => _questions,
+          final name => () {
+            final numbers = {for (final n in named[name] as List) n as int};
+            // Critical for this class = its own appendix list, not the global 60.
+            final critical = {
+              for (final n in named[c['critical_pool']] as List) n as int,
+            };
+            return [
+              for (final q in _questions)
+                if (numbers.contains(q.number))
+                  q.withCritical(critical.contains(q.number)),
+            ];
+          }(),
         },
     };
   }
@@ -87,11 +112,13 @@ class SeedContentRepo implements ContentRepo {
   @override
   Topic topic(int id) => _topics.firstWhere((t) => t.id == id);
   @override
-  List<Question> pool(String classCode) => _questions; // pools: {"*": "all"} in the seed
+  List<Question> pool(String classCode) => _pools[classCode] ?? _questions;
   @override
   Question question(String key) => _byKey[key]!;
   @override
-  Map<int, int> quota(String classCode) => _quotas[classCode] ?? const {};
+  bool hasQuestion(String key) => _byKey.containsKey(key);
+  @override
+  List<Quota> quota(String classCode) => _quotas[classCode] ?? const [];
   @override
   int examSetCount(String classCode) => 5;
 }

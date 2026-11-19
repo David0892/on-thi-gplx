@@ -228,6 +228,7 @@ class _StudyPageState extends ConsumerState<StudyPage> {
           total: qs.length,
           text: q.text,
           critical: q.isCritical,
+          image: QuestionImage.of(q),
           trailing: BookmarkToggle(
             on: saved.contains(q.key),
             onChanged: (_) async {
@@ -252,9 +253,9 @@ class _StudyPageState extends ConsumerState<StudyPage> {
           ),
           const SizedBox(height: AppSpace.s8),
         ],
-        if (chosen != null) ...[
+        if (chosen != null && q.explanation != null) ...[
           const SizedBox(height: AppSpace.s8),
-          ExplanationPanel(body: q.explanation),
+          ExplanationPanel(body: q.explanation!),
         ],
       ],
     );

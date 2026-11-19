@@ -1,5 +1,11 @@
 # Parity: GPLX prep app vs Ôn Thi GPLX 600 Câu Chuẩn 2026
 
+> **Update 2026-11-19, after adding the official bank:**
+> - Feature score is **84.1 / 100**, with must-haves at **13 of 14**.
+> - Still **not shippable**: the remaining must-have is **answer explanations**. The official set has none, so all 600 have to be written.
+> - Content went from 21.4 to 64.3; study is now 63.6, down because the sample explanations were removed with the sample bank.
+> - The sections below describe the earlier run (77.0, 10/14) and are kept for history.
+
 **Build:** `1dfdf9c`. **Date:** 2026-11-19.
 
 **Tools:** `parity.py` on [features.csv](features.csv). `imgdiff.py` was **not run**; see the layout section below.

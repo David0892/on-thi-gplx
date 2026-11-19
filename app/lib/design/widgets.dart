@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 
+import '../domain/models.dart';
 import 'app_theme.dart';
 import 'tokens.g.dart';
 
@@ -482,6 +483,65 @@ class QuestionCard extends StatelessWidget {
             ),
           ],
         ],
+      ),
+    );
+  }
+}
+
+/// The picture printed with a question (signs, traffic scenes). Tap to zoom.
+class QuestionImage extends StatelessWidget {
+  const QuestionImage({super.key, required this.asset, required this.number});
+  final String asset;
+  final int number;
+
+  static Widget? of(Question q) =>
+      q.image == null ? null : QuestionImage(asset: q.image!, number: q.number);
+
+  @override
+  Widget build(BuildContext context) {
+    final c = context.colors;
+    return Semantics(
+      button: true,
+      label: 'Hình câu $number, chạm để phóng to',
+      excludeSemantics: true,
+      child: GestureDetector(
+        onTap: () => showDialog<void>(
+          context: context,
+          builder: (ctx) => Dialog.fullscreen(
+            backgroundColor: c.bg,
+            child: Stack(
+              children: [
+                Positioned.fill(
+                  child: InteractiveViewer(
+                    maxScale: 5,
+                    child: Center(child: Image.asset(asset)),
+                  ),
+                ),
+                SafeArea(
+                  child: IconButton(
+                    tooltip: 'Đóng',
+                    icon: const Icon(Icons.close),
+                    onPressed: () => Navigator.pop(ctx),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(AppRadius.sm),
+          child: Image.asset(
+            asset,
+            fit: BoxFit.contain,
+            errorBuilder: (_, _, _) => Padding(
+              padding: const EdgeInsets.all(AppSpace.s16),
+              child: Text(
+                'Không tải được hình',
+                style: AppType.sm.copyWith(color: c.textMuted),
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }

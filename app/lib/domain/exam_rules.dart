@@ -11,7 +11,7 @@ class NotEnoughQuestions implements Exception {
 
 /// Builds the question list for one exam, following the class rules:
 /// exactly [LicenseClass.criticalPerExam] critical questions, the rest drawn
-/// per topic from [quota] (topicId -> count). With no quota, the rest is drawn
+/// per chapter group from [quota]. With no quota, the rest is drawn
 /// uniformly from the pool. Result is ordered by official question number.
 ///
 /// Pure: same [rng] seed gives the same exam. Used for random exams and for
@@ -19,7 +19,7 @@ class NotEnoughQuestions implements Exception {
 List<Question> generateExam({
   required LicenseClass cls,
   required List<Question> pool,
-  required Map<int, int> quota,
+  required List<Quota> quota,
   required Random rng,
 }) {
   final critical = pool.where((q) => q.isCritical).toList()..shuffle(rng);
@@ -35,19 +35,21 @@ List<Question> generateExam({
   final picked = <Question>[...critical.take(cls.criticalPerExam)];
 
   if (quota.isNotEmpty) {
-    final total = quota.values.fold(0, (a, b) => a + b);
+    final total = quota.fold(0, (a, q) => a + q.count);
     if (total != need) {
       throw StateError('Quota for ${cls.code} sums to $total, expected $need');
     }
-    for (final MapEntry(key: topic, value: count) in quota.entries) {
-      final inTopic = normal.where((q) => q.topicId == topic).toList()
-        ..shuffle(rng);
-      if (inTopic.length < count) {
+    for (final group in quota) {
+      final inGroup =
+          normal.where((q) => group.topics.contains(q.topicId)).toList()
+            ..shuffle(rng);
+      if (inGroup.length < group.count) {
         throw NotEnoughQuestions(
-          '${cls.name} cần $count câu ở chủ đề $topic, bộ câu hỏi hiện có ${inTopic.length}.',
+          '${cls.name} cần ${group.count} câu ở chương ${group.topics.join('/')}, '
+          'bộ câu hỏi hiện có ${inGroup.length}.',
         );
       }
-      picked.addAll(inTopic.take(count));
+      picked.addAll(inGroup.take(group.count));
     }
   } else {
     if (normal.length < need) {

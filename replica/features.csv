@@ -1,15 +1,15 @@
 feature,area,priority,original,clone,notes
 Pick licence class (A1 A B1 B C1 C D1 D2 D BE C1E CE D1E D2E DE),onboarding,must,yes,yes,S01; all 15 classes
-Full official 600-question bank bundled offline,content,must,yes,no,only 32 hand-written sample questions; needs the content pipeline
-Question pools per class (e.g. 250 for A1/A),content,must,yes,partial,all classes share the sample pool; real mapping comes with the official appendix
-Critical questions flagged (60),content,must,yes,partial,3 sample critical questions; 60 come with the official bank
-Random mock exam per class rules (count / minutes / pass mark),exam,must,yes,yes,"S04; quota per topic for A1/A/B1, uniform for others; classes above 32 questions show a not-enough-questions dialog"
+Full official 600-question bank bundled offline,content,must,yes,yes,600 questions parsed from the official Cục CSGT 2025 PDF; answers from underlines; 318 images; see content/README.md
+Question pools per class (e.g. 250 for A1/A),content,must,yes,yes,"Phụ lục 1 (250, A1/A) and Phụ lục 2 (300, B1) of CV 2262; all 600 for other classes"
+Critical questions flagged (60),content,must,yes,yes,Phụ lục 3 of CV 2262; per class 20/30/60
+Random mock exam per class rules (count / minutes / pass mark),exam,must,yes,yes,chapter quotas per class from CV 2262 section II; pass marks per TT 12/2025 (trailer classes unverified)
 Countdown timer with auto-submit,exam,must,yes,yes,deadline stored in user.db; resumes after a kill; past-deadline exams auto-grade as timed out
 Question jump grid in exam,exam,must,yes,yes,"bottom sheet in S04, S08"
 Pass/fail result with critical-question fail rule,exam,must,yes,yes,S05; unit tested
 Review exam with correct answers,exam,must,yes,yes,S06 with all/wrong filter
 Study by topic with instant feedback,study,must,yes,yes,"S07, S08"
-Answer explanations,study,must,yes,partial,written for the 32 sample questions only
+Answer explanations,study,must,yes,no,official set has none; 600 original explanations still to write (sample explanations removed with the sample bank)
 Wrong-answers list auto-collected,review,must,yes,yes,S10; answering right removes it; clear with confirm
 Bookmark / saved questions,review,must,yes,yes,S11 with empty state
 Critical questions drill,review,must,yes,yes,S09

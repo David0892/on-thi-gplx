@@ -1,0 +1,417 @@
+{
+  "_about": "Exam rules per licence class. Quotas per chapter: Công văn 2262/CSGT-P5 section II (07/05/2025). count/minutes/pass: Thông tư 12/2025/TT-BCA, Phụ lục II (A1, A), III (B1), IV (B, C1, C, D1, D2, D). Trailer classes BE..DE: 45 questions per CV 2262; minutes and pass not found in the readable text of TT 12, assumed equal to D (verified=false).",
+  "pass_source": "Thông tư 12/2025/TT-BCA Phụ lục II-IV (trailer classes unverified)",
+  "topics": [
+    {
+      "id": 1,
+      "name": "Quy định chung và quy tắc giao thông đường bộ",
+      "short": "Quy tắc",
+      "from": 1,
+      "to": 180
+    },
+    {
+      "id": 2,
+      "name": "Văn hóa giao thông, đạo đức người lái xe, PCCC và cứu hộ, cứu nạn",
+      "short": "Văn hóa",
+      "from": 181,
+      "to": 205
+    },
+    {
+      "id": 3,
+      "name": "Kỹ thuật lái xe",
+      "short": "Kỹ thuật",
+      "from": 206,
+      "to": 263
+    },
+    {
+      "id": 4,
+      "name": "Cấu tạo và sửa chữa",
+      "short": "Cấu tạo",
+      "from": 264,
+      "to": 300
+    },
+    {
+      "id": 5,
+      "name": "Báo hiệu đường bộ",
+      "short": "Biển báo",
+      "from": 301,
+      "to": 485
+    },
+    {
+      "id": 6,
+      "name": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+      "short": "Sa hình",
+      "from": 486,
+      "to": 600
+    }
+  ],
+  "quota_sets": {
+    "moto": [
+      {
+        "topics": [
+          1
+        ],
+        "count": 8
+      },
+      {
+        "topics": [
+          2
+        ],
+        "count": 1
+      },
+      {
+        "topics": [
+          3,
+          4
+        ],
+        "count": 1
+      },
+      {
+        "topics": [
+          5
+        ],
+        "count": 8
+      },
+      {
+        "topics": [
+          6
+        ],
+        "count": 6
+      }
+    ],
+    "B": [
+      {
+        "topics": [
+          1
+        ],
+        "count": 8
+      },
+      {
+        "topics": [
+          2
+        ],
+        "count": 1
+      },
+      {
+        "topics": [
+          3
+        ],
+        "count": 1
+      },
+      {
+        "topics": [
+          4
+        ],
+        "count": 1
+      },
+      {
+        "topics": [
+          5
+        ],
+        "count": 9
+      },
+      {
+        "topics": [
+          6
+        ],
+        "count": 9
+      }
+    ],
+    "C1": [
+      {
+        "topics": [
+          1
+        ],
+        "count": 10
+      },
+      {
+        "topics": [
+          2
+        ],
+        "count": 1
+      },
+      {
+        "topics": [
+          3
+        ],
+        "count": 2
+      },
+      {
+        "topics": [
+          4
+        ],
+        "count": 1
+      },
+      {
+        "topics": [
+          5
+        ],
+        "count": 10
+      },
+      {
+        "topics": [
+          6
+        ],
+        "count": 10
+      }
+    ],
+    "C": [
+      {
+        "topics": [
+          1
+        ],
+        "count": 10
+      },
+      {
+        "topics": [
+          2
+        ],
+        "count": 1
+      },
+      {
+        "topics": [
+          3
+        ],
+        "count": 2
+      },
+      {
+        "topics": [
+          4
+        ],
+        "count": 1
+      },
+      {
+        "topics": [
+          5
+        ],
+        "count": 14
+      },
+      {
+        "topics": [
+          6
+        ],
+        "count": 11
+      }
+    ],
+    "D": [
+      {
+        "topics": [
+          1
+        ],
+        "count": 10
+      },
+      {
+        "topics": [
+          2
+        ],
+        "count": 1
+      },
+      {
+        "topics": [
+          3
+        ],
+        "count": 2
+      },
+      {
+        "topics": [
+          4
+        ],
+        "count": 1
+      },
+      {
+        "topics": [
+          5
+        ],
+        "count": 16
+      },
+      {
+        "topics": [
+          6
+        ],
+        "count": 14
+      }
+    ]
+  },
+  "classes": [
+    {
+      "code": "A1",
+      "name": "Hạng A1",
+      "group": "moto",
+      "description": "Xe mô tô đến 125 cm³ hoặc động cơ điện đến 11 kW",
+      "count": 25,
+      "minutes": 19,
+      "pass": 21,
+      "pool": "appendix1",
+      "quota_set": "moto",
+      "verified": true
+    },
+    {
+      "code": "A",
+      "name": "Hạng A",
+      "group": "moto",
+      "description": "Xe mô tô trên 125 cm³ hoặc động cơ điện trên 11 kW",
+      "count": 25,
+      "minutes": 19,
+      "pass": 23,
+      "pool": "appendix1",
+      "quota_set": "moto",
+      "verified": true
+    },
+    {
+      "code": "B1",
+      "name": "Hạng B1",
+      "group": "moto",
+      "description": "Xe mô tô ba bánh",
+      "count": 25,
+      "minutes": 19,
+      "pass": 23,
+      "pool": "appendix2",
+      "quota_set": "moto",
+      "verified": true
+    },
+    {
+      "code": "B",
+      "name": "Hạng B",
+      "group": "car",
+      "description": "Ô tô chở người đến 8 chỗ, xe tải đến 3,5 tấn",
+      "count": 30,
+      "minutes": 20,
+      "pass": 27,
+      "pool": "all",
+      "quota_set": "B",
+      "verified": true
+    },
+    {
+      "code": "C1",
+      "name": "Hạng C1",
+      "group": "truck",
+      "description": "Xe tải trên 3,5 tấn đến 7,5 tấn",
+      "count": 35,
+      "minutes": 22,
+      "pass": 32,
+      "pool": "all",
+      "quota_set": "C1",
+      "verified": true
+    },
+    {
+      "code": "C",
+      "name": "Hạng C",
+      "group": "truck",
+      "description": "Xe tải trên 7,5 tấn",
+      "count": 40,
+      "minutes": 24,
+      "pass": 36,
+      "pool": "all",
+      "quota_set": "C",
+      "verified": true
+    },
+    {
+      "code": "D1",
+      "name": "Hạng D1",
+      "group": "bus",
+      "description": "Ô tô chở người trên 8 đến 16 chỗ",
+      "count": 45,
+      "minutes": 26,
+      "pass": 41,
+      "pool": "all",
+      "quota_set": "D",
+      "verified": true
+    },
+    {
+      "code": "D2",
+      "name": "Hạng D2",
+      "group": "bus",
+      "description": "Ô tô chở người trên 16 đến 29 chỗ",
+      "count": 45,
+      "minutes": 26,
+      "pass": 41,
+      "pool": "all",
+      "quota_set": "D",
+      "verified": true
+    },
+    {
+      "code": "D",
+      "name": "Hạng D",
+      "group": "bus",
+      "description": "Ô tô chở người trên 29 chỗ, xe giường nằm",
+      "count": 45,
+      "minutes": 26,
+      "pass": 41,
+      "pool": "all",
+      "quota_set": "D",
+      "verified": true
+    },
+    {
+      "code": "BE",
+      "name": "Hạng BE",
+      "group": "trailer",
+      "description": "Xe hạng B kéo rơ moóc trên 750 kg",
+      "count": 45,
+      "minutes": 26,
+      "pass": 41,
+      "pool": "all",
+      "quota_set": "D",
+      "verified": false
+    },
+    {
+      "code": "C1E",
+      "name": "Hạng C1E",
+      "group": "trailer",
+      "description": "Xe hạng C1 kéo rơ moóc trên 750 kg",
+      "count": 45,
+      "minutes": 26,
+      "pass": 41,
+      "pool": "all",
+      "quota_set": "D",
+      "verified": false
+    },
+    {
+      "code": "CE",
+      "name": "Hạng CE",
+      "group": "trailer",
+      "description": "Xe hạng C kéo rơ moóc, sơ mi rơ moóc",
+      "count": 45,
+      "minutes": 26,
+      "pass": 41,
+      "pool": "all",
+      "quota_set": "D",
+      "verified": false
+    },
+    {
+      "code": "D1E",
+      "name": "Hạng D1E",
+      "group": "trailer",
+      "description": "Xe hạng D1 kéo rơ moóc trên 750 kg",
+      "count": 45,
+      "minutes": 26,
+      "pass": 41,
+      "pool": "all",
+      "quota_set": "D",
+      "verified": false
+    },
+    {
+      "code": "D2E",
+      "name": "Hạng D2E",
+      "group": "trailer",
+      "description": "Xe hạng D2 kéo rơ moóc trên 750 kg",
+      "count": 45,
+      "minutes": 26,
+      "pass": 41,
+      "pool": "all",
+      "quota_set": "D",
+      "verified": false
+    },
+    {
+      "code": "DE",
+      "name": "Hạng DE",
+      "group": "trailer",
+      "description": "Xe hạng D kéo rơ moóc, xe nối toa",
+      "count": 45,
+      "minutes": 26,
+      "pass": 41,
+      "pool": "all",
+      "quota_set": "D",
+      "verified": false
+    }
+  ]
+}

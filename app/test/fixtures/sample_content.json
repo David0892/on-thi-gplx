@@ -1,0 +1,778 @@
+{
+ "meta": {
+  "content_version": 1,
+  "bank_code": "sample",
+  "is_sample": true,
+  "source_ref": "Câu hỏi mẫu tự soạn để phát triển app. KHÔNG phải bộ đề chính thức. Thay bằng dữ liệu từ Công văn 2262/CSGT-P5 qua content pipeline.",
+  "rules_ref": "Thông tư 12/2025/TT-BCA (số câu/thời gian/điểm đạt theo nguồn thứ cấp, cần đối chiếu)",
+  "effective_from": "2025-06-01"
+ },
+ "topics": [
+  {
+   "id": 1,
+   "name": "Quy định chung và quy tắc giao thông",
+   "short": "Quy tắc"
+  },
+  {
+   "id": 2,
+   "name": "Văn hoá giao thông và đạo đức người lái",
+   "short": "Văn hoá"
+  },
+  {
+   "id": 3,
+   "name": "Kỹ thuật lái xe",
+   "short": "Kỹ thuật"
+  },
+  {
+   "id": 4,
+   "name": "Báo hiệu đường bộ",
+   "short": "Biển báo"
+  },
+  {
+   "id": 5,
+   "name": "Sa hình và xử lý tình huống",
+   "short": "Sa hình"
+  }
+ ],
+ "classes": [
+  {
+   "code": "A1",
+   "name": "Hạng A1",
+   "group": "moto",
+   "description": "Xe mô tô đến 125 cm³ hoặc động cơ điện đến 11 kW",
+   "count": 25,
+   "minutes": 19,
+   "pass": 21,
+   "critical": 1,
+   "verified": true,
+   "pool": "all",
+   "quota": [
+    {
+     "topics": [
+      1
+     ],
+     "count": 9
+    },
+    {
+     "topics": [
+      2
+     ],
+     "count": 3
+    },
+    {
+     "topics": [
+      3
+     ],
+     "count": 4
+    },
+    {
+     "topics": [
+      4
+     ],
+     "count": 5
+    },
+    {
+     "topics": [
+      5
+     ],
+     "count": 3
+    }
+   ]
+  },
+  {
+   "code": "A",
+   "name": "Hạng A",
+   "group": "moto",
+   "description": "Xe mô tô trên 125 cm³ hoặc động cơ điện trên 11 kW",
+   "count": 25,
+   "minutes": 19,
+   "pass": 21,
+   "critical": 1,
+   "verified": true,
+   "pool": "all",
+   "quota": [
+    {
+     "topics": [
+      1
+     ],
+     "count": 9
+    },
+    {
+     "topics": [
+      2
+     ],
+     "count": 3
+    },
+    {
+     "topics": [
+      3
+     ],
+     "count": 4
+    },
+    {
+     "topics": [
+      4
+     ],
+     "count": 5
+    },
+    {
+     "topics": [
+      5
+     ],
+     "count": 3
+    }
+   ]
+  },
+  {
+   "code": "B1",
+   "name": "Hạng B1",
+   "group": "moto",
+   "description": "Xe mô tô ba bánh",
+   "count": 25,
+   "minutes": 19,
+   "pass": 21,
+   "critical": 1,
+   "verified": true,
+   "pool": "all",
+   "quota": [
+    {
+     "topics": [
+      1
+     ],
+     "count": 9
+    },
+    {
+     "topics": [
+      2
+     ],
+     "count": 3
+    },
+    {
+     "topics": [
+      3
+     ],
+     "count": 4
+    },
+    {
+     "topics": [
+      4
+     ],
+     "count": 5
+    },
+    {
+     "topics": [
+      5
+     ],
+     "count": 3
+    }
+   ]
+  },
+  {
+   "code": "B",
+   "name": "Hạng B",
+   "group": "car",
+   "description": "Ô tô chở người đến 8 chỗ, xe tải đến 3,5 tấn",
+   "count": 30,
+   "minutes": 20,
+   "pass": 27,
+   "critical": 1,
+   "verified": false,
+   "pool": "all",
+   "quota": []
+  },
+  {
+   "code": "C1",
+   "name": "Hạng C1",
+   "group": "truck",
+   "description": "Xe tải trên 3,5 tấn đến 7,5 tấn",
+   "count": 35,
+   "minutes": 22,
+   "pass": 32,
+   "critical": 1,
+   "verified": false,
+   "pool": "all",
+   "quota": []
+  },
+  {
+   "code": "C",
+   "name": "Hạng C",
+   "group": "truck",
+   "description": "Xe tải trên 7,5 tấn",
+   "count": 40,
+   "minutes": 24,
+   "pass": 36,
+   "critical": 1,
+   "verified": false,
+   "pool": "all",
+   "quota": []
+  },
+  {
+   "code": "D1",
+   "name": "Hạng D1",
+   "group": "bus",
+   "description": "Ô tô chở người trên 8 đến 16 chỗ",
+   "count": 45,
+   "minutes": 26,
+   "pass": 41,
+   "critical": 1,
+   "verified": false,
+   "pool": "all",
+   "quota": []
+  },
+  {
+   "code": "D2",
+   "name": "Hạng D2",
+   "group": "bus",
+   "description": "Ô tô chở người trên 16 đến 29 chỗ",
+   "count": 45,
+   "minutes": 26,
+   "pass": 41,
+   "critical": 1,
+   "verified": false,
+   "pool": "all",
+   "quota": []
+  },
+  {
+   "code": "D",
+   "name": "Hạng D",
+   "group": "bus",
+   "description": "Ô tô chở người trên 29 chỗ, xe giường nằm",
+   "count": 45,
+   "minutes": 26,
+   "pass": 41,
+   "critical": 1,
+   "verified": false,
+   "pool": "all",
+   "quota": []
+  },
+  {
+   "code": "BE",
+   "name": "Hạng BE",
+   "group": "trailer",
+   "description": "Xe hạng B kéo rơ moóc trên 750 kg",
+   "count": 45,
+   "minutes": 26,
+   "pass": 41,
+   "critical": 1,
+   "verified": false,
+   "pool": "all",
+   "quota": []
+  },
+  {
+   "code": "C1E",
+   "name": "Hạng C1E",
+   "group": "trailer",
+   "description": "Xe hạng C1 kéo rơ moóc trên 750 kg",
+   "count": 45,
+   "minutes": 26,
+   "pass": 41,
+   "critical": 1,
+   "verified": false,
+   "pool": "all",
+   "quota": []
+  },
+  {
+   "code": "CE",
+   "name": "Hạng CE",
+   "group": "trailer",
+   "description": "Xe hạng C kéo rơ moóc, sơ mi rơ moóc",
+   "count": 45,
+   "minutes": 26,
+   "pass": 41,
+   "critical": 1,
+   "verified": false,
+   "pool": "all",
+   "quota": []
+  },
+  {
+   "code": "D1E",
+   "name": "Hạng D1E",
+   "group": "trailer",
+   "description": "Xe hạng D1 kéo rơ moóc trên 750 kg",
+   "count": 45,
+   "minutes": 26,
+   "pass": 41,
+   "critical": 1,
+   "verified": false,
+   "pool": "all",
+   "quota": []
+  },
+  {
+   "code": "D2E",
+   "name": "Hạng D2E",
+   "group": "trailer",
+   "description": "Xe hạng D2 kéo rơ moóc trên 750 kg",
+   "count": 45,
+   "minutes": 26,
+   "pass": 41,
+   "critical": 1,
+   "verified": false,
+   "pool": "all",
+   "quota": []
+  },
+  {
+   "code": "DE",
+   "name": "Hạng DE",
+   "group": "trailer",
+   "description": "Xe hạng D kéo rơ moóc, xe nối toa",
+   "count": 45,
+   "minutes": 26,
+   "pass": 41,
+   "critical": 1,
+   "verified": false,
+   "pool": "all",
+   "quota": []
+  }
+ ],
+ "pools": {},
+ "questions": [
+  {
+   "n": 1,
+   "topic": 1,
+   "critical": true,
+   "text": "Người điều khiển phương tiện giao thông đường bộ có được phép lái xe khi trong máu hoặc hơi thở có nồng độ cồn không?",
+   "options": [
+    "Được, nếu nồng độ cồn ở mức thấp.",
+    "Không được.",
+    "Được, nếu chỉ đi quãng đường ngắn."
+   ],
+   "correct": 2,
+   "explanation": "Pháp luật cấm tuyệt đối việc điều khiển phương tiện khi có nồng độ cồn, không phân biệt mức độ hay quãng đường.",
+   "image": null
+  },
+  {
+   "n": 2,
+   "topic": 1,
+   "critical": true,
+   "text": "Hành vi nào sau đây bị nghiêm cấm?",
+   "options": [
+    "Đi đúng chiều trên đường một chiều.",
+    "Điều khiển xe đi ngược chiều trên đường một chiều.",
+    "Giảm tốc độ khi qua nơi đông người."
+   ],
+   "correct": 2,
+   "explanation": "Đi ngược chiều trên đường một chiều là hành vi bị nghiêm cấm vì rất dễ gây tai nạn đối đầu.",
+   "image": null
+  },
+  {
+   "n": 3,
+   "topic": 1,
+   "critical": true,
+   "text": "Khi nghe tín hiệu còi và thấy đèn ưu tiên của xe cứu thương đang làm nhiệm vụ phía sau, người lái xe phải làm gì?",
+   "options": [
+    "Giữ nguyên tốc độ và làn đường.",
+    "Tăng tốc để đi trước xe cứu thương.",
+    "Giảm tốc độ, đi sát về bên phải hoặc dừng lại để nhường đường."
+   ],
+   "correct": 3,
+   "explanation": "Xe cứu thương đang làm nhiệm vụ là xe ưu tiên. Các phương tiện khác phải nhanh chóng giảm tốc độ, tránh hoặc dừng sát lề phải để nhường đường.",
+   "image": null
+  },
+  {
+   "n": 4,
+   "topic": 1,
+   "critical": false,
+   "text": "Khi đèn tín hiệu giao thông chuyển sang màu vàng (không nhấp nháy), người lái xe phải làm gì?",
+   "options": [
+    "Tăng tốc để đi qua nhanh.",
+    "Dừng lại trước vạch dừng; nếu đã đi quá vạch dừng thì được đi tiếp.",
+    "Được đi tiếp trong mọi trường hợp."
+   ],
+   "correct": 2,
+   "explanation": "Đèn vàng báo hiệu sắp chuyển sang đỏ: phải dừng trước vạch dừng. Chỉ khi đã ở trên hoặc đã qua vạch dừng thì mới được đi tiếp.",
+   "image": null
+  },
+  {
+   "n": 5,
+   "topic": 1,
+   "critical": false,
+   "text": "Khi hiệu lệnh của người điều khiển giao thông khác với tín hiệu đèn, người lái xe phải chấp hành theo?",
+   "options": [
+    "Tín hiệu đèn giao thông.",
+    "Hiệu lệnh của người điều khiển giao thông.",
+    "Biển báo hiệu đặt tại nơi đó."
+   ],
+   "correct": 2,
+   "explanation": "Hiệu lệnh của người điều khiển giao thông có thứ tự ưu tiên cao nhất, cao hơn đèn tín hiệu và biển báo.",
+   "image": null
+  },
+  {
+   "n": 6,
+   "topic": 1,
+   "critical": false,
+   "text": "Tại nơi đường giao nhau cùng cấp không có tín hiệu đèn và không có vòng xuyến, người lái xe phải nhường đường cho xe nào?",
+   "options": [
+    "Xe đi đến từ bên trái.",
+    "Xe đi đến từ bên phải.",
+    "Xe có kích thước lớn hơn."
+   ],
+   "correct": 2,
+   "explanation": "Ở giao lộ cùng cấp không có điều khiển và không có vòng xuyến, xe đi đến từ bên phải được đi trước.",
+   "image": null
+  },
+  {
+   "n": 7,
+   "topic": 1,
+   "critical": false,
+   "text": "Khi đi vào nơi giao nhau có vòng xuyến, người lái xe phải nhường đường cho xe nào?",
+   "options": [
+    "Xe đi bên phải.",
+    "Xe đi bên trái.",
+    "Không phải nhường xe nào."
+   ],
+   "correct": 2,
+   "explanation": "Tại vòng xuyến, xe đi vào phải nhường đường cho xe đang đi bên trái mình.",
+   "image": null
+  },
+  {
+   "n": 8,
+   "topic": 1,
+   "critical": false,
+   "text": "Thông thường, khi muốn vượt xe phía trước, người lái xe phải vượt về phía nào?",
+   "options": [
+    "Bên phải.",
+    "Bên trái.",
+    "Bên nào thuận tiện cũng được."
+   ],
+   "correct": 2,
+   "explanation": "Xe xin vượt phải vượt về bên trái. Chỉ được vượt bên phải trong một số trường hợp đặc biệt, ví dụ xe phía trước đang báo rẽ trái.",
+   "image": null
+  },
+  {
+   "n": 9,
+   "topic": 1,
+   "critical": false,
+   "text": "Người điều khiển xe mô tô, xe gắn máy có được vừa lái xe vừa sử dụng điện thoại di động cầm tay không?",
+   "options": [
+    "Được, nếu đi chậm.",
+    "Không được.",
+    "Được, nếu dùng một tay để lái."
+   ],
+   "correct": 2,
+   "explanation": "Sử dụng điện thoại cầm tay khi đang lái xe làm mất tập trung và mất khả năng điều khiển, nên bị cấm.",
+   "image": null
+  },
+  {
+   "n": 10,
+   "topic": 1,
+   "critical": false,
+   "text": "Người ngồi trên xe mô tô hai bánh khi tham gia giao thông có bắt buộc đội mũ bảo hiểm không?",
+   "options": [
+    "Chỉ người lái phải đội.",
+    "Người lái và người ngồi sau đều phải đội và cài quai đúng quy cách.",
+    "Chỉ phải đội khi đi đường dài."
+   ],
+   "correct": 2,
+   "explanation": "Cả người lái và người được chở trên mô tô, xe gắn máy đều phải đội mũ bảo hiểm và cài quai đúng cách.",
+   "image": null
+  },
+  {
+   "n": 11,
+   "topic": 1,
+   "critical": false,
+   "text": "Ban đêm, khi tránh xe đi ngược chiều, người lái xe phải sử dụng đèn như thế nào?",
+   "options": [
+    "Bật đèn chiếu xa.",
+    "Chuyển sang đèn chiếu gần.",
+    "Tắt hết đèn."
+   ],
+   "correct": 2,
+   "explanation": "Đèn chiếu xa làm chói mắt người lái xe ngược chiều. Khi tránh nhau phải chuyển sang đèn chiếu gần.",
+   "image": null
+  },
+  {
+   "n": 12,
+   "topic": 1,
+   "critical": false,
+   "text": "Trên đường có nhiều làn cùng chiều, xe chạy với tốc độ thấp hơn phải đi ở làn nào?",
+   "options": [
+    "Làn bên trái.",
+    "Làn bên phải.",
+    "Làn giữa."
+   ],
+   "correct": 2,
+   "explanation": "Xe chạy chậm phải đi về phía bên phải, để làn bên trái cho xe chạy nhanh hơn và xe vượt.",
+   "image": null
+  },
+  {
+   "n": 13,
+   "topic": 2,
+   "critical": false,
+   "text": "Khi gặp tai nạn giao thông trên đường, người có liên quan trực tiếp phải làm gì?",
+   "options": [
+    "Rời khỏi hiện trường ngay.",
+    "Dừng lại, giữ nguyên hiện trường, cấp cứu người bị nạn và báo cho cơ quan chức năng.",
+    "Di chuyển phương tiện đi nơi khác rồi mới báo."
+   ],
+   "correct": 2,
+   "explanation": "Người liên quan phải dừng xe, giữ hiện trường, sơ cứu người bị nạn và báo ngay cho cơ quan có thẩm quyền.",
+   "image": null
+  },
+  {
+   "n": 14,
+   "topic": 2,
+   "critical": false,
+   "text": "Hành vi nào thể hiện văn hoá khi tham gia giao thông?",
+   "options": [
+    "Bấm còi liên tục để giục xe phía trước.",
+    "Nhường nhịn, giúp đỡ người đi bộ, người già và trẻ em qua đường.",
+    "Đi vào làn đường dành cho xe buýt khi tắc đường."
+   ],
+   "correct": 2,
+   "explanation": "Văn hoá giao thông là tôn trọng, nhường nhịn và giúp đỡ người khác, nhất là những người yếu thế.",
+   "image": null
+  },
+  {
+   "n": 15,
+   "topic": 2,
+   "critical": false,
+   "text": "Trong khu đông dân cư vào ban đêm, việc sử dụng còi xe như thế nào là đúng?",
+   "options": [
+    "Bấm còi thoải mái khi cần.",
+    "Hạn chế, không bấm còi trong khung giờ đêm theo quy định (trừ xe ưu tiên).",
+    "Chỉ bấm còi hơi."
+   ],
+   "correct": 2,
+   "explanation": "Để không làm ảnh hưởng đến người dân, không được bấm còi trong khu đông dân cư vào ban đêm, trừ xe ưu tiên đang làm nhiệm vụ.",
+   "image": null
+  },
+  {
+   "n": 16,
+   "topic": 2,
+   "critical": false,
+   "text": "Khi xe phía sau xin vượt và đủ điều kiện an toàn, người lái xe phía trước nên làm gì?",
+   "options": [
+    "Tăng tốc để không bị vượt.",
+    "Giảm tốc độ, đi sát về bên phải để xe sau vượt.",
+    "Lấn sang trái để chặn."
+   ],
+   "correct": 2,
+   "explanation": "Khi đủ điều kiện an toàn, xe phía trước phải giảm tốc độ và đi sát bên phải để nhường đường cho xe xin vượt.",
+   "image": null
+  },
+  {
+   "n": 17,
+   "topic": 3,
+   "critical": false,
+   "text": "Khi đi trên mặt đường trơn trượt, người lái xe nên làm gì?",
+   "options": [
+    "Phanh gấp khi cần dừng.",
+    "Giảm tốc độ từ sớm, tránh phanh gấp và đánh lái đột ngột.",
+    "Tăng tốc để qua nhanh."
+   ],
+   "correct": 2,
+   "explanation": "Trên đường trơn, độ bám của lốp giảm. Phải giảm tốc độ từ xa và thao tác nhẹ nhàng để tránh trượt bánh.",
+   "image": null
+  },
+  {
+   "n": 18,
+   "topic": 3,
+   "critical": false,
+   "text": "Khi xuống dốc dài, cách điều khiển xe an toàn là gì?",
+   "options": [
+    "Về số cao và thả trôi.",
+    "Về số thấp, kết hợp phanh động cơ và phanh chân hợp lý.",
+    "Tắt máy để tiết kiệm nhiên liệu."
+   ],
+   "correct": 2,
+   "explanation": "Về số thấp giúp tận dụng phanh động cơ, tránh phanh chân bị nóng và mất tác dụng khi xuống dốc dài.",
+   "image": null
+  },
+  {
+   "n": 19,
+   "topic": 3,
+   "critical": false,
+   "text": "Để phanh xe mô tô an toàn khi đi trên đường bằng, người lái nên?",
+   "options": [
+    "Chỉ dùng phanh trước.",
+    "Chỉ dùng phanh sau.",
+    "Giảm ga và sử dụng đồng thời cả phanh trước và phanh sau."
+   ],
+   "correct": 3,
+   "explanation": "Dùng đồng thời cả hai phanh sau khi nhả ga giúp xe dừng ngắn hơn và ít bị trượt, lật.",
+   "image": null
+  },
+  {
+   "n": 20,
+   "topic": 3,
+   "critical": false,
+   "text": "Khi trời mưa, khoảng cách với xe phía trước nên thay đổi như thế nào?",
+   "options": [
+    "Giảm khoảng cách để bám theo xe trước.",
+    "Tăng khoảng cách so với khi trời khô ráo.",
+    "Giữ nguyên."
+   ],
+   "correct": 2,
+   "explanation": "Trời mưa làm quãng đường phanh dài hơn và tầm nhìn kém hơn, nên cần giữ khoảng cách lớn hơn.",
+   "image": null
+  },
+  {
+   "n": 21,
+   "topic": 3,
+   "critical": false,
+   "text": "Trước khi chuyển hướng (rẽ phải hoặc rẽ trái), người lái xe phải làm gì?",
+   "options": [
+    "Rẽ ngay rồi mới bật xi nhan.",
+    "Quan sát, giảm tốc độ và bật tín hiệu báo rẽ từ trước.",
+    "Bấm còi liên tục."
+   ],
+   "correct": 2,
+   "explanation": "Phải quan sát, giảm tốc độ và báo hiệu từ trước để người khác biết ý định chuyển hướng của mình.",
+   "image": null
+  },
+  {
+   "n": 22,
+   "topic": 4,
+   "critical": false,
+   "text": "Biển báo cấm thường có hình dạng và màu sắc như thế nào?",
+   "options": [
+    "Hình tam giác đều, viền đỏ, nền vàng.",
+    "Hình tròn, viền đỏ, nền trắng, hình vẽ màu đen.",
+    "Hình chữ nhật, nền xanh lam."
+   ],
+   "correct": 2,
+   "explanation": "Phần lớn biển báo cấm có dạng hình tròn, viền đỏ, nền trắng và hình vẽ màu đen.",
+   "image": null
+  },
+  {
+   "n": 23,
+   "topic": 4,
+   "critical": false,
+   "text": "Biển báo nguy hiểm và cảnh báo thường có hình dạng nào?",
+   "options": [
+    "Hình tam giác đều, viền đỏ, nền vàng.",
+    "Hình tròn nền xanh lam.",
+    "Hình bát giác màu đỏ."
+   ],
+   "correct": 1,
+   "explanation": "Biển cảnh báo nguy hiểm có dạng tam giác đều, viền đỏ, nền vàng, để người lái chú ý từ xa.",
+   "image": null
+  },
+  {
+   "n": 24,
+   "topic": 4,
+   "critical": false,
+   "text": "Biển hiệu lệnh có đặc điểm nào?",
+   "options": [
+    "Hình tròn, nền xanh lam, hình vẽ màu trắng.",
+    "Hình tam giác, nền vàng.",
+    "Hình chữ nhật, nền trắng."
+   ],
+   "correct": 1,
+   "explanation": "Biển hiệu lệnh có dạng hình tròn nền xanh lam, báo những điều người tham gia giao thông bắt buộc phải thi hành.",
+   "image": null
+  },
+  {
+   "n": 25,
+   "topic": 4,
+   "critical": false,
+   "text": "Biển báo \"Dừng lại\" (STOP) có hình dạng gì?",
+   "options": [
+    "Hình tròn.",
+    "Hình bát giác màu đỏ.",
+    "Hình tam giác ngược."
+   ],
+   "correct": 2,
+   "explanation": "Biển STOP có hình bát giác màu đỏ với chữ STOP màu trắng: xe phải dừng lại hẳn trước khi đi tiếp.",
+   "image": null
+  },
+  {
+   "n": 26,
+   "topic": 4,
+   "critical": false,
+   "text": "Tại một vị trí có cả biển báo cố định và biển báo tạm thời với ý nghĩa khác nhau, người lái xe phải chấp hành theo?",
+   "options": [
+    "Biển báo cố định.",
+    "Biển báo tạm thời.",
+    "Biển nào cũng được."
+   ],
+   "correct": 2,
+   "explanation": "Biển tạm thời phản ánh điều kiện giao thông hiện tại (thi công, sự cố), nên được ưu tiên hơn biển cố định.",
+   "image": null
+  },
+  {
+   "n": 27,
+   "topic": 4,
+   "critical": false,
+   "text": "Biển chỉ dẫn trên đường thường có hình dạng và màu nền gì?",
+   "options": [
+    "Hình chữ nhật hoặc hình vuông, nền xanh lam.",
+    "Hình tròn, nền đỏ.",
+    "Hình tam giác, nền vàng."
+   ],
+   "correct": 1,
+   "explanation": "Biển chỉ dẫn thường là hình chữ nhật hoặc vuông nền xanh lam, cung cấp thông tin về hướng đi và địa điểm.",
+   "image": null
+  },
+  {
+   "n": 28,
+   "topic": 5,
+   "critical": false,
+   "text": "Tại nơi giao nhau cùng cấp không có đèn tín hiệu, bạn đi thẳng và có một xe con cũng đi thẳng đến từ phía bên phải. Xe nào được đi trước?",
+   "options": [
+    "Xe của bạn.",
+    "Xe con đến từ bên phải.",
+    "Xe nào nhanh hơn thì đi trước."
+   ],
+   "correct": 2,
+   "explanation": "Theo quy tắc nhường đường bên phải, xe đến từ bên phải được đi trước.",
+   "image": null
+  },
+  {
+   "n": 29,
+   "topic": 5,
+   "critical": false,
+   "text": "Đèn tín hiệu đang đỏ nhưng cảnh sát giao thông ra hiệu cho hướng của bạn đi. Bạn phải làm gì?",
+   "options": [
+    "Dừng lại chờ đèn xanh.",
+    "Đi theo hiệu lệnh của cảnh sát giao thông.",
+    "Bấm còi xin đi."
+   ],
+   "correct": 2,
+   "explanation": "Hiệu lệnh của người điều khiển giao thông được ưu tiên hơn tín hiệu đèn.",
+   "image": null
+  },
+  {
+   "n": 30,
+   "topic": 5,
+   "critical": false,
+   "text": "Có người đi bộ đang qua đường trên vạch kẻ dành cho người đi bộ phía trước. Bạn phải làm gì?",
+   "options": [
+    "Bấm còi để người đi bộ tránh.",
+    "Giảm tốc độ và dừng lại nhường đường cho người đi bộ.",
+    "Lách qua phía sau người đi bộ."
+   ],
+   "correct": 2,
+   "explanation": "Tại vạch kẻ đường dành cho người đi bộ, người lái xe phải giảm tốc độ và nhường đường cho người đi bộ.",
+   "image": null
+  },
+  {
+   "n": 31,
+   "topic": 5,
+   "critical": false,
+   "text": "Phía trước có biển cấm rẽ trái tại giao lộ. Bạn muốn sang đường bên trái thì phải làm gì?",
+   "options": [
+    "Rẽ trái nếu không có cảnh sát.",
+    "Không được rẽ trái tại đó, phải đi tiếp và tìm lối khác hợp lệ.",
+    "Quay đầu tại giao lộ đó."
+   ],
+   "correct": 2,
+   "explanation": "Biển cấm rẽ trái có hiệu lực tại giao lộ đó. Muốn sang trái phải đi đến nơi cho phép.",
+   "image": null
+  },
+  {
+   "n": 32,
+   "topic": 5,
+   "critical": false,
+   "text": "Bạn đang đi trên đường và thấy xe phía trước bật đèn báo rẽ trái, đang giảm tốc để rẽ. Bạn muốn vượt thì vượt bên nào?",
+   "options": [
+    "Bên trái.",
+    "Bên phải, khi đủ điều kiện an toàn.",
+    "Không cần quan sát, vượt bên nào cũng được."
+   ],
+   "correct": 2,
+   "explanation": "Khi xe phía trước báo rẽ trái và đang rẽ, được phép vượt bên phải nếu đủ điều kiện an toàn.",
+   "image": null
+  }
+ ]
+}

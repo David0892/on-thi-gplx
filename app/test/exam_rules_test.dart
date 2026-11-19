@@ -39,7 +39,13 @@ List<Question> makePool({int perTopic = 12, int critical = 3}) {
 }
 
 void main() {
-  const quota = {1: 9, 2: 3, 3: 4, 4: 5, 5: 3};
+  const quota = [
+    Quota({1}, 9),
+    Quota({2}, 3),
+    Quota({3}, 4),
+    Quota({4}, 5),
+    Quota({5}, 3),
+  ];
 
   test(
     'exam has the class count, exactly one critical, sorted, no duplicates',
@@ -67,7 +73,8 @@ void main() {
       quota: quota,
       rng: Random(1),
     );
-    for (final MapEntry(key: t, value: count) in quota.entries) {
+    for (final Quota(:topics, :count) in quota) {
+      final t = topics.single;
       expect(exam.where((q) => !q.isCritical && q.topicId == t).length, count);
     }
   });
@@ -93,7 +100,7 @@ void main() {
       () => generateExam(
         cls: a1,
         pool: makePool(perTopic: 2),
-        quota: const {},
+        quota: const [],
         rng: Random(1),
       ),
       throwsA(isA<NotEnoughQuestions>()),

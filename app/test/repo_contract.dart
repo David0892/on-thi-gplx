@@ -17,7 +17,7 @@ typedef Repos = ({
 });
 
 SeedContentRepo loadSeed() => SeedContentRepo.fromJson(
-  jsonDecode(File('assets/seed/content.json').readAsStringSync())
+  jsonDecode(File('test/fixtures/sample_content.json').readAsStringSync())
       as Map<String, dynamic>,
 );
 

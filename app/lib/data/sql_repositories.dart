@@ -431,3 +431,61 @@ class SqlExamRepo implements ExamRepo {
     return [for (final r in rows) _toDomain(r, await _answers(r.id))];
   }
 }
+
+/// Run once per launch, before any screen reads user data. When the question
+/// bank changes (content_version), user rows that point at questions which no
+/// longer exist are removed, so no screen can meet an unknown question key.
+/// Returns true when something was cleaned up (worth telling the user).
+Future<bool> reconcileWithContent(db.UserDb udb, ContentRepo content) =>
+    udb.transaction(() async {
+      const key = 'content_version';
+      final row = await (udb.select(
+        udb.settings,
+      )..where((t) => t.key.equals(key))).getSingleOrNull();
+      if (row?.value == '${content.contentVersion}') return false;
+
+      var removed = 0;
+      for (final p in await udb.select(udb.questionProgress).get()) {
+        if (!content.hasQuestion(p.questionKey)) {
+          removed +=
+              await (udb.delete(udb.questionProgress)..where(
+                    (t) =>
+                        t.classCode.equals(p.classCode) &
+                        t.questionKey.equals(p.questionKey),
+                  ))
+                  .go();
+        }
+      }
+      for (final b in await udb.select(udb.bookmarks).get()) {
+        if (!content.hasQuestion(b.questionKey)) {
+          removed += await (udb.delete(
+            udb.bookmarks,
+          )..where((t) => t.questionKey.equals(b.questionKey))).go();
+        }
+      }
+      // Topic numbering may change with the bank: resume points start over.
+      removed += await udb.delete(udb.topicCursor).go();
+      // An exam that contains an unknown question cannot be shown or graded.
+      final stale = <int>{
+        for (final a in await udb.select(udb.attemptAnswers).get())
+          if (!content.hasQuestion(a.questionKey)) a.attemptId,
+      };
+      for (final id in stale) {
+        await (udb.delete(
+          udb.attemptAnswers,
+        )..where((t) => t.attemptId.equals(id))).go();
+        removed += await (udb.delete(
+          udb.examAttempts,
+        )..where((t) => t.id.equals(id))).go();
+      }
+      await udb
+          .into(udb.settings)
+          .insertOnConflictUpdate(
+            db.SettingsCompanion.insert(
+              key: key,
+              value: '${content.contentVersion}',
+              updatedAt: _now(),
+            ),
+          );
+      return row != null && removed > 0;
+    });

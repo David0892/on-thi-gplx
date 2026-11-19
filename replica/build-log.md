@@ -66,3 +66,38 @@
     - S04 grades an exam immediately if it is reopened after its deadline.
 - **Checks:** 34 tests pass, including the shared repository contract against both implementations and a real-file test that closes and reopens the database. I also killed and relaunched the app on the iOS simulator; details are in backend.md.
 - **S04** goes from partial to done. Remaining gap: a resumed exam opens at question 1 instead of the last question viewed (small; store the current position in `exam_attempts`).
+
+## 2026-11-19: official 600-question bank
+
+**Sources:**
+- *600 câu hỏi* (Cục CSGT, 2025)
+- Công văn 2262/CSGT-P5, with Phụ lục 1–3
+- Thông tư 12/2025 (pass marks)
+
+Details are in [content/README.md](../content/README.md).
+
+**Pipeline:** `tool/content/build_content.py` parses the PDF:
+- the answer key comes from the underlines;
+- 318 images are cropped (about 7.4 MB as WebP);
+- the build refuses to write unless every check passes (600 questions, one underlined answer each, appendix counts).
+
+**What changed in the app:**
+- `assets/content/` replaces the sample seed;
+- the 32-question sample now lives on as a test fixture;
+- chapter quotas are groups (motorbike classes draw "kỹ thuật **or** cấu tạo");
+- pools and critical questions are per class (A1/A: 250 questions, 20 critical; B1: 300, 30; others: 600, 60);
+- images in the question card, with tap to zoom;
+- explanations are optional;
+- user data recorded against the old sample bank is removed on first launch with the new bank.
+
+**Corrections found on the way:**
+- **Pass marks:** A and B1 pass at **23/25**, not 21 (Thông tư 12/2025 Phụ lục II, III).
+- **Topic quotas:** these were "unknown" before; they are now exact from CV 2262.
+- **Chapter IV:** "Cấu tạo và sửa chữa" was missing from the sample topics.
+
+**Checks:**
+- 73 tests pass, including new real-content tests: chapter ranges, pools, critical counts, 30 generated exams per class, every image file present, pass marks;
+- `flutter analyze` is clean;
+- the web build showed an official sign question with its image, with no console errors.
+
+**Not done:** 600 original explanations, which the official set does not provide. The iOS simulator was not rerun, in case someone else is using it.

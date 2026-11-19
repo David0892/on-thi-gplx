@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'data/db/open_db.dart';
 import 'data/memory_repositories.dart';
+import 'data/sql_repositories.dart';
 import 'design/app_theme.dart';
 import 'providers.dart';
 import 'router.dart';
@@ -11,6 +12,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final content = await SeedContentRepo.load();
   final userDb = await openUserDb();
+  if (userDb != null) await reconcileWithContent(userDb, content);
   final container = ProviderContainer(
     overrides: [
       contentRepoProvider.overrideWithValue(content),

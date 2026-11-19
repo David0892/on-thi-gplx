@@ -13,7 +13,8 @@ abstract interface class ContentRepo {
   Topic topic(int id);
   List<Question> pool(String classCode);
   Question question(String key);
-  Map<int, int> quota(String classCode);
+  bool hasQuestion(String key);
+  List<Quota> quota(String classCode);
   int examSetCount(String classCode);
 }
 

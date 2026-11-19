@@ -1,9 +1,11 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:drift/drift.dart' show driftRuntimeOptions;
 import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gplx_prep/data/db/user_db.dart';
+import 'package:gplx_prep/data/memory_repositories.dart';
 import 'package:gplx_prep/data/repositories.dart';
 import 'package:gplx_prep/data/sql_repositories.dart';
 import 'package:gplx_prep/domain/models.dart' show StudySource, AttemptStatus;
@@ -35,6 +37,43 @@ void main() {
     db = UserDb(NativeDatabase.memory());
     return sqlRepos(db!, content);
   }, tearDownFn: () async => db?.close());
+
+  test(
+    'a new question bank removes user data for questions that no longer exist',
+    () async {
+      final udb = UserDb(NativeDatabase.memory());
+      final sample = loadSeed(); // content_version 1, keys sample-NNN
+      final r = sqlRepos(udb, sample);
+      await reconcileWithContent(udb, sample);
+      await r.settings.setClass('A1');
+      final id = await r.exams.start('A1');
+      await r.bookmarks.toggle('sample-005');
+      await r.study.record('A1', 'sample-006', correct: false);
+      await r.study.saveCursor('A1', 1, 3);
+
+      // Same bank again: nothing changes.
+      expect(await reconcileWithContent(udb, sample), isFalse);
+      expect(await r.exams.running(), isNotNull);
+
+      // The official bank (content_version 2, keys 2025-NNN) replaces it.
+      final official = SeedContentRepo.fromJson(
+        jsonDecode(File('assets/content/content.json').readAsStringSync())
+            as Map<String, dynamic>,
+      );
+      expect(await reconcileWithContent(udb, official), isTrue);
+      final r2 = sqlRepos(udb, official);
+      expect(await r2.exams.running(), isNull);
+      expect(() => r2.exams.attempt(id), throwsStateError);
+      expect(await r2.bookmarks.all(), isEmpty);
+      expect(await r2.study.progress('A1'), isEmpty);
+      expect(await r2.study.cursor('A1', 1), 0);
+      expect(
+        await r2.settings.selectedClass(),
+        'A1',
+      ); // the class choice survives
+      await udb.close();
+    },
+  );
 
   group('sqlite persistence across restarts', () {
     late Directory dir;

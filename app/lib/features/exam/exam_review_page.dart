@@ -120,7 +120,9 @@ class _ReviewItem extends StatelessWidget {
         index: answer.position,
         total: total,
         text: question.text,
-        critical: question.isCritical,
+        critical:
+            answer.isCritical, // as graded in this exam (critical is per class)
+        image: QuestionImage.of(question),
         trailing: BookmarkToggle(on: saved, onChanged: (_) => onToggleSave()),
       ),
       const SizedBox(height: AppSpace.s8),
@@ -141,10 +143,11 @@ class _ReviewItem extends StatelessWidget {
         ),
         const SizedBox(height: AppSpace.s8),
       ],
-      ExplanationPanel(
-        body: question.explanation,
-        initiallyExpanded: answer.isCorrect == false,
-      ),
+      if (question.explanation case final body?)
+        ExplanationPanel(
+          body: body,
+          initiallyExpanded: answer.isCorrect == false,
+        ),
     ],
   );
 }
