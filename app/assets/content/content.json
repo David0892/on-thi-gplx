@@ -1664,7 +1664,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Rải vật sắc nhọn hay đổ chất gây trơn trượt có thể làm thủng lốp, trượt ngã cho bất kỳ ai đi qua, nên là hành vi bị nghiêm cấm. Xe đạp vẫn được đi trên quốc lộ (trừ đường cao tốc), nên ý 1 và \"Cả hai ý trên\" đều sai."
   },
   {
    "n": 20,
@@ -1678,7 +1678,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Xe cơ giới, xe máy chuyên dùng chỉ được tham gia giao thông khi đã được kiểm định an toàn kỹ thuật và bảo vệ môi trường, và chưa hết niên hạn sử dụng. Thiếu một trong hai điều kiện là bị cấm, nên chọn \"Cả hai ý trên\"."
   },
   {
    "n": 21,
@@ -1692,7 +1692,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Đua xe chỉ hợp pháp khi được cơ quan nhà nước có thẩm quyền cấp phép, có tổ chức và bảo đảm an toàn. Đường vắng hay được người dân ủng hộ đều không thay thế được giấy phép."
   },
   {
    "n": 22,
@@ -1705,7 +1705,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Đua xe trái phép không chỉ bị nhắc nhở: tùy mức độ và hậu quả, người vi phạm có thể bị xử phạt hành chính hoặc bị truy cứu trách nhiệm hình sự."
   },
   {
    "n": 23,
@@ -1719,7 +1719,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Lái xe ô tô khi trong cơ thể có chất ma túy là vi phạm rất nặng: người lái vừa bị phạt tiền vừa bị tước giấy phép lái xe, nên chọn \"Cả hai ý trên\"."
   },
   {
    "n": 24,
@@ -1733,7 +1733,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Pháp luật cấm điều khiển phương tiện khi trong máu hoặc hơi thở có nồng độ cồn, không có mức \"nhẹ\" nào được chấp nhận. Chỉ cần có nồng độ cồn là vi phạm."
   },
   {
    "n": 25,
@@ -1747,7 +1747,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Lái ô tô khi có nồng độ cồn bị phạt tiền và có thể bị tước giấy phép lái xe, tùy mức nồng độ. Vì có cả hai hình thức xử phạt nên chọn \"Cả hai ý trên\"."
   },
   {
    "n": 26,
@@ -1761,7 +1761,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Lệnh cấm sử dụng rượu, bia khi tham gia giao thông áp dụng cho người điều khiển phương tiện (ô tô, mô tô, xe gắn máy, xe đạp). Người được chở không điều khiển xe nên không thuộc đối tượng của lệnh cấm này."
   },
   {
    "n": 27,
@@ -1776,7 +1776,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Giao xe cho người không đủ điều kiện lái là bị nghiêm cấm: người chưa đủ tuổi, người không có giấy phép lái xe, và người đã bị trừ hết 12 điểm giấy phép lái xe (chưa được phục hồi điểm). Cả ba trường hợp đều cấm, nên chọn ý 4."
   },
   {
    "n": 28,
@@ -1790,7 +1790,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Lạng lách, đánh võng, rú ga liên tục và chống đối, cản trở người thi hành công vụ về an toàn giao thông đều là hành vi bị nghiêm cấm, nên chọn \"Cả hai ý trên\"."
   },
   {
    "n": 29,
@@ -1817,7 +1817,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Gắn thiết bị âm thanh, ánh sáng gây mất an toàn, cản trở người và xe khác, ném gạch đá vào người hoặc phương tiện đang đi trên đường đều bị cấm vì trực tiếp gây nguy hiểm, nên chọn \"Cả hai ý trên\"."
   },
   {
    "n": 31,
@@ -1845,7 +1845,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Lạng lách, đánh võng, rú ga liên tục là hành vi bị nghiêm cấm. Thay đổi tốc độ nhiều lần hay lái xe sau 23 giờ không bị cấm."
   },
   {
    "n": 33,
@@ -1873,7 +1873,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Tại nơi người đi bộ, xe lăn đang qua đường, người lái phải quan sát, giảm tốc độ hoặc dừng hẳn lại để họ qua an toàn. Ý 2 đúng vì có đủ các thao tác này, trong đó có lựa chọn dừng lại; tăng tốc vượt qua (ý 3) là hoàn toàn sai."
   },
   {
    "n": 35,
@@ -1888,7 +1888,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Đường hẹp, quanh co, đèo dốc, cầu cống hẹp, hầm, trời mưa gió, sương mù, mặt đường trơn trượt đều là nơi dễ mất an toàn, nên người lái mô tô phải quan sát, giảm tốc độ hoặc dừng lại ở cả ba trường hợp."
   },
   {
    "n": 36,
@@ -2057,7 +2057,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Trên cầu hẹp chỉ có một làn đường hay ở đường cong tầm nhìn bị hạn chế, người lái không thấy được xe ngược chiều nên không được vượt, kể cả khi đường vắng hay có việc gấp."
   },
   {
    "n": 48,
@@ -2071,7 +2071,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Muốn vượt, người lái báo hiệu cho xe phía trước bằng đèn chiếu sáng phía trước (nháy đèn) hoặc còi. Bấm còi liên tục hay rú ga không phải là tín hiệu xin vượt và còn gây mất trật tự."
   },
   {
    "n": 49,
@@ -2126,7 +2126,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Dùng tay cầm và sử dụng điện thoại hoặc thiết bị điện tử khi đang lái xe bị cấm vì làm mất tập trung và mất một tay điều khiển. Ý 2 mô tả một trường hợp được phép chở người trên thùng xe tải, không phải hành vi bị cấm."
   },
   {
    "n": 53,
@@ -2140,7 +2140,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Không được vượt trên cầu hẹp có một làn đường, tại nơi đường giao nhau, đường bộ giao cùng mức với đường sắt, và khi gặp xe ưu tiên. Cầu có từ 2 làn trở lên hoặc làn chia bằng vạch nét đứt thì vẫn có thể vượt khi đủ điều kiện an toàn."
   },
   {
    "n": 54,
@@ -2168,7 +2168,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Không được quay đầu xe ở phần đường dành cho người đi bộ qua đường, trên cầu, đầu cầu, trên đường cao tốc, nơi giao cắt cùng mức với đường sắt, đường hẹp, đường dốc. Ý 2 sai vì quốc lộ nói chung không cấm quay đầu nếu không có biển cấm."
   },
   {
    "n": 56,
@@ -2212,7 +2212,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Không được lùi xe ở đường một chiều, khu vực cấm dừng, phần đường cho người đi bộ qua đường, nơi đường giao nhau, nơi giao cắt với đường sắt, nơi tầm nhìn bị che khuất, trong hầm và trên đường cao tốc. Cả ba ý đều là nơi cấm lùi."
   },
   {
    "n": 59,
@@ -2285,7 +2285,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Người điều khiển mô tô, xe gắn máy không được dùng xe để kéo hoặc đẩy phương tiện khác, bất kể phương tiện đó nhỏ hay lớn, vì xe hai bánh rất dễ mất thăng bằng."
   },
   {
    "n": 64,
@@ -2298,7 +2298,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Buông cả hai tay, đứng hoặc nằm trên xe để điều khiển, dùng chân chống hay vật khác quệt xuống đường khi xe chạy đều bị cấm. Ý 2 là trường hợp được phép chở tối đa hai người phía sau, không phải hành vi bị cấm."
   },
   {
    "n": 65,
@@ -2313,7 +2313,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Buông cả hai tay, dùng xe kéo đẩy xe khác hoặc vật khác, quệt chân chống xuống đường khi xe chạy là các hành vi không được phép. Chở người, chở hàng đúng quy định, chạm chân khi khởi hành, đội mũ bảo hiểm hay chở người dưới 16 tuổi ngồi sau thì không bị cấm."
   },
   {
    "n": 66,
@@ -2328,7 +2328,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Người ngồi sau mô tô, xe gắn máy không được mang vác vật cồng kềnh và không được bám, kéo, đẩy phương tiện khác, vì làm xe mất thăng bằng. Quy định cấm dùng tay cầm điện thoại khi lái áp dụng cho người điều khiển, nên đáp án là \"Ý 1 và ý 2\"."
   },
   {
    "n": 67,
@@ -2343,7 +2343,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Người được chở trên mô tô, xe gắn máy không được bám, kéo hoặc đẩy phương tiện khác trong mọi trường hợp, kể cả khi xe mình hay xe kia bị hỏng."
   },
   {
    "n": 68,
@@ -2357,7 +2357,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Cả người lái và người được chở trên mô tô, xe gắn máy đều phải đội mũ bảo hiểm đạt quy chuẩn và cài quai đúng quy cách. Mũ không cài quai sẽ văng ra khi va chạm, gần như không bảo vệ được đầu."
   },
   {
    "n": 69,
@@ -2386,7 +2386,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Cả ba nhóm hành vi đều bị cấm vì làm mất khả năng điều khiển hoặc gây nguy hiểm cho người khác: đi dàn hàng ngang, buông hai tay; kéo đẩy xe khác, chở vật cồng kềnh, chở người sai tư thế; ngồi lệch, đứng hay nằm lái xe, đổi người lái khi xe chạy, quệt chân chống xuống đường."
   },
   {
    "n": 71,
@@ -2400,7 +2400,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Người lái mô tô, xe gắn máy không được đi dàn hàng ngang, không được đi vào phần đường của người đi bộ và phương tiện khác, không được dùng ô hay thiết bị âm thanh (trừ thiết bị trợ thính). Cả hai ý đều bị cấm."
   },
   {
    "n": 72,
@@ -2414,7 +2414,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Đi dàn hàng ngang và đi vào phần đường dành cho người đi bộ là hành vi bị cấm. Ý 1 mô tả việc đi đúng làn và chấp hành tín hiệu, là điều bắt buộc phải làm chứ không bị cấm."
   },
   {
    "n": 73,
@@ -2429,7 +2429,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Người được chở trên mô tô, xe gắn máy không được sử dụng ô, kể cả khi trời mưa: ô cản gió làm xe mất thăng bằng và che tầm nhìn. Khi mưa phải dùng áo mưa."
   },
   {
    "n": 74,
@@ -2443,7 +2443,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Người ngồi sau xe mô tô không được kéo theo người đi xe đạp hay bất kỳ phương tiện nào, kể cả khi đường vắng hay cả hai đội mũ bảo hiểm."
   },
   {
    "n": 75,
@@ -2598,7 +2598,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Khi lùi xe phải quan sát hai bên và phía sau, có tín hiệu lùi, và chỉ lùi khi chắc chắn an toàn. Ý 1 thiếu tín hiệu và quan sát hai bên; ý 2 sai vì lùi nhanh là nguy hiểm."
   },
   {
    "n": 86,
@@ -2612,7 +2612,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Ở nơi tầm nhìn bị che khuất thì không được lùi xe, vì người lái không thể chắc chắn phía sau an toàn. Lùi chậm hay bấm còi trước khi lùi đều không làm việc lùi xe trở nên hợp lệ."
   },
   {
    "n": 87,
@@ -2626,7 +2626,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Trên đường không chia hai chiều riêng biệt, khi gặp xe ngược chiều mỗi xe phải giảm tốc độ và đi về bên phải theo chiều đi của mình. Không bắt buộc một xe phải dừng, và tăng tốc khi tránh nhau là nguy hiểm."
   },
   {
    "n": 88,
@@ -2641,7 +2641,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Khi tránh xe ngược chiều: ở chỗ đường hẹp có chỗ tránh thì xe gần chỗ tránh hơn vào tránh; xe xuống dốc nhường xe lên dốc; xe có chướng ngại vật phía trước nhường xe không có chướng ngại vật. Cả ba quy tắc đều đúng."
   },
   {
    "n": 89,
@@ -2655,7 +2655,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Xe đang xuống dốc phải nhường đường cho xe lên dốc, vì xe lên dốc khó dừng rồi khởi hành lại hơn. Không cần chờ xe lên dốc nháy đèn mới nhường."
   },
   {
    "n": 90,
@@ -2669,7 +2669,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Ở đường cong tầm nhìn hạn chế, người lái phải quan sát, giảm tốc độ hoặc dừng lại để bảo đảm an toàn. Sang làn ngược chiều hoặc vượt bên phải ở đây là rất nguy hiểm và bị cấm."
   },
   {
    "n": 91,
@@ -2683,7 +2683,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Xe đi từ đường không ưu tiên, đường nhánh phải nhường đường cho xe trên đường ưu tiên, đường chính đến từ bất kỳ hướng nào, không phân biệt bên phải hay bên trái."
   },
   {
    "n": 92,
@@ -2697,7 +2697,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Tại nơi giao nhau có báo hiệu đi theo vòng xuyến, xe phải nhường đường cho xe đến từ bên trái (xe đang ở trong vòng xuyến)."
   },
   {
    "n": 93,
@@ -2711,7 +2711,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Tại nơi giao nhau không có báo hiệu đi theo vòng xuyến, xe phải nhường đường cho xe đến từ bên phải. Xin đường trước không được quyền đi trước."
   },
   {
    "n": 94,
@@ -2768,7 +2768,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Xe Cảnh sát giao thông không phát tín hiệu ưu tiên thì được coi như xe thường, nên người lái được vượt khi bảo đảm an toàn và đúng quy tắc vượt. Vượt ở phần đường dành cho người đi bộ qua đường thì luôn sai."
   },
   {
    "n": 98,
@@ -2783,7 +2783,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Xe cứu thương đang phát tín hiệu ưu tiên đang làm nhiệm vụ khẩn cấp, nên không được vượt mà phải nhường đường. Trên cầu, nơi giao nhau hay khi thấy an toàn cũng không được vượt."
   },
   {
    "n": 99,
@@ -2840,7 +2840,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Tại đường ngang, cầu chung với đường sắt, người tham gia giao thông phải dừng trước vạch dừng khi có hiệu lệnh của nhân viên gác chắn, đèn đỏ nhấp nháy và chuông kêu, hoặc chắn đường đang dịch chuyển hay đã đóng. Gặp một trong ba báo hiệu đều phải dừng."
   },
   {
    "n": 103,
@@ -3051,7 +3051,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Khi nhập vào đường cao tốc phải có tín hiệu xin vào và nhường xe đang chạy trên đường; quan sát phía sau, đủ khoảng cách mới nhập vào làn bên phải; nếu có làn tăng tốc thì chạy trên làn đó trước khi nhập làn. Cả ba việc đều phải làm."
   },
   {
    "n": 118,
@@ -3705,7 +3705,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Biển báo nguy hiểm và cảnh báo cho biết phía trước có tình huống nguy hiểm, nên người lái phải giảm tốc độ, chú ý quan sát và sẵn sàng xử lý. Biển chỉ dẫn, biển hết mọi lệnh cấm hay biển hết hạn chế tốc độ không đòi hỏi việc này."
   },
   {
    "n": 164,
@@ -3734,7 +3734,7 @@
    ],
    "correct": 4,
    "image": null,
-   "explanation": null
+   "explanation": "Người lái phải quan sát, giảm tốc độ hoặc dừng lại ở cả ba nhóm nơi: chỗ người đi bộ, xe lăn qua đường; nơi giao nhau, giao cắt với đường sắt, đường hẹp, quanh co, đèo dốc; khu vực trường học, bệnh viện, chợ, đông dân cư, công trường, hiện trường tai nạn."
   },
   {
    "n": 166,
@@ -3761,7 +3761,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Khi gặp xe buýt đang dừng đón trả khách, người lái mô tô phải quan sát, giảm tốc độ, hoặc dừng lại nếu cần, vì hành khách có thể bất ngờ đi ra từ phía trước hay phía sau xe buýt. Tăng tốc vượt qua là nguy hiểm."
   },
   {
    "n": 168,
@@ -4183,7 +4183,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Bỏ trốn sau khi gây tai nạn để trốn tránh trách nhiệm, hoặc cố ý không cứu giúp người bị nạn khi có điều kiện, là hành vi bị nghiêm cấm trong mọi trường hợp."
   },
   {
    "n": 198,
@@ -4198,7 +4198,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Người đi bộ đang qua đường trên vạch kẻ được quyền ưu tiên, nên người lái phải giảm tốc độ và nhường đường. Bấm còi giục, tiếp tục đi vì vội hay lách qua khoảng trống đều sai và nguy hiểm."
   },
   {
    "n": 199,
@@ -4313,7 +4313,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Khi xuống dốc dài, dốc cao bằng xe tay ga, giữ ga ở mức phù hợp và dùng cả phanh trước lẫn phanh sau để giảm tốc độ. Tắt máy hoặc tắt khóa điện khi đang chạy làm mất khả năng điều khiển và rất nguy hiểm."
   },
   {
    "n": 207,
@@ -4434,7 +4434,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Khi vào đường vòng phải quan sát chướng ngại vật, báo hiệu bằng còi, đèn, giảm tốc độ, về số thấp và quay vòng với tốc độ phù hợp với độ cong. Tăng tốc trong đường vòng dễ làm xe văng ra ngoài."
   },
   {
    "n": 216,
@@ -4585,7 +4585,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Trên đường trơn: giữ vững tay lái, đi theo vệt bánh xe phía trước, dùng số thấp, đi chậm, gài cầu nếu có, giữ đều ga, không lấy nhiều lái, không đánh lái ngoặt và không phanh gấp. Ý 1 sai vì đánh lái ngoặt và phanh gấp trên đường trơn dễ làm xe trượt."
   },
   {
    "n": 227,
@@ -4701,7 +4701,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Trước khi mở cửa xuống xe phải quan sát phía trước, phía sau và phía bên mở cửa, mở hé cửa trước, chỉ mở ở mức cần thiết khi thấy an toàn. Mở cửa ngay hoặc mở hết cỡ dễ va vào xe máy, xe đạp đang đi tới."
   },
   {
    "n": 235,
@@ -4855,7 +4855,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Lái ô tô trời mưa: giảm tốc độ, tăng quan sát, không phanh gấp, không tăng ga hay đánh lái đột ngột, bật đèn chiếu gần và để gạt nước ở chế độ phù hợp. Phanh gấp trong vũng nước hay bật đèn chiếu xa rồi tăng tốc đều làm tăng nguy cơ tai nạn."
   },
   {
    "n": 246,
@@ -4869,7 +4869,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Khi lùi xe phải quan sát bên trái, bên phải và phía sau, có tín hiệu cần thiết và lùi với tốc độ phù hợp. Chỉ nhìn phía trước hoặc lùi nhanh là nguy hiểm."
   },
   {
    "n": 247,
@@ -4952,7 +4952,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Xe số tự động xuống dốc dài: nhả ga, về số thấp để có phanh động cơ, kết hợp đạp phanh chân vừa phải. Về số N sẽ mất phanh động cơ, phải dùng phanh liên tục nên phanh dễ quá nhiệt và mất tác dụng."
   },
   {
    "n": 253,
@@ -4966,7 +4966,7 @@
    ],
    "correct": 1,
    "image": null,
-   "explanation": null
+   "explanation": "Từ đường nhánh ra đường chính phải quan sát, giảm tốc độ, phát tín hiệu và nhường đường cho xe trên đường chính từ bất kỳ hướng nào. Nháy đèn bấm còi rồi tăng tốc, hay chỉ nhường xe to hơn, đều sai quy tắc."
   },
   {
    "n": 254,
@@ -4980,7 +4980,7 @@
    ],
    "correct": 2,
    "image": null,
-   "explanation": null
+   "explanation": "Muốn gọi điện, nhắn tin thì phải giảm tốc độ, dừng xe ở nơi được phép rồi mới dùng điện thoại. Vừa lái vừa dùng điện thoại, dù đã giảm tốc độ hay tăng tốc cách xa xe khác, đều mất tập trung và rất nguy hiểm."
   },
   {
    "n": 255,
@@ -4994,7 +4994,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Chỉ dùng phanh trước trên xe tay ga dễ làm bánh trước bị bó cứng, xe trượt hoặc lật, nhất là khi phanh gấp. Phanh an toàn là phối hợp cả phanh trước và phanh sau; dùng còi không phải thói quen nguy hiểm."
   },
   {
    "n": 256,
@@ -5067,7 +5067,7 @@
    ],
    "correct": 3,
    "image": null,
-   "explanation": null
+   "explanation": "Tăng ga từ từ để xe tăng tốc êm, không bị giật hay bốc đầu làm mất lái; khi cần giảm tốc thì nhả ga nhanh để xe chậm lại kịp thời. Tăng ga thật mạnh dễ mất kiểm soát, còn giảm ga từ từ thì phản ứng chậm khi gặp tình huống."
   },
   {
    "n": 261,

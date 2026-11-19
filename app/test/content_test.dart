@@ -84,6 +84,20 @@ void main() {
     }
   });
 
+  test('every critical question has an explanation (own writing)', () {
+    final critical = content.pool('B').where((q) => q.isCritical).toList();
+    expect(critical, hasLength(60));
+    for (final q in critical) {
+      expect(q.explanation, isNotNull, reason: q.key);
+      expect(q.explanation!.length, greaterThan(40), reason: q.key);
+    }
+    // A1/A see their 20 critical questions with explanations too.
+    expect(
+      content.pool('A1').where((q) => q.isCritical && q.explanation == null),
+      isEmpty,
+    );
+  });
+
   test('every referenced image file exists; all sign and scenario questions have one', () {
     for (final q in content.pool('B')) {
       if (q.image != null) {

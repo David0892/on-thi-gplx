@@ -101,3 +101,11 @@ Details are in [content/README.md](../content/README.md).
 - the web build showed an official sign question with its image, with no console errors.
 
 **Not done:** 600 original explanations, which the official set does not provide. The iOS simulator was not rerun, in case someone else is using it.
+
+## 2026-11-19: explanations, batch 1 (60 critical questions)
+
+- **What was written:** explanations for all 60 critical questions in `content/explanations.json`, in our own words. Each one checks against the underlined official answer and says why the tempting wrong options are wrong (e.g. Câu 19: "Cả hai ý trên" is wrong because bicycles may use quốc lộ).
+- **Pipeline:** the build merges the explanations and fails if a key is not a real question, an explanation is empty, or a critical question has none.
+- **Reproducibility:** the build was re-run in a fresh venv from `requirements.txt`. The output was byte-identical apart from the 60 explanation lines (all 318 images unchanged).
+- **Checks:** 74 tests pass, including a new one that every critical question has an explanation. In the web build, A1's critical drill shows 20 questions, and answering one wrong shows the explanation.
+- **Remaining:** 540 explanations, for the non-critical questions.

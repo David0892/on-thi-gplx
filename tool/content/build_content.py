@@ -32,6 +32,7 @@ OUT = ROOT / "app" / "assets" / "content"
 BANK = SRC / "bo-600-cau-hoi-2025.pdf"
 CV = SRC / "cong-van-2262-csgt-p5.pdf"
 RULES = Path(__file__).resolve().parent / "rules.json"
+EXPLANATIONS = ROOT / "content" / "explanations.json"  # own writing, by question number
 
 Q_RE = re.compile(r"^Câu\s+(\d+)\s*[.:]\s*(.*)$")  # Câu 507 is printed with a colon
 OPT_RE = re.compile(r"^([1-4])\s*\.\s+(.*)$")
@@ -261,6 +262,21 @@ def main():
     apps = parse_appendices(CV)
     doc, questions, _ = parse_bank(BANK)
     errors, warnings = validate(questions, apps, rules)
+    explanations = {
+        int(k): v.strip()
+        for k, v in json.loads(EXPLANATIONS.read_text(encoding="utf-8"))["explanations"].items()
+    }
+    unknown = sorted(set(explanations) - {q["number"] for q in questions})
+    if unknown:
+        errors.append(f"explanations.json: unknown question numbers {unknown}")
+    empty = sorted(n for n, v in explanations.items() if len(v) < 20)
+    if empty:
+        errors.append(f"explanations.json: empty or too short for {empty}")
+    critical_all = set(apps[3][0]["numbers"])
+    missing_critical = sorted(critical_all - set(explanations))
+    if missing_critical:
+        errors.append(f"explanations.json: critical questions without explanation {missing_critical}")
+    print(f"explanations: {len(explanations)} (critical covered: {len(critical_all & set(explanations))}/60)")
 
     with_img = sum(1 for q in questions if q["images"])
     print(f"parsed {len(questions)} questions, {with_img} with an image")
@@ -315,7 +331,7 @@ def main():
             "options": [clean(o["text"]) for o in q["options"]],
             "correct": next(i + 1 for i, o in enumerate(q["options"]) if o["under"]),
             "image": image,
-            "explanation": None,
+            "explanation": explanations.get(n),
         })
 
     content = {

@@ -73,4 +73,10 @@ A question on the 60-list that an appendix files under another group (for exampl
 
 The question bank and the công văn are administrative documents issued by Cục Cảnh sát giao thông. Under Article 15 of the Luật Sở hữu trí tuệ, legal and administrative documents are not protected by copyright. Have a lawyer confirm this before publishing, including for the images in the book.
 
-**Explanations:** the app shows explanations only where we wrote them ourselves. The official set has none, so `explanation` is `null` for all 600 questions for now.
+**Explanations:** the official set has none, so all explanations are our own writing, in `content/explanations.json` (keyed by question number).
+- **Written:** 60 of 600, covering all the critical questions.
+- **The build checks:** every key is a real question number, no explanation is empty, and every critical question has one.
+- **The rule for writing them:**
+  - say why the underlined answer is right, and why the tempting wrong answers are wrong;
+  - never contradict the official answer;
+  - don't cite article numbers that haven't been checked.
