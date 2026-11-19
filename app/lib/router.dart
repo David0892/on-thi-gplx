@@ -27,23 +27,28 @@ final routerProvider = Provider<GoRouter>((ref) {
     redirect: (context, state) {
       final hasClass = ref.read(selectedClassProvider) != null;
       final atOnboarding = state.matchedLocation == '/onboarding';
-      if (!hasClass && !atOnboarding && state.matchedLocation != '/design') return '/onboarding';
+      if (!hasClass && !atOnboarding && state.matchedLocation != '/design') {
+        return '/onboarding';
+      }
       return null;
     },
     routes: [
       GoRoute(
         path: '/onboarding', // S01
-        builder: (_, s) => ClassPickerPage(changing: s.uri.queryParameters['change'] == '1'),
+        builder: (_, s) =>
+            ClassPickerPage(changing: s.uri.queryParameters['change'] == '1'),
       ),
       GoRoute(path: '/', builder: (_, _) => const HomePage()), // S02
       GoRoute(path: '/exams', builder: (_, _) => const ExamListPage()), // S03
       GoRoute(
         path: '/exams/run/:id', // S04
-        builder: (_, s) => ExamRunPage(attemptId: int.parse(s.pathParameters['id']!)),
+        builder: (_, s) =>
+            ExamRunPage(attemptId: int.parse(s.pathParameters['id']!)),
       ),
       GoRoute(
         path: '/exams/result/:id', // S05
-        builder: (_, s) => ExamResultPage(attemptId: int.parse(s.pathParameters['id']!)),
+        builder: (_, s) =>
+            ExamResultPage(attemptId: int.parse(s.pathParameters['id']!)),
       ),
       GoRoute(
         path: '/exams/review/:id', // S06
@@ -60,10 +65,24 @@ final routerProvider = Provider<GoRouter>((ref) {
           topicId: int.tryParse(s.uri.queryParameters['topic'] ?? ''),
         ),
       ),
-      GoRoute(path: '/signs', builder: (_, _) => const StubPage(title: 'Biển báo', screenId: 'S12')),
-      GoRoute(path: '/tips', builder: (_, _) => const StubPage(title: 'Mẹo ghi nhớ', screenId: 'S13')),
-      GoRoute(path: '/faq', builder: (_, _) => const StubPage(title: 'Hỏi đáp về kỳ thi', screenId: 'S14')),
-      GoRoute(path: '/settings', builder: (_, _) => const SettingsPage()), // S15
+      GoRoute(
+        path: '/signs',
+        builder: (_, _) => const StubPage(title: 'Biển báo', screenId: 'S12'),
+      ),
+      GoRoute(
+        path: '/tips',
+        builder: (_, _) =>
+            const StubPage(title: 'Mẹo ghi nhớ', screenId: 'S13'),
+      ),
+      GoRoute(
+        path: '/faq',
+        builder: (_, _) =>
+            const StubPage(title: 'Hỏi đáp về kỳ thi', screenId: 'S14'),
+      ),
+      GoRoute(
+        path: '/settings',
+        builder: (_, _) => const SettingsPage(),
+      ), // S15
       GoRoute(path: '/design', builder: (_, _) => const GalleryPage()),
     ],
   );

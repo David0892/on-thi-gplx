@@ -10,8 +10,13 @@ import 'package:gplx_prep/domain/models.dart' show StudySource, AttemptStatus;
 
 import 'repo_contract.dart';
 
-({SettingsRepo settings, BookmarkRepo bookmarks, StudyRepo study, ExamRepo exams}) sqlRepos(
-    UserDb db, ContentRepo content) {
+({
+  SettingsRepo settings,
+  BookmarkRepo bookmarks,
+  StudyRepo study,
+  ExamRepo exams,
+})
+sqlRepos(UserDb db, ContentRepo content) {
   final bookmarks = SqlBookmarkRepo(db);
   final study = SqlStudyRepo(db, content, bookmarks);
   return (
@@ -26,14 +31,10 @@ void main() {
   driftRuntimeOptions.dontWarnAboutMultipleDatabases = true;
 
   UserDb? db;
-  runRepoContract(
-    'sqlite repos',
-    (content) async {
-      db = UserDb(NativeDatabase.memory());
-      return sqlRepos(db!, content);
-    },
-    tearDownFn: () async => db?.close(),
-  );
+  runRepoContract('sqlite repos', (content) async {
+    db = UserDb(NativeDatabase.memory());
+    return sqlRepos(db!, content);
+  }, tearDownFn: () async => db?.close());
 
   group('sqlite persistence across restarts', () {
     late Directory dir;
@@ -74,19 +75,22 @@ void main() {
       await db2.close();
     });
 
-    test('the database refuses a second running exam (one_running_exam index)', () async {
-      final db = UserDb(NativeDatabase.memory());
-      final content = loadSeed();
-      final r = sqlRepos(db, content);
-      await r.exams.start('A1');
-      await expectLater(
-        db.customInsert(
-          "INSERT INTO exam_attempts (class_code, content_version, status, started_at, deadline_at, "
-          "question_count, pass_mark) VALUES ('A1', 1, 'in_progress', 1, 2, 25, 21)",
-        ),
-        throwsA(isA<SqliteException>()),
-      );
-      await db.close();
-    });
+    test(
+      'the database refuses a second running exam (one_running_exam index)',
+      () async {
+        final db = UserDb(NativeDatabase.memory());
+        final content = loadSeed();
+        final r = sqlRepos(db, content);
+        await r.exams.start('A1');
+        await expectLater(
+          db.customInsert(
+            "INSERT INTO exam_attempts (class_code, content_version, status, started_at, deadline_at, "
+            "question_count, pass_mark) VALUES ('A1', 1, 'in_progress', 1, 2, 25, 21)",
+          ),
+          throwsA(isA<SqliteException>()),
+        );
+        await db.close();
+      },
+    );
   });
 }

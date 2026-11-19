@@ -45,7 +45,9 @@ abstract final class AppTheme {
       labelMedium: AppType.sm,
       labelSmall: AppType.xs,
     );
-    final rounded = RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppRadius.md));
+    final rounded = RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(AppRadius.md),
+    );
     return ThemeData(
       useMaterial3: true,
       colorScheme: scheme,
@@ -90,7 +92,9 @@ abstract final class AppTheme {
       ),
       dialogTheme: DialogThemeData(
         backgroundColor: c.bg,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppRadius.lg)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(AppRadius.lg),
+        ),
         titleTextStyle: AppType.lg.copyWith(color: c.text),
         contentTextStyle: AppType.base.copyWith(color: c.textMuted),
       ),
@@ -98,7 +102,9 @@ abstract final class AppTheme {
         backgroundColor: c.bg,
         showDragHandle: true,
         shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(AppRadius.lg)),
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(AppRadius.lg),
+          ),
         ),
       ),
       snackBarTheme: SnackBarThemeData(

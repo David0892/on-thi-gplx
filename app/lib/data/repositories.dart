@@ -31,6 +31,9 @@ abstract interface class ExamRepo {
   Future<ExamAttempt> attempt(int id);
   Future<void> answer(int attemptId, int position, int choice);
 
+  /// Remember the question on screen, so a resumed exam reopens there.
+  Future<void> setPosition(int attemptId, int position);
+
   /// Idempotent: submitting a finished attempt returns it unchanged.
   Future<ExamAttempt> submit(int attemptId, {bool timedOut = false});
   Future<void> abandon(int attemptId);
@@ -38,8 +41,16 @@ abstract interface class ExamRepo {
 }
 
 abstract interface class StudyRepo {
-  Future<List<Question>> questions(StudySource source, String classCode, {int? topicId});
-  Future<void> record(String classCode, String questionKey, {required bool correct});
+  Future<List<Question>> questions(
+    StudySource source,
+    String classCode, {
+    int? topicId,
+  });
+  Future<void> record(
+    String classCode,
+    String questionKey, {
+    required bool correct,
+  });
   Future<Map<String, QuestionProgress>> progress(String classCode);
   Future<int> cursor(String classCode, int topicId);
   Future<void> saveCursor(String classCode, int topicId, int position);

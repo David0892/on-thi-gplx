@@ -24,16 +24,18 @@ class StudyPage extends ConsumerStatefulWidget {
 class _StudyPageState extends ConsumerState<StudyPage> {
   int _index = 0;
   bool _cursorLoaded = false;
-  final _answers = <String, int>{}; // this session: questionKey -> chosen position
+  final _answers =
+      <String, int>{}; // this session: questionKey -> chosen position
 
   StudyKey get _key => (source: widget.source, topicId: widget.topicId);
 
   String _title() => switch (widget.source) {
-        StudySource.topic => ref.read(contentRepoProvider).topic(widget.topicId!).shortName,
-        StudySource.critical => 'Câu điểm liệt',
-        StudySource.wrong => 'Câu đã làm sai',
-        StudySource.saved => 'Câu đã lưu',
-      };
+    StudySource.topic =>
+      ref.read(contentRepoProvider).topic(widget.topicId!).shortName,
+    StudySource.critical => 'Câu điểm liệt',
+    StudySource.wrong => 'Câu đã làm sai',
+    StudySource.saved => 'Câu đã lưu',
+  };
 
   @override
   void initState() {
@@ -43,7 +45,9 @@ class _StudyPageState extends ConsumerState<StudyPage> {
 
   Future<void> _restoreCursor() async {
     if (widget.source == StudySource.topic) {
-      final pos = await ref.read(studyRepoProvider).cursor(ref.read(currentClassProvider).code, widget.topicId!);
+      final pos = await ref
+          .read(studyRepoProvider)
+          .cursor(ref.read(currentClassProvider).code, widget.topicId!);
       if (mounted) setState(() => _index = pos);
     }
     if (mounted) setState(() => _cursorLoaded = true);
@@ -52,14 +56,22 @@ class _StudyPageState extends ConsumerState<StudyPage> {
   void _go(int i, int length) {
     setState(() => _index = i.clamp(0, length - 1));
     if (widget.source == StudySource.topic) {
-      ref.read(studyRepoProvider).saveCursor(ref.read(currentClassProvider).code, widget.topicId!, _index);
+      ref
+          .read(studyRepoProvider)
+          .saveCursor(
+            ref.read(currentClassProvider).code,
+            widget.topicId!,
+            _index,
+          );
     }
   }
 
   Future<void> _choose(Question q, int choice) async {
     if (_answers.containsKey(q.key)) return;
     setState(() => _answers[q.key] = choice);
-    await ref.read(studyRepoProvider).record(
+    await ref
+        .read(studyRepoProvider)
+        .record(
           ref.read(currentClassProvider).code,
           q.key,
           correct: choice == q.correctPosition,
@@ -73,9 +85,15 @@ class _StudyPageState extends ConsumerState<StudyPage> {
       context: context,
       builder: (ctx) => AlertDialog(
         title: const Text('Hết câu hỏi'),
-        content: Text('Bạn đã trả lời ${_answers.length}/${qs.length} câu, đúng $right câu.'),
+        content: Text(
+          'Bạn đã trả lời ${_answers.length}/${qs.length} câu, đúng $right câu.',
+        ),
         actions: [
-          AppButton(label: 'Ở lại', variant: AppButtonVariant.ghost, onPressed: () => Navigator.pop(ctx)),
+          AppButton(
+            label: 'Ở lại',
+            variant: AppButtonVariant.ghost,
+            onPressed: () => Navigator.pop(ctx),
+          ),
           AppButton(
             label: 'Xong',
             onPressed: () {
@@ -97,7 +115,9 @@ class _StudyPageState extends ConsumerState<StudyPage> {
       destructive: true,
     );
     if (!ok) return;
-    await ref.read(studyRepoProvider).clearWrong(ref.read(currentClassProvider).code);
+    await ref
+        .read(studyRepoProvider)
+        .clearWrong(ref.read(currentClassProvider).code);
     ref.read(revisionProvider.notifier).bump();
     ref.invalidate(studyQuestionsProvider(_key));
   }
@@ -108,7 +128,12 @@ class _StudyPageState extends ConsumerState<StudyPage> {
       isScrollControlled: true,
       builder: (ctx) => SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.fromLTRB(AppLayout.gutter, 0, AppLayout.gutter, AppLayout.gutter),
+          padding: const EdgeInsets.fromLTRB(
+            AppLayout.gutter,
+            0,
+            AppLayout.gutter,
+            AppLayout.gutter,
+          ),
           child: Wrap(
             spacing: AppSpace.s8,
             runSpacing: AppSpace.s8,
@@ -120,7 +145,8 @@ class _StudyPageState extends ConsumerState<StudyPage> {
                   critical: q.isCritical,
                   state: switch (_answers[q.key]) {
                     null => GridCellState.unanswered,
-                    final c when c == q.correctPosition => GridCellState.correct,
+                    final c when c == q.correctPosition =>
+                      GridCellState.correct,
                     _ => GridCellState.wrong,
                   },
                   onTap: () {
@@ -144,8 +170,13 @@ class _StudyPageState extends ConsumerState<StudyPage> {
       appBar: AppBar(
         title: Text(_title()),
         actions: [
-          if (widget.source == StudySource.wrong && (questions.value?.isNotEmpty ?? false))
-            IconButton(tooltip: 'Xoá danh sách', icon: const Icon(Icons.delete_outline), onPressed: _clearWrong),
+          if (widget.source == StudySource.wrong &&
+              (questions.value?.isNotEmpty ?? false))
+            IconButton(
+              tooltip: 'Xoá danh sách',
+              icon: const Icon(Icons.delete_outline),
+              onPressed: _clearWrong,
+            ),
         ],
       ),
       body: switch (questions) {
@@ -155,36 +186,42 @@ class _StudyPageState extends ConsumerState<StudyPage> {
         _ => const LoadingView(),
       },
       bottomNavigationBar: switch (questions) {
-        AsyncData(:final value) when value.isNotEmpty && _cursorLoaded => _bottomBar(value),
+        AsyncData(:final value) when value.isNotEmpty && _cursorLoaded =>
+          _bottomBar(value),
         _ => null,
       },
     );
   }
 
   Widget _empty() => switch (widget.source) {
-        StudySource.wrong => EmptyState(
-            icon: Icons.task_alt,
-            title: 'Chưa có câu sai nào',
-            body: 'Câu nào bạn trả lời sai khi ôn hoặc khi thi thử sẽ được gom vào đây.',
-            action: AppButton(label: 'Thi thử ngay', onPressed: () => startExam(context, ref)),
-          ),
-        StudySource.saved => const EmptyState(
-            icon: Icons.bookmark_border,
-            title: 'Chưa lưu câu nào',
-            body: 'Bấm biểu tượng dấu trang ở góc câu hỏi để lưu lại những câu khó.',
-          ),
-        _ => const EmptyState(
-            icon: Icons.inbox_outlined,
-            title: 'Chưa có câu hỏi',
-            body: 'Mục này chưa có câu hỏi cho hạng bạn đang ôn.',
-          ),
-      };
+    StudySource.wrong => EmptyState(
+      icon: Icons.task_alt,
+      title: 'Chưa có câu sai nào',
+      body: 'Câu nào bạn trả lời sai khi ôn hoặc khi thi thử sẽ được gom vào đây.',
+      action: AppButton(
+        label: 'Thi thử ngay',
+        onPressed: () => startExam(context, ref),
+      ),
+    ),
+    StudySource.saved => const EmptyState(
+      icon: Icons.bookmark_border,
+      title: 'Chưa lưu câu nào',
+      body: 'Bấm biểu tượng dấu trang ở góc câu hỏi để lưu lại những câu khó.',
+    ),
+    _ => const EmptyState(
+      icon: Icons.inbox_outlined,
+      title: 'Chưa có câu hỏi',
+      body: 'Mục này chưa có câu hỏi cho hạng bạn đang ôn.',
+    ),
+  };
 
   Widget _question(List<Question> qs, Set<String> saved) {
     final i = _index.clamp(0, qs.length - 1);
     final q = qs[i];
     final chosen = _answers[q.key];
+    // Keyed by question so each question opens scrolled to its top.
     return PageBody(
+      key: ValueKey(q.key),
       children: [
         QuestionCard(
           index: i + 1,
@@ -206,7 +243,11 @@ class _StudyPageState extends ConsumerState<StudyPage> {
             text: opt,
             state: chosen == null
                 ? AnswerState.idle
-                : revealedState(position: j + 1, correct: q.correctPosition, chosen: chosen),
+                : revealedState(
+                    position: j + 1,
+                    correct: q.correctPosition,
+                    chosen: chosen,
+                  ),
             onTap: chosen == null ? () => _choose(q, j + 1) : null,
           ),
           const SizedBox(height: AppSpace.s8),
@@ -222,34 +263,40 @@ class _StudyPageState extends ConsumerState<StudyPage> {
   Widget _bottomBar(List<Question> qs) {
     final i = _index.clamp(0, qs.length - 1);
     final isLast = i == qs.length - 1;
-    return SafeArea(
-      child: Container(
-        decoration: BoxDecoration(
-          color: context.colors.bg,
-          border: Border(top: BorderSide(color: context.colors.border)),
-        ),
-        padding: const EdgeInsets.all(AppSpace.s8),
-        child: Row(
-          children: [
-            IconButton(
-              tooltip: 'Câu trước',
-              onPressed: i == 0 ? null : () => _go(i - 1, qs.length),
-              icon: const Icon(Icons.chevron_left),
-            ),
-            Expanded(
-              child: AppButton(
-                label: 'Câu ${i + 1}/${qs.length}',
-                icon: Icons.grid_view,
-                variant: AppButtonVariant.secondary,
-                onPressed: () => _openGrid(qs),
+    // Toolbar text is capped at 1.3x so the controls still fit on a 320px screen.
+    return MediaQuery.withClampedTextScaling(
+      maxScaleFactor: 1.3,
+      child: SafeArea(
+        child: Container(
+          decoration: BoxDecoration(
+            color: context.colors.bg,
+            border: Border(top: BorderSide(color: context.colors.border)),
+          ),
+          padding: const EdgeInsets.all(AppSpace.s8),
+          child: Row(
+            children: [
+              IconButton(
+                tooltip: 'Câu trước',
+                onPressed: i == 0 ? null : () => _go(i - 1, qs.length),
+                icon: const Icon(Icons.chevron_left),
               ),
-            ),
-            const SizedBox(width: AppSpace.s8),
-            AppButton(
-              label: isLast ? 'Hoàn thành' : 'Tiếp',
-              onPressed: isLast ? () => _finish(qs) : () => _go(i + 1, qs.length),
-            ),
-          ],
+              Expanded(
+                child: AppButton(
+                  label: 'Câu ${i + 1}/${qs.length}',
+                  icon: Icons.grid_view,
+                  variant: AppButtonVariant.secondary,
+                  onPressed: () => _openGrid(qs),
+                ),
+              ),
+              const SizedBox(width: AppSpace.s8),
+              AppButton(
+                label: isLast ? 'Hoàn thành' : 'Tiếp',
+                onPressed: isLast
+                    ? () => _finish(qs)
+                    : () => _go(i + 1, qs.length),
+              ),
+            ],
+          ),
         ),
       ),
     );

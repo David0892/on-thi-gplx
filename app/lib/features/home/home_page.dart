@@ -33,7 +33,10 @@ class HomePage extends ConsumerWidget {
       appBar: AppBar(
         title: const Text('Ôn thi GPLX'),
         actions: [
-          ClassChip(code: cls.code, onTap: () => context.push('/onboarding?change=1')),
+          ClassChip(
+            code: cls.code,
+            onTap: () => context.push('/onboarding?change=1'),
+          ),
           IconButton(
             tooltip: 'Cài đặt',
             icon: const Icon(Icons.settings_outlined),
@@ -52,21 +55,30 @@ class HomePage extends ConsumerWidget {
                 borderRadius: BorderRadius.circular(AppRadius.md),
                 border: Border.all(color: c.accent),
               ),
-              child: Row(
+              // Text and button stacked, so neither is squeezed at large text sizes.
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Icon(Icons.pending_actions, color: c.accent),
-                  const SizedBox(width: AppSpace.s12),
-                  Expanded(
-                    child: Text(
-                      'Bạn có bài thi đang làm dở '
-                      '(${running.answeredCount}/${running.questionCount} câu).',
-                      style: AppType.sm.copyWith(color: c.text),
-                    ),
+                  Row(
+                    children: [
+                      Icon(Icons.pending_actions, color: c.accent),
+                      const SizedBox(width: AppSpace.s12),
+                      Expanded(
+                        child: Text(
+                          'Bạn có bài thi đang làm dở '
+                          '(${running.answeredCount}/${running.questionCount} câu).',
+                          style: AppType.sm.copyWith(color: c.text),
+                        ),
+                      ),
+                    ],
                   ),
-                  AppButton(
-                    label: 'Làm tiếp',
-                    variant: AppButtonVariant.ghost,
-                    onPressed: () => context.go('/exams/run/${running.id}'),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: AppButton(
+                      label: 'Làm tiếp',
+                      variant: AppButtonVariant.ghost,
+                      onPressed: () => context.go('/exams/run/${running.id}'),
+                    ),
                   ),
                 ],
               ),
@@ -130,7 +142,12 @@ class HomePage extends ConsumerWidget {
                   for (final (icon, label, count, path) in tiles)
                     SizedBox(
                       width: w,
-                      child: MenuTile(icon: icon, label: label, count: count, onTap: () => context.push(path)),
+                      child: MenuTile(
+                        icon: icon,
+                        label: label,
+                        count: count,
+                        onTap: () => context.push(path),
+                      ),
                     ),
                 ],
               );

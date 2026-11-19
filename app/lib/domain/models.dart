@@ -75,12 +75,12 @@ class AttemptAnswer {
   final bool? isCorrect; // set at grading
 
   AttemptAnswer copyWith({int? chosen, bool? isCorrect}) => AttemptAnswer(
-        position: position,
-        questionKey: questionKey,
-        isCritical: isCritical,
-        chosen: chosen ?? this.chosen,
-        isCorrect: isCorrect ?? this.isCorrect,
-      );
+    position: position,
+    questionKey: questionKey,
+    isCritical: isCritical,
+    chosen: chosen ?? this.chosen,
+    isCorrect: isCorrect ?? this.isCorrect,
+  );
 }
 
 class ExamAttempt {
@@ -97,6 +97,7 @@ class ExamAttempt {
     this.score,
     this.passed,
     this.failedOnCritical,
+    this.currentPosition = 1,
   });
 
   final int id;
@@ -112,6 +113,9 @@ class ExamAttempt {
   final bool? passed;
   final bool? failedOnCritical;
 
+  /// 1-based question on screen when the exam was last open.
+  final int currentPosition;
+
   int get questionCount => answers.length;
   bool get isFinished => status != AttemptStatus.inProgress;
   int get answeredCount => answers.where((a) => a.chosen != null).length;
@@ -124,21 +128,22 @@ class ExamAttempt {
     int? score,
     bool? passed,
     bool? failedOnCritical,
-  }) =>
-      ExamAttempt(
-        id: id,
-        classCode: classCode,
-        examSetNumber: examSetNumber,
-        status: status ?? this.status,
-        startedAt: startedAt,
-        deadlineAt: deadlineAt,
-        finishedAt: finishedAt ?? this.finishedAt,
-        passMark: passMark,
-        answers: answers ?? this.answers,
-        score: score ?? this.score,
-        passed: passed ?? this.passed,
-        failedOnCritical: failedOnCritical ?? this.failedOnCritical,
-      );
+    int? currentPosition,
+  }) => ExamAttempt(
+    id: id,
+    classCode: classCode,
+    examSetNumber: examSetNumber,
+    status: status ?? this.status,
+    startedAt: startedAt,
+    deadlineAt: deadlineAt,
+    finishedAt: finishedAt ?? this.finishedAt,
+    passMark: passMark,
+    answers: answers ?? this.answers,
+    score: score ?? this.score,
+    passed: passed ?? this.passed,
+    failedOnCritical: failedOnCritical ?? this.failedOnCritical,
+    currentPosition: currentPosition ?? this.currentPosition,
+  );
 }
 
 class QuestionProgress {

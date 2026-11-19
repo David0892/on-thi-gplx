@@ -17,11 +17,15 @@ typedef Repos = ({
 });
 
 SeedContentRepo loadSeed() => SeedContentRepo.fromJson(
-      jsonDecode(File('assets/seed/content.json').readAsStringSync()) as Map<String, dynamic>,
-    );
+  jsonDecode(File('assets/seed/content.json').readAsStringSync())
+      as Map<String, dynamic>,
+);
 
-void runRepoContract(String name, Future<Repos> Function(ContentRepo content) make,
-    {Future<void> Function()? tearDownFn}) {
+void runRepoContract(
+  String name,
+  Future<Repos> Function(ContentRepo content) make, {
+  Future<void> Function()? tearDownFn,
+}) {
   group(name, () {
     late ContentRepo content;
     late Repos r;
@@ -35,7 +39,11 @@ void runRepoContract(String name, Future<Repos> Function(ContentRepo content) ma
     test('seed is consistent', () {
       expect(content.classes(), hasLength(15));
       for (final q in content.pool('A1')) {
-        expect(q.correctPosition, inInclusiveRange(1, q.options.length), reason: q.key);
+        expect(
+          q.correctPosition,
+          inInclusiveRange(1, q.options.length),
+          reason: q.key,
+        );
         expect(q.explanation, isNotEmpty, reason: q.key);
       }
     });
@@ -53,7 +61,11 @@ void runRepoContract(String name, Future<Repos> Function(ContentRepo content) ma
       expect(a.questionCount, 25);
       expect(a.answers.where((x) => x.isCritical), hasLength(1));
       for (final x in a.answers) {
-        await r.exams.answer(id, x.position, content.question(x.questionKey).correctPosition);
+        await r.exams.answer(
+          id,
+          x.position,
+          content.question(x.questionKey).correctPosition,
+        );
       }
       a = await r.exams.submit(id);
       expect(a.status, AttemptStatus.submitted);
@@ -65,7 +77,11 @@ void runRepoContract(String name, Future<Repos> Function(ContentRepo content) ma
       for (final x in b.answers) {
         final q = content.question(x.questionKey);
         final wrong = q.correctPosition == 1 ? 2 : 1;
-        await r.exams.answer(id2, x.position, x.isCritical ? wrong : q.correctPosition);
+        await r.exams.answer(
+          id2,
+          x.position,
+          x.isCritical ? wrong : q.correctPosition,
+        );
       }
       final graded = await r.exams.submit(id2);
       expect(graded.score, 24);
@@ -93,6 +109,13 @@ void runRepoContract(String name, Future<Repos> Function(ContentRepo content) ma
       expect((await r.exams.attempt(id)).answers.first.chosen, isNull);
     });
 
+    test('the last viewed question is remembered for resume', () async {
+      final id = await r.exams.start('A1');
+      expect((await r.exams.running())!.currentPosition, 1);
+      await r.exams.setPosition(id, 5);
+      expect((await r.exams.running())!.currentPosition, 5);
+    });
+
     test('starting a new exam abandons the running one', () async {
       final id = await r.exams.start('A1');
       expect((await r.exams.running())?.id, id);
@@ -104,33 +127,48 @@ void runRepoContract(String name, Future<Repos> Function(ContentRepo content) ma
     test('numbered sets are stable and track the best score', () async {
       final a = await r.exams.attempt(await r.exams.start('A1', setNumber: 3));
       final b = await r.exams.attempt(await r.exams.start('A1', setNumber: 3));
-      expect(a.answers.map((x) => x.questionKey), b.answers.map((x) => x.questionKey));
+      expect(
+        a.answers.map((x) => x.questionKey),
+        b.answers.map((x) => x.questionKey),
+      );
       await r.exams.submit(b.id);
       final sets = await r.exams.listSets('A1');
       expect(sets[2].bestScore, 0);
       expect(sets[0].bestScore, isNull);
     });
 
-    test('classes larger than the sample bank throw and write nothing', () async {
-      await expectLater(r.exams.start('D'), throwsA(isA<NotEnoughQuestions>()));
-      expect(await r.exams.running(), isNull);
-    });
+    test(
+      'classes larger than the sample bank throw and write nothing',
+      () async {
+        await expectLater(
+          r.exams.start('D'),
+          throwsA(isA<NotEnoughQuestions>()),
+        );
+        expect(await r.exams.running(), isNull);
+      },
+    );
 
-    test('wrong list: answering right takes it off; clear and reset work', () async {
-      final q = content.pool('A1').first;
-      await r.study.record('A1', q.key, correct: false);
-      expect(await r.study.questions(StudySource.wrong, 'A1'), contains(q));
-      await r.study.record('A1', q.key, correct: true);
-      expect(await r.study.questions(StudySource.wrong, 'A1'), isNot(contains(q)));
+    test(
+      'wrong list: answering right takes it off; clear and reset work',
+      () async {
+        final q = content.pool('A1').first;
+        await r.study.record('A1', q.key, correct: false);
+        expect(await r.study.questions(StudySource.wrong, 'A1'), contains(q));
+        await r.study.record('A1', q.key, correct: true);
+        expect(
+          await r.study.questions(StudySource.wrong, 'A1'),
+          isNot(contains(q)),
+        );
 
-      await r.study.record('A1', q.key, correct: false);
-      await r.study.clearWrong('A1');
-      expect(await r.study.questions(StudySource.wrong, 'A1'), isEmpty);
-      expect((await r.study.progress('A1'))[q.key]?.timesWrong, 2);
+        await r.study.record('A1', q.key, correct: false);
+        await r.study.clearWrong('A1');
+        expect(await r.study.questions(StudySource.wrong, 'A1'), isEmpty);
+        expect((await r.study.progress('A1'))[q.key]?.timesWrong, 2);
 
-      await r.study.reset('A1');
-      expect(await r.study.progress('A1'), isEmpty);
-    });
+        await r.study.reset('A1');
+        expect(await r.study.progress('A1'), isEmpty);
+      },
+    );
 
     test('progress is kept per class', () async {
       final q = content.pool('A1').first;

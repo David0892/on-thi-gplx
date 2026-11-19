@@ -1501,6 +1501,18 @@ class ExamAttempts extends Table with TableInfo<ExamAttempts, ExamAttempt> {
     requiredDuringInsert: false,
     $customConstraints: 'CHECK (failed_on_critical IN (0, 1))',
   );
+  static const VerificationMeta _currentPositionMeta = const VerificationMeta(
+    'currentPosition',
+  );
+  late final GeneratedColumn<int> currentPosition = GeneratedColumn<int>(
+    'current_position',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    $customConstraints: 'NOT NULL DEFAULT 1',
+    defaultValue: const CustomExpression('1'),
+  );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -1516,6 +1528,7 @@ class ExamAttempts extends Table with TableInfo<ExamAttempts, ExamAttempt> {
     score,
     passed,
     failedOnCritical,
+    currentPosition,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -1628,6 +1641,15 @@ class ExamAttempts extends Table with TableInfo<ExamAttempts, ExamAttempt> {
         ),
       );
     }
+    if (data.containsKey('current_position')) {
+      context.handle(
+        _currentPositionMeta,
+        currentPosition.isAcceptableOrUnknown(
+          data['current_position']!,
+          _currentPositionMeta,
+        ),
+      );
+    }
     return context;
   }
 
@@ -1689,6 +1711,10 @@ class ExamAttempts extends Table with TableInfo<ExamAttempts, ExamAttempt> {
         DriftSqlType.int,
         data['${effectivePrefix}failed_on_critical'],
       ),
+      currentPosition: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}current_position'],
+      )!,
     );
   }
 
@@ -1720,6 +1746,9 @@ class ExamAttempt extends DataClass implements Insertable<ExamAttempt> {
   final int? score;
   final int? passed;
   final int? failedOnCritical;
+
+  /// v2: the question on screen, so a resumed exam reopens where the learner was.
+  final int currentPosition;
   const ExamAttempt({
     required this.id,
     required this.classCode,
@@ -1734,6 +1763,7 @@ class ExamAttempt extends DataClass implements Insertable<ExamAttempt> {
     this.score,
     this.passed,
     this.failedOnCritical,
+    required this.currentPosition,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -1761,6 +1791,7 @@ class ExamAttempt extends DataClass implements Insertable<ExamAttempt> {
     if (!nullToAbsent || failedOnCritical != null) {
       map['failed_on_critical'] = Variable<int>(failedOnCritical);
     }
+    map['current_position'] = Variable<int>(currentPosition);
     return map;
   }
 
@@ -1789,6 +1820,7 @@ class ExamAttempt extends DataClass implements Insertable<ExamAttempt> {
       failedOnCritical: failedOnCritical == null && nullToAbsent
           ? const Value.absent()
           : Value(failedOnCritical),
+      currentPosition: Value(currentPosition),
     );
   }
 
@@ -1811,6 +1843,7 @@ class ExamAttempt extends DataClass implements Insertable<ExamAttempt> {
       score: serializer.fromJson<int?>(json['score']),
       passed: serializer.fromJson<int?>(json['passed']),
       failedOnCritical: serializer.fromJson<int?>(json['failed_on_critical']),
+      currentPosition: serializer.fromJson<int>(json['current_position']),
     );
   }
   @override
@@ -1830,6 +1863,7 @@ class ExamAttempt extends DataClass implements Insertable<ExamAttempt> {
       'score': serializer.toJson<int?>(score),
       'passed': serializer.toJson<int?>(passed),
       'failed_on_critical': serializer.toJson<int?>(failedOnCritical),
+      'current_position': serializer.toJson<int>(currentPosition),
     };
   }
 
@@ -1847,6 +1881,7 @@ class ExamAttempt extends DataClass implements Insertable<ExamAttempt> {
     Value<int?> score = const Value.absent(),
     Value<int?> passed = const Value.absent(),
     Value<int?> failedOnCritical = const Value.absent(),
+    int? currentPosition,
   }) => ExamAttempt(
     id: id ?? this.id,
     classCode: classCode ?? this.classCode,
@@ -1865,6 +1900,7 @@ class ExamAttempt extends DataClass implements Insertable<ExamAttempt> {
     failedOnCritical: failedOnCritical.present
         ? failedOnCritical.value
         : this.failedOnCritical,
+    currentPosition: currentPosition ?? this.currentPosition,
   );
   ExamAttempt copyWithCompanion(ExamAttemptsCompanion data) {
     return ExamAttempt(
@@ -1893,6 +1929,9 @@ class ExamAttempt extends DataClass implements Insertable<ExamAttempt> {
       failedOnCritical: data.failedOnCritical.present
           ? data.failedOnCritical.value
           : this.failedOnCritical,
+      currentPosition: data.currentPosition.present
+          ? data.currentPosition.value
+          : this.currentPosition,
     );
   }
 
@@ -1911,7 +1950,8 @@ class ExamAttempt extends DataClass implements Insertable<ExamAttempt> {
           ..write('passMark: $passMark, ')
           ..write('score: $score, ')
           ..write('passed: $passed, ')
-          ..write('failedOnCritical: $failedOnCritical')
+          ..write('failedOnCritical: $failedOnCritical, ')
+          ..write('currentPosition: $currentPosition')
           ..write(')'))
         .toString();
   }
@@ -1931,6 +1971,7 @@ class ExamAttempt extends DataClass implements Insertable<ExamAttempt> {
     score,
     passed,
     failedOnCritical,
+    currentPosition,
   );
   @override
   bool operator ==(Object other) =>
@@ -1948,7 +1989,8 @@ class ExamAttempt extends DataClass implements Insertable<ExamAttempt> {
           other.passMark == this.passMark &&
           other.score == this.score &&
           other.passed == this.passed &&
-          other.failedOnCritical == this.failedOnCritical);
+          other.failedOnCritical == this.failedOnCritical &&
+          other.currentPosition == this.currentPosition);
 }
 
 class ExamAttemptsCompanion extends UpdateCompanion<ExamAttempt> {
@@ -1965,6 +2007,7 @@ class ExamAttemptsCompanion extends UpdateCompanion<ExamAttempt> {
   final Value<int?> score;
   final Value<int?> passed;
   final Value<int?> failedOnCritical;
+  final Value<int> currentPosition;
   const ExamAttemptsCompanion({
     this.id = const Value.absent(),
     this.classCode = const Value.absent(),
@@ -1979,6 +2022,7 @@ class ExamAttemptsCompanion extends UpdateCompanion<ExamAttempt> {
     this.score = const Value.absent(),
     this.passed = const Value.absent(),
     this.failedOnCritical = const Value.absent(),
+    this.currentPosition = const Value.absent(),
   });
   ExamAttemptsCompanion.insert({
     this.id = const Value.absent(),
@@ -1994,6 +2038,7 @@ class ExamAttemptsCompanion extends UpdateCompanion<ExamAttempt> {
     this.score = const Value.absent(),
     this.passed = const Value.absent(),
     this.failedOnCritical = const Value.absent(),
+    this.currentPosition = const Value.absent(),
   }) : classCode = Value(classCode),
        contentVersion = Value(contentVersion),
        startedAt = Value(startedAt),
@@ -2014,6 +2059,7 @@ class ExamAttemptsCompanion extends UpdateCompanion<ExamAttempt> {
     Expression<int>? score,
     Expression<int>? passed,
     Expression<int>? failedOnCritical,
+    Expression<int>? currentPosition,
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
@@ -2029,6 +2075,7 @@ class ExamAttemptsCompanion extends UpdateCompanion<ExamAttempt> {
       if (score != null) 'score': score,
       if (passed != null) 'passed': passed,
       if (failedOnCritical != null) 'failed_on_critical': failedOnCritical,
+      if (currentPosition != null) 'current_position': currentPosition,
     });
   }
 
@@ -2046,6 +2093,7 @@ class ExamAttemptsCompanion extends UpdateCompanion<ExamAttempt> {
     Value<int?>? score,
     Value<int?>? passed,
     Value<int?>? failedOnCritical,
+    Value<int>? currentPosition,
   }) {
     return ExamAttemptsCompanion(
       id: id ?? this.id,
@@ -2061,6 +2109,7 @@ class ExamAttemptsCompanion extends UpdateCompanion<ExamAttempt> {
       score: score ?? this.score,
       passed: passed ?? this.passed,
       failedOnCritical: failedOnCritical ?? this.failedOnCritical,
+      currentPosition: currentPosition ?? this.currentPosition,
     );
   }
 
@@ -2106,6 +2155,9 @@ class ExamAttemptsCompanion extends UpdateCompanion<ExamAttempt> {
     if (failedOnCritical.present) {
       map['failed_on_critical'] = Variable<int>(failedOnCritical.value);
     }
+    if (currentPosition.present) {
+      map['current_position'] = Variable<int>(currentPosition.value);
+    }
     return map;
   }
 
@@ -2124,7 +2176,8 @@ class ExamAttemptsCompanion extends UpdateCompanion<ExamAttempt> {
           ..write('passMark: $passMark, ')
           ..write('score: $score, ')
           ..write('passed: $passed, ')
-          ..write('failedOnCritical: $failedOnCritical')
+          ..write('failedOnCritical: $failedOnCritical, ')
+          ..write('currentPosition: $currentPosition')
           ..write(')'))
         .toString();
   }
@@ -3446,6 +3499,7 @@ typedef $ExamAttemptsCreateCompanionBuilder = ExamAttemptsCompanion Function({
   Value<int?> score,
   Value<int?> passed,
   Value<int?> failedOnCritical,
+  Value<int> currentPosition,
 });
 typedef $ExamAttemptsUpdateCompanionBuilder = ExamAttemptsCompanion Function({
   Value<int> id,
@@ -3461,6 +3515,7 @@ typedef $ExamAttemptsUpdateCompanionBuilder = ExamAttemptsCompanion Function({
   Value<int?> score,
   Value<int?> passed,
   Value<int?> failedOnCritical,
+  Value<int> currentPosition,
 });
 
 final class $ExamAttemptsReferences
@@ -3556,6 +3611,11 @@ class $ExamAttemptsFilterComposer extends Composer<_$UserDb, ExamAttempts> {
 
   ColumnFilters<int> get failedOnCritical => $composableBuilder(
     column: $table.failedOnCritical,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get currentPosition => $composableBuilder(
+    column: $table.currentPosition,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -3657,6 +3717,11 @@ class $ExamAttemptsOrderingComposer extends Composer<_$UserDb, ExamAttempts> {
     column: $table.failedOnCritical,
     builder: (column) => ColumnOrderings(column),
   );
+
+  ColumnOrderings<int> get currentPosition => $composableBuilder(
+    column: $table.currentPosition,
+    builder: (column) => ColumnOrderings(column),
+  );
 }
 
 class $ExamAttemptsAnnotationComposer extends Composer<_$UserDb, ExamAttempts> {
@@ -3715,6 +3780,11 @@ class $ExamAttemptsAnnotationComposer extends Composer<_$UserDb, ExamAttempts> {
 
   GeneratedColumn<int> get failedOnCritical => $composableBuilder(
     column: $table.failedOnCritical,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get currentPosition => $composableBuilder(
+    column: $table.currentPosition,
     builder: (column) => column,
   );
 
@@ -3785,6 +3855,7 @@ class $ExamAttemptsTableManager
                 Value<int?> score = const Value.absent(),
                 Value<int?> passed = const Value.absent(),
                 Value<int?> failedOnCritical = const Value.absent(),
+                Value<int> currentPosition = const Value.absent(),
               }) => ExamAttemptsCompanion(
                 id: id,
                 classCode: classCode,
@@ -3799,6 +3870,7 @@ class $ExamAttemptsTableManager
                 score: score,
                 passed: passed,
                 failedOnCritical: failedOnCritical,
+                currentPosition: currentPosition,
               ),
           createCompanionCallback:
               ({
@@ -3815,6 +3887,7 @@ class $ExamAttemptsTableManager
                 Value<int?> score = const Value.absent(),
                 Value<int?> passed = const Value.absent(),
                 Value<int?> failedOnCritical = const Value.absent(),
+                Value<int> currentPosition = const Value.absent(),
               }) => ExamAttemptsCompanion.insert(
                 id: id,
                 classCode: classCode,
@@ -3829,6 +3902,7 @@ class $ExamAttemptsTableManager
                 score: score,
                 passed: passed,
                 failedOnCritical: failedOnCritical,
+                currentPosition: currentPosition,
               ),
           withReferenceMapper: (p0) => p0
               .map(

@@ -7,7 +7,9 @@ import 'data/sql_repositories.dart';
 import 'domain/models.dart';
 
 /// Overridden in main() once the seed is loaded.
-final contentRepoProvider = Provider<ContentRepo>((ref) => throw UnimplementedError());
+final contentRepoProvider = Provider<ContentRepo>(
+  (ref) => throw UnimplementedError(),
+);
 
 /// user.db, opened in main(). Null on web (dev preview), where the memory
 /// repositories stand in and nothing persists.
@@ -25,13 +27,17 @@ final studyRepoProvider = Provider<StudyRepo>((ref) {
   final db = ref.watch(userDbProvider);
   final content = ref.watch(contentRepoProvider);
   final bookmarks = ref.watch(bookmarkRepoProvider);
-  return db == null ? MemoryStudyRepo(content, bookmarks) : SqlStudyRepo(db, content, bookmarks);
+  return db == null
+      ? MemoryStudyRepo(content, bookmarks)
+      : SqlStudyRepo(db, content, bookmarks);
 });
 final examRepoProvider = Provider<ExamRepo>((ref) {
   final db = ref.watch(userDbProvider);
   final content = ref.watch(contentRepoProvider);
   final study = ref.watch(studyRepoProvider);
-  return db == null ? MemoryExamRepo(content, study) : SqlExamRepo(db, content, study);
+  return db == null
+      ? MemoryExamRepo(content, study)
+      : SqlExamRepo(db, content, study);
 });
 
 /// An exam left running (app killed or closed mid-exam), offered on home.
@@ -65,7 +71,9 @@ class SelectedClass extends Notifier<String?> {
   }
 }
 
-final selectedClassProvider = NotifierProvider<SelectedClass, String?>(SelectedClass.new);
+final selectedClassProvider = NotifierProvider<SelectedClass, String?>(
+  SelectedClass.new,
+);
 
 /// The selected class, for screens that only render after onboarding.
 final currentClassProvider = Provider<LicenseClass>((ref) {
@@ -76,7 +84,9 @@ final currentClassProvider = Provider<LicenseClass>((ref) {
 
 final progressProvider = FutureProvider<Map<String, QuestionProgress>>((ref) {
   ref.watch(revisionProvider);
-  return ref.read(studyRepoProvider).progress(ref.watch(currentClassProvider).code);
+  return ref
+      .read(studyRepoProvider)
+      .progress(ref.watch(currentClassProvider).code);
 });
 
 final bookmarksProvider = FutureProvider<Set<String>>((ref) {
@@ -86,12 +96,16 @@ final bookmarksProvider = FutureProvider<Set<String>>((ref) {
 
 final examSetsProvider = FutureProvider<List<ExamSetSummary>>((ref) {
   ref.watch(revisionProvider);
-  return ref.read(examRepoProvider).listSets(ref.watch(currentClassProvider).code);
+  return ref
+      .read(examRepoProvider)
+      .listSets(ref.watch(currentClassProvider).code);
 });
 
 final historyProvider = FutureProvider<List<ExamAttempt>>((ref) {
   ref.watch(revisionProvider);
-  return ref.read(examRepoProvider).history(ref.watch(currentClassProvider).code);
+  return ref
+      .read(examRepoProvider)
+      .history(ref.watch(currentClassProvider).code);
 });
 
 final attemptProvider = FutureProvider.family<ExamAttempt, int>((ref, id) {
@@ -104,17 +118,26 @@ typedef StudyKey = ({StudySource source, int? topicId});
 /// The list is fixed when the session opens; it does not refetch on every
 /// answer, otherwise answering a "wrong" question right would make it vanish
 /// mid-session.
-final studyQuestionsProvider = FutureProvider.autoDispose.family<List<Question>, StudyKey>((ref, key) {
-  return ref.read(studyRepoProvider).questions(
-        key.source,
-        ref.read(currentClassProvider).code,
-        topicId: key.topicId,
-      );
-});
+final studyQuestionsProvider = FutureProvider.autoDispose
+    .family<List<Question>, StudyKey>((ref, key) {
+      return ref
+          .read(studyRepoProvider)
+          .questions(
+            key.source,
+            ref.read(currentClassProvider).code,
+            topicId: key.topicId,
+          );
+    });
 
 class HomeStats {
-  const HomeStats({required this.mastered, required this.total, required this.wrong, required this.saved,
-      required this.examsPassed, required this.examsTaken});
+  const HomeStats({
+    required this.mastered,
+    required this.total,
+    required this.wrong,
+    required this.saved,
+    required this.examsPassed,
+    required this.examsTaken,
+  });
   final int mastered;
   final int total;
   final int wrong;

@@ -49,11 +49,20 @@ class _ExamRunPageState extends ConsumerState<ExamRunPage> {
         if (mounted) context.go('/exams/result/${a.id}');
         return;
       }
-      setState(() => _attempt = a);
+      setState(() {
+        _attempt = a;
+        _index = (a.currentPosition - 1).clamp(0, a.questionCount - 1);
+      });
       _ticker = Timer.periodic(const Duration(seconds: 1), (_) => _tick());
     } catch (e) {
       if (mounted) setState(() => _error = e);
     }
+  }
+
+  /// Moves to question [i] and remembers it, so a resumed exam reopens here.
+  void _goTo(int i) {
+    setState(() => _index = i);
+    ref.read(examRepoProvider).setPosition(_attempt!.id, i + 1);
   }
 
   void _tick() {
@@ -75,9 +84,12 @@ class _ExamRunPageState extends ConsumerState<ExamRunPage> {
   Future<void> _choose(int position, int choice) async {
     final a = _attempt!;
     setState(() {
-      _attempt = a.copyWith(answers: [
-        for (final x in a.answers) x.position == position ? x.copyWith(chosen: choice) : x,
-      ]);
+      _attempt = a.copyWith(
+        answers: [
+          for (final x in a.answers)
+            x.position == position ? x.copyWith(chosen: choice) : x,
+        ],
+      );
     });
     await ref.read(examRepoProvider).answer(a.id, position, choice);
   }
@@ -126,13 +138,20 @@ class _ExamRunPageState extends ConsumerState<ExamRunPage> {
       isScrollControlled: true,
       builder: (ctx) => SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(AppLayout.gutter, 0, AppLayout.gutter, AppLayout.gutter),
+          padding: const EdgeInsets.fromLTRB(
+            AppLayout.gutter,
+            0,
+            AppLayout.gutter,
+            AppLayout.gutter,
+          ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Đã trả lời ${a.answeredCount}/${a.questionCount} câu',
-                  style: AppType.lg.copyWith(color: ctx.colors.text)),
+              Text(
+                'Đã trả lời ${a.answeredCount}/${a.questionCount} câu',
+                style: AppType.lg.copyWith(color: ctx.colors.text),
+              ),
               const SizedBox(height: AppSpace.s16),
               Wrap(
                 spacing: AppSpace.s8,
@@ -141,12 +160,14 @@ class _ExamRunPageState extends ConsumerState<ExamRunPage> {
                   for (final (i, x) in a.answers.indexed)
                     QuestionGridCell(
                       number: i + 1,
-                      state: x.chosen == null ? GridCellState.unanswered : GridCellState.answered,
+                      state: x.chosen == null
+                          ? GridCellState.unanswered
+                          : GridCellState.answered,
                       current: i == _index,
                       critical: false, // not revealed during the exam, like the real test
                       onTap: () {
                         Navigator.pop(ctx);
-                        setState(() => _index = i);
+                        _goTo(i);
                       },
                     ),
                 ],
@@ -161,7 +182,10 @@ class _ExamRunPageState extends ConsumerState<ExamRunPage> {
   @override
   Widget build(BuildContext context) {
     if (_error != null) {
-      return Scaffold(appBar: AppBar(), body: ErrorView(message: 'Không mở được bài thi này.'));
+      return Scaffold(
+        appBar: AppBar(),
+        body: ErrorView(message: 'Không mở được bài thi này.'),
+      );
     }
     final a = _attempt;
     if (a == null) return const Scaffold(body: LoadingView());
@@ -184,13 +208,17 @@ class _ExamRunPageState extends ConsumerState<ExamRunPage> {
             icon: const Icon(Icons.close),
             onPressed: _confirmExit,
           ),
-          title: Text(a.examSetNumber == null ? 'Đề ngẫu nhiên' : 'Đề ${a.examSetNumber}'),
+          title: Text(
+            a.examSetNumber == null ? 'Đề ngẫu nhiên' : 'Đề ${a.examSetNumber}',
+          ),
           actions: [
             CountdownPill(remaining: a.deadlineAt.difference(DateTime.now())),
             const SizedBox(width: AppSpace.s8),
           ],
         ),
+        // Keyed by question so each question opens scrolled to its top.
         body: PageBody(
+          key: ValueKey(_index),
           children: [
             QuestionCard(
               index: _index + 1,
@@ -210,52 +238,70 @@ class _ExamRunPageState extends ConsumerState<ExamRunPage> {
               AnswerOption(
                 position: i + 1,
                 text: opt,
-                state: answer.chosen == i + 1 ? AnswerState.selected : AnswerState.idle,
+                state: answer.chosen == i + 1
+                    ? AnswerState.selected
+                    : AnswerState.idle,
                 onTap: () => _choose(answer.position, i + 1),
               ),
               const SizedBox(height: AppSpace.s8),
             ],
           ],
         ),
-        bottomNavigationBar: SafeArea(
-          child: Container(
-            decoration: BoxDecoration(
-              color: context.colors.bg,
-              border: Border(top: BorderSide(color: context.colors.border)),
-            ),
-            padding: const EdgeInsets.symmetric(horizontal: AppSpace.s8, vertical: AppSpace.s8),
-            child: Row(
-              children: [
-                IconButton(
-                  tooltip: 'Câu trước',
-                  onPressed: _index == 0 ? null : () => setState(() => _index--),
-                  icon: const Icon(Icons.chevron_left),
-                ),
-                Expanded(
-                  child: AppButton(
-                    label: 'Câu ${_index + 1}/${a.questionCount}',
-                    icon: Icons.grid_view,
-                    variant: AppButtonVariant.secondary,
-                    onPressed: _openGrid,
-                  ),
-                ),
-                const SizedBox(width: AppSpace.s8),
-                if (isLast)
-                  AppButton(label: 'Nộp bài', loading: _submitting, onPressed: () => _submit())
-                else ...[
-                  AppButton(
-                    label: 'Nộp',
-                    variant: AppButtonVariant.ghost,
-                    loading: _submitting,
-                    onPressed: () => _submit(),
-                  ),
+        // Toolbar text is capped at 1.3x so four controls still fit on a 320px screen.
+        bottomNavigationBar: MediaQuery.withClampedTextScaling(
+          maxScaleFactor: 1.3,
+          child: SafeArea(
+            child: Container(
+              decoration: BoxDecoration(
+                color: context.colors.bg,
+                border: Border(top: BorderSide(color: context.colors.border)),
+              ),
+              padding: const EdgeInsets.symmetric(
+                horizontal: AppSpace.s8,
+                vertical: AppSpace.s8,
+              ),
+              child: Row(
+                children: [
                   IconButton(
-                    tooltip: 'Câu tiếp theo',
-                    onPressed: () => setState(() => _index++),
-                    icon: const Icon(Icons.chevron_right),
+                    tooltip: 'Câu trước',
+                    onPressed: _index == 0 ? null : () => _goTo(_index - 1),
+                    icon: const Icon(Icons.chevron_left),
                   ),
+                  Expanded(
+                    child: AppButton(
+                      label: 'Câu ${_index + 1}/${a.questionCount}',
+                      icon: Icons.grid_view,
+                      variant: AppButtonVariant.secondary,
+                      onPressed: _openGrid,
+                    ),
+                  ),
+                  const SizedBox(width: AppSpace.s8),
+                  // Flexible, so the loading spinner cannot squeeze the grid button to nothing.
+                  if (isLast)
+                    Flexible(
+                      child: AppButton(
+                        label: 'Nộp bài',
+                        loading: _submitting,
+                        onPressed: () => _submit(),
+                      ),
+                    )
+                  else ...[
+                    Flexible(
+                      child: AppButton(
+                        label: 'Nộp',
+                        variant: AppButtonVariant.ghost,
+                        loading: _submitting,
+                        onPressed: () => _submit(),
+                      ),
+                    ),
+                    IconButton(
+                      tooltip: 'Câu tiếp theo',
+                      onPressed: () => _goTo(_index + 1),
+                      icon: const Icon(Icons.chevron_right),
+                    ),
+                  ],
                 ],
-              ],
+              ),
             ),
           ),
         ),

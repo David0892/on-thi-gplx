@@ -10,13 +10,13 @@ class StubPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(title: Text(title)),
-        body: Center(
-          child: EmptyState(
-            icon: Icons.construction_outlined,
-            title: 'Sắp có',
-            body: 'Mục này đang được xây dựng ($screenId).',
-          ),
-        ),
-      );
+    appBar: AppBar(title: Text(title)),
+    body: Center(
+      child: EmptyState(
+        icon: Icons.construction_outlined,
+        title: 'Sắp có',
+        body: 'Mục này đang được xây dựng ($screenId).',
+      ),
+    ),
+  );
 }

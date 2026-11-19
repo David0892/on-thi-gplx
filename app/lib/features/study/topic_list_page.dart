@@ -29,13 +29,19 @@ class TopicListPage extends ConsumerWidget {
                 for (final (i, t) in content.topics().indexed) ...[
                   if (i > 0) const Divider(),
                   () {
-                    final inTopic = pool.where((q) => q.topicId == t.id).toList();
-                    final right = inTopic.where((q) => progress[q.key]?.lastCorrect == true).length;
+                    final inTopic = pool
+                        .where((q) => q.topicId == t.id)
+                        .toList();
+                    final right = inTopic
+                        .where((q) => progress[q.key]?.lastCorrect == true)
+                        .length;
                     return ListRow(
                       title: t.name,
                       subtitle: '$right/${inTopic.length} câu đã trả lời đúng',
                       progress: inTopic.isEmpty ? 0 : right / inTopic.length,
-                      onTap: inTopic.isEmpty ? null : () => context.push('/study/topic?topic=${t.id}'),
+                      onTap: inTopic.isEmpty
+                          ? null
+                          : () => context.push('/study/topic?topic=${t.id}'),
                     );
                   }(),
                 ],

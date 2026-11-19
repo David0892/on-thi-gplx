@@ -28,7 +28,8 @@ List<Question> generateExam({
 
   if (critical.length < cls.criticalPerExam) {
     throw NotEnoughQuestions(
-        '${cls.name} cần ${cls.criticalPerExam} câu điểm liệt, bộ câu hỏi hiện có ${critical.length}.');
+      '${cls.name} cần ${cls.criticalPerExam} câu điểm liệt, bộ câu hỏi hiện có ${critical.length}.',
+    );
   }
 
   final picked = <Question>[...critical.take(cls.criticalPerExam)];
@@ -39,17 +40,20 @@ List<Question> generateExam({
       throw StateError('Quota for ${cls.code} sums to $total, expected $need');
     }
     for (final MapEntry(key: topic, value: count) in quota.entries) {
-      final inTopic = normal.where((q) => q.topicId == topic).toList()..shuffle(rng);
+      final inTopic = normal.where((q) => q.topicId == topic).toList()
+        ..shuffle(rng);
       if (inTopic.length < count) {
         throw NotEnoughQuestions(
-            '${cls.name} cần $count câu ở chủ đề $topic, bộ câu hỏi hiện có ${inTopic.length}.');
+          '${cls.name} cần $count câu ở chủ đề $topic, bộ câu hỏi hiện có ${inTopic.length}.',
+        );
       }
       picked.addAll(inTopic.take(count));
     }
   } else {
     if (normal.length < need) {
       throw NotEnoughQuestions(
-          '${cls.name} cần ${cls.examQuestionCount} câu, bộ câu hỏi hiện chỉ có ${normal.length + critical.length}.');
+        '${cls.name} cần ${cls.examQuestionCount} câu, bộ câu hỏi hiện chỉ có ${normal.length + critical.length}.',
+      );
     }
     picked.addAll((normal..shuffle(rng)).take(need));
   }
@@ -84,7 +88,9 @@ Grade grade({
   final graded = [
     for (final a in answers)
       () {
-        final ok = a.chosen != null && a.chosen == questions[a.questionKey]!.correctPosition;
+        final ok =
+            a.chosen != null &&
+            a.chosen == questions[a.questionKey]!.correctPosition;
         if (ok) score++;
         if (!ok && a.isCritical) criticalFail = true;
         return a.copyWith(isCorrect: ok);

@@ -11,21 +11,27 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final content = await SeedContentRepo.load();
   final userDb = await openUserDb();
-  final container = ProviderContainer(overrides: [
-    contentRepoProvider.overrideWithValue(content),
-    userDbProvider.overrideWithValue(userDb),
-  ]);
-  // Read before the first frame so the router redirect never sees a loading state.
-  final initialClass = await container.read(settingsRepoProvider).selectedClass();
-  container.dispose();
-  runApp(ProviderScope(
+  final container = ProviderContainer(
     overrides: [
       contentRepoProvider.overrideWithValue(content),
       userDbProvider.overrideWithValue(userDb),
-      initialClassProvider.overrideWithValue(initialClass),
     ],
-    child: const App(),
-  ));
+  );
+  // Read before the first frame so the router redirect never sees a loading state.
+  final initialClass = await container
+      .read(settingsRepoProvider)
+      .selectedClass();
+  container.dispose();
+  runApp(
+    ProviderScope(
+      overrides: [
+        contentRepoProvider.overrideWithValue(content),
+        userDbProvider.overrideWithValue(userDb),
+        initialClassProvider.overrideWithValue(initialClass),
+      ],
+      child: const App(),
+    ),
+  );
 }
 
 class App extends ConsumerWidget {

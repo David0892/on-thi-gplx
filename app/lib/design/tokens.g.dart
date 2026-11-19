@@ -83,7 +83,25 @@ class AppColors extends ThemeExtension<AppColors> {
   );
 
   @override
-  AppColors copyWith({Color? bg, Color? surface, Color? border, Color? borderInput, Color? text, Color? textMuted, Color? accent, Color? onAccent, Color? accentSoft, Color? danger, Color? dangerSoft, Color? onDanger, Color? success, Color? successSoft, Color? onSuccess, Color? warning, Color? warningSoft}) => AppColors(
+  AppColors copyWith({
+    Color? bg,
+    Color? surface,
+    Color? border,
+    Color? borderInput,
+    Color? text,
+    Color? textMuted,
+    Color? accent,
+    Color? onAccent,
+    Color? accentSoft,
+    Color? danger,
+    Color? dangerSoft,
+    Color? onDanger,
+    Color? success,
+    Color? successSoft,
+    Color? onSuccess,
+    Color? warning,
+    Color? warningSoft,
+  }) => AppColors(
     bg: bg ?? this.bg,
     surface: surface ?? this.surface,
     border: border ?? this.border,
@@ -134,13 +152,55 @@ abstract final class AppFont {
 }
 
 abstract final class AppType {
-  static const xs = TextStyle(fontFamily: AppFont.family, fontFamilyFallback: AppFont.fallback, fontSize: 12, height: 1.3333, fontWeight: FontWeight.w500);
-  static const sm = TextStyle(fontFamily: AppFont.family, fontFamilyFallback: AppFont.fallback, fontSize: 14, height: 1.4286, fontWeight: FontWeight.w400);
-  static const base = TextStyle(fontFamily: AppFont.family, fontFamilyFallback: AppFont.fallback, fontSize: 16, height: 1.5, fontWeight: FontWeight.w400);
-  static const question = TextStyle(fontFamily: AppFont.family, fontFamilyFallback: AppFont.fallback, fontSize: 18, height: 1.4444, fontWeight: FontWeight.w500);
-  static const lg = TextStyle(fontFamily: AppFont.family, fontFamilyFallback: AppFont.fallback, fontSize: 20, height: 1.4, fontWeight: FontWeight.w600);
-  static const xl = TextStyle(fontFamily: AppFont.family, fontFamilyFallback: AppFont.fallback, fontSize: 28, height: 1.2143, fontWeight: FontWeight.w700);
-  static const display = TextStyle(fontFamily: AppFont.family, fontFamilyFallback: AppFont.fallback, fontSize: 48, height: 1.0833, fontWeight: FontWeight.w800);
+  static const xs = TextStyle(
+    fontFamily: AppFont.family,
+    fontFamilyFallback: AppFont.fallback,
+    fontSize: 12,
+    height: 1.3333,
+    fontWeight: FontWeight.w500,
+  );
+  static const sm = TextStyle(
+    fontFamily: AppFont.family,
+    fontFamilyFallback: AppFont.fallback,
+    fontSize: 14,
+    height: 1.4286,
+    fontWeight: FontWeight.w400,
+  );
+  static const base = TextStyle(
+    fontFamily: AppFont.family,
+    fontFamilyFallback: AppFont.fallback,
+    fontSize: 16,
+    height: 1.5,
+    fontWeight: FontWeight.w400,
+  );
+  static const question = TextStyle(
+    fontFamily: AppFont.family,
+    fontFamilyFallback: AppFont.fallback,
+    fontSize: 18,
+    height: 1.4444,
+    fontWeight: FontWeight.w500,
+  );
+  static const lg = TextStyle(
+    fontFamily: AppFont.family,
+    fontFamilyFallback: AppFont.fallback,
+    fontSize: 20,
+    height: 1.4,
+    fontWeight: FontWeight.w600,
+  );
+  static const xl = TextStyle(
+    fontFamily: AppFont.family,
+    fontFamilyFallback: AppFont.fallback,
+    fontSize: 28,
+    height: 1.2143,
+    fontWeight: FontWeight.w700,
+  );
+  static const display = TextStyle(
+    fontFamily: AppFont.family,
+    fontFamilyFallback: AppFont.fallback,
+    fontSize: 48,
+    height: 1.0833,
+    fontWeight: FontWeight.w800,
+  );
 }
 
 abstract final class AppSpace {

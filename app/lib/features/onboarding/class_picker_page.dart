@@ -35,25 +35,40 @@ class _ClassPickerPageState extends ConsumerState<ClassPickerPage> {
     _picked ??= ref.watch(selectedClassProvider);
 
     return Scaffold(
-      appBar: widget.changing ? AppBar(title: const Text('Đổi hạng bằng')) : null,
+      appBar: widget.changing
+          ? AppBar(title: const Text('Đổi hạng bằng'))
+          : null,
       body: SafeArea(
         child: PageBody(
           children: [
             if (!widget.changing) ...[
               const SizedBox(height: AppSpace.s24),
-              Text('Bạn đang ôn thi bằng hạng nào?', style: AppType.xl.copyWith(color: c.text)),
+              Text(
+                'Bạn đang ôn thi bằng hạng nào?',
+                style: AppType.xl.copyWith(color: c.text),
+              ),
               const SizedBox(height: AppSpace.s8),
               Text(
                 'Mỗi hạng có số câu, thời gian và điểm đạt khác nhau. Bạn có thể đổi lại bất cứ lúc nào.',
                 style: AppType.base.copyWith(color: c.textMuted),
               ),
             ],
-            for (final MapEntry(key: group, value: label) in _groups.entries) ...[
+            for (final MapEntry(key: group, value: label)
+                in _groups.entries) ...[
               Padding(
-                padding: const EdgeInsets.only(top: AppSpace.s24, bottom: AppSpace.s12),
+                padding: const EdgeInsets.only(
+                  top: AppSpace.s24,
+                  bottom: AppSpace.s12,
+                ),
                 child: Semantics(
                   header: true,
-                  child: Text(label, style: AppType.sm.copyWith(fontWeight: FontWeight.w600, color: c.textMuted)),
+                  child: Text(
+                    label,
+                    style: AppType.sm.copyWith(
+                      fontWeight: FontWeight.w600,
+                      color: c.textMuted,
+                    ),
+                  ),
                 ),
               ),
               LayoutBuilder(
@@ -89,15 +104,21 @@ class _ClassPickerPageState extends ConsumerState<ClassPickerPage> {
           child: Center(
             heightFactor: 1,
             child: ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: AppLayout.maxContentWidth),
+              constraints: const BoxConstraints(
+                maxWidth: AppLayout.maxContentWidth,
+              ),
               child: AppButton(
-                label: _picked == null ? 'Chọn một hạng để tiếp tục' : 'Ôn thi hạng $_picked',
+                label: _picked == null
+                    ? 'Chọn một hạng để tiếp tục'
+                    : 'Ôn thi hạng $_picked',
                 size: AppButtonSize.lg,
                 expand: true,
                 onPressed: _picked == null
                     ? null
                     : () async {
-                        await ref.read(selectedClassProvider.notifier).set(_picked!);
+                        await ref
+                            .read(selectedClassProvider.notifier)
+                            .set(_picked!);
                         ref.read(revisionProvider.notifier).bump();
                         if (context.mounted) context.go('/');
                       },

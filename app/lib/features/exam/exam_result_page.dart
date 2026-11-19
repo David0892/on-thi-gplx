@@ -31,69 +31,79 @@ class ExamResultPage extends ConsumerWidget {
       ),
       body: switch (attempt) {
         AsyncData(:final value) when value.score != null => () {
-            final a = value;
-            final wrong = a.answers.where((x) => x.chosen != null && x.isCorrect == false).length;
-            final blank = a.answers.where((x) => x.chosen == null).length;
-            final criticalMiss = a.answers.where((x) => x.isCritical && x.isCorrect == false).firstOrNull;
-            final kind = a.passed!
-                ? ResultKind.pass
-                : (a.failedOnCritical! ? ResultKind.failCritical : ResultKind.failScore);
-            return PageBody(
-              children: [
-                ResultBanner(
-                  kind: kind,
-                  score: a.score!,
-                  total: a.questionCount,
-                  passMark: a.passMark,
-                  timeUsed: formatDuration(a.timeUsed),
-                  criticalNumber: criticalMiss?.position,
-                ),
-                if (a.status == AttemptStatus.timedOut) ...[
-                  const SizedBox(height: AppSpace.s12),
-                  Text('Hết giờ: bài đã được nộp tự động.',
-                      style: AppType.sm.copyWith(color: c.textMuted), textAlign: TextAlign.center),
-                ],
-                const SizedBox(height: AppSpace.s16),
-                Row(
-                  children: [
-                    _Stat(label: 'Đúng', value: a.score!, color: c.success),
-                    _Stat(label: 'Sai', value: wrong, color: c.danger),
-                    _Stat(label: 'Bỏ trống', value: blank, color: c.textMuted),
-                  ],
-                ),
-                if (criticalMiss != null) ...[
-                  const SizedBox(height: AppSpace.s16),
-                  Text(
-                    'Câu ${criticalMiss.position} là câu điểm liệt: '
-                    '"${content.question(criticalMiss.questionKey).text}"',
-                    style: AppType.sm.copyWith(color: c.text),
-                  ),
-                ],
-                const SizedBox(height: AppSpace.s24),
-                if (a.score! < a.questionCount)
-                  AppButton(
-                    label: 'Xem lại câu sai',
-                    icon: Icons.error_outline,
-                    expand: true,
-                    onPressed: () => context.push('/exams/review/${a.id}?filter=wrong'),
-                  ),
-                const SizedBox(height: AppSpace.s8),
-                AppButton(
-                  label: 'Xem lại cả bài',
-                  variant: AppButtonVariant.secondary,
-                  expand: true,
-                  onPressed: () => context.push('/exams/review/${a.id}'),
-                ),
-                const SizedBox(height: AppSpace.s8),
-                AppButton(
-                  label: 'Làm đề khác',
-                  variant: AppButtonVariant.ghost,
-                  expand: true,
-                  onPressed: () => context.go('/exams'),
+          final a = value;
+          final wrong = a.answers
+              .where((x) => x.chosen != null && x.isCorrect == false)
+              .length;
+          final blank = a.answers.where((x) => x.chosen == null).length;
+          final criticalMiss = a.answers
+              .where((x) => x.isCritical && x.isCorrect == false)
+              .firstOrNull;
+          final kind = a.passed!
+              ? ResultKind.pass
+              : (a.failedOnCritical!
+                    ? ResultKind.failCritical
+                    : ResultKind.failScore);
+          return PageBody(
+            children: [
+              ResultBanner(
+                kind: kind,
+                score: a.score!,
+                total: a.questionCount,
+                passMark: a.passMark,
+                timeUsed: formatDuration(a.timeUsed),
+                criticalNumber: criticalMiss?.position,
+              ),
+              if (a.status == AttemptStatus.timedOut) ...[
+                const SizedBox(height: AppSpace.s12),
+                Text(
+                  'Hết giờ: bài đã được nộp tự động.',
+                  style: AppType.sm.copyWith(color: c.textMuted),
+                  textAlign: TextAlign.center,
                 ),
               ],
-            );
-          }(),
+              const SizedBox(height: AppSpace.s16),
+              Row(
+                children: [
+                  _Stat(label: 'Đúng', value: a.score!, color: c.success),
+                  _Stat(label: 'Sai', value: wrong, color: c.danger),
+                  _Stat(label: 'Bỏ trống', value: blank, color: c.textMuted),
+                ],
+              ),
+              if (criticalMiss != null) ...[
+                const SizedBox(height: AppSpace.s16),
+                Text(
+                  'Câu ${criticalMiss.position} là câu điểm liệt: '
+                  '"${content.question(criticalMiss.questionKey).text}"',
+                  style: AppType.sm.copyWith(color: c.text),
+                ),
+              ],
+              const SizedBox(height: AppSpace.s24),
+              if (a.score! < a.questionCount)
+                AppButton(
+                  label: 'Xem lại câu sai',
+                  icon: Icons.error_outline,
+                  expand: true,
+                  onPressed: () =>
+                      context.push('/exams/review/${a.id}?filter=wrong'),
+                ),
+              const SizedBox(height: AppSpace.s8),
+              AppButton(
+                label: 'Xem lại cả bài',
+                variant: AppButtonVariant.secondary,
+                expand: true,
+                onPressed: () => context.push('/exams/review/${a.id}'),
+              ),
+              const SizedBox(height: AppSpace.s8),
+              AppButton(
+                label: 'Làm đề khác',
+                variant: AppButtonVariant.ghost,
+                expand: true,
+                onPressed: () => context.go('/exams'),
+              ),
+            ],
+          );
+        }(),
         AsyncData() => const ErrorView(message: 'Bài thi này chưa được chấm.'),
         AsyncError() => const ErrorView(message: 'Không tìm thấy bài thi.'),
         _ => const LoadingView(),
@@ -110,11 +120,14 @@ class _Stat extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Expanded(
-        child: Column(
-          children: [
-            Text('$value', style: AppType.xl.copyWith(color: color)),
-            Text(label, style: AppType.sm.copyWith(color: context.colors.textMuted)),
-          ],
+    child: Column(
+      children: [
+        Text('$value', style: AppType.xl.copyWith(color: color)),
+        Text(
+          label,
+          style: AppType.sm.copyWith(color: context.colors.textMuted),
         ),
-      );
+      ],
+    ),
+  );
 }

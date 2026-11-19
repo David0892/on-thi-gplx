@@ -17,13 +17,15 @@ class SettingsPage extends ConsumerWidget {
     final cls = ref.watch(currentClassProvider);
 
     void info(String title, String body) => showDialog<void>(
-          context: context,
-          builder: (ctx) => AlertDialog(
-            title: Text(title),
-            content: SingleChildScrollView(child: Text(body)),
-            actions: [AppButton(label: 'Đóng', onPressed: () => Navigator.pop(ctx))],
-          ),
-        );
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text(title),
+        content: SingleChildScrollView(child: Text(body)),
+        actions: [
+          AppButton(label: 'Đóng', onPressed: () => Navigator.pop(ctx)),
+        ],
+      ),
+    );
 
     final rows = <Widget>[
       ListRow(
@@ -40,7 +42,8 @@ class SettingsPage extends ConsumerWidget {
           final ok = await showConfirmDialog(
             context,
             title: 'Xoá tiến độ ${cls.name}?',
-            body: 'Toàn bộ kết quả ôn tập của hạng này sẽ bị xoá và không khôi phục được. '
+            body:
+                'Toàn bộ kết quả ôn tập của hạng này sẽ bị xoá và không khôi phục được. '
                 'Câu đã lưu vẫn được giữ.',
             confirmLabel: 'Xoá tiến độ',
             destructive: true,
@@ -49,7 +52,8 @@ class SettingsPage extends ConsumerWidget {
           await ref.read(studyRepoProvider).reset(cls.code);
           ref.read(revisionProvider.notifier).bump();
           if (context.mounted) {
-            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Đã xoá tiến độ')));
+            ScaffoldMessenger.of(context)
+                .showSnackBar(const SnackBar(content: Text('Đã xoá tiến độ')));
           }
         },
       ),
@@ -89,7 +93,10 @@ class SettingsPage extends ConsumerWidget {
             borderRadius: BorderRadius.circular(AppRadius.lg),
             child: Column(
               children: [
-                for (final (i, r) in rows.indexed) ...[if (i > 0) const Divider(), r],
+                for (final (i, r) in rows.indexed) ...[
+                  if (i > 0) const Divider(),
+                  r,
+                ],
               ],
             ),
           ),

@@ -61,29 +61,29 @@ class AppButton extends StatelessWidget {
     final min = Size(expand ? double.infinity : AppLayout.tapTargetMin, height);
     final Widget button = switch (variant) {
       AppButtonVariant.primary => FilledButton(
-          onPressed: onPress,
-          style: FilledButton.styleFrom(minimumSize: min),
-          child: child,
-        ),
+        onPressed: onPress,
+        style: FilledButton.styleFrom(minimumSize: min),
+        child: child,
+      ),
       AppButtonVariant.danger => FilledButton(
-          onPressed: onPress,
-          style: FilledButton.styleFrom(
-            minimumSize: min,
-            backgroundColor: c.danger,
-            foregroundColor: c.onDanger,
-          ),
-          child: child,
+        onPressed: onPress,
+        style: FilledButton.styleFrom(
+          minimumSize: min,
+          backgroundColor: c.danger,
+          foregroundColor: c.onDanger,
         ),
+        child: child,
+      ),
       AppButtonVariant.secondary => OutlinedButton(
-          onPressed: onPress,
-          style: OutlinedButton.styleFrom(minimumSize: min),
-          child: child,
-        ),
+        onPressed: onPress,
+        style: OutlinedButton.styleFrom(minimumSize: min),
+        child: child,
+      ),
       AppButtonVariant.ghost => TextButton(
-          onPressed: onPress,
-          style: TextButton.styleFrom(minimumSize: min),
-          child: child,
-        ),
+        onPressed: onPress,
+        style: TextButton.styleFrom(minimumSize: min),
+        child: child,
+      ),
     };
     return Semantics(
       hint: loading ? 'Đang xử lý' : null,
@@ -141,7 +141,10 @@ class MenuTile extends StatelessWidget {
                 const SizedBox(height: AppSpace.s12),
                 Text(
                   label,
-                  style: AppType.sm.copyWith(fontWeight: FontWeight.w600, color: c.text),
+                  style: AppType.sm.copyWith(
+                    fontWeight: FontWeight.w600,
+                    color: c.text,
+                  ),
                 ),
               ],
             ),
@@ -199,7 +202,10 @@ class ClassCard extends StatelessWidget {
         color: selected ? c.accentSoft : c.bg,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppRadius.lg),
-          side: BorderSide(color: selected ? c.accent : c.border, width: selected ? 2 : 1),
+          side: BorderSide(
+            color: selected ? c.accent : c.border,
+            width: selected ? 2 : 1,
+          ),
         ),
         clipBehavior: Clip.antiAlias,
         child: InkWell(
@@ -211,13 +217,25 @@ class ClassCard extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text(code, style: AppType.xl.copyWith(color: c.text)),
-                    const Spacer(),
+                    // Scales down instead of overflowing at large text sizes ("D1E" at 200%).
+                    Expanded(
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          code,
+                          style: AppType.xl.copyWith(color: c.text),
+                        ),
+                      ),
+                    ),
                     if (selected) Icon(Icons.check_circle, color: c.accent),
                   ],
                 ),
                 const SizedBox(height: AppSpace.s4),
-                Text(description, style: AppType.sm.copyWith(color: c.textMuted)),
+                Text(
+                  description,
+                  style: AppType.sm.copyWith(color: c.textMuted),
+                ),
               ],
             ),
           ),
@@ -246,14 +264,21 @@ class ClassChip extends StatelessWidget {
           customBorder: const StadiumBorder(),
           onTap: onTap,
           child: ConstrainedBox(
-            constraints: const BoxConstraints(minHeight: AppLayout.tapTargetMin),
+            constraints: const BoxConstraints(
+              minHeight: AppLayout.tapTargetMin,
+            ),
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: AppSpace.s16),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text('Hạng $code',
-                      style: AppType.sm.copyWith(fontWeight: FontWeight.w600, color: c.accent)),
+                  Text(
+                    'Hạng $code',
+                    style: AppType.sm.copyWith(
+                      fontWeight: FontWeight.w600,
+                      color: c.accent,
+                    ),
+                  ),
                   Icon(Icons.expand_more, size: 20, color: c.accent),
                 ],
               ),
@@ -268,7 +293,11 @@ class ClassChip extends StatelessWidget {
 // ---------------------------------------------------------------- Progress
 
 class ProgressRing extends StatelessWidget {
-  const ProgressRing({super.key, required this.value, this.caption = 'đã thuộc'});
+  const ProgressRing({
+    super.key,
+    required this.value,
+    this.caption = 'đã thuộc',
+  });
   final double value; // 0..1
   final String caption;
 
@@ -293,16 +322,30 @@ class ProgressRing extends StatelessWidget {
               color: done ? c.success : c.accent,
               strokeCap: StrokeCap.round,
             ),
-            Center(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  if (done)
-                    Icon(Icons.check, color: c.success)
-                  else
-                    Text('$pct%', style: AppType.lg.copyWith(fontWeight: FontWeight.w700, color: c.text)),
-                  Text(caption, style: AppType.xs.copyWith(color: c.textMuted)),
-                ],
+            Padding(
+              // Keep the label inside the ring; shrink it rather than overflow at large text sizes.
+              padding: const EdgeInsets.all(AppSpace.s12),
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    if (done)
+                      Icon(Icons.check, color: c.success)
+                    else
+                      Text(
+                        '$pct%',
+                        style: AppType.lg.copyWith(
+                          fontWeight: FontWeight.w700,
+                          color: c.text,
+                        ),
+                      ),
+                    Text(
+                      caption,
+                      style: AppType.xs.copyWith(color: c.textMuted),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
@@ -352,8 +395,15 @@ class CriticalBadge extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Icon(Icons.priority_high, size: 14, color: c.warning),
-          Text('Điểm liệt',
-              style: AppType.xs.copyWith(fontWeight: FontWeight.w600, color: c.warning)),
+          Flexible(
+            child: Text(
+              'Điểm liệt',
+              style: AppType.xs.copyWith(
+                fontWeight: FontWeight.w600,
+                color: c.warning,
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -393,16 +443,30 @@ class QuestionCard extends StatelessWidget {
         children: [
           Row(
             children: [
-              Text('Câu $index/$total', style: AppType.xs.copyWith(color: c.textMuted)),
-              if (critical) ...[const SizedBox(width: AppSpace.s8), const CriticalBadge()],
-              const Spacer(),
+              // Number and badge wrap onto two lines at large text sizes instead of overflowing.
+              Expanded(
+                child: Wrap(
+                  spacing: AppSpace.s8,
+                  runSpacing: AppSpace.s4,
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  children: [
+                    Text(
+                      'Câu $index/$total',
+                      style: AppType.xs.copyWith(color: c.textMuted),
+                    ),
+                    if (critical) const CriticalBadge(),
+                  ],
+                ),
+              ),
               ?trailing,
             ],
           ),
           const SizedBox(height: AppSpace.s8),
           Semantics(
             header: true,
-            label: critical ? 'Câu $index, câu điểm liệt. $text' : 'Câu $index. $text',
+            label: critical
+                ? 'Câu $index, câu điểm liệt. $text'
+                : 'Câu $index. $text',
             excludeSemantics: true,
             child: Text(text, style: AppType.question.copyWith(color: c.text)),
           ),
@@ -442,13 +506,66 @@ class AnswerOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = context.colors;
-    final (Color bg, Color border, double width, Color bubbleBg, Color bubbleFg, IconData? icon, Color? iconColor, String stateWord) =
-        switch (state) {
-      AnswerState.idle => (c.bg, c.border, 1.0, c.surface, c.text, null, null, ''),
-      AnswerState.selected => (c.accentSoft, c.accent, 2.0, c.accent, c.onAccent, null, null, ', đã chọn'),
-      AnswerState.correct => (c.successSoft, c.success, 2.0, c.success, c.onSuccess, Icons.check_circle, c.success, ', đúng'),
-      AnswerState.wrong => (c.dangerSoft, c.danger, 2.0, c.danger, c.onDanger, Icons.cancel, c.danger, ', sai'),
-      AnswerState.missed => (c.bg, c.success, 2.0, c.surface, c.success, Icons.check, c.success, ', đáp án đúng'),
+    final (
+      Color bg,
+      Color border,
+      double width,
+      Color bubbleBg,
+      Color bubbleFg,
+      IconData? icon,
+      Color? iconColor,
+      String stateWord,
+    ) = switch (state) {
+      AnswerState.idle => (
+        c.bg,
+        c.border,
+        1.0,
+        c.surface,
+        c.text,
+        null,
+        null,
+        '',
+      ),
+      AnswerState.selected => (
+        c.accentSoft,
+        c.accent,
+        2.0,
+        c.accent,
+        c.onAccent,
+        null,
+        null,
+        ', đã chọn',
+      ),
+      AnswerState.correct => (
+        c.successSoft,
+        c.success,
+        2.0,
+        c.success,
+        c.onSuccess,
+        Icons.check_circle,
+        c.success,
+        ', đúng',
+      ),
+      AnswerState.wrong => (
+        c.dangerSoft,
+        c.danger,
+        2.0,
+        c.danger,
+        c.onDanger,
+        Icons.cancel,
+        c.danger,
+        ', sai',
+      ),
+      AnswerState.missed => (
+        c.bg,
+        c.success,
+        2.0,
+        c.surface,
+        c.success,
+        Icons.check,
+        c.success,
+        ', đáp án đúng',
+      ),
     };
     return Semantics(
       button: onTap != null,
@@ -471,19 +588,35 @@ class AnswerOption extends StatelessWidget {
             child: ConstrainedBox(
               constraints: const BoxConstraints(minHeight: 56),
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: AppSpace.s16, vertical: AppSpace.s12),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: AppSpace.s16,
+                  vertical: AppSpace.s12,
+                ),
                 child: Row(
                   children: [
                     Container(
                       width: 28,
                       height: 28,
                       alignment: Alignment.center,
-                      decoration: BoxDecoration(color: bubbleBg, shape: BoxShape.circle),
-                      child: Text('$position',
-                          style: AppType.sm.copyWith(fontWeight: FontWeight.w600, color: bubbleFg)),
+                      decoration: BoxDecoration(
+                        color: bubbleBg,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Text(
+                        '$position',
+                        style: AppType.sm.copyWith(
+                          fontWeight: FontWeight.w600,
+                          color: bubbleFg,
+                        ),
+                      ),
                     ),
                     const SizedBox(width: AppSpace.s12),
-                    Expanded(child: Text(text, style: AppType.base.copyWith(color: c.text))),
+                    Expanded(
+                      child: Text(
+                        text,
+                        style: AppType.base.copyWith(color: c.text),
+                      ),
+                    ),
                     if (icon != null) ...[
                       const SizedBox(width: AppSpace.s8),
                       Icon(icon, color: iconColor),
@@ -538,7 +671,9 @@ class QuestionGridCell extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(AppRadius.sm),
             side: BorderSide(
-              color: current ? c.accent : (state == GridCellState.unanswered ? c.border : bg),
+              color: current
+                  ? c.accent
+                  : (state == GridCellState.unanswered ? c.border : bg),
               width: current ? 2 : 1,
             ),
           ),
@@ -548,8 +683,13 @@ class QuestionGridCell extends StatelessWidget {
             child: Stack(
               children: [
                 Center(
-                  child: Text('$number',
-                      style: AppType.sm.copyWith(fontWeight: FontWeight.w600, color: fg)),
+                  child: Text(
+                    '$number',
+                    style: AppType.sm.copyWith(
+                      fontWeight: FontWeight.w600,
+                      color: fg,
+                    ),
+                  ),
                 ),
                 if (critical)
                   Positioned(
@@ -558,7 +698,10 @@ class QuestionGridCell extends StatelessWidget {
                     child: Container(
                       width: 6,
                       height: 6,
-                      decoration: BoxDecoration(color: c.warning, shape: BoxShape.circle),
+                      decoration: BoxDecoration(
+                        color: c.warning,
+                        shape: BoxShape.circle,
+                      ),
                     ),
                   ),
               ],
@@ -606,7 +749,10 @@ class _CountdownPillState extends State<CountdownPill> {
       label: 'Còn ${r.inMinutes} phút ${r.inSeconds % 60} giây',
       excludeSemantics: true,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: AppSpace.s12, vertical: AppSpace.s4),
+        padding: const EdgeInsets.symmetric(
+          horizontal: AppSpace.s12,
+          vertical: AppSpace.s4,
+        ),
         decoration: BoxDecoration(
           color: warn ? c.warningSoft : c.surface,
           borderRadius: BorderRadius.circular(AppRadius.pill),
@@ -614,7 +760,11 @@ class _CountdownPillState extends State<CountdownPill> {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.timer_outlined, size: 18, color: warn ? c.warning : c.text),
+            Icon(
+              Icons.timer_outlined,
+              size: 18,
+              color: warn ? c.warning : c.text,
+            ),
             const SizedBox(width: AppSpace.s4),
             Text(
               '$mm:$ss',
@@ -660,13 +810,21 @@ class ResultBanner extends StatelessWidget {
     final bg = pass ? c.success : c.danger;
     final fg = pass ? c.onSuccess : c.onDanger;
     final (IconData icon, String verdict, String detail) = switch (kind) {
-      ResultKind.pass => (Icons.verified, 'Đạt', 'Cần $passMark/$total câu để đạt'),
-      ResultKind.failScore => (Icons.cancel, 'Chưa đạt', 'Cần $passMark/$total câu để đạt'),
+      ResultKind.pass => (
+        Icons.verified,
+        'Đạt',
+        'Cần $passMark/$total câu để đạt',
+      ),
+      ResultKind.failScore => (
+        Icons.cancel,
+        'Chưa đạt',
+        'Cần $passMark/$total câu để đạt',
+      ),
       ResultKind.failCritical => (
-          Icons.priority_high,
-          'Chưa đạt',
-          'Sai câu điểm liệt số ${criticalNumber ?? '?'}'
-        ),
+        Icons.priority_high,
+        'Chưa đạt',
+        'Sai câu điểm liệt số ${criticalNumber ?? '?'}',
+      ),
     };
     return Semantics(
       liveRegion: true,
@@ -675,7 +833,10 @@ class ResultBanner extends StatelessWidget {
       child: Container(
         width: double.infinity,
         padding: const EdgeInsets.all(AppSpace.s24),
-        decoration: BoxDecoration(color: bg, borderRadius: BorderRadius.circular(AppRadius.lg)),
+        decoration: BoxDecoration(
+          color: bg,
+          borderRadius: BorderRadius.circular(AppRadius.lg),
+        ),
         child: Column(
           children: [
             Icon(icon, color: fg, size: 32),
@@ -683,7 +844,11 @@ class ResultBanner extends StatelessWidget {
             Text('$score/$total', style: AppType.display.copyWith(color: fg)),
             Text(verdict, style: AppType.lg.copyWith(color: fg)),
             const SizedBox(height: AppSpace.s4),
-            Text(detail, style: AppType.sm.copyWith(color: fg), textAlign: TextAlign.center),
+            Text(
+              detail,
+              style: AppType.sm.copyWith(color: fg),
+              textAlign: TextAlign.center,
+            ),
             const SizedBox(height: AppSpace.s8),
             Text('Thời gian: $timeUsed', style: AppType.xs.copyWith(color: fg)),
           ],
@@ -696,30 +861,50 @@ class ResultBanner extends StatelessWidget {
 // ---------------------------------------------------------------- Explanation, bookmark
 
 class ExplanationPanel extends StatelessWidget {
-  const ExplanationPanel({super.key, required this.body, this.initiallyExpanded = true});
+  const ExplanationPanel({
+    super.key,
+    required this.body,
+    this.initiallyExpanded = true,
+  });
   final String body;
   final bool initiallyExpanded;
 
   @override
   Widget build(BuildContext context) {
     final c = context.colors;
-    return Container(
-      decoration: BoxDecoration(
-        color: c.surface,
+    // A Material (not a coloured Container) so the ExpansionTile's ink shows.
+    return Material(
+      color: c.surface,
+      shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(AppRadius.md),
-        border: Border(left: BorderSide(color: c.accent, width: 4)),
       ),
-      child: Theme(
-        data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
-        child: ExpansionTile(
-          initiallyExpanded: initiallyExpanded,
-          tilePadding: const EdgeInsets.symmetric(horizontal: AppSpace.s16),
-          childrenPadding: const EdgeInsets.fromLTRB(AppSpace.s16, 0, AppSpace.s16, AppSpace.s16),
-          leading: Icon(Icons.lightbulb_outline, color: c.accent),
-          title: Text('Giải thích',
-              style: AppType.sm.copyWith(fontWeight: FontWeight.w600, color: c.text)),
-          expandedAlignment: Alignment.centerLeft,
-          children: [Text(body, style: AppType.base.copyWith(color: c.text))],
+      clipBehavior: Clip.antiAlias,
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border(left: BorderSide(color: c.accent, width: 4)),
+        ),
+        child: Theme(
+          data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+          child: ExpansionTile(
+            initiallyExpanded: initiallyExpanded,
+            tilePadding: const EdgeInsets.symmetric(horizontal: AppSpace.s16),
+            childrenPadding: const EdgeInsets.fromLTRB(
+              AppSpace.s16,
+              0,
+              AppSpace.s16,
+              AppSpace.s16,
+            ),
+            leading: Icon(Icons.lightbulb_outline, color: c.accent),
+            title: Text(
+              'Giải thích',
+              style: AppType.sm.copyWith(
+                fontWeight: FontWeight.w600,
+                color: c.text,
+              ),
+            ),
+            expandedAlignment: Alignment.centerLeft,
+            children: [Text(body, style: AppType.base.copyWith(color: c.text))],
+          ),
         ),
       ),
     );
@@ -743,10 +928,14 @@ class BookmarkToggle extends StatelessWidget {
           onChanged(!on);
           ScaffoldMessenger.maybeOf(context)
             ?..hideCurrentSnackBar()
-            ..showSnackBar(SnackBar(content: Text(on ? 'Đã bỏ lưu' : 'Đã lưu')));
+            ..showSnackBar(
+              SnackBar(content: Text(on ? 'Đã bỏ lưu' : 'Đã lưu')),
+            );
         },
-        icon: Icon(on ? Icons.bookmark : Icons.bookmark_border,
-            color: on ? c.accent : c.textMuted),
+        icon: Icon(
+          on ? Icons.bookmark : Icons.bookmark_border,
+          color: on ? c.accent : c.textMuted,
+        ),
       ),
     );
   }
@@ -778,10 +967,21 @@ class EmptyState extends StatelessWidget {
         children: [
           Icon(icon, size: 48, color: c.textMuted),
           const SizedBox(height: AppSpace.s16),
-          Text(title, style: AppType.lg.copyWith(color: c.text), textAlign: TextAlign.center),
+          Text(
+            title,
+            style: AppType.lg.copyWith(color: c.text),
+            textAlign: TextAlign.center,
+          ),
           const SizedBox(height: AppSpace.s8),
-          Text(body, style: AppType.sm.copyWith(color: c.textMuted), textAlign: TextAlign.center),
-          if (action != null) ...[const SizedBox(height: AppSpace.s24), action!],
+          Text(
+            body,
+            style: AppType.sm.copyWith(color: c.textMuted),
+            textAlign: TextAlign.center,
+          ),
+          if (action != null) ...[
+            const SizedBox(height: AppSpace.s24),
+            action!,
+          ],
         ],
       ),
     );
@@ -809,7 +1009,9 @@ Future<bool> showConfirmDialog(
         ),
         AppButton(
           label: confirmLabel,
-          variant: destructive ? AppButtonVariant.danger : AppButtonVariant.primary,
+          variant: destructive
+              ? AppButtonVariant.danger
+              : AppButtonVariant.primary,
           onPressed: () => Navigator.pop(ctx, true),
         ),
       ],
@@ -846,7 +1048,10 @@ class ListRow extends StatelessWidget {
         child: ConstrainedBox(
           constraints: const BoxConstraints(minHeight: 56),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: AppSpace.s16, vertical: AppSpace.s12),
+            padding: const EdgeInsets.symmetric(
+              horizontal: AppSpace.s16,
+              vertical: AppSpace.s12,
+            ),
             child: Row(
               children: [
                 if (leading != null) ...[
@@ -859,7 +1064,10 @@ class ListRow extends StatelessWidget {
                     children: [
                       Text(title, style: AppType.base.copyWith(color: c.text)),
                       if (subtitle != null)
-                        Text(subtitle!, style: AppType.sm.copyWith(color: c.textMuted)),
+                        Text(
+                          subtitle!,
+                          style: AppType.sm.copyWith(color: c.textMuted),
+                        ),
                       if (progress != null) ...[
                         const SizedBox(height: AppSpace.s8),
                         ProgressBar(value: progress!),
@@ -867,8 +1075,10 @@ class ListRow extends StatelessWidget {
                     ],
                   ),
                 ),
-                if (trailing != null) ...[const SizedBox(width: AppSpace.s12), trailing!]
-                else if (onTap != null)
+                if (trailing != null) ...[
+                  const SizedBox(width: AppSpace.s12),
+                  trailing!,
+                ] else if (onTap != null)
                   Icon(Icons.chevron_right, color: c.textMuted),
               ],
             ),
