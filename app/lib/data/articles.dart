@@ -48,12 +48,38 @@ class FaqGroup {
   final List<FaqItem> items;
 }
 
+/// A topic in the sign library (S12): chapter V questions grouped for lookup.
+class SignGroup {
+  const SignGroup({
+    required this.id,
+    required this.title,
+    required this.summary,
+    required this.questionNumbers,
+  });
+  final String id;
+  final String title;
+  final String summary;
+  final List<int> questionNumbers;
+}
+
 class Articles {
-  const Articles({required this.tips, required this.faq});
+  const Articles({
+    required this.tips,
+    required this.faq,
+    this.signGroups = const [],
+  });
   final List<Tip> tips;
   final List<FaqGroup> faq;
+  final List<SignGroup> signGroups;
 
   static const empty = Articles(tips: [], faq: []);
+
+  SignGroup? signGroup(String id) {
+    for (final g in signGroups) {
+      if (g.id == id) return g;
+    }
+    return null;
+  }
 
   Tip? tip(String id) {
     for (final t in tips) {
@@ -72,6 +98,15 @@ class Articles {
       );
 
   factory Articles.fromJson(Map<String, dynamic> json) => Articles(
+    signGroups: [
+      for (final g in (json['sign_groups'] as List?) ?? const [])
+        SignGroup(
+          id: g['id'],
+          title: g['title'],
+          summary: g['summary'],
+          questionNumbers: [for (final n in g['questions'] as List) n as int],
+        ),
+    ],
     tips: [
       for (final t in json['tips'] as List)
         Tip(

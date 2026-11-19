@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:gplx_prep/data/db/user_db.dart';
+import 'package:gplx_prep/features/browse/question_page.dart';
 import 'package:gplx_prep/features/guide/faq_page.dart';
 import 'package:gplx_prep/design/widgets.dart';
 
@@ -335,11 +336,89 @@ void main() {
     });
   });
 
-  testWidgets('F07-H1: signs is a stub for now', (tester) async {
-    await launchApp(tester, db);
-    await pickClass(tester, 'A1');
-    await tapText(tester, 'Biển báo');
-    expect(find.text('Sắp có'), findsOneWidget);
+  group('S12 sign library (official bank)', () {
+    testWidgets('F07-H1: group → question with answer and explanation', (
+      tester,
+    ) async {
+      await launchApp(tester, db, contentRepo: bank);
+      await pickClass(tester, 'B');
+      await tapText(tester, 'Biển báo');
+      await tapText(tester, 'Vạch kẻ đường');
+      expect(find.byType(QuestionRow), findsWidgets);
+      await tapText(tester, 'Câu 478');
+      expect(find.text('Câu 478/600'), findsOneWidget);
+      final q = bank.pool('B').firstWhere((q) => q.number == 478);
+      final correct = tester.widget<AnswerOption>(
+        find.byWidgetPredicate(
+          (w) => w is AnswerOption && w.position == q.correctPosition,
+        ),
+      );
+      expect(correct.state, AnswerState.correct);
+      expect(find.textContaining('vạch tim đường'), findsWidgets);
+    });
+
+    testWidgets('F07-E1: groups only count questions in the class pool', (
+      tester,
+    ) async {
+      await launchApp(tester, db, contentRepo: bank);
+      await pickClass(tester, 'A1');
+      await tapText(tester, 'Biển báo');
+      final a1 = bank.pool('A1').map((q) => q.number).toSet();
+      final g = articles.signGroups.first;
+      final n = g.questionNumbers.where(a1.contains).length;
+      expect(find.text('$n câu · ${g.summary}'), findsOneWidget);
+    });
+  });
+
+  group('S16 search (official bank)', () {
+    testWidgets('F08-H1: words without accents find the question', (
+      tester,
+    ) async {
+      await launchApp(tester, db, contentRepo: bank);
+      await pickClass(tester, 'B');
+      await tapLabel(tester, 'Tìm câu hỏi');
+      await tester.enterText(find.byType(TextField), 'nong do con');
+      await settle(tester);
+      expect(find.text('Câu 24'), findsOneWidget);
+      await tapText(tester, 'Câu 24');
+      expect(find.text('Câu 24/600'), findsOneWidget);
+    });
+
+    testWidgets('F08-H2: a number opens that question; no match says so', (
+      tester,
+    ) async {
+      await launchApp(tester, db, contentRepo: bank);
+      await pickClass(tester, 'B');
+      await tapLabel(tester, 'Tìm câu hỏi');
+      await tester.enterText(find.byType(TextField), 'câu 145');
+      await settle(tester);
+      expect(find.text('1 câu'), findsOneWidget);
+      expect(find.text('Câu 145'), findsOneWidget);
+      await tester.enterText(find.byType(TextField), 'xyzzy khong co');
+      await settle(tester);
+      expect(find.text('Không tìm thấy câu nào'), findsOneWidget);
+    });
+
+    testWidgets('F08-E1: a question outside the class still opens, flagged', (
+      tester,
+    ) async {
+      await launchApp(tester, db, contentRepo: bank);
+      await pickClass(tester, 'A1');
+      final a1 = bank.pool('A1').map((q) => q.number).toSet();
+      final outside = List.generate(
+        600,
+        (i) => i + 1,
+      ).firstWhere((n) => !a1.contains(n));
+      final ctx = tester.element(find.byType(Scaffold).first);
+      GoRouter.of(ctx).push('/question/$outside');
+      await settle(tester);
+      expect(find.text('Câu $outside/600'), findsOneWidget);
+      expect(
+        find.text('Câu này không có trong bộ câu của Hạng A1.'),
+        findsOneWidget,
+      );
+      expect(find.byType(CriticalBadge), findsNothing);
+    });
   });
 
   testWidgets('S13-H1: tips list opens an article with its points', (

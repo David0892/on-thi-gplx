@@ -34,7 +34,7 @@ BANK = SRC / "bo-600-cau-hoi-2025.pdf"
 CV = SRC / "cong-van-2262-csgt-p5.pdf"
 RULES = Path(__file__).resolve().parent / "rules.json"
 EXPLANATIONS = ROOT / "content" / "explanations"  # own writing: *.json, {"explanations": {"N": "..."}}
-ARTICLES = ROOT / "content" / "articles"  # own writing: tips.json, faq.json
+ARTICLES = ROOT / "content" / "articles"  # own writing: tips.json, faq.json, signs.json
 
 Q_RE = re.compile(r"^Câu\s+(\d+)\s*[.:]\s*(.*)$")  # Câu 507 is printed with a colon
 OPT_RE = re.compile(r"^([1-4])\s*\.\s+(.*)$")
@@ -324,13 +324,26 @@ def validate_articles(questions, apps):
             if it.get("widget") not in (None, "class_table"):
                 errors.append(f"{where}: unknown widget {it['widget']}")
             check_all(where, it.get("checks", []))
+    signs = json.loads((ARTICLES / "signs.json").read_text(encoding="utf-8"))["groups"]
+    placed = [n for g in signs for n in g["questions"]]
+    chapter5 = {q["number"] for q in questions if 301 <= q["number"] <= 485}
+    if sorted(placed) != sorted(chapter5):
+        missing = sorted(chapter5 - set(placed))
+        twice = sorted({n for n in placed if placed.count(n) > 1})
+        extra = sorted(set(placed) - chapter5)
+        errors.append(f"signs: every chapter V question once; missing {missing}, twice {twice}, outside {extra}")
+    for g in signs:
+        unique("signs", g.get("id"))
+        if not g.get("title") or not g.get("summary") or not g.get("questions"):
+            errors.append(f"signs {g.get('id')}: needs title, summary and questions")
     strip = lambda d: {k: v for k, v in d.items() if k != "checks"}
     out = {
         "tips": [strip(t) for t in tips],
         "faq": [{"title": g["title"], "items": [strip(i) for i in g["items"]]} for g in faq],
+        "sign_groups": signs,
     }
     n_items = sum(len(g["items"]) for g in faq)
-    print(f"articles: {len(tips)} tips, {n_items} FAQ items, {n_checks} facts checked against the bank")
+    print(f"articles: {len(tips)} tips, {n_items} FAQ items, {n_checks} facts checked against the bank, {len(signs)} sign groups")
     return out, errors
 
 

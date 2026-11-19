@@ -22,6 +22,12 @@ import '../repo_contract.dart' show loadSeed;
 
 final SeedContentRepo content = loadSeed();
 
+/// The official bank, as shipped (for screens that need real questions).
+final SeedContentRepo bank = SeedContentRepo.fromJson(
+  jsonDecode(File('assets/content/content.json').readAsStringSync())
+      as Map<String, dynamic>,
+);
+
 /// The real tips and FAQ, as shipped.
 final Articles articles = Articles.fromJson(
   jsonDecode(File('assets/content/articles.json').readAsStringSync())
@@ -40,6 +46,7 @@ Future<void> launchApp(
   UserDb db, {
   Size size = const Size(390, 844),
   double textScale = 1,
+  SeedContentRepo? contentRepo,
 }) async {
   WidgetController.hitTestWarningShouldBeFatal =
       true; // a missed tap fails the test
@@ -57,7 +64,7 @@ Future<void> launchApp(
       child: ProviderScope(
         key: UniqueKey(),
         overrides: [
-          contentRepoProvider.overrideWithValue(content),
+          contentRepoProvider.overrideWithValue(contentRepo ?? content),
           userDbProvider.overrideWithValue(db),
           initialClassProvider.overrideWithValue(initialClass),
           articlesProvider.overrideWithValue(articles),
@@ -96,6 +103,15 @@ Future<void> tapText(WidgetTester tester, String text) async {
   final box = tester.getRect(f);
   await tester.tapAt(
     box.topLeft + Offset(8, box.height < 32 ? box.height / 2 : 12),
+  );
+  await settle(tester);
+}
+
+Future<void> scrollToTop(WidgetTester tester) async {
+  await tester.fling(
+    find.byType(Scrollable).first,
+    const Offset(0, 3000),
+    5000,
   );
   await settle(tester);
 }

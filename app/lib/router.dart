@@ -5,6 +5,9 @@ import 'package:go_router/go_router.dart';
 
 import 'design/gallery_page.dart';
 import 'domain/models.dart';
+import 'features/browse/question_page.dart';
+import 'features/browse/search_page.dart';
+import 'features/browse/signs_page.dart';
 import 'features/exam/exam_list_page.dart';
 import 'features/exam/exam_result_page.dart';
 import 'features/exam/exam_review_page.dart';
@@ -14,7 +17,6 @@ import 'features/guide/tips_page.dart';
 import 'features/home/home_page.dart';
 import 'features/onboarding/class_picker_page.dart';
 import 'features/settings/settings_page.dart';
-import 'features/stub_page.dart';
 import 'features/study/study_page.dart';
 import 'features/study/topic_list_page.dart';
 import 'providers.dart';
@@ -67,9 +69,16 @@ final routerProvider = Provider<GoRouter>((ref) {
           topicId: int.tryParse(s.uri.queryParameters['topic'] ?? ''),
         ),
       ),
+      GoRoute(path: '/signs', builder: (_, _) => const SignsPage()), // S12
       GoRoute(
-        path: '/signs',
-        builder: (_, _) => const StubPage(title: 'Biển báo', screenId: 'S12'),
+        path: '/signs/:id',
+        builder: (_, s) => SignGroupPage(groupId: s.pathParameters['id']!),
+      ),
+      GoRoute(path: '/search', builder: (_, _) => const SearchPage()), // S16
+      GoRoute(
+        path: '/question/:n',
+        builder: (_, s) =>
+            QuestionPage(number: int.tryParse(s.pathParameters['n']!) ?? 0),
       ),
       GoRoute(path: '/tips', builder: (_, _) => const TipsPage()), // S13
       GoRoute(

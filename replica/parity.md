@@ -1,5 +1,11 @@
 # Parity: GPLX prep app vs Ôn Thi GPLX 600 Câu Chuẩn 2026
 
+> **Update 2026-11-19, after the sign library (S12) and search (S16):**
+> - Feature score is **98.4 / 100**, must-haves **14 of 14**, no open S1 or S2 bugs: **shippable**.
+> - Sign library: 13 subject groups over the 185 chapter V questions, filtered to the class pool. It reuses the official question pictures; there are no separate per-sign images.
+> - Search: accent-insensitive words or a question number, over the current class's pool. A question outside the class still opens, with a note.
+> - Only the hosted privacy policy is left from the feature matrix. Layout parity is still unmeasured.
+>
 > **Update 2026-11-19, after tips (S13) and FAQ (S14):**
 > - Feature score is **95.2 / 100**, with must-haves at **14 of 14**. No open S1 or S2 bugs: **shippable**.
 > - Tips: 10 articles; every number in them (48 facts) is checked at build time against the official answer of the question it comes from.

@@ -88,6 +88,53 @@ void main() {
     expect(find.text('A1'), findsWidgets);
   });
 
+  testWidgets('A11Y-1 signs, search and a question (official bank)', (
+    tester,
+  ) async {
+    await launchApp(tester, db, contentRepo: bank);
+    await pickClass(tester, 'B');
+    await tapText(tester, 'Biển báo');
+    await checkA11y(tester);
+    await tapText(tester, 'Đường sắt');
+    await checkA11y(tester);
+    await tapText(tester, 'Câu 371');
+    await checkA11y(tester);
+    for (var i = 0; i < 3; i++) {
+      await tester.pageBack();
+      await settle(tester);
+    }
+    await scrollToTop(tester); // home kept its scroll position
+    await tapLabel(tester, 'Tìm câu hỏi');
+    await checkA11y(tester);
+    await tester.enterText(find.byType(TextField), 'duong cao toc');
+    await settle(tester);
+    await checkA11y(tester);
+  });
+
+  testWidgets('S12/S16 at 320px, text 200%: no overflow', (tester) async {
+    await launchApp(
+      tester,
+      db,
+      contentRepo: bank,
+      size: const Size(320, 640),
+      textScale: 2,
+    );
+    await pickClass(tester, 'B');
+    await tapText(tester, 'Biển báo');
+    await tapText(tester, 'Vạch kẻ đường');
+    await tapText(tester, 'Câu 476');
+    expect(find.text('Câu 476/600'), findsOneWidget);
+    for (var i = 0; i < 3; i++) {
+      await tester.pageBack();
+      await settle(tester);
+    }
+    await scrollToTop(tester); // home kept its scroll position
+    await tapLabel(tester, 'Tìm câu hỏi');
+    await tester.enterText(find.byType(TextField), 'biển');
+    await settle(tester);
+    expect(find.textContaining('hiện 50 câu đầu'), findsOneWidget);
+  });
+
   for (final (w, h) in [(320.0, 640.0), (390.0, 844.0)]) {
     testWidgets(
       'F02-E8: ${w.toInt()}px wide, text 200%, whole exam flow has no overflow',

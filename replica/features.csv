@@ -22,8 +22,8 @@ FAQ on the exam procedure,content,should,yes,yes,"11 items, own writing; exam ta
 Change class later and keep progress per class,settings,should,inferred,yes,progress keyed by class
 Reset progress with confirm,settings,should,inferred,yes,S15
 Not-official disclaimer + privacy policy,settings,should,yes,partial,in-app text in S15; hosted privacy page still needed for the stores
-Traffic sign library by group,content,could,inferred,no,may not exist in original
-Search questions by text or number,study,could,unknown,no,
+Traffic sign library by group,content,could,inferred,yes,"S12: the 185 chapter V questions in 13 subject groups, filtered to the class pool; opens the question with picture, answer, explanation"
+Search questions by text or number,study,could,unknown,yes,"S16: accent-insensitive words over question and options, or a number; in-memory over the class pool (FTS5 not needed at 600 rows)"
 Dark mode,settings,could,unknown,yes,follows the system theme; dark tokens pass contrast.py
 Banner and interstitial ads,monetization,could,yes,skip,decided 2026-11-19: app is completely free
 Remove-ads purchase,monetization,could,no,skip,not needed: no ads

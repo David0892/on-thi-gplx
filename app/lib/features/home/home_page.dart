@@ -47,6 +47,44 @@ class HomePage extends ConsumerWidget {
       body: PageBody(
         children: [
           const SampleNotice(),
+          // In the body, not the app bar: at 320px and 200% text the bar has no room.
+          Semantics(
+            button: true,
+            label: 'Tìm câu hỏi',
+            excludeSemantics: true,
+            child: Material(
+              color: c.surface,
+              borderRadius: BorderRadius.circular(AppRadius.md),
+              child: InkWell(
+                borderRadius: BorderRadius.circular(AppRadius.md),
+                onTap: () => context.push('/search'),
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(
+                    minHeight: AppLayout.tapTargetMin,
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: AppSpace.s12,
+                      vertical: AppSpace.s8,
+                    ),
+                    child: Row(
+                      children: [
+                        Icon(Icons.search, color: c.textMuted),
+                        const SizedBox(width: AppSpace.s8),
+                        Expanded(
+                          child: Text(
+                            'Tìm câu hỏi theo từ khóa hoặc số câu',
+                            style: AppType.base.copyWith(color: c.textMuted),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(height: AppSpace.s16),
           if (ref.watch(runningExamProvider).value case final running?) ...[
             Container(
               padding: const EdgeInsets.all(AppSpace.s12),

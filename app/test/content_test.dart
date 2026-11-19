@@ -159,4 +159,14 @@ void main() {
       hasLength(1),
     );
   });
+
+  test('sign library: every chapter V question in exactly one group', () {
+    final a = Articles.fromJson(
+      jsonDecode(File('assets/content/articles.json').readAsStringSync())
+          as Map<String, dynamic>,
+    );
+    final placed = a.signGroups.expand((g) => g.questionNumbers).toList();
+    expect(placed.toSet(), hasLength(placed.length));
+    expect(placed.toSet(), List.generate(185, (i) => 301 + i).toSet());
+  });
 }
