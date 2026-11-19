@@ -6,6 +6,7 @@ import '../domain/models.dart';
 
 abstract interface class ContentRepo {
   bool get isSample;
+  int get contentVersion;
   List<LicenseClass> classes();
   LicenseClass cls(String code);
   List<Topic> topics();

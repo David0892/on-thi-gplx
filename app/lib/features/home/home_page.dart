@@ -44,6 +44,35 @@ class HomePage extends ConsumerWidget {
       body: PageBody(
         children: [
           const SampleNotice(),
+          if (ref.watch(runningExamProvider).value case final running?) ...[
+            Container(
+              padding: const EdgeInsets.all(AppSpace.s12),
+              decoration: BoxDecoration(
+                color: c.accentSoft,
+                borderRadius: BorderRadius.circular(AppRadius.md),
+                border: Border.all(color: c.accent),
+              ),
+              child: Row(
+                children: [
+                  Icon(Icons.pending_actions, color: c.accent),
+                  const SizedBox(width: AppSpace.s12),
+                  Expanded(
+                    child: Text(
+                      'Bạn có bài thi đang làm dở '
+                      '(${running.answeredCount}/${running.questionCount} câu).',
+                      style: AppType.sm.copyWith(color: c.text),
+                    ),
+                  ),
+                  AppButton(
+                    label: 'Làm tiếp',
+                    variant: AppButtonVariant.ghost,
+                    onPressed: () => context.go('/exams/run/${running.id}'),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: AppSpace.s16),
+          ],
           Container(
             padding: const EdgeInsets.all(AppSpace.s16),
             decoration: BoxDecoration(

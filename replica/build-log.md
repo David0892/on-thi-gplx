@@ -56,3 +56,13 @@
 
 **Bigger than it looked:**
 - The **content work**, not the screens. The official 600 questions, the class pools, the 60 critical flags, about 200 images and 600 original explanations are still entirely ahead.
+
+## 2026-11-19: persistence (replica-backend)
+
+- **What changed:**
+  - `user.db` is now SQLite through drift on Android and iOS; the memory repos remain only for the web preview.
+  - Screens did not change, apart from two additions:
+    - home now has a "Bạn có bài thi đang làm dở" banner with a "Làm tiếp" button;
+    - S04 grades an exam immediately if it is reopened after its deadline.
+- **Checks:** 34 tests pass, including the shared repository contract against both implementations and a real-file test that closes and reopens the database. I also killed and relaunched the app on the iOS simulator; details are in backend.md.
+- **S04** goes from partial to done. Remaining gap: a resumed exam opens at question 1 instead of the last question viewed (small; store the current position in `exam_attempts`).

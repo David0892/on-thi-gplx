@@ -58,6 +58,8 @@ class SeedContentRepo implements ContentRepo {
   @override
   bool get isSample => _json['meta']['is_sample'] == true;
   @override
+  int get contentVersion => _json['meta']['content_version'] as int;
+  @override
   List<LicenseClass> classes() => _classes;
   @override
   LicenseClass cls(String code) => _classes.firstWhere((c) => c.code == code);

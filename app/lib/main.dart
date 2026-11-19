@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'data/db/open_db.dart';
 import 'data/memory_repositories.dart';
 import 'design/app_theme.dart';
 import 'providers.dart';
@@ -9,12 +10,18 @@ import 'router.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final content = await SeedContentRepo.load();
-  final settings = MemorySettingsRepo();
-  final initialClass = await settings.selectedClass();
+  final userDb = await openUserDb();
+  final container = ProviderContainer(overrides: [
+    contentRepoProvider.overrideWithValue(content),
+    userDbProvider.overrideWithValue(userDb),
+  ]);
+  // Read before the first frame so the router redirect never sees a loading state.
+  final initialClass = await container.read(settingsRepoProvider).selectedClass();
+  container.dispose();
   runApp(ProviderScope(
     overrides: [
       contentRepoProvider.overrideWithValue(content),
-      settingsRepoProvider.overrideWithValue(settings),
+      userDbProvider.overrideWithValue(userDb),
       initialClassProvider.overrideWithValue(initialClass),
     ],
     child: const App(),

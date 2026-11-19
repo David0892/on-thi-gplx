@@ -4,7 +4,7 @@ Full official 600-question bank bundled offline,content,must,yes,no,only 32 hand
 Question pools per class (e.g. 250 for A1/A),content,must,yes,partial,all classes share the sample pool; real mapping comes with the official appendix
 Critical questions flagged (60),content,must,yes,partial,3 sample critical questions; 60 come with the official bank
 Random mock exam per class rules (count / minutes / pass mark),exam,must,yes,yes,"S04; quota per topic for A1/A/B1, uniform for others; classes above 32 questions show a not-enough-questions dialog"
-Countdown timer with auto-submit,exam,must,yes,partial,"timer reads deadline and auto-submits; NOT persisted, so killing the app loses the exam until drift lands"
+Countdown timer with auto-submit,exam,must,yes,yes,deadline stored in user.db; resumes after a kill; past-deadline exams auto-grade as timed out
 Question jump grid in exam,exam,must,yes,yes,"bottom sheet in S04, S08"
 Pass/fail result with critical-question fail rule,exam,must,yes,yes,S05; unit tested
 Review exam with correct answers,exam,must,yes,yes,S06 with all/wrong filter
@@ -15,7 +15,7 @@ Bookmark / saved questions,review,must,yes,yes,S11 with empty state
 Critical questions drill,review,must,yes,yes,S09
 Numbered fixed exam sets with best score,exam,should,inferred,yes,"5 sets per class, fixed seed"
 Progress per topic and overall,study,should,inferred,yes,"S02 ring, S07 bars"
-Resume topic where left off,study,should,inferred,yes,in memory only for now
+Resume topic where left off,study,should,inferred,yes,topic_cursor in user.db
 Exam history,exam,should,inferred,yes,"S03, last 10"
 Memorization tips per topic,content,should,yes,no,own writing
 FAQ on the exam procedure,content,should,yes,no,own writing

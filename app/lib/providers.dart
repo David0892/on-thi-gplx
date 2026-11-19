@@ -1,20 +1,44 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'data/db/user_db.dart' show UserDb;
 import 'data/memory_repositories.dart';
 import 'data/repositories.dart';
+import 'data/sql_repositories.dart';
 import 'domain/models.dart';
 
 /// Overridden in main() once the seed is loaded.
 final contentRepoProvider = Provider<ContentRepo>((ref) => throw UnimplementedError());
 
-final settingsRepoProvider = Provider<SettingsRepo>((ref) => MemorySettingsRepo());
-final bookmarkRepoProvider = Provider<BookmarkRepo>((ref) => MemoryBookmarkRepo());
-final studyRepoProvider = Provider<StudyRepo>(
-  (ref) => MemoryStudyRepo(ref.watch(contentRepoProvider), ref.watch(bookmarkRepoProvider)),
-);
-final examRepoProvider = Provider<ExamRepo>(
-  (ref) => MemoryExamRepo(ref.watch(contentRepoProvider), ref.watch(studyRepoProvider)),
-);
+/// user.db, opened in main(). Null on web (dev preview), where the memory
+/// repositories stand in and nothing persists.
+final userDbProvider = Provider<UserDb?>((ref) => null);
+
+final settingsRepoProvider = Provider<SettingsRepo>((ref) {
+  final db = ref.watch(userDbProvider);
+  return db == null ? MemorySettingsRepo() : SqlSettingsRepo(db);
+});
+final bookmarkRepoProvider = Provider<BookmarkRepo>((ref) {
+  final db = ref.watch(userDbProvider);
+  return db == null ? MemoryBookmarkRepo() : SqlBookmarkRepo(db);
+});
+final studyRepoProvider = Provider<StudyRepo>((ref) {
+  final db = ref.watch(userDbProvider);
+  final content = ref.watch(contentRepoProvider);
+  final bookmarks = ref.watch(bookmarkRepoProvider);
+  return db == null ? MemoryStudyRepo(content, bookmarks) : SqlStudyRepo(db, content, bookmarks);
+});
+final examRepoProvider = Provider<ExamRepo>((ref) {
+  final db = ref.watch(userDbProvider);
+  final content = ref.watch(contentRepoProvider);
+  final study = ref.watch(studyRepoProvider);
+  return db == null ? MemoryExamRepo(content, study) : SqlExamRepo(db, content, study);
+});
+
+/// An exam left running (app killed or closed mid-exam), offered on home.
+final runningExamProvider = FutureProvider<ExamAttempt?>((ref) {
+  ref.watch(revisionProvider);
+  return ref.read(examRepoProvider).running();
+});
 
 /// Bumped after every write, so read providers refetch. The drift version can
 /// replace this with table watches.

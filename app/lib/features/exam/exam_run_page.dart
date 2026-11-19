@@ -42,6 +42,13 @@ class _ExamRunPageState extends ConsumerState<ExamRunPage> {
         context.go('/exams/result/${a.id}');
         return;
       }
+      // Reopened after the deadline (app was killed mid-exam): grade what was answered.
+      if (!DateTime.now().isBefore(a.deadlineAt)) {
+        await ref.read(examRepoProvider).submit(a.id, timedOut: true);
+        ref.read(revisionProvider.notifier).bump();
+        if (mounted) context.go('/exams/result/${a.id}');
+        return;
+      }
       setState(() => _attempt = a);
       _ticker = Timer.periodic(const Duration(seconds: 1), (_) => _tick());
     } catch (e) {
